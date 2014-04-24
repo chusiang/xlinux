@@ -1,0 +1,3216 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head><meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+ <meta NAME="GENERATOR" CONTENT="SGML-Tools 1.0.9">
+ <title>XLinux安裝手冊和使用說明: Genie -- XLinux 的智慧型設定精靈?</title>
+ <link HREF="install-7.html" REL="next">
+ <link HREF="install-5.html" REL="previous">
+ <link HREF="install.html#toc6" REL="contents">
+</head>
+<body>
+<a HREF="install-7.html">Next</a>
+<a HREF="install-5.html">Previous</a>
+<a HREF="install.html#toc6">Contents</a>
+<hr>
+<h2><a NAME="GEN-ref"></a> <a NAME="s6">6. Genie -- XLinux 的智慧型設定精靈?</a> </h2>
+
+<p>Genie設定精靈是網虎國際開發團隊設計開發的智慧型設定工具, 針對煩瑣的
+Linux設定程序與指令, 網虎國際特地設計此對話式方塊的設定介面, 讓使用者
+對設定Linux的印像不再是一堆煩長難記的指令. <br>
+<p>利用Genie智慧型設定精靈, 你將可以輕輕鬆鬆設定成你想要的Linux系統,
+對話式的設定模式, 讓Linux的系統設定不再是件困難與麻煩的事.<br>
+<p>Genie可以幫助您設定硬體(如鍵盤, 滑鼠, 列表機等等), 時區設定, 系統服務,
+網路服務, X Window 組態設定等等, 是一項好用、方便的設定工具.  
+<p>
+<figure>
+<eps FILE="images/genie-main.eps">
+<img SRC="images/genie-main.jpg" WIDTH="975" HEIGHT="604">
+<caption> Genie 主要開啟畫面</caption>
+</figure>
+ 
+<h2><a NAME="ss6.1">6.1 Genie 使用需知</a>
+</h2>
+
+<p>
+<ul>
+<li> 建議您在Console模式下執行Genie設定精靈 </li>
+<li> 請以root身份使用Genie設定精靈</li>
+<li> 如下圖一, Genie 設有登入密碼保護 (Genie密碼與root密碼相同).
+若使用者連續輸入三次密碼錯誤, 整個Genie畫面將被鎖住一分鐘(如下圖二), 但Genie的此項保護只限於在Genie的各項主畫面.<br>
+<br>
+
+<figure>
+<eps FILE="images/genie-main.eps">
+<img SRC="images/GN-password.jpg" WIDTH="975" HEIGHT="580">
+<caption> 圖一: Genie 登入密碼</caption>
+</figure>
+
+
+<p>
+<figure>
+<eps FILE="images/genie-main.eps">
+<img SRC="images/GN-password-wrong.jpg" WIDTH="975" HEIGHT="604">
+<caption> 圖二: Genie 鎖住畫面</caption>
+</figure>
+                  
+<p>要啟動Genie, 只須簡單地鍵入 &quot;genie&quot; 或直接切至【Alt】+【F12】的 g11ntty console
+下, 此console 是預設給系統管理使用的Genie控制台. ?             
+<p>
+</li>
+</ul>
+<p>
+<h2><a NAME="ss6.2">6.2 Genie 的預設項目        </a>
+</h2>
+
+<p>Genie的預定設定項目包括了以下幾方面: 
+<ul>
+<li>硬體設定 </li>
+<li>網路設定</li>
+<li>系統設定</li>
+<li>關閉系統 </li>
+</ul>
+  
+以下教你如何設定使用Genie設定精靈: 
+<p>
+<h3><b>硬體設定</b></h3>
+
+<p>Genie的硬體設定包函了有以下的設定功能:
+<ul>
+<li> 滑鼠設定程式</li>
+<li> 串列埠設定</li>
+<li> 鍵盤對應設定</li>
+<li> 印表機設定</li>
+</ul>
+<br>
+                               
+<p>如下圖, 請利用上下鍵選擇您想要設定的項目按【Enter】鍵進入設定畫面.
+<p>
+<figure>
+<eps FILE="images/genie-hardware.eps">
+<img SRC="images/Genie-hardware-main.jpg" WIDTH="975" HEIGHT="580">
+<caption>Genie硬體設定開啟畫面</caption>
+</figure>
+<br>
+  
+<p>
+<h3>滑鼠設定精靈</h3>
+
+<p>功能說明:
+<p>滑鼠精靈幫您輕易設定機器上之滑鼠。
+這裏將以 Logitech ps/2 mouse 為例，詳加說明如何使用本設定精靈。
+<p>
+<figure>
+<eps FILE="images/gs-hardware-mouse-1.ps">
+<img SRC="images/gs-hardware-mouse-1.jpg" WIDTH="964" HEIGHT="580">
+<caption> Geine 滑鼠設定精靈主畫面</caption>
+</figure>
+                                
+<p>
+<h3>滑鼠設定精靈</h3>
+
+<p>【選擇滑鼠設定】後按【Enter】鍵，進入設定區滑鼠設定精靈先偵測系統滑鼠設備。
+<p>
+<figure>
+<eps FILE="images/gs-hardware-mouse-1.1.ps">
+<img SRC="images/gs-hardware-mouse-1.1.jpg" WIDTH="964" HEIGHT="580">
+<caption>滑鼠設定精靈偵測到系統上裝設 PS/2 Mouse 畫面</caption>
+</figure>
+<p>
+<p>在出現偵測畫面【選擇確定】後按【Enter】鍵，進入設定區：請選擇滑鼠型號。
+以 Logitech ps/2 mouse 為例，請移動選擇上下游標選擇 Logitech MouseMan/FirstMouse (ps/2)。
+<p>
+<figure>
+<eps FILE="images/gs-hardware-mouse-1.2.ps">
+<img SRC="images/gs-hardware-mouse-1.2.jpg" WIDTH="964" HEIGHT="580">
+<caption>【設定滑鼠型號畫面】-&gt;【Logitech MouseMan/FirstMouse (ps/2)】</caption>
+</figure>
+<p>
+<p>【選擇滑鼠型號】後,按【Enter】鍵，進入選擇當滑鼠雙鍵齊按時模擬第三鍵設定區:請選定 Emulate 3 Buttons 。
+<p>
+<figure>
+<eps FILE="images/gs-hardware-mouse-1.3.ps">
+<img SRC="images/gs-hardware-mouse-1.3.jpg" WIDTH="964" HEIGHT="580">
+<caption>當滑鼠雙鍵齊按時模擬第三鍵畫面</caption>
+</figure>
+<p>
+<p>【選擇模擬第三鍵】後,按【Enter】鍵，滑鼠設定精靈將重新啟動設定檔並完成設定，回到 Genie 主畫面。
+<p>
+<h3>串列埠設定</h3>
+
+<p>功能說明:
+<p>* 偵測目前串列埠之設定值。<br>
+* 輸出入埠設定。<br>
+* IRQ 設定。<br>
+* 傳輸速度設定。<br>
+<p>第一項是【查看狀態】: 顯示出 serial 的狀態。<br>
+第二項是【設定】:設定 serial。<br>
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-serial-main.jpg" WIDTH="964" HEIGHT="580">
+<caption>串列埠設定主畫面</caption>
+</figure>
+<p>
+<p>
+<h3>查看狀態</h3>
+
+<p>將光棒移至 status 的選項上,按下 enter,會將主機板上的 serial port 的狀態顯示出來。
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-serial-01.jpg" WIDTH="964" HEIGHT="580">
+<caption>【串列埠設定】-&gt;【查看狀態】</caption>
+</figure>
+<p>
+<p>在看完狀態後,會回到主畫面。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-serial-main.jpg" WIDTH="964" HEIGHT="580">
+<caption>串列埠設定主畫面</caption>
+</figure>
+<p>
+<p>
+<h3>設定</h3>
+
+<p>將光棒移至 setup 的選項上,按下 enter,會出現 com1 &nbsp; com4 讓您選擇,在此以 com1 作範例。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-serial-02.jpg" WIDTH="963" HEIGHT="580">
+<caption>【串列埠設定】-&gt;【設定】</caption>
+</figure>
+<p>
+<p>將光棒移至 com1 上按下 enter,會出現以下畫面,第一項是設定 uart,(例如 16550 或 8250),第二項是設定 io port 的值,第三是項設定 irq 的值。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-serial-03.jpg" WIDTH="964" HEIGHT="580">
+<caption>【串列埠設定】-&gt;【設定】-&gt;【Com1】</caption>
+</figure>
+<p>
+<p>先設定 uart 的部份,將光棒移至 uart 的選項上按下 enter,進入設定,一般來說,程式會自動判別您所使用的 uart,無特殊需要,此項可以不用設定。接下來會出現輸入視窗,輸入您所使用的 uart 型號。(一般都是 16550a)
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-serial-04.jpg" WIDTH="964" HEIGHT="580">
+<caption>【串列埠設定】-&gt;【設定】-&gt;【Com1】-&gt;【UART】</caption>
+</figure>
+<p>
+<p>設定完後會回到選擇 com 的部份,本次範例還是選擇 com1。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-serial-02.jpg" WIDTH="963" HEIGHT="580">
+<caption>【串列埠設定】-&gt;【設定】</caption>
+</figure>
+<p>
+<p>再來是設定 port,將光棒移至 port 選項上按下 enter 後,會出現如下畫面來輸入數值,正常此數值會由程式自動偵測,無特殊需要,此項目不須設定。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-serial-05.jpg" WIDTH="964" HEIGHT="580">
+<caption>【串列埠設定】-&gt;【設定】-&gt;【Com1】-&gt;【PORT】</caption>
+</figure>
+<p>
+<p>設定完後會回到選擇 com 的部份。<br>
+再來是設定 irq,會出現輸入視窗可輸入,一般也不需要設定,視情況而定。
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-serial-06.jpg" WIDTH="964" HEIGHT="580">
+<caption>【串列埠設定】-&gt;【設定】-&gt;【Com1】-&gt;【IRQ】</caption>
+</figure>
+<p>
+<p>到此即完成設定,在最後會出現詢問是否離開的視窗,如想繼續設定,則選否。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="http://mouse.oit.edu.tw/htdocs/BOOK/xlinux/images/genie-system-serial-3.jpg">
+<caption>【串列埠設定】-&gt; 是否離開</caption>
+</figure>
+<p>
+<p>
+<h3>鍵盤對應設定</h3>
+
+<p>功能說明:
+<p>Keymap 設定工具可以設定鍵盤的鍵位對應,及設定基本的鍵盤對應。<br>
+* 第一項是更改鍵盤對應。<br>
+* 第二項是更改按鍵定義。<br>
+* 第三項則是完成。<br>
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-keymap-main.jpg" WIDTH="964" HEIGHT="580">
+<caption> Geine 鍵盤對應設定主畫面</caption>
+</figure>
+<p>
+<p>
+<h3>如何修改鍵盤定義</h3>
+
+<p>選擇【更改鍵盤對應】後, 按 Enter 鍵進入設定區:
+選擇您所要的鍵盤定義,預設值是 us.kmap.gz,一般來說都不用改變此項設定,維持預設值。
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-keymap-01.jpg" WIDTH="964" HEIGHT="580">
+<caption>【鍵盤對應設定】-&gt;【更改鍵盤對應】</caption>
+</figure>
+<p>
+<p>本項設定在設定完後會直接生效。
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/genie-system-keymap-1.2.jpg" WIDTH="975" HEIGHT="580">
+<caption>設定生效</caption>
+</figure>
+<p>
+<p>
+<h3>如何修改鍵位定義</h3>
+
+<p>在主選單選擇【更改按鍵定義】後按下 enter。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-keymap-main.jpg" WIDTH="964" HEIGHT="580">
+<caption>主選單</caption>
+</figure>
+<p>第一項為改變各單鍵定義。<br>
+第二項為改變功能鍵(f1&nbsp;f12)的定義。<br>
+第三項則為改變組合鍵定義。<br>
+第四項則是跳回主選單。<br>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-keymap-02.jpg" WIDTH="964" HEIGHT="580">
+<caption>【鍵盤對應設定】-&gt;【更改按鍵定義】</caption>
+</figure>
+<p>
+<p>選擇 keys 選項後,輸入您想改變的按鍵的掃描碼,關於掃描碼的部份請參考其他相關說明。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-keymap-03.jpg" WIDTH="964" HEIGHT="580">
+<caption>【鍵盤對應設定】-&gt;【更改按鍵定義】-&gt;【keys】</caption>
+</figure>
+<p>
+<p>這邊選擇您想替換的定義,選擇完後,會直接生效設定,然後會回到主選單。
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-keymap-04.jpg" WIDTH="964" HEIGHT="580">
+<caption>選擇按鍵</caption>
+</figure>
+<p>
+<p>
+<p>接下來是解說 function key 的設定方式,選擇 change key set 後,按下 enter 進入主設定畫面。
+<p>在 function key 的選項上按下 enter。
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-keymap-02.jpg" WIDTH="964" HEIGHT="580">
+<caption>選擇選項</caption>
+</figure>
+<p>
+<p>選擇 function key 選項後,輸入您想改變定義的功能鍵掃描碼。
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-keymap-05.jpg" WIDTH="964" HEIGHT="580">
+<caption>輸入掃描碼</caption>
+</figure>
+<p>
+<p>選擇您想換的按鍵,選擇完後,會直接生效設定,並回到主選單。
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-keymap-06.jpg" WIDTH="964" HEIGHT="580">
+<caption>選擇按鍵</caption>
+</figure>
+<p>
+<p>
+<p>接下來是解說 compose key 的設定方式,選擇 change key set 後,按下 enter 進入主設定畫面。
+<p>在 compose key 的選項上按下 enter。
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-keymap-02.jpg" WIDTH="964" HEIGHT="580">
+<caption>選擇選項</caption>
+</figure>
+<p>
+<p>選擇 compose key 選項後,輸入您想用的按鍵掃描碼。
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-keymap-07.jpg" WIDTH="964" HEIGHT="580">
+<caption>輸入掃描碼</caption>
+</figure>
+<p>
+<p>再來是輸入另一顆按鍵的掃描碼。
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-keymap-08.jpg" WIDTH="964" HEIGHT="580">
+<caption>輸入掃描碼</caption>
+</figure>
+<p>
+<p>這邊是輸入該組合鍵按下後所產生的效果。
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-keymap-09.jpg" WIDTH="964" HEIGHT="580">
+<caption>輸入想要的東西</caption>
+</figure>
+<p>
+<p>
+<h3>離開這個畫面是詢問重新啟動後,依然使用此項設定,由於本程式功能限制,建議不要選擇確定的選項。下一版程式將會改進這個部份。</h3>
+
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-keymap-10.jpg" WIDTH="964" HEIGHT="580">
+<caption>離開</caption>
+</figure>
+<p>
+<h3>印表機設定</h3>
+
+<p>印表機設定精靈，可讓你設定本端的印表機，或是遠端 Unix 印表機，
+透過 Windows 網路芳鄰分享的印表機，連 Novell Netware 上的印表機也可使用。
+這裏將以設定本端的 HP 4L 印表機為例，詳加說明如何使用本設定精靈。
+<p>
+<figure>
+<eps FILE="images/gs-print-main.ps">
+<img SRC="images/gs-print-main.jpg" WIDTH="665" HEIGHT="415">
+<caption> Geine 印表機精靈主畫面</caption>
+</figure>
+   
+<p>
+<h3>如何新增 HP4L 印表機</h3>
+
+<p>【選擇印表機設定】後, 按【Enter】鍵進入設定區:
+<p>
+<figure>
+<eps FILE="images/gs-print-1.ps">
+<img SRC="images/gs-print-1.jpg" WIDTH="665" HEIGHT="406">
+<caption>印表機精靈畫面</caption>
+</figure>
+      
+<p>
+<p>
+<p>【印表機】 -&gt; 【Add】按【Enter】鍵進入設定區:
+<p>
+<figure>
+<eps FILE="images/gs-print-1-1.ps">
+<img SRC="images/gs-print-1-1.jpg" WIDTH="665" HEIGHT="415">
+<caption>【印表機】 -&gt; 【Add】</caption>
+</figure>
+
+<ul>
+<li>LOCAL   &lt;----本端印表機</li>
+<li>REMOTE  &lt;----遠端 UNIX 列表機</li>
+<li>SMB     &lt;----遠端 windows 網路芳鄰印表機</li>
+<li>NCP     &lt;----遠端 Novell 列表機</li>
+</ul>
+<p>這裏將以設定本端的 HP 4L 印表機為例，詳加說明如何使用本設定精靈。
+在此請選擇 Local 端選項。按【enter】進入設定區。
+<p>
+<p>
+<p>Config local printer 主畫面
+<p>
+<figure>
+<eps FILE="images/gs-print-1-1-main.ps">
+<img SRC="images/gs-print-1-1-main.jpg" WIDTH="665" HEIGHT="415">
+<caption>Config local printer 主畫面</caption>
+</figure>
+            
+<p>
+<ul>
+<li>Name   &lt;----印表機名稱 (印表機名稱以能夠辨別為主，故你可輸入任意字串均可)</li>
+<li>Spool  &lt;----印表機暫存檔目錄 (印表機暫存檔存放目錄，此選項不用修改)</li>
+<li>Limit  &lt;----印表檔案大小極限值 (印表檔案大小極限值，可限制列印檔案的大小，通常設為0)</li>
+<li>Device &lt;----裝置名稱 (印表機連接埠名稱，lp0=lpt1 ，lp1=lpt2..)</li>
+<li>Filter &lt;----印表機型號 (指定 printer 型號所使用的 Filter)</li>
+<li>Done   &lt;----設定完成 (完成設定)</li>
+</ul>
+<p>
+<p>此請選擇 Name ，按【enter】進入設定區，並輸入HP4L。字母與字母間不可有空白存在
+<p>
+<figure>
+<eps FILE="images/gs-print-1-1-1.ps">
+<img SRC="images/gs-print-1-1-1.jpg" WIDTH="665" HEIGHT="415">
+<caption>Config local printer --&gt; Name</caption>
+</figure>
+ 
+<p>
+<p>
+<p>回到 Config local printer 主畫面
+<p>
+<figure>
+<eps FILE="images/gs-print-1-1-main.ps">
+<img SRC="images/gs-print-1-1-main.jpg" WIDTH="665" HEIGHT="415">
+<caption>Config local printer 主畫面</caption>
+</figure>
+ 
+<p>
+<p>
+<p>
+<p>請選擇 Limit ，按【enter】進入設定區，並輸入 0 ，0表示 print 檔案大小沒有限制。
+<p>
+<figure>
+<eps FILE="images/gs-print-1-1-3.ps">
+<img SRC="images/gs-print-1-1-3.jpg" WIDTH="665" HEIGHT="415">
+<caption>Config local printer --&gt; Limit</caption>
+</figure>
+ 
+<p>
+<p>回到 Config local printer 主畫面
+<p>
+<figure>
+<eps FILE="images/gs-print-1-1-main.ps">
+<img SRC="images/gs-print-1-1-main.jpg" WIDTH="665" HEIGHT="415">
+<caption>Config local printer 主畫面</caption>
+</figure>
+<p>
+<p>
+<p>請選擇 Device ，按【enter】進入設定區，選擇 printer 所連接的 print port，
+此例選擇 lp0 --&gt; lp0 相當於 dos (lpt1)
+<p>
+<figure>
+<eps FILE="images/gs-print-1-1-4.ps">
+<img SRC="images/gs-print-1-1-4.jpg" WIDTH="665" HEIGHT="415">
+<caption>Config local printer --&gt; Device</caption>
+</figure>
+<p>
+<p>
+<p>回到 Config local printer 主畫面
+<p> 
+<figure>
+<eps FILE="images/gs-print-1-1-main.ps">
+<img SRC="images/gs-print-1-1-main.jpg" WIDTH="665" HEIGHT="415">
+<caption>Config local printer 主畫面</caption>
+</figure>
+<p>
+<p>
+<p>請選擇 Filter ，按【enter】進入設定區，在設定 printer 型號此以 HP 4L 為例
+<p>
+<figure>
+<eps FILE="images/gs-print-1-1-5.ps">
+<img SRC="images/gs-print-1-1-5.jpg" WIDTH="665" HEIGHT="415">
+<caption>Config local printer --&gt; Filter</caption>
+</figure>
+<p>
+<p>在此設定紙張大小及列印精細度
+<p>
+<figure>
+<eps FILE="images/gs-print-1-1-5-1.ps">
+<img SRC="images/gs-print-1-1-5-1.jpg" WIDTH="665" HEIGHT="415">
+<caption>Config local printer --&gt; Filter</caption>
+</figure>
+<p>
+<p>回到 Config local printer 主畫面，選擇 Done 完成設定
+<p>   
+<figure>
+<eps FILE="images/gs-print-1-1-main.ps">
+<img SRC="images/gs-print-1-1-main.jpg" WIDTH="665" HEIGHT="415">
+<caption>Config local printer 主畫面</caption>
+</figure>
+<p>
+<p>
+<h3>如何修改印表機設定檔</h3>
+
+<p>【選擇印表機設定】後, 按【Enter】鍵進入設定區:選定 Edit 選項。
+<p>
+<figure>
+<eps FILE="images/gs-print-1.ps">
+<img SRC="images/gs-print-1.jpg" WIDTH="665" HEIGHT="406">
+<caption>印表機精靈畫面</caption>
+</figure>
+      
+<p>
+<p>【印表機】 -&gt; 【Edit】後, 按【Enter】鍵進入設定區:選擇需修改的印表機。
+<p>
+<figure>
+<eps FILE="images/gs-print-2-1.ps">
+<img SRC="images/gs-print-2-1.jpg" WIDTH="665" HEIGHT="415">
+<caption>【印表機】 -&gt; 【Edit】</caption>
+</figure>
+<p>
+<p>【印表機】 -&gt; 【Edit】 -&gt; 【HP4L】後, 按【Enter】鍵進入設定區:之後就與新增印表機設定雷同。
+<p>
+<figure>
+<eps FILE="images/gs-print-2-1-1.ps">
+<img SRC="images/gs-print-2-1-1.jpg" WIDTH="665" HEIGHT="415">
+<caption>【印表機】 -&gt; 【Edit】 -&gt; 【HP4L】</caption>
+</figure>
+<p>
+<p>
+<h3>如何刪除無用的印表機設定檔</h3>
+
+<p>【選擇印表機設定】後, 按【Enter】鍵進入設定區:選定 Delete 選項。
+<p>
+<figure>
+<eps FILE="images/gs-print-1.ps">
+<img SRC="images/gs-print-1.jpg" WIDTH="665" HEIGHT="406">
+<caption>印表機精靈畫面</caption>
+</figure>
+ 
+<p>
+<p>【印表機】 -&gt; 【Delete】後, 選擇無用的印表機名稱，按【Enter】回主畫面完成刪除動作:
+<p>
+<figure>
+<eps FILE="images/gs-print-3-1.ps">
+<img SRC="http://mouse.oit.edu.tw/htdocs/BOOK/xlinux/images2/gs-print-3-1.jpg">
+<caption>【印表機】 -&gt; 【Delete】</caption>
+</figure>
+ 
+<p>
+<h3><b>網路設定</b></h3>
+
+<p>Genie的網路設定包函了有以下的設定功能:
+<ul>
+<li> 系統網路設定</li>
+<li> 數據機上網設定</li>
+</ul>
+<br>
+                                          
+請利用上下鍵選擇您想要設定的項目按[Enter]鍵進入設定畫面.
+<figure>
+<eps FILE="images/genie-network.eps">
+<img SRC="images/gs-network.jpg" WIDTH="815" HEIGHT="484">
+<caption>Genie網路設定開啟畫面</caption>
+</figure>
+<br>
+<p>
+<h3>系統網路設定</h3>
+
+<p>功能說明:
+<p>系統網路設定用來設定、管理主機的網路環境如(主機名稱、IP位址)、
+網路卡、路徑表及ipchains。以下將以一個簡單的例子說明本設定精靈的使用方式。
+<p>
+<figure>
+<eps FILE="images/gs-network.ps">
+<img SRC="images/gs-network.jpg" WIDTH="815" HEIGHT="484">
+<caption> Genie 網路設定主畫面</caption>
+</figure>
+<p>
+<p>
+<ol>
+<li>主機資訊<p>選擇【系統網路設定】後, 按【Enter】鍵進入設定區:選定 host選項。
+<p>
+<p>
+<figure>
+<eps FILE="images/gs-network-main.ps">
+<img SRC="images/gs-network-main.jpg" WIDTH="815" HEIGHT="484">
+<caption> 網路設定主畫面</caption>
+</figure>
+<p>【系統網路設定】 -&gt; 【host】按【Enter】進入設定區。
+主機資訊設定包括，網域名稱、主機名稱、名稱伺服器位址及名稱詢問順序。
+如網域名稱: wahoo.com.tw，主機名稱: genie，名稱伺服器位址192.168.0.1、
+名稱詢問順序先查/etc/hosts再向DNS詢問。
+<p>選定選項按【Enter】後輸入上述的規劃，在主機名稱僅輸入genie即可。
+<p>如果是修改，須先清除原來的字串。
+<p>
+<p>
+<figure>
+<eps FILE="images/gs-network-1.ps">
+<img SRC="images/gs-network-1.jpg" WIDTH="815" HEIGHT="484">
+<caption> 【系統網路設定】 -&gt; 【host】</caption>
+</figure>
+<p>完成後按【取消】離開。
+<p>
+</li>
+<li>網路卡<p>選擇【系統網路設定】後, 按【Enter】鍵進入設定區:選定 interface選項。
+<p>
+<p>
+<figure>
+<eps FILE="images/gs-network-main.ps">
+<img SRC="images/gs-network-main.jpg" WIDTH="815" HEIGHT="484">
+<caption> 網路設定主畫面</caption>
+</figure>
+<p>【系統網路設定】 -&gt; 【ineterface】按【Enter】進入設定區。
+<p>
+<figure>
+<eps FILE="images/gs-network-2.ps">
+<img SRC="images/gs-network-2.jpg" WIDTH="815" HEIGHT="484">
+<caption>【系統網路設定】 -&gt; 【ineterface】</caption>
+</figure>
+<p>網路卡資訊包含，裝置名稱、位址設定及開機是否啟動
+<dl>
+<dt><b>新增網路卡:</b><dd><p>【系統網路設定】 -&gt; 【ineterface】 -&gt; 【addif】按【Enter】進入
+如新增一乙太網路卡eth0，使用固定IP位址為192.168.0.99，netmask為255.255.255.0，
+並設定在開機時起動。
+<p>輸入裝置名稱，後進入設定畫面。
+選擇【ipaddr】輸入192.168.0.99
+<p>選擇【netmask】輸入255.255.255.0，設定精靈會自動計算network ip及broadcast ip。
+<p>選擇【onboot】選擇yes。
+<p>
+<p>
+<figure>
+<eps FILE="images/gs-network-2.1.ps">
+<img SRC="images/gs-network-2.1.jpg" WIDTH="815" HEIGHT="484">
+<caption>【系統網路設定】 -&gt; 【ineterface】 -&gt; 【addif】</caption>
+</figure>
+<p>離開時精靈會詢問是否立即啟動設定，
+只要回答yes之後即可立即起動無須重開機
+<p>
+<p>
+<dt><b>修改網路卡設定:</b><dd><p>【系統網路設定】 -&gt; 【ineterface】 -&gt; 【modifyif】按【Enter】進入
+<p>
+<figure>
+<eps FILE="images/gs-network-2.2.1.ps">
+<img SRC="images/gs-network-2.2.1.jpg" WIDTH="815" HEIGHT="484">
+<caption> 選擇網路裝置</caption>
+</figure>
+<p>選擇欲修改的網路裝置，後如同【新增網路卡】步驟
+<p>
+<p>
+<dt><b>刪除網路卡設定:</b><dd><p>【系統網路設定】 -&gt; 【ineterface】 -&gt; 【removeif】按【Enter】進入
+選擇欲刪除網路卡設定。
+<p>
+<figure>
+<eps FILE="images/gs-network-2.2.1.ps">
+<img SRC="images/gs-network-2.2.1.jpg" WIDTH="815" HEIGHT="484">
+<caption>選擇網路裝置</caption>
+</figure>
+<p>再確認是否真要刪除，
+<p>
+<figure>
+<eps FILE="images/gs-network-2.3.1.ps">
+<img SRC="http://mouse.oit.edu.tw/htdocs/BOOK/xlinux/images/gs-network-2.3.1.jpg">
+<caption>刪除確認</caption>
+</figure>
+<p>若回答yes，則該網路設定將會被刪除。
+</dl>
+<p>
+</li>
+<li>路徑表<p>選擇【系統網路設定】後, 按【Enter】鍵進入設定區:選定 router選項。
+<p>
+<p>
+<figure>
+<eps FILE="images/gs-network-main.ps">
+<img SRC="images/gs-network-main.jpg" WIDTH="815" HEIGHT="484">
+<caption> 網路設定主畫面</caption>
+</figure>
+<p>【系統網路設定】 -&gt; 【router】按【Enter】進入設定區。
+<p>
+<figure>
+<eps FILE="images/gs-network-3.ps">
+<img SRC="images/gs-network-3.jpg" WIDTH="815" HEIGHT="484">
+<caption>【系統網路設定】 -&gt; 【router】</caption>
+</figure>
+<p>如預設路徑為192.168.0.254，
+往主機192.168.2.1路徑為192.168.0.253，
+往網域10.0.0.0/255.0.0.0的路徑為192.168.0.252
+<dl>
+<dt><b>預設路徑:</b><dd><p>【系統網路設定】 -&gt; 【router】-&gt;【default】按【Enter】
+<p>
+<figure>
+<eps FILE="images/gs-network-3.1.ps">
+<img SRC="images/gs-network-3.1.jpg" WIDTH="815" HEIGHT="484">
+<caption>【系統網路設定】 -&gt; 【router】-&gt;【default】</caption>
+</figure>
+<p>選擇gateway輸入192.168.0.254
+<p>選擇device選擇eth0
+<p>
+<dt><b>特定主機路徑:</b><dd><p>【系統網路設定】 -&gt; 【router】-&gt;【host】按【Enter】
+<p>
+<figure>
+<eps FILE="images/gs-network-3.2.ps">
+<img SRC="images/gs-network-3.2.jpg" WIDTH="815" HEIGHT="484">
+<caption>【系統網路設定】 -&gt; 【router】-&gt;【host】</caption>
+</figure>
+<p>選擇host輸入192.168.2.1
+<p>選擇gateway輸入192.168.0.253
+<p>選擇device選擇eth0
+<p>
+<dt><b>特定網域路徑:</b><dd><p>【系統網路設定】 -&gt; 【router】-&gt;【net】按【Enter】
+<p>
+<figure>
+<eps FILE="images/gs-network-3.3.ps">
+<img SRC="images/gs-network-3.3.jpg" WIDTH="815" HEIGHT="484">
+<caption>【系統網路設定】 -&gt; 【router】-&gt;【net】</caption>
+</figure>
+<p>選擇net輸入10.0.0.0
+<p>選擇netmask輸入255.0.0.0
+選擇gateway輸入192.168.0.252
+<p>選擇device選擇eth0
+<p>
+</dl>
+<p>
+</li>
+<li>ipchains<p>選擇【系統網路設定】後, 按【Enter】鍵進入設定區:選定 ipchains選項。
+<p>
+<p>
+<figure>
+<eps FILE="images/gs-network-main.ps">
+<img SRC="images/gs-network-main.jpg" WIDTH="815" HEIGHT="484">
+<caption> 網路設定主畫面</caption>
+</figure>
+<p>這是用在有兩個以上的網路介面，
+透過ipchains來做IP-Masquerade(NAT)及anti-spoofing。
+如eth1為192.168.0.0/255.255.255.0，eth0為public ip，
+【系統網路設定】 -&gt; 【ipchains】按【Enter】
+<p>
+<figure>
+<eps FILE="images/gs-network-main.ps">
+<img SRC="images/gs-network-main.jpg" WIDTH="815" HEIGHT="484">
+<caption>【系統網路設定】 -&gt; 【ipchains】</caption>
+</figure>
+<p>選擇publicdevice，輸入eth0
+<p>選擇privatenet，輸入192.168.0.0
+<p>選擇netmask，輸入255.255.255.0
+<p>
+</li>
+</ol>
+<p>
+<h3>數據機上網設定</h3>
+
+<p>功能說明:
+數據機上網設定精靈，可讓你設定 Modem 透過 ISP 方便你撥接上 Internet ，
+你可設定多組設定檔分別連接上不同的 ISP 公司，除了可以新增各個不同的設定檔，
+也可刪除不合時宜的設定，或是執行撥接程式連上 ISP ，以及中斷連線。
+這裏將以 HiNet 為例，詳加說明如何使用本設定精靈。
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-modem.jpg" WIDTH="975" HEIGHT="604">
+<caption> Geine 數據機精靈主畫面</caption>
+</figure>
+   
+<p>
+<ol>
+<li>如何新增 HiNet 連接設定
+
+
+<p>【選擇數據機設定】後, 按【Enter】鍵進入設定區:請選定 setup 。
+<p>
+<figure>
+<eps FILE="images/gn-modem-main.ps">
+<img SRC="images/gn-modem-main.jpg" WIDTH="975" HEIGHT="604">
+<caption>數據機精靈主畫面</caption>
+</figure>
+      
+<p>
+<p>
+<p>【選擇數據機設定】 -&gt; 【setup】按【Enter】鍵進入設定區:請選定 Next 。
+<p>
+<figure>
+<eps FILE="images/gn-modem-1.ps">
+<img SRC="images/gn-modem-1.jpg" WIDTH="975" HEIGHT="604">
+<caption>【數據機】 -&gt; 【setup】</caption>
+</figure>
+<p>
+<p>
+<p>【Setup】 -&gt; 【Next】按【Enter】鍵進入設定區:請輸入連線設定檔名稱如 hinet 
+(請小心不可輸入空白鍵)
+<p>
+<figure>
+<eps FILE="images/gn-modem-1-1.ps">
+<img SRC="images/gn-modem-1-1.jpg" WIDTH="975" HEIGHT="604">
+<caption>【setup】 -&gt; 【next】</caption>
+</figure>
+            
+<p>
+<p>【Next】 -&gt; 【Hinet】按【Enter】鍵進入設定區:請選定 PAP 。
+PAP 是 Windows 95 所使用的驗證方式，台灣現在各 ISP 均支援此種認證方式，我們就以此為範例。
+<p>
+<figure>
+<eps FILE="images/gn-modem-1-2.ps">
+<img SRC="images/gn-modem-1-2.jpg" WIDTH="975" HEIGHT="604">
+<caption>【next】 -&gt; 【hinet】</caption>
+</figure>
+ 
+<p>
+<p>
+<p>【Hinet】 -&gt; 【PAP】按【Enter】鍵進入設定區:請清除原字串並輸入 ISP 所給定的密碼。
+<p>
+<figure>
+<eps FILE="images/gn-modem-1-3.ps">
+<img SRC="images/gn-modem-1-3.jpg" WIDTH="975" HEIGHT="604">
+<caption>【hinet】 -&gt; 【pap】</caption>
+</figure>
+ 
+<p>
+<p>
+<p>【PAP】 -&gt; 【password】按【Enter】鍵進入設定區:
+<p>
+<figure>
+<eps FILE="images/gn-modem-1-4.ps">
+<img SRC="images/gn-modem-1-4.jpg" WIDTH="975" HEIGHT="604">
+<caption>【pap】 -&gt; 【password】</caption>
+</figure>
+ 
+<p>
+<p>【password】 -&gt; 【message】按【Enter】鍵進入設定區:請清除原字串並輸入你在 ISP 所登記的使用者名稱。(注意請勿包函任何空白鍵)
+<p>
+<figure>
+<eps FILE="images/gn-modem-1-5.ps">
+<img SRC="images/gn-modem-1-5.jpg" WIDTH="975" HEIGHT="604">
+<caption>【password】 -&gt; 【message】</caption>
+</figure>
+ 
+<p>
+<p>【message】 -&gt; 【user ID】按【Enter】鍵進入設定區:輸入數據機的連接埠所在。此處輸入 /dev/ttyS1。
+<p>
+<figure>
+<eps FILE="images/gn-modem-1-6.ps">
+<img SRC="images/gn-modem-1-6.jpg" WIDTH="975" HEIGHT="604">
+<caption>【message】 -&gt; 【user ID】</caption>
+</figure>
+<p>
+<p>
+<p>【user ID】 -&gt; 【port】按【Enter】鍵進入設定區:指定 defaultroute 並用空白鍵 mark 該區。
+啟動預設的 routing table 方便 getway 指向 ISP 。
+<p>
+<figure>
+<eps FILE="images/gn-modem-1-7.ps">
+<img SRC="images/gn-modem-1-7.jpg" WIDTH="975" HEIGHT="604">
+<caption>【user ID】 -&gt; 【port】</caption>
+</figure>
+ 
+<p>
+<p>【port】 -&gt; 【defaultroute】按【Enter】鍵進入設定區:設定你的 IP ， 
+Hinet 並不會給每個使用者一個固定的 IP ，請清除原字串後按【Enter】鍵進入下一個設定。
+此舉表示由 ISP 動態給定 IP 。
+<p>
+<figure>
+<eps FILE="images/gn-modem-1-8.ps">
+<img SRC="images/gn-modem-1-8.jpg" WIDTH="975" HEIGHT="604">
+<caption>【port】 -&gt; 【defaultroute】</caption>
+</figure>
+  
+<p>
+<p>
+<p>【defaultroute】 -&gt; 【noipdefault】按【Enter】鍵進入設定區: 
+設定你數據機上網速率。建議值為 115200 。
+<p>
+<figure>
+<eps FILE="images/gn-modem-1-9.ps">
+<img SRC="images/gn-modem-1-9.jpg" WIDTH="975" HEIGHT="604">
+<caption>【defaultroute】 -&gt; 【noipdefault】</caption>
+</figure>
+ 
+<p>
+<p>
+<p>
+<p>【noipdefault】 -&gt; 【set speed】按【Enter】鍵進入設定區:數據機初始值設定，
+這須要查看一下你所購買 modem 所附的 AT 指令集，或是將使用手冊中所寫的最佳設定值填入。
+如果你沒有把握就請保留原設定值 ATZ 。
+<p>
+<figure>
+<eps FILE="images/gn-modem-1-10.ps">
+<img SRC="images/gn-modem-1-10.jpg" WIDTH="975" HEIGHT="604">
+<caption>【noipdefault】 -&gt; 【set speed】</caption>
+</figure>
+ 
+<p>
+<p>【set speed】 -&gt; 【initalization】按【Enter】鍵進入設定區:輸入電話號碼，以 HiNet 為例，
+請輸入 4125678 。
+<p>
+<figure>
+<eps FILE="images/gn-modem-1-11.ps">
+<img SRC="images/gn-modem-1-11.jpg" WIDTH="975" HEIGHT="604">
+<caption>【set speed】 -&gt; 【initalization】</caption>
+</figure>
+ 
+<p>
+<p>
+<p>【initalization】 -&gt; 【Number to dial】按【Enter】鍵進入設定區:
+設定你所使用的電話系統是屬於按鍵式或是撥盤式的，台灣現已全面改成了按鍵式的電話系統了，
+所以請將游標移至 ATDT 並按下空白鍵將 ATDT mark 起來，按【Enter】鍵進入下一個設定。
+<p>
+<figure>
+<eps FILE="images/gn-modem-1-12.ps">
+<img SRC="images/gn-modem-1-12.jpg" WIDTH="975" HEIGHT="604">
+<caption>【initalization】 -&gt; 【Number to dial】</caption>
+</figure>
+ 
+<p>
+<p>
+<p>
+<p>【Number to dial】 -&gt; 【ATDT】按【Enter】鍵進入設定區:
+<p>
+<figure>
+<eps FILE="images/gn-modem-1-13.ps">
+<img SRC="images/gn-modem-1-13.jpg" WIDTH="975" HEIGHT="604">
+<caption>【Number to dial】 -&gt; 【ATDT】</caption>
+</figure>
+  
+<p>
+<p>
+<p>
+<p>
+<p>【ATDT】 -&gt; 【properties】按【Enter】鍵進入設定區:在此你可預覽或更改先前的設定，
+如一切正確就選取 Finished 將設定寫回完成設定。也可選取 Quit 離開並放棄寫回設定檔。
+在此我們以 Finished 為例將設定檔寫回完成設定。
+<p>
+<figure>
+<eps FILE="images/gn-modem-1-14.ps">
+<img SRC="images/gn-modem-1-14.jpg" WIDTH="975" HEIGHT="604">
+<caption>【ATDT】 -&gt; 【properties】</caption>
+</figure>
+ 
+<p>
+<p>
+<p>
+<p>
+<p>【properties】 -&gt; 【Finished】按【Enter】鍵進入設定區:
+<p>
+<figure>
+<eps FILE="images/gn-modem-1-15.ps">
+<img SRC="images/gn-modem-1-15.jpg" WIDTH="975" HEIGHT="604">
+<caption>【properties】 -&gt; 【Finished】</caption>
+</figure>
+ 
+<p>
+<p>
+<p>【Finished】 -&gt; 【message】按【Enter】鍵進入設定區: 回到了主畫面如您還需設定另一個連線設定，
+請選 Next ，在此我們選擇 Quit 離開設定工具。
+<p>
+<figure>
+<eps FILE="images/gn-modem-1-16.ps">
+<img SRC="images/gn-modem-1-16.jpg" WIDTH="975" HEIGHT="604">
+<caption>【Finished】 -&gt; 【message】</caption>
+</figure>
+  
+<p>
+<p>
+</li>
+<li> 如何利用 Hinet 設定檔撥接上網
+
+
+<p>【選擇數據機設定】後, 按【Enter】鍵進入設定區:請選定 dialup 。
+<p>
+<figure>
+<eps FILE="images/gn-modem-main.ps">
+<img SRC="images/gn-modem-main.jpg" WIDTH="975" HEIGHT="604">
+<caption>數據機精靈主畫面</caption>
+</figure>
+  
+<p>
+<p>【數據機精靈主畫面】 -&gt; 【dialup】後按【Enter】鍵進入設定區:請選擇你想撥接的撥號設定檔，
+此我們選擇 Hinet 按【Enter】鍵後完成撥號動作。
+此時你將會聽到 modem 的撥號聲，請稍待片刻待 modem 與 ISP 完成連線動作後也就完成上網的整個動作‧
+如果還是有錯，請回到設定選項調整設定，或是詢問 ISP 及 modem 製造商詢問一些網路設定細節。
+<p>
+<figure>
+<eps FILE="images/gn-modem-3.ps">
+<img SRC="images/gn-modem-3.jpg" WIDTH="975" HEIGHT="604">
+<caption>【數據機精靈主畫面】 -&gt; 【dialup】</caption>
+</figure>
+ 
+<p>
+<p>
+<p>
+</li>
+<li>切斷連線
+
+<p>【選擇數據機設定】後, 按【Enter】鍵進入設定區:請選定 hangup 。
+當你能正確撥接上網後，你下一個要學會的動作就是如何切斷連線方法如上所示，
+完成後將對 modem 下達斷線指令。
+<p>
+<figure>
+<eps FILE="images/gn-modem-main.ps">
+<img SRC="images/gn-modem-main.jpg" WIDTH="975" HEIGHT="604">
+<caption>數據機精靈主畫面</caption>
+</figure>
+ 
+<p>
+<p>
+<p>
+</li>
+<li> 如何刪除 Hinet 連線設定檔
+
+<p>【選擇數據機設定】後, 按【Enter】鍵進入設定區:請選定 del_setup 。
+<p>
+<figure>
+<eps FILE="images/gn-modem-main.ps">
+<img SRC="images/gn-modem-main.jpg" WIDTH="975" HEIGHT="604">
+<caption>數據機精靈主畫面</caption>
+</figure>
+      
+<p>
+<p>【數據機精靈主畫面】 -&gt; 【del_setup】後按【Enter】鍵進入設定區:請選擇你想刪除的撥號設定檔，
+此我們選擇 Hinet 按【Enter】鍵後刪除完成。
+<p>
+<figure>
+<eps FILE="images/gn-modem-2.ps">
+<img SRC="images/gn-modem-2.jpg" WIDTH="975" HEIGHT="604">
+<caption>【數據機精靈主畫面】 -&gt; 【del_setup】</caption>
+</figure>
+ 
+</li>
+</ol>
+<p>
+<h3><b>系統設定</b></h3>
+
+<p>Genie的系統設定包函了有以下的設定功能:
+<ul>
+<li>系統備份?/LI&gt;
+<li>核心模組載入程式</li>
+<li>動態載入物件設定</li>
+<li>PAM 設定</li>
+<li>系統時間與時區設定</li>
+<li>User/Group/Quota 設定</li>
+<li>使用者預設登入環境設定</li>
+<li>例行性事務設定</li>
+<li>環境變數設定工具</li>
+<li>系統服務啟用工具</li>
+</ul>
+
+請利用上下鍵選擇您想要設定的項目按[Enter]鍵進入設定畫面.
+<figure>
+<eps FILE="images/genie-system.eps">
+<img SRC="images/Genie-system-main.jpg" WIDTH="975" HEIGHT="604">
+<caption>系統設定開啟畫面</caption>
+</figure>
+<p>
+<h3>系統備份</h3>
+
+<p>功能說明:
+<p>系統備份設定可以輕易地設定備份裝置、備份來源、備份週期等。
+以下將以每週定期的備份/var/log下的檔案至SCSI的磁帶為例。
+<p>
+<figure>
+<eps FILE="images/gs-backup.ps">
+<img SRC="images/gs-backup.jpg" WIDTH="815" HEIGHT="484">
+<caption>Genie系統備份畫面</caption>
+</figure>
+<p>
+<p>
+<h3>基本設定</h3>
+
+<p>選擇【系統備份】後, 按【Enter】鍵進入設定區:請選定【Basic Configure】
+<p>
+<figure>
+<eps FILE="images/gs-backup-main.ps">
+<img SRC="images/gs-backup-main.jpg" WIDTH="975" HEIGHT="604">
+<caption>系統備份主畫面</caption>
+</figure>
+<p>選擇【系統備份】-&gt;【Basic Configure】按【Enter】鍵進入設定區。
+<p>基本設定包括備份裝置可選擇的有SCSI/IDE磁碟機，管理者。
+<p>
+<figure>
+<eps FILE="images/gs-backup-1.ps">
+<img SRC="images/gs-backup-1.jpg" WIDTH="815" HEIGHT="449">
+<caption>【系統備份】-&gt;【Basic Configure】</caption>
+</figure>
+<p>選擇【Backup device】-&gt;【/dev/nts0】
+<p>Basic Configure之後按Done離開
+<p>
+<h3>備份來源</h3>
+
+<p>選擇【系統備份】後, 按【Enter】鍵進入設定區:請選定【Backup Source】
+<p>
+<figure>
+<eps FILE="images/gs-backup.ps">
+<img SRC="images/gs-backup-main.jpg" WIDTH="975" HEIGHT="604">
+<caption>系統備份主畫面</caption>
+</figure>
+<p>選擇【系統備份】-&gt;【Backup Source】按【Enter】鍵進入設定區。
+<p>
+<p>
+<figure>
+<eps FILE="images/gs-backup-2.ps">
+<img SRC="images/gs-backup-2.jpg" WIDTH="815" HEIGHT="484">
+<caption>系統備份】-&gt;【Backup Source】</caption>
+</figure>
+<p>選擇【add】按【Enter】進入設定區
+<p>
+<figure>
+<eps FILE="images/gs-backup-2.1.ps">
+<img SRC="images/gs-backup-2.1.jpg" WIDTH="815" HEIGHT="484">
+<caption>系統備份主畫面</caption>
+</figure>
+<p>選擇hostname，輸入localhost
+<p>選擇directory，輸入/var/log
+<p>選擇Done，按【Enter】離開。
+<p>
+<h3>備份週期</h3>
+
+<p>選擇【系統備份】後, 按【Enter】鍵進入設定區:請選定【Backup Interval】
+<p>
+<figure>
+<eps FILE="images/gs-backup.ps">
+<img SRC="images/gs-backup-main.jpg" WIDTH="975" HEIGHT="604">
+<caption>系統備份主畫面</caption>
+</figure>
+<p>
+<p>選擇【系統備份】-&gt;【Backup Interval】按【Enter】鍵進入設定區。
+<p>
+<p>
+<figure>
+<eps FILE="images/gs-backup-3.ps">
+<img SRC="images/gs-backup-3.jpg" WIDTH="815" HEIGHT="484">
+<caption>【系統備份】-&gt;【Backup Interval】</caption>
+</figure>
+<p>選擇weekly、精靈會自動的將backup排入cron.weekly中
+<p>
+<h3>檢視備份記錄</h3>
+
+<p>選擇【系統備份】後, 按【Enter】鍵進入設定區:請選定【View Log】
+<p>
+<figure>
+<eps FILE="images/gs-backup.ps">
+<img SRC="images/gs-backup-main.jpg" WIDTH="975" HEIGHT="604">
+<caption>系統備份主畫面</caption>
+</figure>
+<p>選擇【系統備份】-&gt;【View Log】按【Enter】鍵進入設定區。
+<p>
+<p>選擇在檢視的備份記綠。
+<p>
+<h3>完成</h3>
+
+<p>在設定完成為後不要忘了按Done離開，不然設定將不會生效。
+<p>
+<h3>動態載入物件設定精靈</h3>
+
+<p>功能說明:
+<p>動態載入物件設定精靈可讓您設定動態載入物件的目錄。
+<p>
+<figure>
+<eps FILE="images/gs-ld.ps">
+<img SRC="images/Genie-ld-main.jpg" WIDTH="975" HEIGHT="604">
+<caption> Geine 動態載入物件設定精靈主畫面</caption>
+</figure>
+<p>
+<h3>如何新增動態載入物件</h3>
+
+<p>【選擇動態載入物件設定】後按【Enter】鍵，會先顯示您機器目前已載入之物件。
+<p>
+<figure>
+<eps FILE="images/gs-ld-main.ps">
+<img SRC="images/gn-ld-main.jpg" WIDTH="964" HEIGHT="580">
+<caption>顯示您機器目前已載入之物件畫面</caption>
+</figure>
+<p>
+<p>之後【選擇確定】按【Enter】鍵，進入設定區：請選擇 ADD 。
+<p>
+<figure>
+<eps FILE="images/gs-ld-main.ps">
+<img SRC="images/gn-ld-01.jpg" WIDTH="964" HEIGHT="580">
+<caption>新增、刪除動態載入物件主畫面</caption>
+</figure>
+<p>
+<p>【選擇 ADD 】後按【Enter】鍵，進入設定區：請輸入欲載入之物件路徑。
+<p>以 /usr/lib 為例，在輸入欄位輸入-&gt; /usr/lib 。
+<p>
+<figure>
+<eps FILE="images/gs-ld-main.ps">
+<img SRC="images/gn-ld-02.jpg" WIDTH="964" HEIGHT="580">
+<caption>新增新增動態載入物件輸入畫面</caption>
+</figure>
+<p>
+<p>在輸後【選擇確定】按【Enter】鍵，將再次顯示您機器目前已載入之物件，讓您確認剛才所設定是否正確。
+<p>
+<p>
+<p>【選擇確定】後按【Enter】鍵，鍵則完成新增工作，並回到動態載入物件新增、刪除主畫面，您可選擇離開或是繼續其它新增、刪除工作。
+<p>
+<figure>
+<eps FILE="images/gs-ld-main.ps">
+<img SRC="images/gn-ld-main.jpg" WIDTH="964" HEIGHT="580">
+<caption>回到新增、刪除動態載入物件主畫面</caption>
+</figure>
+<p>
+<h3>如何取消動態載入之物件</h3>
+
+<p>【選擇動態載入物件設定】後按【Enter】鍵，會先顯示您機器目前已載入之物件。
+<p>
+<figure>
+<eps FILE="images/gs-ld-main.ps">
+<img SRC="images/gn-ld-main.jpg" WIDTH="964" HEIGHT="580">
+<caption>顯示您機器目前已載入之物件畫面</caption>
+</figure>
+<p>
+<p>之後【選擇確定】按【Enter】鍵，進入設定區：請選擇 DEL 。
+<p>
+<figure>
+<eps FILE="images/gs-ld-main.ps">
+<img SRC="images/gn-ld-01.jpg" WIDTH="964" HEIGHT="580">
+<caption>新增、刪除動態載入物件主畫面</caption>
+</figure>
+<p>
+<p>【選擇 DEL 】後按【Enter】鍵，進入設定區：請移動選擇上下游標選擇欲刪除之工作項目。
+<p>以 /usr/lib 為例，在輸入欄位輸入-&gt; /usr/lib 。
+<figure>
+<eps FILE="images/gs-ld-main.ps">
+<img SRC="images/gn-ld-03.jpg" WIDTH="964" HEIGHT="580">
+<caption>刪除動態載入物件畫面</caption>
+</figure>
+<p>
+<p>於選定後【選擇確定】按【Enter】鍵，將再次顯示您機器目前已載入之物件，讓您確認剛才所刪除是否正確。
+<p>
+<figure>
+<eps FILE="images/gs-ld-main.ps">
+<img SRC="images/gn-ld-main.jpg" WIDTH="964" HEIGHT="580">
+<caption>顯示您機器目前已載入之物件畫面</caption>
+</figure>
+<p>
+<p>【選擇確定】後按【Enter】鍵，鍵則完成刪除工作，並回到動態載入物件新增、刪除主畫面，您可選擇離開或是繼續其它新增、刪除工作。
+<p>
+<figure>
+<eps FILE="images/gs-ld-main.ps">
+<img SRC="images/gn-ld-04.jpg" WIDTH="964" HEIGHT="580">
+<caption>確認畫面</caption>
+</figure>
+<p>
+<h3>PAM設定</h3>
+
+<p>功能說明:
+PAM設定可以設定管制使用者連線的來源，可以上線的時間，consol端使用者的特權。
+以及Root登入的的限制。
+<p>
+<figure>
+<eps FILE="images/gs-pam.ps">
+<img SRC="images/Genie-pam-main.jpg" WIDTH="975" HEIGHT="604">
+<caption> Geine PAM設定主畫面</caption>
+</figure>
+<p>
+<p>
+<h3>登入管制</h3>
+
+<p>選擇【PAM設定】後，按【Enter】鍵進入設定區:請選定login
+<p>
+<figure>
+<eps FILE="images/gs-pam-main.ps">
+<img SRC="images/system-pam.jpg" WIDTH="964" HEIGHT="580">
+<caption>PAM設定主畫面</caption>
+</figure>
+<p>選擇【PAM設定】-&gt; 【login】按【Enter】鍵進入設定區
+<p>
+<figure>
+<eps FILE="images/gs-pam-1.ps">
+<img SRC="images/system-pam-1.jpg" WIDTH="975" HEIGHT="580">
+<caption>【PAM設定】-&gt;【login】</caption>
+</figure>
+<p>如限定使用者guest只能在每週一至週五上午8:00至下午5:00從local的網域login。
+選擇【PAM設定】-&gt;【login】-&gt;【add】
+<p>
+<figure>
+<eps FILE="images/gs-pam-1.1.ps">
+<img SRC="images/system-pam-1-1.jpg" WIDTH="964" HEIGHT="580">
+<caption>【PAM設定】-&gt;【login】-&gt;【add】</caption>
+</figure>
+<p>選擇user，輸入guest
+<p>選擇deny，輸入ALL
+<p>選擇allow，輸入LOCAL
+<p>選擇date，選擇Mo Tu We Th Fr
+<p>選擇time，輸入0800-1700
+<p>選擇save，Enter後離開。
+<p>
+<h3>console使用者特權</h3>
+
+<p>選擇【PAM設定】後，按【Enter】鍵進入設定區:請選定console
+<p>
+<figure>
+<eps FILE="images/gs-pam-main.ps">
+<img SRC="images/system-pam.jpg" WIDTH="964" HEIGHT="580">
+<caption>PAM設定主畫面</caption>
+</figure>
+<p>
+<p>選擇【PAM設定】-&gt; 【console】按【Enter】鍵進入設定區
+<p>
+<figure>
+<eps FILE="images/gs-pam-2.ps">
+<img SRC="images/system-pam-2.jpg" WIDTH="964" HEIGHT="580">
+<caption>【PAM設定】-&gt; 【console】</caption>
+</figure>
+<p>選擇由console登入的使用者可以執行的特別指令。
+之後按【Enter】鍵離開。
+<p>
+<h3>root登入限制</h3>
+
+<p>選擇【PAM設定】後，按【Enter】鍵進入設定區:請選定securetty
+<p>
+<figure>
+<eps FILE="images/gs-pam-main.ps">
+<img SRC="images/system-pam.jpg" WIDTH="964" HEIGHT="580">
+<caption>PAM設定主畫面</caption>
+</figure>
+<p>選擇【PAM設定】-&gt; 【securetty】按【Enter】鍵進入設定區
+<p>
+<figure>
+<eps FILE="images/gs-pam-3.ps">
+<img SRC="images/system-pam-3.jpg" WIDTH="964" HEIGHT="580">
+<caption>【PAM設定】-&gt; 【securetty】</caption>
+</figure>
+<p>選擇允許root login的tty，通常只從允許本端的console，
+選擇tty1 tty2 tty3 tty4 tty5 tty6，
+之後按【Enter】鍵離開。
+<p>
+<h3>系統時間與時區設定</h3>
+
+<p>功能說明:
+<p>Date/Time 設定工具幫您輕易設定系統日期時間，以及你所在的時區。
+這裏將以台灣為例，詳加說明如何使用本設定精靈。
+<p>
+<figure>
+<eps FILE="images/gs-time.ps">
+<img SRC="images/Genie-timezone-main.jpg" WIDTH="975" HEIGHT="604">
+<caption> Geine 系統時間與時區主畫面</caption>
+</figure>
+   
+<p>
+<p>
+<h3>如何修改日期設定</h3>
+
+<p>【選擇系統時間與時區設定】後, 按【Enter】鍵進入設定區:請選定 ldate 。
+<p>
+<figure>
+<eps FILE="images/gs-time-main.ps">
+<img SRC="images/system-timezone.jpg" WIDTH="975" HEIGHT="580">
+<caption>系統時間與時區主畫面</caption>
+</figure>
+      
+<p>
+<p>
+<p>【選擇系統時間與時區設定】 -&gt; 【ldate】按【Enter】鍵進入設定區:請清除原字串並輸入月/日/年。
+以1999年12月16日為例，請輸入12/16/1999。
+<p>
+<figure>
+<eps FILE="images/gs-time-1.ps">
+<img SRC="images/system-timezone-1.jpg" WIDTH="964" HEIGHT="580">
+<caption>【系統時間與時區】 -&gt; 【ldate】</caption>
+</figure>
+<p>
+<h3>如何修改系統時間</h3>
+
+<p>【選擇系統時間與時區設定】後, 按【Enter】鍵進入設定區:請選定 ltime 。
+<p>
+<figure>
+<eps FILE="images/gs-time-main.ps">
+<img SRC="images/system-timezone.jpg" WIDTH="975" HEIGHT="580">
+<caption>系統時間與時區主畫面</caption>
+</figure>
+<p>
+<p>【選擇系統時間與時區設定】 -&gt; 【ltime】按【Enter】鍵進入設定區:請清除原字串並輸入時:分:秒。
+以凌辰0時20分11秒為例，請輸入00:20:11。
+<p>
+<figure>
+<eps FILE="images/gs-time-2.ps">
+<img SRC="images/system-timezone-2.jpg" WIDTH="964" HEIGHT="580">
+<caption>【系統時間與時區】 -&gt; 【ltime】</caption>
+</figure>
+   
+<p>
+<h3>如何修改系統時區</h3>
+
+<p>【選擇系統時間與時區設定】後, 按【Enter】鍵進入設定區:請選定 zone 。
+<p>
+<figure>
+<eps FILE="images/gs-time-main.ps">
+<img SRC="images/system-timezone.jpg" WIDTH="975" HEIGHT="580">
+<caption>系統時間與時區主畫面</caption>
+</figure>
+<p>
+<p>【選擇系統時間與時區設定】 -&gt; 【zone】按【Enter】鍵進入設定區:
+以台灣為例，請以上下鍵移動游標，將游標移至 Asia (亞洲) 按【Enter】鍵進入下一個設定。
+<p>
+<figure>
+<eps FILE="images/gs-time-3.ps">
+<img SRC="images/system-timezone-3.jpg" WIDTH="964" HEIGHT="580">
+<caption>【系統時間與時區】 -&gt; 【zone】</caption>
+</figure>
+   
+<p>
+<p>
+<p>【zone】 -&gt; 【Asia】按【Enter】鍵進入設定區:
+請以上下鍵移動游標，將游標移至 Taipei (台北) 按【Enter】鍵完成時區設定。
+<p>
+<figure>
+<eps FILE="images/gs-time-3-1.ps">
+<img SRC="images/system-timezone-3-1.jpg" WIDTH="975" HEIGHT="604">
+<caption>【zone】 -&gt; 【Asia】</caption>
+</figure>
+   
+<p>
+<p>
+<h3>如何修改系統 locale 設定</h3>
+
+<p>什麼是 locale 呢? 由於每個地區都有各地所使用的時間如週 week ，貨幣單位如 NT US，
+等這些都與當地法令國別習慣相關，不可混用，於是乎需依當地來加以規範。
+以下將以台灣為例加以設定。
+<p>
+<p>【選擇系統時間與時區設定】後, 按【Enter】鍵進入設定區:請選定 locale 。
+<p>
+<figure>
+<eps FILE="images/gs-time-main.ps">
+<img SRC="images/system-timezone.jpg" WIDTH="975" HEIGHT="580">
+<caption>系統時間與時區主畫面</caption>
+</figure>
+<p>
+<p>【選擇系統時間與時區設定】 -&gt; 【locale】按【Enter】鍵進入設定區:
+以台灣為例，請以上下鍵移動游標，
+將游標移至 zh_TW.Big5 (台灣大五碼) 按【Enter】鍵完成 locale 設定。
+<p>
+<figure>
+<eps FILE="images/gs-time-4.ps">
+<img SRC="images/system-timezone-4.jpg" WIDTH="964" HEIGHT="580">
+<caption>【系統時間與時區】 -&gt; 【locale】</caption>
+</figure>
+   
+<p>
+<h3>User/Group/Quota 設定</h3>
+
+<p>功能說明:
+<p>User/Group/Quota 設定工具幫您輕易新增，修改，刪除，設定使用者帳號，群組，
+以及設定 Quota (使用者可使用的硬碟空間)等。
+這裏將舉例，詳加說明如何使用本設定精靈。
+<p>
+<figure>
+<eps FILE="images/gs-ugquota.ps">
+<img SRC="images/Genie-ugq-main.jpg" WIDTH="975" HEIGHT="604">
+<caption> Geine User/Group/Quota 主畫面</caption>
+</figure>
+   
+<p>
+<h3>如何新增刪除使用者群組</h3>
+
+<p>在 Unix 裏每個使用者都需要加入其中任一個群組，以學校為例子，
+學校有學生，老師，行政人員，校長，研究生等，你可以依其特性的不同，
+建立很多不同的群組，以下將以學生為例，建一個以學生為主的群組來說明。
+<p>
+<p>【User/Group/Quota 設定】後, 按【Enter】鍵進入設定區:請選定 groups 。
+<p>
+<figure>
+<eps FILE="images/gs-ugquota-main.ps">
+<img SRC="images/system-ugadmin-1.jpg" WIDTH="975" HEIGHT="580">
+<caption>User/Group/Quota 主畫面</caption>
+</figure>
+ 
+<p>
+<p>【User/Group/Quota 設定】 -&gt; 【groups】按【Enter】鍵進入設定區:
+這裏有三個選項，add (新增群組) ， modify (修改群組)，remove (移除群組)，
+這裏請選定 add 後按【Enter】鍵進入下一個設定區。
+<p>
+<figure>
+<eps FILE="images/gs-ugquota-2.ps">
+<img SRC="images/system-ugqadmin-2.jpg" WIDTH="964" HEIGHT="580">
+<caption>【User/Group/Quota 設定】 -&gt; 【groups】</caption>
+</figure>
+ 
+<p>
+<p>
+<p>【groups】 -&gt; 【add】按【Enter】鍵進入設定區:
+輸入 students 按【Enter】鍵完成設定，並回到群組設定主畫面。
+<p>
+<figure>
+<eps FILE="images/gs-ugquota-2-1.ps">
+<img SRC="images/system-ugqadmin-2-1.jpg" WIDTH="964" HEIGHT="580">
+<caption>【groups】 -&gt; 【add】</caption>
+</figure>
+ 
+<p>
+<p>如果想要刪除剛剛所新建的群組 students ，在群組設定主畫面下，
+選定【remove】後按【Enter】鍵進入刪除群組設定。
+<p>
+<figure>
+<eps FILE="images/gs-ugquota-2.ps">
+<img SRC="images/system-ugqadmin-2-1-1.jpg" WIDTH="975" HEIGHT="604">
+<caption>【User/Group/Quota 設定】 -&gt; 【groups】</caption>
+</figure>
+ 
+<p>
+<p>【groups】 -&gt; 【remove】按【Enter】鍵進入設定區:
+請用上下鍵來移動游標，將游標移至 students 並用空白鍵將 students 選項 mark 起來，
+此處可多選可將想刪除的選項一併標示出來，按【Enter】鍵完成刪除動作。
+如不想刪除請以【Tab】鍵移動游標至【取消】後按【Enter】鍵離開。
+<p>
+<figure>
+<eps FILE="images/gs-ugquota-2-3.ps">
+<img SRC="images/system-ugqadmin-2-1-2.jpg" WIDTH="975" HEIGHT="604">
+<caption>【groups】 -&gt; 【remove】</caption>
+</figure>
+ 
+<p>
+<p>
+<h3>如何新增新的使用者</h3>
+
+<p>【User/Group/Quota 設定】後, 按【Enter】鍵進入設定區:請選定【users】。
+<p>
+<figure>
+<eps FILE="images/gs-ugquota-main.ps">
+<img SRC="images/system-ugadmin-1.jpg" WIDTH="975" HEIGHT="580">
+<caption>User/Group/Quota 主畫面</caption>
+</figure>
+      
+<p>
+<p>
+<p>【User/Group/Quota 設定】 -&gt; 【users】按【Enter】鍵進入設定區:
+這裏有三個選項，add (新增使用者) ， modify (修改使用者)，remove (移除使用者帳號)，
+這裏請選定 add 後按【Enter】鍵進入下一個設定區。 
+<p>
+<figure>
+<eps FILE="images/gs-ugquota-1.ps">
+<img SRC="images/system-ugqadmin-1.jpg" WIDTH="964" HEIGHT="580">
+<caption>【User/Group/Quota 設定】 -&gt; 【users】</caption>
+</figure>
+<p>
+<p>【users】 -&gt; 【add】按【Enter】鍵進入設定區:
+這裏有六個選項，
+id ( 使用者名稱，不可輸入中文 ) 這裡以 test 為例，
+home ( 使用者帳號目錄位置 ) ，
+shell ( 設定該使用者所使用的 shell )，
+group ( 使用者群組 ) 這個選項可以多選，建議選擇 users 這個群組，
+這裡我們以剛剛所建的 students為例。
+fullname ( 使用者全名 ) 這可輸入額外的資訊如人名電話等，很抱歉目前中文還不可以使用，
+故請勿輸入中文。 
+填好各項資訊後，請選定 save 按【Enter】鍵，設定 test 的密碼後完成整個設定。
+<p>                                           
+<figure>
+<eps FILE="images/gs-ugquota-1-1.ps">
+<img SRC="images/system-ugqadmin-1-1.jpg" WIDTH="964" HEIGHT="580">
+<caption>【users】 -&gt; 【add】</caption>
+</figure>
+<p>
+<h3>如何設定使用者硬碟使用空間？</h3>
+
+<p>在使用上同一台機器上也許你會有好幾百個使用者共用同一台機器，
+這時候如何管理並限制每個使用者固定的硬碟空間就成為一嚴肅的話題，
+如果每個使用者的硬碟空間不加以設定的話，將會造成硬碟空間的爆滿，
+很有可能會導至基本系統運作能力的喪失。以下將介紹如何限制使用者硬碟空間。
+<p>
+<p>【User/Group/Quota 設定】後, 按【Enter】鍵進入設定區:請選定 quota 。
+<p>
+<figure>
+<eps FILE="images/gs-ugquota-main.ps">
+<img SRC="images/system-ugadmin-1.jpg" WIDTH="975" HEIGHT="580">
+<caption>User/Group/Quota 主畫面</caption>
+</figure>
+ 
+<p>
+<p>【User/Group/Quota 設定】 -&gt; 【quota】按【Enter】鍵進入 Quota 設定主畫面:
+這裏有六個選項分別如下:
+<ul>
+<li>setup &lt;---- 設定那些硬碟分割區有 quota 限制。</li>
+<li>check &lt;---- 建立 quota 資訊。</li>
+<li>enable &lt;---- 啟動 quota。</li>
+<li>disable &lt;---- 停止 quota。</li>
+<li>report &lt;---- 察看使用者 quota 設定。</li>
+<li>edit &lt;---- 修改設定 users quota 值。</li>
+</ul>
+<p>
+<p>這裏請選定 setup 後按【Enter】鍵進入下一個設定區。
+<p>
+<figure>
+<eps FILE="images/gs-ugquota-3.ps">
+<img SRC="images/system-ugqadmin-3.jpg" WIDTH="964" HEIGHT="580">
+<caption>【User/Group/Quota 設定】 -&gt; 【quota】</caption>
+</figure>
+ 
+<p>
+<p>
+<p>【quota】 -&gt; 【setup】按【Enter】鍵進入設定區:
+<p>還記的先前你在安裝過程中所切割的硬碟分割區嗎 ? 硬碟限制是以硬碟分割區為範圍，
+也就是如果你是將 /dev/hda4 畫分給 /home 使用，則你在此所需要作的動作就是，
+設定 /dev/hda4 使用 quota。請使用上下鍵移動游標至 /dev/hda4 後按下空白鍵將 /dev/hda4 標示起來，
+按【Enter】鍵後回到 Quota 主畫面。
+<p>
+<figure>
+<eps FILE="images/gs-ugquota-3-1.ps">
+<img SRC="images/system-ugqadmin-3-1.jpg" WIDTH="964" HEIGHT="580">
+<caption>【quota】-&gt;【setup】</caption>
+</figure>
+ 
+<p>
+<p>回到 Quota 主畫面後，你已經指定了某個硬碟分割區使用 quota ，下一步就是建立 quota 資訊庫。
+這一步會花點時間，要看你選擇的硬碟空間大小及數量的多寡而定。
+請於 Quota 主畫面下移動游標至 check 按【Enter】鍵，請稍等片刻後回 Quota 主畫面。
+<p>
+<figure>
+<eps FILE="images/gs-ugquota-3-2.ps">
+<img SRC="images/system-ugqadmin-3-2.jpg" WIDTH="964" HEIGHT="580">
+<caption>【quota】 -&gt; 【check】</caption>
+</figure>
+ 
+<p>
+<p>回到 Quota 主畫面後，下一步就請將 quota 啟動吧 ? 
+請於 Quota 主畫面下移動游標至【enable】按【Enter】鍵，請稍等片刻後回 Quota 主畫面。
+<p>
+<figure>
+<eps FILE="images/gs-ugquota-3-3.ps">
+<img SRC="images/system-ugqadmin-3-3.jpg" WIDTH="975" HEIGHT="604">
+<caption>【quota】 -&gt; 【enable】</caption>
+</figure>
+ 
+<p>
+<p>這裏請選定【edit】後按【Enter】鍵進入設定使用者 quota 設定。
+<p>
+<figure>
+<eps FILE="images/gs-ugquota-3.ps">
+<img SRC="images/system-ugqadmin-3.jpg" WIDTH="964" HEIGHT="580">
+<caption>【User/Group/Quota 設定】 -&gt; 【quota】</caption>
+</figure>
+ 
+<p>
+<p>在此有六個選項分別如下
+<ul>
+<li>softblock  &lt;---- 當檔案容量大至該限制時出現警告訊息。</li>
+<li>hardblock  &lt;---- 使用者硬碟容量最大限制。</li>
+<li>softinode  &lt;---- 當檔案數量大至該限制時出現警告訊息。</li>
+<li>hardinode  &lt;---- 使用者檔案數量最大限制。</li>
+<li>user  &lt;---- 設定那些使用者須要 quota 限制。</li>
+<li>done  &lt;---- 存檔。</li>
+</ul>
+<p>請分別將 softblock ，hardblock ，softinode ，hardinode ，分別設定為 5000 ，6000 ，0 ，0。
+<p>
+<p>
+<figure>
+<eps FILE="images/gs-ugquota-3-6.ps">
+<img SRC="images/system-ugqadmin-3-6.jpg" WIDTH="964" HEIGHT="580">
+<caption>【quota】 -&gt; 【edit】</caption>
+</figure>
+ 
+<p>
+<p>softblock 5000 表示為 5000 區塊，如果你一個區塊為 1K 的話表示你的 softblock 為 5
+000K。     
+<figure>
+<eps FILE="images/gs-ugquota-3-6.ps">
+<img SRC="images/system-ugqadmin-3-6-1.jpg" WIDTH="964" HEIGHT="580">
+<caption>【quota】-&gt;【edit】-&gt;【softblock】</caption>
+</figure>
+           
+<p>
+<p>請將游標移至【user】並按【Enter】鍵選定那些使用者須要設定 quota。
+<p>
+<p>請移動游標將 test1 test2 分別使用空白鍵標示起來，並按【Enter】鍵回到主畫面。
+<p>
+<figure>
+<eps FILE="images/gs-ugquota-3-6-5.ps">
+<img SRC="images/system-ugqadmin-3-6-5.jpg" WIDTH="964" HEIGHT="580">
+<caption>【quota】-&gt;【edit】-&gt;【user】</caption>
+</figure>
+ 
+<p>
+<p>
+<p>回主畫面後請移動游標至【done】選項並按【Enter】鍵完成設定，回到 quota 設定主畫面。
+或是使用【table】鍵將游標移至【取消】按【Enter】鍵取消設定，回到 quota 設定主畫面。
+<p>
+<figure>
+<eps FILE="images/gs-ugquota-3-6.ps">
+<img SRC="images/system-ugqadmin-3-6.jpg" WIDTH="964" HEIGHT="580">
+<caption>【edit】-&gt;【user】</caption>
+</figure>
+<p>
+<p>這裏請選定【report】後按【Enter】鍵。
+<p>
+<figure>
+<eps FILE="images/gs-ugquota-3.ps">
+<img SRC="images/system-ugqadmin-3.jpg" WIDTH="964" HEIGHT="580">
+<caption>【User/Group/Quota 設定】-&gt;【quota】</caption>
+</figure>
+ 
+<p>
+<p>這裏你所看到的就是所有使用者目前的 quota 的使用情形及報告。使用上下鍵捲動畫面，
+按【Enter】鍵回主畫面離開。
+<p>
+<figure>
+<eps FILE="images/gs-ugquota-3-5.ps">
+<img SRC="images/system-ugqadmin-3-5.jpg" WIDTH="964" HEIGHT="580">
+<caption>【User/Group/Quota 設定】-&gt;【quota】-&gt;【report】</caption>
+</figure>
+ 
+<p>
+<h3>使用者預設登入環境設定</h3>
+
+<p>功能說明:
+<p>* 新增使用者預設的登入環境。<br>
+* 編修使用者預設的登入環境。<br>
+* 刪除使用者預設的登入環境。<br>
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/Genie-usershell-main.jpg" WIDTH="975" HEIGHT="604">
+<caption>使用者預設登入環境設定主畫面</caption>
+</figure>
+<p>            
+<p>第一項是查看使用者所使用的 shell。<br>
+第二項是修改使用者所使用的 shell。<br>
+第三項是在 /etc/shells 增加 shell,讓某些程式查詢。<br>
+第四項是把 /etc/shells 中的 shell 刪除。<br>
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-usershell-main.jpg" WIDTH="964" HEIGHT="580">
+<caption>使用者預設登入環境畫面</caption>
+</figure>
+<p>
+<p>
+<h3>查詢使用者的登入環境</h3>
+
+<p>在查看 shell 上按下【Enter】並輸入想查詢的使用者名稱(例如 root),然後選擇確定。
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-usershell-01.jpg" WIDTH="964" HEIGHT="580">
+<caption>查看使用者</caption>
+</figure>
+<p>
+<p>就會出現查詢結果。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-usershell-02.jpg" WIDTH="964" HEIGHT="580">
+<caption>查詢結果</caption>
+</figure>
+<p>
+<p>當系統上並沒有這個使用者時,就會出現這個畫面。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-usershell-03.jpg" WIDTH="964" HEIGHT="580">
+<caption>查無此人</caption>
+</figure>
+<p>
+<p>當這個使用者並沒有設定 shell 時,就會出現這個畫面。
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-usershell-04.jpg" WIDTH="964" HEIGHT="580">
+<caption>未設定</caption>
+</figure>
+<p>
+<p>接下來就會回到主畫面
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-usershell-main.jpg" WIDTH="964" HEIGHT="580">
+<caption>使用者預設登入環境畫面</caption>
+</figure>
+<p>
+<p>
+<h3>修改使用者的登入環境</h3>
+
+<p>將光棒移至修改 shell 的選項,按下【Enter】,會看如下畫面,輸入想修改的使用者名稱。(例如 root)
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-usershell-05.jpg" WIDTH="964" HEIGHT="580">
+<caption>修改使用者所用的 shell</caption>
+</figure>
+<p>
+<p>然後選擇想使用的 shell,預設值是 /bin/bash。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-usershell-06.jpg" WIDTH="964" HEIGHT="580">
+<caption>選擇使用者所用的 shell</caption>
+</figure>
+<p>
+<p>修改完後,設定會立刻生效,然後回到主畫面。
+<p>
+<h3>新增可用的 shell</h3>
+
+<p>將光棒移至此項,按下【Enter】,輸入您想增加的 shell。
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-usershell-07.jpg" WIDTH="964" HEIGHT="580">
+<caption>新增 shell</caption>
+</figure>
+<p>
+<p>設定完後設定會立刻生效,然後回到主畫面。
+<p>
+<h3>刪除 shell將光棒移至此項,按下【Enter】,選擇您想刪除的 shell。</h3>
+
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-usershell-08.jpg" WIDTH="964" HEIGHT="580">
+<caption>刪除 shell</caption>
+</figure>
+<p>
+<p>
+<h3>例行性事務設定精靈</h3>
+
+<p>功能說明:
+<p>例行性事務設定精靈讓您依每分、每時、每日、每週或每月來安排週期性的工作。
+<p>
+<p>
+<figure>
+<eps FILE="images/gs-system-crontab-1.ps">
+<img SRC="images/gs-system-crontab-1.jpg" WIDTH="964" HEIGHT="580">
+<caption> Geine 例行性事務設定精靈主畫面</caption>
+</figure>
+   
+<p>
+<h3>如何新增工作</h3>
+
+<p>【選擇例行性事務設定】後按【Enter】鍵，進入設定區：請選擇 【Add】。
+<p>這裏將以於每天晚上十一點廿分鐘後將備份 /tmp/database 整個目錄到 /usr/local/database.tgz 檔為例，詳加說明如何使用本設定精靈。
+<p>
+<figure>
+<eps FILE="images/gs-system-crontab-1-1.ps">
+<img SRC="images/gs-system-crontab-1.1.jpg" WIDTH="964" HEIGHT="580">
+<caption>例行性事務設定開啟畫面</caption>
+</figure>
+<p>
+<h3>如何設定時間</h3>
+
+<p>以每天晚上十一點廿分鐘為例。
+<p>【選擇 Add 】後按【Enter】鍵，進入設定區：請選擇 Daily 。
+<p>
+<figure>
+<eps FILE="images/gs-system-crontab-1-2.ps">
+<img SRC="images/gs-system-crontab-1.2.jpg" WIDTH="964" HEIGHT="580">
+<caption>選擇設定時間畫面</caption>
+</figure>
+<p>
+<p>【選擇 Daily 】後, 按【Enter】鍵進入設定區:請輸入欲設定分鐘時間。
+<p>以每天晚上十一點廿分鐘為例，在第一個輸入畫面( minute )上輸入-&gt;20。
+<p>
+<figure>
+<eps FILE="images/gs-system-crontab-1-3.ps">
+<img SRC="images/gs-system-crontab-1.3.jpg" WIDTH="964" HEIGHT="580">
+<caption>輸入設定分鐘畫面</caption>
+</figure>
+<p>
+<p>在輸入分鐘後【選擇確定】後, 按【Enter】鍵進入設定區:請輸入欲設定小時。
+<p>以每天晚上十一點廿分鐘為例，在第二個輸入畫面( hour )上輸入-&gt;23。
+<p>
+<figure>
+<eps FILE="images/gs-system-crontab-1.4.ps">
+<img SRC="images/gs-system-crontab-1.4.jpg" WIDTH="964" HEIGHT="580">
+<caption>設定小時畫面</caption>
+</figure>
+<p>
+<p>在輸入小時後【選擇確定】後, 按【Enter】鍵進入設定區:請選擇以指令模式下達或執行一個 shell 。
+<p>這裏將以指令模式為例。
+<p>
+<figure>
+<eps FILE="images/gs-system-crontab-1.5.ps">
+<img SRC="images/gs-system-crontab-1.5.jpg" WIDTH="964" HEIGHT="580">
+<caption>選擇項目畫面</caption>
+</figure>
+<p>
+<p>【選擇 Command 】後, 按【Enter】鍵進入設定區:請輸入欲下達之命令 。
+<p>這裏將以下達備份 /tmp/database 整個目錄到 /usr/local/database.tgz 檔為例，
+在輸入畫面上輸入-&gt; tar zcvf /usr/local/database.tgz /tmp/database 。
+<p>
+<figure>
+<eps FILE="images/gs-system-crontab-1.6.ps">
+<img SRC="images/gs-system-crontab-1.6.jpg" WIDTH="964" HEIGHT="580">
+<caption>輸入欲下達命令畫面</caption>
+</figure>
+<p>
+<p>在輸入命令後【選擇確定】後, 按【Enter】鍵則完成新增工作，並回到例行性事務設定精靈主畫面。
+<p>
+<h3>如何編輯工作</h3>
+
+<p>【選擇例行性事務設定】後按【Enter】鍵，進入設定區：請選擇 Edit 。
+<p>
+<figure>
+<eps FILE="images/gs-system-crontab-1.ps">
+<img SRC="images/gs-system-crontab-2.1.jpg" WIDTH="964" HEIGHT="580">
+<caption>例行性事務設定開啟畫面</caption>
+</figure>
+<p>
+<p>【選擇 Edit 】後, 按【Enter】鍵進入設定區:請移動選擇上下游標選擇欲編輯之工作項目。
+<p>
+<figure>
+<eps FILE="images/gs-system-crontab-2.1.ps">
+<img SRC="images/gs-system-crontab-2.2.jpg" WIDTH="964" HEIGHT="580">
+<caption>選擇欲編輯之工作</caption>
+</figure>
+<p>
+<p>在【選擇確定】後, 按【Enter】鍵開始重新編輯時間與工作項目，其設定方式與新增項工作一樣，您可參考上面新增工作的操作流程。
+<p>
+<h3>如何刪除工作</h3>
+
+<p>【選擇例行性事務設定】後按【Enter】鍵，進入設定區：請選擇 Delete 。
+<p>
+<figure>
+<eps FILE="images/gs-system-crontab-1.ps">
+<img SRC="images/gs-system-crontab-3.1.jpg" WIDTH="964" HEIGHT="580">
+<caption>選擇刪除工作主畫面</caption>
+</figure>
+<p>
+<p>【選擇 Delete 】後, 按【Enter】鍵進入設定區:請移動選擇上下游標選擇欲刪除之工作項目。
+<p>
+<p>在【選擇確定】後, 按【Enter】鍵將顯示詢問是否真要刪除此工作項目。
+<p>
+<figure>
+<eps FILE="images/gs-system-crontab-1.ps">
+<img SRC="images/gs-system-crontab-3.3.jpg" WIDTH="964" HEIGHT="580">
+<caption>詢問是否真要刪除此工作項目畫面</caption>
+</figure>
+<p>
+<p>在【選擇確定】後, 按【Enter】鍵則刪除此工作項目，並回到例行性事務設定精靈主畫面。
+<p>
+<h3>如何離開例行性事務設定精靈</h3>
+
+<p>【選擇例行性事務設定】後按【Enter】鍵，進入設定區：請選擇 Done ，設定精靈將回到 Genie 主畫面。 
+<p>
+<figure>
+<eps FILE="images/gs-system-crontab-4.1.ps">
+<img SRC="images/gs-system-crontab-4.1.jpg" WIDTH="964" HEIGHT="580">
+<caption>離開例行性事務設定精靈主畫面</caption>
+</figure>
+<p>
+<h3>環境變數設定工具</h3>
+
+<p>環境變數設定工具整合了多項系統變數的設定功能，以下將一一介紹。
+<p>
+<figure>
+<eps FILE="images/gs-env-main.ps">
+<img SRC="images/Genie-env-main.jpg" WIDTH="975" HEIGHT="604">
+<caption>環境變數設定主畫面</caption>
+</figure>
+         
+<p>
+<figure>
+<eps FILE="images/gs-env-main.ps">
+<img SRC="images/gs-env-main.jpg" WIDTH="975" HEIGHT="580">
+<caption>環境變數設定工具開啟畫面</caption>
+</figure>
+   
+<p>
+<h3>改變系統提示符號</h3>
+
+<p>選擇【提示符號設定】選項，畫面顯示目前提示符號的設定值(PS1變數)，
+您可依照喜好設定提示符號樣示，如
+<pre>
+&quot;[\u@\h \W]\\$ &quot;        [使用者@主機名稱 工作目錄]$
+</pre>
+
+確定後，按【確定】回到主畫面。
+<p>
+<p>
+<figure>
+<eps FILE="images/gs-env-1.ps">
+<img SRC="images/gs-env-1.jpg" WIDTH="975" HEIGHT="580">
+<caption>設定提示符號樣式</caption>
+</figure>
+      
+<p>
+<h3>設定檔名色彩</h3>
+
+<p>您喜歡在執行ls指令時可看見檔名的色彩嗎?以下的設定方法，
+還可以讓我們自訂喜愛的檔名顏色。
+選擇【檔案色彩設定】選項，畫面出現目前系統的檔名色彩設定值。
+例如我們想要將目錄的顏色改為黃色，則利用上、下鍵移動至【DIR】選項，
+按下【確定】。
+<p>
+<p>
+<figure>
+<eps FILE="images/gs-env-2.ps">
+<img SRC="images/gs-env-2.jpg" WIDTH="975" HEIGHT="580">
+<caption>欲改變哪種類型的檔案色彩?</caption>
+</figure>
+<p>接著進入的畫面為目錄的顏色設定值，我們將它改成黃色，其值為
+<pre>
+01;33
+</pre>
+
+按【確定】回到前一個畫面，再進行其他檔案類型的設定，或按【取消】離開。
+<p>
+<p>
+<h3>如何修改帳號建立預設組態</h3>
+
+<p>當系統管理者新增使用者帳號時，系統會給予這名新使用者一些預設的設定值。
+而這些預設的設定值可利用本工具來進行修改。
+例如，我們希望新增的使用者的家目錄(Home Directory)均產生在/home1目錄下，
+而預設的shell程式為tcsh，而且使用者必須每兩個月更換一次密碼。則以下設定方法:
+<p>選擇【帳號建立預設組態】選項，移至【HOME】選項，按下【確定】按鈕。
+<p>
+<figure>
+<eps FILE="images/gs-env-3.ps">
+<img SRC="images/gs-env-3.jpg" WIDTH="975" HEIGHT="580">
+<caption>選擇設定選項</caption>
+</figure>
+            
+<p>接下來，輸入使用者家目錄的所在目錄，為
+<pre>
+/home1
+</pre>
+<p>
+<figure>
+<eps FILE="images/gs-env-4.ps">
+<img SRC="images/gs-env-4.jpg" WIDTH="975" HEIGHT="580">
+<caption>輸入使用者家目錄的所在目錄</caption>
+</figure>
+ 
+<p>
+<p>按下【確定】按鈕，回到設定選項畫面。接下來，選擇【SHELL】選項，
+進入預設shell程式的設定。將設定改成
+<pre>
+/bin/tcsh
+</pre>
+<p>
+<figure>
+<eps FILE="images/gs-env-5-main.ps">
+<img SRC="images/gs-env-5.jpg" WIDTH="975" HEIGHT="580">
+<caption>預設shell程式的設定</caption>
+</figure>
+ 
+<p>按下【確定】按鈕，回到設定選項畫面。最後選擇【PASS_MAX_DAYS】選項，
+將設定值改為
+<pre>
+60
+</pre>
+
+即為60天(兩個月)。按下【確定】按鈕。在設定選項畫面中按下【取消】按鈕，
+回到設定程式主畫面。
+<p>
+<figure>
+<eps FILE="images/gs-env-6.ps">
+<img SRC="images/gs-env-6.jpg" WIDTH="975" HEIGHT="580">
+<caption>密碼有效的期限</caption>
+</figure>
+ 
+<p>
+<h3>系統服務啟用工具</h3>
+
+<p>功能說明:
+Linux作業系統的功能強大且繁多，在面對如此多的服務程式(servers)、監控程式
+(daemons)時，您可能需要一個操作簡易的工具程式來協助日常的管理。「系統服
+務啟用工具」，正是幫助您管理系統中各服務程式在開機時啟用與否的程式。
+<p>
+<figure>
+<eps FILE="images/gs-service-main.ps">
+<img SRC="images/Genie-service-main.jpg" WIDTH="975" HEIGHT="604">
+<caption>系統服務啟用工具主畫面</caption>
+</figure>
+   
+<p>
+<p>
+<h3>設定開機時欲啟用的程式。?/H3&gt;
+
+<p>只啟用所需的服務程式，是系統管理者必需具備的常識。
+如此不但達到節約系統資源的目的，也能增進系統的安全性。以下舉例示範，
+欲在開機時啟用sendmail伺服器及apache網頁伺服器的作法。
+<p>在「系統服務啟用工具」畫面中，列出的為所有安裝在系統中的服務項目。
+我們利用上、下方向鍵，將選項光棒移動至sendmail選項，
+然後使用空白鍵來啟用它。項目左方的括號中若為[X]，則表示該項目啟用。
+<p>
+<p>
+<figure>
+<eps FILE="images/gs-service-main.ps">
+<img SRC="images/gs-service-main.jpg" WIDTH="975" HEIGHT="580">
+<caption>系統服務啟用工具開啟畫面</caption>
+</figure>
+        
+<p>
+<p>相同的方法，找到httpd (apache網頁伺服器)，將它啟用。確定時，
+選擇「確定」按鈕離開。完成以上動作之後，下次系統開機時，
+就會自動啟動sendmail及apache伺服器。
+<p>
+<h3><b>關閉系統</b> </h3>
+
+<h3>關閉系統設定精靈</h3>
+
+<p>功能說明:
+<p>關閉系統設定精靈幫您輕易設定關機時間與設定關機前要傳達之訊息。
+這裏將以十分鐘後將關機並傳達與每位目前正在線上的使用者&quot;SHUTDOWN&quot;訊息為例，詳加說明如何使用本設定精靈。
+<p>
+<figure>
+<eps FILE="images/gs-shutdown-1.ps">
+<img SRC="images/Genie-shutdown-main.jpg" WIDTH="975" HEIGHT="604">
+<caption> Geine 關閉系統設定精靈主畫面</caption>
+</figure>
+<p>
+<h3>如何設定系統關閉時間與欲傳達之訊息</h3>
+
+<p>【選擇關閉系統】後按【Enter】鍵，進入設定區：請選擇 Set time and message 。
+<p>
+<figure>
+<eps FILE="images/gs-shutdown-1.1.ps">
+<img SRC="images/gs-shutdown-1.1.jpg" WIDTH="964" HEIGHT="580">
+<caption>如何設定系統關閉時間主畫面</caption>
+</figure>
+<p>
+<h3>如何設定系統關閉時間</h3>
+
+<p>【選擇 Set time and message 】後按【Enter】鍵，進入設定區：請選擇 SetTime 。
+<p>
+<figure>
+<eps FILE="images/gs-shutdown-1.2.ps">
+<img SRC="images/gs-shutdown-1.2.jpg" WIDTH="964" HEIGHT="580">
+<caption>選擇設定系統關閉時間畫面</caption>
+</figure>
+<p>
+<p>【選擇 SetTime 】後, 按【Enter】鍵進入設定區:請輸入關機時間。
+以十分鐘為例，在畫面上輸入-&gt;10。
+<p>
+<figure>
+<eps FILE="images/gs-shutdown-1.3.ps">
+<img SRC="images/gs-shutdown-1.3.jpg" WIDTH="964" HEIGHT="580">
+<caption>設定關閉時間畫面</caption>
+</figure>
+<p>
+<h3>如何設定欲傳達之訊息</h3>
+
+<p>【選擇 Set time and message 】後按【Enter】鍵，進入設定區：請選擇 SetMessage 。
+<p>
+<figure>
+<eps FILE="images/gs-shutdown-1.2.ps">
+<img SRC="images/gs-shutdown-1.2.jpg" WIDTH="964" HEIGHT="580">
+<caption>選擇設定欲傳達之訊息</caption>
+</figure>
+<p>
+<p>【選擇 SetMessage 】後, 按【Enter】鍵進入設定區:請輸入欲傳達之訊息。
+以 &quot;SHUTDOWN&quot; 為例，在畫面上輸入-&gt;SHUTDOWN。
+<p>
+<figure>
+<eps FILE="images/gs-shutdown-1.4.ps">
+<img SRC="images/gs-shutdown-1.4.jpg" WIDTH="964" HEIGHT="580">
+<caption>設定欲傳達之訊息畫面</caption>
+</figure>
+<p>
+<h3>離開設定系統關閉時間與欲傳達之訊息</h3>
+
+<p>【選擇 Exit 】後按【Enter】鍵，進入設定區：請選擇 Down ，回到關閉系統設定精靈主畫面。
+<p>
+<figure>
+<eps FILE="images/gs-shutdown-1.5.ps">
+<img SRC="images/gs-shutdown-1.5.jpg" WIDTH="964" HEIGHT="580">
+<caption>離開設定系統關閉時間與欲傳達之訊息畫面</caption>
+</figure>
+<p>
+<h3>如何關閉機器</h3>
+
+<p>【選擇關閉系統】後按【Enter】鍵，進入設定區：請選擇 Shutdown Machine ，設定精靈將執行先前下達之關機命令。
+<p>
+<figure>
+<eps FILE="images/gs-shutdown-2.1.ps">
+<img SRC="images/gs-shutdown-2.1.jpg" WIDTH="964" HEIGHT="580">
+<caption>關閉系統設定精靈主畫面</caption>
+</figure>
+<p>
+<h3>如何取消先前下達之關機命令</h3>
+
+<p>【選擇關閉系統】後按【Enter】鍵，進入設定區：請選擇 Cencel Shutdown Machine ，設定精靈將取消先前下達之關機命令。
+<p>
+<figure>
+<eps FILE="images/gs-shutdown-3.1.ps">
+<img SRC="images/gs-shutdown-3.1.jpg" WIDTH="964" HEIGHT="580">
+<caption>關閉系統設定精靈主畫面</caption>
+</figure>
+<p>
+<h3>離開關閉系統設定精靈</h3>
+
+<p>【選擇關閉系統】後按【Enter】鍵，進入設定區：請選擇 Exit ，設定精靈將回到 Genie 主畫面。 
+<p>
+<figure>
+<eps FILE="images/gs-shutdown-4.1.ps">
+<img SRC="images/gs-shutdown-4.1.jpg" WIDTH="964" HEIGHT="580">
+<caption>關閉系統設定精靈主畫面</caption>
+</figure>
+<p>
+<h2><a NAME="genie2-ref"></a> <a NAME="ss6.3">6.3 Genie 的動態設定項目 </a>
+        </h2>
+
+<p>XLinux的Genie動態設定項目是使用RPM包裝好的檔案, 使您可以很容易地加入其它server的
+設定程式或移除。Genie的動態設定項目可幫助您設定其它特別的server(伺服器)功能, 
+甚至X Window 的設定也可以交給它喔! 只要您在安裝XLinux時安裝了以下的套件, 
+您便可以選擇相對的Genie設定項目, 動態式地加入您的系統, 以方便您設定它。
+<p>您可以在XLinux的光碟中找到其所屬的rpm檔案(位於XLinux光碟片的/package目錄下), 用
+rpm 的方式將它在安裝到您的系統中,
+<p>以下為Genie 的動態設定項目及它們在XLinux光碟片中所屬的RPM檔案名稱:?<p>● X Window Setup<br>
+● Sendmail 設定 <br>
+● fetchmail 設定<br>
+● 網路檔案系統(NFS)設定 
+● 網路檔案系統伺服器(NFSD)設定<br>
+● Samba 設定 <br>
+● Apache 設定 <br>
+● Inn 設定 <br>     
+● 網路對時協定(NTP)設定 <br>      
+● 網路對時協定伺服器(NTPD)設定 <br> 
+安裝步驟:
+<p>
+<ol>
+<li><b>步驟一.</b>:
+<p>先將XLinux光碟放入CD-Rom中, 再把CD-Rom的檔案格式掛入(mount)
+可執行以下指令:
+<p>
+<blockquote><code>
+<pre>
+[root@xlinux /]# mount /mnt/cdrom
+</pre>
+</code></blockquote>
+<p>
+</li>
+<li><b>步驟二.</b>:
+<p>切換到光碟中的package目錄下
+<p>
+<blockquote><code>
+<pre>
+[root@xlinux /]# cd /mnt/cdrom/package
+[root@xlinux package]#
+</pre>
+</code></blockquote>
+                             
+<p>
+</li>
+<li><b>步驟三.</b>:
+<p>用rpm指令安裝Genie的動態設定項目,
+如下:(例如您要安裝fetchmail的Genie設定項目)
+<p>您可見輸入以下指令: ([--force]表示可有可無)
+<blockquote><code>
+<pre>
+rpm -ivh [--force] Genie動態設定項目rpm檔案名稱
+</pre>
+</code></blockquote>
+<p>例如您要安裝的Genie動態設定項目是fetchmail:
+<blockquote><code>
+<pre>
+[root@xlinux package]#rpm -ivh --force genie-fetchmail-19991125-1XL.noarch.rpm 
+genie-fetchmail             ##################################################
+</pre>
+</code></blockquote>
+<p>
+</li>
+<li><b>步驟四.</b>:
+<p>把CD-Rom的檔案格式卸下(umount):
+<blockquote><code>
+<pre>
+[root@xlinux /]# umount /mnt/cdrom
+</pre>
+</code></blockquote>
+                            
+<p>
+</li>
+<li><b>步驟五.</b>:
+<p>回到Genie的主設定畫面, 您所安裝的Genie動態設定項目將加入於設定畫面中. 按照Genie?的預設項目使用方法即可.
+<p>
+</li>
+</ol>
+<p>現在, 讓我們一一的介紹 Genie 的動態設定項:
+<p>
+<h3>X Window 設定精靈</h3>
+
+<p>功能說明:
+<p>X Window 精靈幫您輕易設定啟動 X 時所須之硬體相關資訊與參數。
+<p>這裏將以 sis 6326 顯示卡為例，詳加說明如何使用本設定精靈。
+<p>
+<figure>
+<eps FILE="images/gs-system-xsetup-1.ps">
+<img SRC="images/gs-system-xsetup-1.jpg" WIDTH="964" HEIGHT="580">
+<caption> Geine X Window 設定精靈主畫面</caption>
+</figure>
+<p>
+<h3>X Window 設定精靈</h3>
+
+<p>【選擇 X 設定】後按【Enter】鍵，進入設定區滑鼠設定精靈先偵測系統目前的顯示卡。
+<p>
+<figure>
+<eps FILE="images/gs-system-xsetup-1.1.ps">
+<img SRC="images/gs-system-xsetup-1.1.jpg" WIDTH="964" HEIGHT="580">
+<caption>X Window 設定精靈正偵測您機器上之顯示卡畫面</caption>
+</figure>
+<p>
+<p>若有偵測到顯示卡則出現目前顯示卡型號，【選擇確認】後按【Enter】鍵，進入設定區：設定螢幕廠牌型號。
+<p>這裏將以 sis 6326 顯示卡為例。
+<p>
+<figure>
+<eps FILE="images/gs-system-xsetup-1.2.ps">
+<img SRC="images/gs-system-xsetup-1.2.jpg" WIDTH="964" HEIGHT="580">
+<caption>X Window 設定精靈偵測到您機器上裝有 sis 6326 顯示卡畫面</caption>
+</figure>
+<p>
+<p>選定顯示器廠牌型號，【選擇確認】後按【Enter】鍵，進入設定區：設定顯示卡記憶容量。
+<p>
+<p>這裏將以 ViewSonic 17GA  顯示器為例，請移動選擇上下游標選擇 ViewSonic 17GA  顯示器。
+<p>
+<figure>
+<eps FILE="images/gs-system-xsetup-1.3.ps">
+<img SRC="images/gs-system-xsetup-1.3.jpg" WIDTH="964" HEIGHT="580">
+<caption>設定顯示器廠牌型號畫面</caption>
+</figure>
+<p>
+<p>選定顯示卡記憶容量，【選擇確認】後按【Enter】鍵，進入設定區：設定顯示卡的 Clockchip Configuration 。
+<p>
+<p>這裏將以 4 Mega 為例，請移動選擇上下游標選擇 4 Mega 的 Video Memory 。
+<p>
+<figure>
+<eps FILE="images/gs-system-xsetup-1.4.ps">
+<img SRC="images/gs-system-xsetup-1.4.jpg" WIDTH="964" HEIGHT="580">
+<caption>設定顯示卡記憶容項畫面</caption>
+</figure>
+<p>
+<p>選定 ClockChip ，【選擇確認】後按【Enter】鍵，進入設定區：設定螢幕色彩。
+<p>
+<p>這裏將以不設定為例 (不清楚可選擇 No Clockchip Setting (recommended) )，請移動選擇上下游標選擇 No Clockchip Setting (recommended)。
+<p>
+<figure>
+<eps FILE="images/gs-system-xsetup-1.5.ps">
+<img SRC="images/gs-system-xsetup-1.5.jpg" WIDTH="964" HEIGHT="580">
+<caption>設定 ClockChip 畫面</caption>
+</figure>
+<p>
+<p>選定螢幕色彩，【選擇確認】後按【Enter】鍵，進入設定區：設定螢幕解析度。
+<p>
+<p>這裏將以 16 Bit 為例，請移動選擇上下游標選擇 16 Bit 的 Video Depth 。
+<p>
+<figure>
+<eps FILE="images/gs-system-xsetup-1.6.ps">
+<img SRC="images/gs-system-xsetup-1.6.jpg" WIDTH="964" HEIGHT="580">
+<caption>設定螢幕色彩畫面</caption>
+</figure>
+<p>
+<p>選定解析度，【選擇確認】後按【Enter】鍵， X Window 設定精靈將儲存先前所設定之資訊。
+<p>這裏將以 1024x768 為例，請移動選擇上下游標選擇 1024x768 的解析度。
+<p>
+<figure>
+<eps FILE="images/gs-system-xsetup-1.7.ps">
+<img SRC="images/gs-system-xsetup-1.7.jpg" WIDTH="964" HEIGHT="580">
+<caption>設定解析度畫面</caption>
+</figure>
+<p>
+<p>X Window 設定精靈完成設定，回到 Genie 主畫面。
+<p>
+<figure>
+<eps FILE="images/gs-system-xsetup-1.8.ps">
+<img SRC="images/gs-system-xsetup-1.8.jpg" WIDTH="964" HEIGHT="580">
+<caption>完成 X Window 設定畫面</caption>
+</figure>
+<p>
+<h3>Sendmail設定工具</h3>
+
+<p>功能說明:
+<p>Sendmail設定工具透過設定巨集檔(sendmail.mc)的修改，
+得以產生可靠的正確設定檔，
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-sendmail.ps">
+<img SRC="images/Genie-sendmail-main.jpg" WIDTH="975" HEIGHT="604">
+<caption>Sendmail設定工具主畫面</caption>
+</figure>
+   
+<p>以下將介紹常用的sendmail設定。
+<p>
+<figure>
+<eps FILE="images/gn-sendmail.ps">
+<img SRC="images/gn-sendmail-main.jpg" WIDTH="975" HEIGHT="580">
+<caption>Sendmail設定開啟畫面</caption>
+</figure>
+   
+<p>
+<h3>設定轉信收件人(Aliases)</h3>
+
+<p>如果您是系統管理者，相信您不會一直使用root這個帳號來操作主機，
+以免不小心造成系統資料的毀損。以下示範將所有寄至root帳號的信件，
+轉寄至您日常操作的一般使用者帳號(以robert為例)的設定方式。
+<p>在主畫面中，選擇【轉信設定檔】-&gt; 【新增記錄】，在進入【輸入轉信記錄】畫面後，
+輸入轉信設定
+<pre>
+root:   robert
+</pre>
+
+即，所有root的信件轉寄給robert這個使用者，如此一來，
+您就不怕遺漏掉重要的系統訊息了。
+<p>
+<figure>
+<eps FILE="images/gn-sendmail-1.ps">
+<img SRC="images/gn-sendmail-1.jpg" WIDTH="975" HEIGHT="580">
+<caption>輸入轉信記錄設定</caption>
+</figure>
+      
+<p>
+<h3>設定主機別名</h3>
+
+<p>如果您的郵件主機擁有不只一個的主機名稱，您就得為伺服程式設定主機別名了。
+請先選擇【功能設定】選項，確定【use_cw_file】選項目前是【啟動】的。
+如果不是，可按【Enter】鍵來啟動它。
+<p>
+<figure>
+<eps FILE="images/gn-sendmail-2.ps">
+<img SRC="images/gn-sendmail-2.jpg" WIDTH="975" HEIGHT="580">
+<caption>先確定【use_cw_file】的功能是否開啟了</caption>
+</figure>
+<p>
+<p>確定【use_cw_file】功能為【啟動】之後，按【取消】回到主畫面。
+接下來選擇【主機名稱設定】-&gt; 【新增記錄】，畫面要求輸入主機別名，
+如:foo.com.tw，確定時按【確定】按鈕。
+則您可看見foo.com.tw的主機名稱設定已經加到sendmail.cw檔中了。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-sendmail-3.ps">
+<img SRC="images/gn-sendmail-3.jpg" WIDTH="964" HEIGHT="580">
+<caption>輸入主機別名</caption>
+</figure>
+<p>
+<h3>阻擋垃圾信函</h3>
+
+<p>所謂的垃圾信函也就是那些大量複製散播，不受人歡迎的廣告信、謠言信等等，
+以下教您如何阻擋掉這些惱人信件的騷擾。
+<p>在主畫面中選擇【阻擋垃圾信函】-&gt;【新增記錄】，
+此時畫面要求輸入郵件伺服主機的存取權限設定，
+我們以擋掉所有來自digital.cnet.com的信件為例，則輸入
+<pre>
+digital.cnet.com        DENY
+</pre>
+
+按【確定】後會回到上一層畫面，此時按【取消】可回到主畫面。
+<p>
+<figure>
+<eps FILE="images/gn-sendmail-4.ps">
+<img SRC="images/gn-sendmail-4.jpg" WIDTH="975" HEIGHT="580">
+<caption>輸入郵件伺服主機的存取權限設定</caption>
+</figure>
+            
+<p>
+<h3>更新設定檔，重新啟動郵件伺服器</h3>
+
+<p>當您對郵件伺服器的設定有所更動後，在離開設定程式前，
+程式會再次詢問是否確定將設定值寫入設定檔中，選擇【是】，
+則程式自動將所做的更動一次寫回各相關設定檔中，如果選擇【否】，
+則取消設定的動作。一但設定檔有所更動，程式還會詢問是否重新啟動sendmail伺服程式，
+以使新設定值生效。(多數設定皆需重新啟動sendmail伺服程式，才可生效)
+<p>
+<figure>
+<eps FILE="images/gn-sendmail-5.ps">
+<img SRC="images/gn-sendmail-5.jpg" WIDTH="975" HEIGHT="580">
+<caption>確定將設定值寫入設定檔?</caption>
+</figure>
+ 
+<p>
+<figure>
+<eps FILE="images/gn-sendmail-6.ps">
+<img SRC="images/gn-sendmail-6.jpg" WIDTH="975" HEIGHT="580">
+<caption>重新啟動Sendmail?</caption>
+</figure>
+ 
+<p>
+<h3>Fetchmail 設定</h3>
+
+<p>功能說明
+<p>Fetchmail 提供遠端取信以供離線閱讀，並提供下列功能:<br>
+* 自動偵測遠端使用的協定。<br>
+* 利用 smtp 做信件分配的工作。<br>
+* 多帳號收信。<br>
+* 背景執行。<br>
+* 信件過濾。<br>
+* 信件分配。<br>
+* 多主機轉信。<br>
+* 支援多協定如 imap,pop3,etrn 等<br>
+* 支援 IPV6。<br>
+* 支援 IPSec。<br>
+<p>
+<p>
+<figure>
+<eps FILE="images/xx.ps">
+<img SRC="images/Genie-fetch-main.jpg" WIDTH="975" HEIGHT="604">
+<caption>Fetchmail 設定主畫面</caption>
+</figure>
+<p>          
+<p>畫面說明:<br>
+<ul>
+<li>第一項是伺服器管理</li>
+<li>第二項是使用者管理</li>
+<li>第三項是讀取信件周期</li>
+<li>第四項是阻擋垃圾信規則</li>
+</ul>
+<p>
+<figure>
+<eps FILE="images/xx.ps">
+<img SRC="images/gn-fetch-main.jpg" WIDTH="964" HEIGHT="580">
+<caption>Fetchmail 設定開啟畫面</caption>
+</figure>
+<p>
+<p>
+<h3>伺服器管理的部份</h3>
+
+<p>
+<figure>
+<eps FILE="images/xx.ps">
+<img SRC="images/gn-fetch-01.jpg" WIDTH="964" HEIGHT="580">
+<caption>fetchmail伺服器管理畫面</caption>
+</figure>
+<p>
+<p>
+<h3>新增伺服器</h3>
+
+<p>
+<figure>
+<eps FILE="images/xx.ps">
+<img SRC="images/gn-fetch-02.jpg" WIDTH="964" HEIGHT="580">
+<caption>fetchmail新增伺服器畫面</caption>
+</figure>
+<p>domain 的部份是輸入收信的網域,以 ms2.hinet.net 為例子,網域的部份就是輸入 hinet.net,輸入完後會將結果顯示在選項右邊。
+server 的部份則輸入該網域的主機,以剛剛的例子就是輸入 ms2,輸入完後會將結果顯示在選項右邊。
+<p>proto 的部份則是輸入使用的協定,一般都是 pop3。
+設定完畢後,選擇儲存,再選 cancel 離開此選項。
+<p>
+<h3>修改伺服器</h3>
+
+<p>
+<figure>
+<eps FILE="images/xx.ps">
+<img SRC="images/gn-fetch-02-1.jpg" WIDTH="975" HEIGHT="604">
+<caption>修改伺服器畫面</caption>
+</figure>
+<p>
+<p>修改伺服器是將設定的部份顯示出來,供您修改用。
+<p>
+<h3>移除伺服器</h3>
+
+<p>
+<figure>
+<eps FILE="images/xx.ps">
+<img SRC="images/gn-fetch-02-2.jpg" WIDTH="975" HEIGHT="604">
+<caption>移除伺服器畫面</caption>
+</figure>
+<p>移除伺服器則是移除您不想用的郵件伺服器。
+<p>
+<h3>使用者管理的部份</h3>
+
+<p>
+<figure>
+<eps FILE="images/xx.ps">
+<img SRC="images/gn-fetch-06.jpg" WIDTH="964" HEIGHT="580">
+<caption>使用者管理主畫面</caption>
+</figure>
+<p>
+<p>
+<h3>新增使用者</h3>
+
+<p>username 是輸入遠端主機的郵件帳號,以 someone@ms2.hinet.net 為例子,其 username 就是輸入 @ 左方的字串,也就是 someone。
+<p>password 是輸入遠端主機帳號的密碼。
+<p>localname 是選擇遠端主機的信是給本地端主機的哪個使用者的。
+<p>
+<figure>
+<eps FILE="images/xx.ps">
+<img SRC="images/gn-fetch-07.jpg" WIDTH="964" HEIGHT="580">
+<caption>新增使用者畫面</caption>
+</figure>
+<p>
+<h3>修改使用者</h3>
+
+<p>
+<p>這邊選擇想要修改的使用者,並修改您想修改的部份。
+<p>
+<figure>
+<eps FILE="images/xx.ps">
+<img SRC="images/gn-fetch-07-1.jpg" WIDTH="975" HEIGHT="604">
+<caption>修改使用者畫面</caption>
+</figure>
+<p>
+<h3>移除使用者</h3>
+
+<p>移除使用者則是移除不用的使用者帳號。
+<p>
+<figure>
+<eps FILE="images/xx.ps">
+<img SRC="images/gn-fetch-07-2.jpg" WIDTH="975" HEIGHT="604">
+<caption>移除使用者畫面</caption>
+</figure>
+<p>
+<p>
+<h3>讀取信件周期</h3>
+
+<p>設定多久取一次信,預設值是 60。
+<p>
+<figure>
+<eps FILE="images/xx.ps">
+<img SRC="images/gn-fetch-11.jpg" WIDTH="964" HEIGHT="580">
+<caption>讀取信件周期畫面</caption>
+</figure>
+<p>
+<p>
+<h3>阻擋垃圾信規則</h3>
+
+<p>使用哪些規則來檔信,這部份設定跟 sendmail 程式相關,請參考該程式之說明。
+<p>
+<figure>
+<eps FILE="images/xx.ps">
+<img SRC="images/gn-fetch-12.jpg" WIDTH="975" HEIGHT="604">
+<caption>阻擋垃圾信規則畫面</caption>
+</figure>
+<p>
+<p>
+<h3>網路檔案系統(NFS)設定</h3>
+
+<p>功能說明:
+<p>NFS允許您使用遠端主機中的檔案，就像在使用本身機器上的檔案一樣。
+此功能是混合客戶端的核心函式與伺服端的NFS伺服器來達成的，
+而這些經過不同的伺服器和不同架構主機的檔案，
+對客戶端在使用上來說是完全透明的。
+<p>而本設定工具的主要功能即提供方便的操作介面，來掛載、卸除NFS目錄。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-nfs.ps">
+<img SRC="images/Genie-nfs-main.jpg" WIDTH="975" HEIGHT="604">
+<caption> NFS設定程式主畫面</caption>
+</figure>
+     
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-nfs.ps">
+<img SRC="images/gn-nfs-main.jpg" WIDTH="975" HEIGHT="580">
+<caption> NFS設定程式開啟畫面</caption>
+</figure>
+<p>
+<h3>掛載NFS目錄</h3>
+
+<p>在NFS設定程式主畫面中選擇【掛載NFS】選項，先輸入遠端NFS伺服主機的網路位置。
+(IP或主機名稱皆可)，如:cappuccino.wahoo.com.tw。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-nfs-1.ps">
+<img SRC="images/gn-nfs-1.jpg" WIDTH="975" HEIGHT="580">
+<caption> 【NFS設定】 -&gt; 【掛載NFS】</caption>
+</figure>
+<p>
+<p>按【確定】鍵後畫面中會顯示出該遠端主機中開放出(exported)的NFS目錄，
+利用上、下方向鍵的移動，選擇欲掛載的目錄。
+<p>
+<figure>
+<eps FILE="images/gs-nfs-2.ps">
+<img SRC="images/gn-nfs-2.jpg" WIDTH="975" HEIGHT="580">
+<caption>選擇遠端NFS檔案系統</caption>
+</figure>
+ 
+<p>選定欲掛載的目錄後，按【Enter】進入下一畫面。
+輸入要將該遠端NFS掛載至本地端的那一個目錄節點，如:/mnt/nfs。
+<p>
+<p>
+<figure>
+<eps FILE="images/gs-nfs-3.ps">
+<img SRC="images/gn-nfs-3.jpg" WIDTH="975" HEIGHT="580">
+<caption>輸入本地端掛載目錄</caption>
+</figure>
+ 
+<p>
+<p>按【Enter】後，程式自動進行NFS掛載的動作，如果正確無誤的話，
+畫面顯示出成功掛載的訊息。
+<p>
+<figure>
+<eps FILE="images/gs-nfs-4.ps">
+<img SRC="images/gn-nfs-4.jpg" WIDTH="975" HEIGHT="580">
+<caption>成功地NFS掛載至本機端!</caption>
+</figure>
+ 
+<p>
+<p>之後程式會問您是否將NFS掛載的記錄寫至/etc/fstab檔中。如果您選擇【是】的話，
+則在未來重新開機時，則系統會自動將目前設定的這個NFS目錄掛載上來。
+選擇【否】的話，則下次重新開機，系統並不會自動再度掛載上該NFS目錄。
+<p>
+<h3>卸除NFS</h3>
+
+<p>當您想要卸除一個正掛載在本地端的NFS目錄時，請選擇【卸除NFS】選項。
+<p>
+<figure>
+<eps FILE="images/gs-nfs-4.ps">
+<img SRC="images/gn-nfs-4.jpg" WIDTH="975" HEIGHT="580">
+<caption>【卸除NFS】</caption>
+</figure>
+ 
+<p>
+<p>?程式自動列出目前所有掛載中的NFS目錄。使用上、下方向鍵移動至欲卸除的NFS目錄。
+確定時按【Enter】鍵。
+<p>
+<figure>
+<eps FILE="images/gs-nfs-5.ps">
+<img SRC="images/gn-nfs-5.jpg" WIDTH="975" HEIGHT="580">
+<caption>目前系統掛載中的NFS目錄清單</caption>
+</figure>
+ 
+<p>
+<p>在卸除成功的訊息之後，同樣會出現訊息詢問您是否變更/etc/fstab檔的記錄。
+如果您選擇【是】，則以後重新開機時，系統就不再自動掛載該NFS目錄。
+選擇【否】的話，則不去修改/etc/fstab檔。
+<p>
+<h3>網路檔案系統伺服器(NFSD)設定</h3>
+
+<p>功能說明:
+<p>而本設定工具針對NFS伺服器端的管理設定。當您的主機是一部可供他人掛載、
+使用本地端檔案系統的伺服器時，此工具提供方便的操作介面，
+幫助您設定NFS伺服器。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-nfsd.ps">
+<img SRC="images/Genie-nfsd-main.jpg" WIDTH="975" HEIGHT="604">
+<caption> NFS伺服器設定程式主畫面</caption>
+</figure>
+     
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-nfsd.ps">
+<img SRC="images/gn-nfsd-main.jpg" WIDTH="975" HEIGHT="580">
+<caption> NFS伺服器設定開啟畫面</caption>
+</figure>
+<p>
+<p>
+<h3>開放NFS目錄</h3>
+
+<p>開放本機的某一個目錄，供特定的NFS客戶端來掛載。您可以依以下步驟達成。
+選擇【新增記錄】選項後，畫面要求輸入欲開放的NFS目錄，
+即為欲供NFS客戶端掛載的本地端目錄。請輸入，如:/usr/local。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-nfsd-1.ps">
+<img SRC="images/gn-nfsd-1.jpg" WIDTH="975" HEIGHT="580">
+<caption>輸入欲開放的NFS目錄</caption>
+</figure>
+<p>
+<p>之後，畫面要求選項該NFS目錄的開放權限設定，ro為唯讀，rw為可讀寫等等。
+<p>
+<p>
+<figure>
+<eps FILE="images/gs-nfsd-2.ps">
+<img SRC="images/gn-nfsd-2.jpg" WIDTH="975" HEIGHT="580">
+<caption>權限設定選項</caption>
+</figure>
+ 
+<p>允許存取的網路區域，您可限制此NFS目錄的存取範圍，輸入的格式為IP號碼或主機名稱，
+如:*.wahoo.com.tw、210.200.87.0/255.255.255.0等。如果直接按【Enter】鍵，
+則預設為所有人皆可存取。
+<p>
+<p>
+<figure>
+<eps FILE="images/gs-nfsd-3.ps">
+<img SRC="images/gn-nfsd-3.jpg" WIDTH="975" HEIGHT="580">
+<caption>輸入允許存取的網路區域</caption>
+</figure>
+ 
+<p>
+<h3>關閉NFS目錄</h3>
+
+<p>選擇【刪除記錄】選項，程式會列出目前NFS伺服器中所有開放的目錄清單，
+您可利用上、下方向鍵移動至欲關閉的NFS目錄，確定時按下【Enter】鍵。
+<p>
+<figure>
+<eps FILE="images/gs-nfsd-4.ps">
+<img SRC="images/gn-nfsd-4.jpg" WIDTH="975" HEIGHT="580">
+<caption>選擇欲關閉的NFS目錄</caption>
+</figure>
+ 
+<p>
+<h3>Samba 設定</h3>
+
+<p>功能說明:
+<p>samba 是檔案伺服器的一種,作用是跟 windows 系列的網路芳鄰溝通來達成檔案共享的功能。本程式可設定以下功能:
+<p>* 設定分享的目錄。<br>
+* 設定分享的印表機。<br>
+* 刪除分享的目錄。<br>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/Genie-smb-main.jpg" WIDTH="975" HEIGHT="604">
+<caption>Samba 設定主畫面</caption>
+</figure>
+<p>                             
+<p>
+<p>畫面說明:
+<p>
+<ul>
+<li>第一項是群組名稱,</li>
+<li>第二項是主機名稱,</li>
+<li>第三項是目錄管理,</li>
+<li>第四項是印表機分享。</li>
+</ul>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-smb-main.jpg" WIDTH="964" HEIGHT="580">
+<caption>Samba 設定開啟畫面</caption>
+</figure>
+<p>
+<p>先選擇群組名稱的設定,這邊是設定 samba 主機在網路芳鄰中的群組名稱。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-smb-01.jpg" WIDTH="964" HEIGHT="580">
+<caption>Samba 群組名稱</caption>
+</figure>
+<p>
+<p>再來是設定這台 samba 主機在網路芳鄰中的簡單介紹。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-smb-02.jpg" WIDTH="964" HEIGHT="580">
+<caption>Samba 主機介紹</caption>
+</figure>
+<p>
+<p>目錄管理的部份,有新增跟刪除的選項。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-smb-03.jpg" WIDTH="964" HEIGHT="580">
+<caption>Samba 目錄管理主畫面</caption>
+</figure>
+<p>
+<p>先介紹新增的部份。
+<p>
+<p>輸入要分享出去的目錄名稱。(例如 tmp)
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-smb-04.jpg" WIDTH="964" HEIGHT="580">
+<caption>Samba 分享目錄設定</caption>
+</figure>
+<p>
+<p>接下來是設定該目錄在網路芳鄰上的名稱。(請勿打空白)
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/genie-network-samba-3.1.1.jpg" WIDTH="975" HEIGHT="580">
+<caption>分享目錄設定</caption>
+</figure>
+<p>
+<p>接著是刪除的部份,選擇想刪除的選項。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-smb-05.jpg" WIDTH="964" HEIGHT="580">
+<caption>Samba 刪除目錄分享</caption>
+</figure>
+<p>
+<p>設定完後會回到主畫面,接下來設定印表機的分享。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-smb-07.jpg" WIDTH="964" HEIGHT="580">
+<caption>Samba 印表機分享</caption>
+</figure>
+<p>
+<p>選擇新增,選擇&quot;是&quot;,即完成印表機的分享設定。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-smb-08.jpg" WIDTH="964" HEIGHT="580">
+<caption>Samba 印表機分享</caption>
+</figure>
+<p>
+<p>如選擇刪除,選&quot;是&quot;,則印表機解除分享。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-smb-09.jpg" WIDTH="964" HEIGHT="580">
+<caption>Samba 印表機分享移除</caption>
+</figure>
+<p>
+<h3>apache設定工具</h3>
+
+<p>功能說明:
+<p>apache設定工具使您可以輕易的設定apache web server的基本項目。
+包括Server名稱、執行使的使用者及群組、管理者帳號，Web Server的根目錄。
+html文件的根目錄，使用的埠號(port)。
+<p>在使用genie這項功能之前，必須先安裝genie-apachetoll的套件。
+<p>
+<figure>
+<eps FILE="images/gs-apachetool.ps">
+<img SRC="images/gs-apachetool.jpg" WIDTH="815" HEIGHT="484">
+<caption> Geine apache設定工具主畫面</caption>
+</figure>
+<p>
+<p>選擇【apache設定工具】後, 按【Enter】鍵進入設定區。
+<p>
+<figure>
+<eps FILE="images/gs-apachetool-main.ps">
+<img SRC="images/gs-apachetool-main.jpg" WIDTH="815" HEIGHT="484">
+<caption>apache設定工具主畫面</caption>
+</figure>
+<p>
+<p>如Server Name為www.wahoo.com.tw，執行時的使用者/群組為www/www，
+管理人員的e-mail為webadm@www.wahoo.com.tw，伺服器的根目錄為/etc/httpd
+(這是rpm安裝的預設目錄)，html文件的根目錄之/home/httpd/htdocs
+<p>選擇ServerName輸入www.wahoo.com.tw，
+<p>選擇User輸入www
+<p>選擇Group輸入www
+<p>選擇SererAdmin輸入webadm@www.wahoo.com.tw
+<p>選擇SererRoot輸入/etc/httpd
+<p>選擇DocumentRoot輸入/home/httpd/htdocs
+<p>關於BindAddress的設定請先查閱apache文件。
+<p>最後選擇Done，按下後離開。
+<p>選擇Group輸入www
+<p>
+<p>
+<h3>Inn 設定</h3>
+
+<p>功能說明:
+<p>Inn 是新聞群組伺服器的一種,本程式是設定一個基本的 news 伺服器的程式,可設定的以下功能:<br>
+* 設定上層餵信的主機。<br>
+* 設定可餵信過去的主機。<br>
+* 設定可餵信過來的主機。<br>
+* 設定可讀取新聞的網域。<br>
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/Genie-inn-main.jpg" WIDTH="975" HEIGHT="604">
+<caption>Inn 設定主畫面</caption>
+</figure>
+           
+<p>畫面說明:
+<p>
+<ul>
+<li>第一項是設定主機資訊</li>
+<li>第二項是設定連線管理</li>
+<li>第三項是群組管理?/LI&gt;
+</ul>
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-inn-main.jpg" WIDTH="964" HEIGHT="580">
+<caption>Inn 設定開啟畫面</caption>
+</figure>
+<p>
+<p>
+<h3>主機資訊的部份</h3>
+
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-inn-01.jpg" WIDTH="964" HEIGHT="580">
+<caption>選項</caption>
+</figure>
+<p>
+<p>
+<h3>機構名稱設定</h3>
+
+<p>這個部份是設定公司或機構名稱
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-inn-02.jpg" WIDTH="964" HEIGHT="580">
+<caption>機構名稱設定</caption>
+</figure>
+<p>
+<p>
+<h3>主機名稱設定</h3>
+
+<p>這邊是設定抓取 active 的主機,一般都是設定上層的 news 主機,這個設定會影響後面的群組管理中抓取 active 的部份。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-inn-03.jpg" WIDTH="964" HEIGHT="580">
+<caption>主機名稱設定</caption>
+</figure>
+<p>
+<p>
+<h3>網域名稱設定</h3>
+
+<p>這部份請詢問網管人員。
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-inn-04.jpg" WIDTH="964" HEIGHT="580">
+<caption>網域名稱設定</caption>
+</figure>
+<p>
+<p>
+<h3>管理者設定</h3>
+
+<p>
+<p>這邊是設定 news 主機管理者的 mail 帳號,一般都是 root。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-inn-05.jpg" WIDTH="964" HEIGHT="580">
+<caption>管理者設定</caption>
+</figure>
+<p>
+<p>
+<h3>連線管理的部份</h3>
+
+<p>請回到主畫面,選擇連線管理的選項。
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-inn-main.jpg" WIDTH="964" HEIGHT="580">
+<caption>Inn 設定開啟畫面</caption>
+</figure>
+<p>
+<p>會出現如下畫面。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-inn-06.jpg" WIDTH="964" HEIGHT="580">
+<caption>連線管理主畫面</caption>
+</figure>
+<p>
+<p>
+<h3>上層連線設定</h3>
+
+<p>這邊是設定餵信的主機,本程式因功能限制,餵信過來和餵信出去都是在這裡設定。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-inn-07.jpg" WIDTH="964" HEIGHT="580">
+<caption>上層連線管理設定</caption>
+</figure>
+<p>
+<p>
+<h3>存取網域設定</h3>
+
+<p>這邊是設定可在此台主機讀取或發送新聞的網域。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-inn-08.jpg" WIDTH="964" HEIGHT="580">
+<caption>存取網域設定</caption>
+</figure>
+<p>
+<p>
+<h3>群組管理設定</h3>
+
+<p>這部份是設定新聞群組,本程式因功能限制,目前只能管理有關台灣的新聞群組。
+<p>
+<p>接下來是即將抓取新聞群組的 active 檔,時間長短依使用的網路頻寬有關。
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-inn-09.jpg" WIDTH="964" HEIGHT="580">
+<caption>警示畫面</caption>
+</figure>
+<p>
+<p>抓取完畢後,會將群組顯示出來以供刪除,如不想刪除,則選擇取消。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-modem.ps">
+<img SRC="images/gn-inn-10.jpg" WIDTH="964" HEIGHT="580">
+<caption>抓取中</caption>
+</figure>
+<p>
+<p>
+<h3>網路對時協定(NTP)設定</h3>
+
+<p>功能說明:
+<p>網路對時協定(NTP)為網路間各個主機調校系統時間的一種協定。透過
+客戶端程式向擁有標準時間的NTP伺服主機詢問標準時間，
+可獲得相當準確的系統時間。而本設定程式，
+可讓您定時向特定的NTP伺服主機詢問標準時間，
+用以校正本機的系統時間。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-ntp.ps">
+<img SRC="images/Genie-ntp-main.jpg" WIDTH="975" HEIGHT="604">
+<caption>網路對時協定設定程式主畫面</caption>
+</figure>
+   
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-ntp.ps">
+<img SRC="images/gn-ntp-main.jpg" WIDTH="975" HEIGHT="580">
+<caption>網路對時協定設定開啟畫面</caption>
+</figure>
+   
+<p>
+<h3>定時向NTP伺服主機校對系統時間?/H3&gt;
+
+<p>在此設定程式的主畫面中，會顯示目前是否已經有定時校對系統時間的設定。
+而選單之中列出的是在台灣地區的各大NTP伺服主機位址。
+我們以tock.stdtime.gov.tw為例。請利用上、下方向鍵移動至tock.stdtime.gov.tw，
+按下【Enter】鍵。
+<p>下一畫面中，請選擇向NTP伺服主機對時的時間間隔。如想要各天對時一次，
+則選擇【daily】選項。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-ntp-1.ps">
+<img SRC="images/gn-ntp-1.jpg" WIDTH="975" HEIGHT="580">
+<caption>選擇對時的時間間隔</caption>
+</figure>
+<p>輸入每天的幾時進行對時。例如想要在每天的晚上10:30分進行對時，
+在此畫面則輸入22。(請使用24時制)。
+<p>
+<figure>
+<eps FILE="images/gn-ntp-2.ps">
+<img SRC="images/gn-ntp-2.jpg" WIDTH="975" HEIGHT="580">
+<caption>幾時進行對時動作?</caption>
+</figure>
+<p>
+<p>下一畫面輸入30，(如此代表22:30，即晚上的10:30)。
+<p>
+<figure>
+<eps FILE="images/gn-ntp-3.ps">
+<img SRC="images/gn-ntp-3.jpg" WIDTH="975" HEIGHT="580">
+<caption>幾分進行對時動作?</caption>
+</figure>
+   
+<p>按下【確定】鍵後，回到主畫面，程式會告訴您已成功地設定tock.stdtime.gov.tw(本例)
+為NTP校時伺服主機了。而系統將於每天的22:30分與tock.stdtime.gov.tw
+透過網路做系統時間的效對。
+<p>
+<h3>網路對時協定伺服器(NTPD)設定</h3>
+
+<p>功能說明:
+<p>如果您的主機是一部NTP伺服器，(即擁有標準計時器，可接受別台主機的對時要求)
+則此設定工具可幫助您做NTPD的設定動作。
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-ntpd.ps">
+<img SRC="images/Genie-ntpd-main.jpg" WIDTH="975" HEIGHT="604">
+<caption>NTPD設定程式主畫面</caption>
+</figure>
+ 
+<p>
+<p>
+<figure>
+<eps FILE="images/gn-ntpd.ps">
+<img SRC="images/gn-ntpd-main.jpg" WIDTH="975" HEIGHT="580">
+<caption>NTPD設定程式開啟畫面</caption>
+</figure>
+   
+<p>
+<h3>將本機設定成為第二層級(Stratum 2)的NTP伺服器</h3>
+
+<p>除非您擁有標準的時間產生源，用來做為標準時間的基準，
+不然NTP伺服器仍然依靠第一層級的NTP伺服器來做為時間基準。
+如此的NTP伺服器即稱為第二層級。
+<p>在NTPD設定程式主畫面中，以空白鍵選擇【Secondary NTP server】選項。
+接著，畫面出現各大NTP伺服主機的位置，請選擇其一做為您的上層NTP伺服器。
+確定後，按【確定】後回到主畫面。
+<p>
+<figure>
+<eps FILE="images/gn-ntpd-1.ps">
+<img SRC="images/gn-ntpd-1.jpg" WIDTH="975" HEIGHT="580">
+<caption>選擇上層NTP伺服主機</caption>
+</figure>
+   
+<p>
+<p>
+<hr>
+<a HREF="install-7.html">Next</a>
+<a HREF="install-5.html">Previous</a>
+<a HREF="install.html#toc6">Contents</a>
+</body>
+</html>

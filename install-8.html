@@ -1,0 +1,1151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head><meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+ <meta NAME="GENERATOR" CONTENT="SGML-Tools 1.0.9">
+ <title>XLinux安裝手冊和使用說明: 系統管理</title>
+ <link HREF="install-9.html" REL="next">
+ <link HREF="install-7.html" REL="previous">
+ <link HREF="install.html#toc8" REL="contents">
+</head>
+<body>
+<a HREF="install-9.html">Next</a>
+<a HREF="install-7.html">Previous</a>
+<a HREF="install.html#toc8">Contents</a>
+<hr>
+<h2><a NAME="s8">8. 系統管理</a></h2>
+
+<p>
+<h2><a NAME="ss8.1">8.1 LINUX系統概述        </a>
+</h2>
+
+<p>作業系統是現代電腦系統維持正常運作不可或缺的一環，它是在電腦上執行的一個特殊程式
+，而且通常在電腦一開機就進駐記憶體執行，提供其他程式執行、正常運作所需的環境，並
+且作為系統上所有程式跟電腦硬體之間的溝通橋樑，<br>
+<p>如圖一：<br>
+<figure>
+<eps FILE="images/kernel-1.eps">
+<img SRC="images/kernel-1.jpg" WIDTH="1050" HEIGHT="753">
+<caption>圖一：電腦系統架構簡圖</caption>
+</figure>
+<p>圖一簡化了作業系統的功能，事實上，作業系統是一個非常複雜的程式，
+它所擔負的工作也不只是驅動週邊設備而已，像 Linux 這樣的一個完整的現代作業系統，
+它所要負責的工作大致上可以分成以下幾個部份與
+功能：                                       
+<p>* 程序管理 (Process Management)
+<p>* 主記憶體管理 (Main-Memory Management)
+<p>* 延伸記憶體管理 (Secondary-Storage Management)
+<p>* 輸出入系統管理 (I/O System Management)
+<p>* 檔案系統管理 (File System Management)
+<p>* 保護子系統 (Protection System)
+<p>* 網路子系統 (Networking System)
+<p>這個架構並不是一成不變的，而會依各個作業系統的實作規格而有所不同，在
+Un*x 系統上，是以所謂的 &quot;系統呼叫&quot; 來實作這些功能，一般的應用程式是透
+過系統呼叫的方式跟作業系統要求服務，圖二便是一般 Un*x 系統提供的系統服
+務架構。           
+<p>
+<figure>
+<eps FILE="images/kernel-2.eps">
+<img SRC="images/kernel-2.jpg" WIDTH="1080" HEIGHT="790">
+<caption>圖二：Un*x 系統的架構?/CAPTION&gt;
+</figure>
+<p>圖一與圖二非常簡略的描述了作業系統的功能架構，這邊所謂的作業系統是
+用比較狹義的定義，並不指整個包括系統工具的程式集合，這邊的作業系統
+主要指的是提供系統低階服務的系統核心部份，本章的作用不在介紹作業系
+統的理論，這一節的功用也只是要給您對這樣的架構有一點了解，
+在後面我們將會介紹 XLinux 的開機程序跟系統核心運作的架構，
+目的是讓身為一個系統管理員的您可以控制您系統上提供的服務，
+並且能夠控制系統核心，解決硬體支援的相關問題。    
+<p>
+<h2><a NAME="ss8.2">8.2 樹狀目錄</a>
+</h2>
+
+<p>
+<ol>
+<li><p>用過DOS的人應該都知道，\DOS下放置的通常是DOS的工具程式，看到 \WINDOWS大
+概已經知道是 MS-Windows的系統程式，而這就是簡單的「目錄構造」觀念。因為系
+統的不同，當我們在安裝 DOS、Windows套裝軟體的時候，這些軟體通常會將所有的
+檔案裝在自已的目錄下，只有少部份 .DLL.INI會安裝到Windows的目錄下。
+在許多UNIX系統中，目錄都有被定義其下檔案的特性，這不但程式開發者、還有使
+用者，在安裝檔案或是在找檔案時，有一個重要的依據，尤其是像 UNIX的系統，是
+一個巨大樹狀結構的目錄，如果沒有嚴謹的目錄規範，那就不用懷疑，這整個系統看
+起來一定是亂七八糟的，因此我們一定要瞭解Linux整個的目錄構造。
+<p>在Linux系統下，檔案空間是一個樹狀結構，其最上層為root。目錄與檔
+案都是由root往下分支出來的。最上層的目錄即是所謂的根目錄(/)。
+&lt;圖8.2.1&gt;是一個樹狀結構，用來說明檔案空間大略的外觀為何。
+對使用者而言，這些目錄的樹狀結構看起來是連續的─他們只看到目
+錄與檔案。事實上，這個樹狀結構中的目錄與檔案可能位在同一磁碟上
+的不同分割區、在不同的磁碟上，或甚至在不同的電腦上。當其中一個
+磁碟分割區聯繫到檔案結構上的一個目錄時，即所謂的「mount point」;
+這個mount point與它下面所有的目錄，都被稱做檔案系統。
+<p><br>
+<figure>
+<eps FILE="images/tree.eps">
+<img SRC="images/tree.jpg" WIDTH="872" HEIGHT="376">
+<caption>圖8.2.1 Linux的檔案系統樹狀圖?/CAPTION&gt;
+</figure>
+        
+<p>
+<p>
+</li>
+<li>Linux 的目錄結構
+<p>UNIX大致分為BSD與SYSV兩個類別，這兩者的指令、目錄構造、作業系統的特性，
+都有些許的差異，不過沒有什麼關係。
+<p>顯示/的檔案目錄:
+bin/    etc/       proc/  var/
+boot/   home/      root/  
+sbin/   lib/
+dev/    lost+found/
+tmp/    usr/
+<p>您可以看到Linux最上層的檔案目錄結構就類似於上面這個列表，但是
+這些目錄裡面到底放什麼東西呢?往下就一一為您做介紹。
+我想一般人最常找的目錄就是有放置可執行程式的目錄，通常在Linux
+上，可執行檔都放在/bin、/sbin、/usr/bin、/usr/local/bin等目錄下。
+<p><b>/bin</b>
+<p>擺放一些執行檔，如基本的程式ls、mv、rm、mkdir、rmdir，基本的
+壓縮、解壓縮工具如gzip、gunzip、tar，基本的網路工具telnet、ftp等
+等可執行程式。而基本上/bin目錄裡面的檔案一般都和/usr/bin連結，也   
+就是說 /bin和/usr/bin這兩個目錄存放的檔案幾乎是完全一樣的。
+<p><b>/sbin</b>
+放置一些系統管理的程式，如fdisk、mke2fs、mkswap、mount等程式。
+<p>/usr/bin
+<p>擺放一些執行檔，一般都將/bin連結至此，而除了/bin連結到這邊外，
+一般常用的程式都放在這邊，如編譯程式語言的編譯器g++、gee、g77;
+解壓縮工具unarj、unzip、zoo;另外一些常用程式，如whereis，who，
+whoami，passwd;網路程式方面如mail、pine、elm等常用電子郵件程
+式;基本文書編輯程式vi、joe、pico等等。所以幾乎什麼想的到的常用
+程式都可以在這個目錄下找到。以後您自己安裝一些Linux軟體時，這
+些軟體的可執行檔也幾乎部內定放到  /usr/bin這個目錄或
+/usr/local/bin。
+<p>/usr/local/bin
+<p>對於自己安裝的軟體其可執行通常情況下，我們都放在/usr/local/bin這
+個目錄，以區別那些可執行程式是系統擁有的，那些是我們額外安裝的，
+所以自己裝好的軟體，要找它的可執行檔就到/usr/bin和/usr/lcoal/bin
+找準沒錯。
+<p>/usr/X11R6/bin
+<p>在X Window System上使用的程式幾乎部放在這個目錄，自己安裝的軟
+體也不例外，所以要找有關於X Window System的可執行程式，都可在
+/usr/X11R6/bin這個目錄下找到。                 
+<p>/boot
+<p>放置有關系統啟動(boot)之相關檔案。
+<p>/mnt/cdrom
+<p>/cdrom通常當做是CD-ROM的掛入點。當Linux有mount CD-ROM時，
+光碟片的檔案可以在這個目錄裡看到。(不過還是要依您的/etc/fstab的設
+定為準)
+<p>/lib
+<p>在Linux執行或編譯程式時，都需要某些函式庫(Library)，而/lib這個目
+錄就是擺放一些shared library的檔案，供系統使用者取用。
+<p>/dev
+<p>擺放和裝置有關的檔案，Linux上把所有的裝置都視為是一個檔案，而不
+會像在DOS或Windows95上一樣，用一個特別的名稱來代表裝置名稱，
+例如第一顆硬碟在Linux代表的裝置檔案是『hda』，在DOS上是卻是用
+一個特別的名稱『C磁碟機』來代表第一顆硬碟。這觀念在安裝Linux
+的時候您應該就已經了解。再舉個例，第一台軟碟是/dev/fd0代表A:，
+所以在Linux上都用檔案代表裝置，而這些檔案只是裝置的指標而已。
+<p>/etc
+<p>這一個目錄是攸關系統是否運作正常的重要目錄，不管是系統的組態
+檔;LILO多重開機程式的設定檔;網路的設定檔，幾乎所有系統設定檔
+案都放在這個目錄，所以這個目錄裡面每一個檔案的內容都要正確，不
+要任意修改甚至刪除，而要修改某些設定檔之前，最好都先備份比較好，
+否則修改不好或錯誤可能會造成系統運作不正常。
+<p>在系統中，/etc/這個目錄裡放著一些可以改變系統設定的設定檔，這些設定檔對系統管理
+者非常的重要，希望讀者能夠善用這些設定檔案，並了解這些檔案是設定系統的哪些功
+能，在這小節介紹一些較為重要且常用到的的設定檔案。
+首先是按字母順序排列的非網路配置( 結構 )檔案。
+<p>
+<center><table BORDER><tr><td>
+
+/etc/aliases</td><td>郵件收信人的假名。</td></tr><tr><td>
+/etc/csh.cshr</td><td>csh 執行描述檔。</td></tr><tr><td>
+/etc/csh.login</td><td>csh 執行描述檔。</td></tr><tr><td>
+/etc/csh.logout</td><td>csh 執行描述檔。</td></tr><tr><td>
+/etc/crontab</td><td>由root設定的定時自動描述檔。</td></tr><tr><td>
+/etc/fstab</td><td>開機自動掛上的檔案系統。</td></tr><tr><td>
+/etc/gettydefs</td><td>getty程式所需之描述檔。</td></tr><tr><td>
+/etc/group</td><td>群組定義檔。</td></tr><tr><td>
+/etc/login.conf</td><td>login時的描述檔。</td></tr><tr><td>
+/etc/man.config</td><td>man 所需的組態檔。</td></tr><tr><td>
+/etc/motd </td><td>login時看到的訊息檔。(message of the day) </td></tr><tr><td>
+/etc/passwd</td><td>是一個老舊-樣式的密碼檔，有些程式可能需要它。</td></tr><tr><td>
+/etc/printcap</td><td>敘述印表機連接到的系統。</td></tr><tr><td>
+/etc/profile</td><td>Bourne-style shells 啟動時執行檔。</td></tr><tr><td>
+/etc/rc.d/</td><td>系統啟動的主要程序檔目錄。</td></tr><tr><td>
+/etc/rc.d/rc.local</td><td>自定的系統啟動的程序檔。</td></tr><tr><td>
+/etc/sendmail.cf</td><td>sendmail所需的組態檔。</td></tr><tr><td>
+/etc/shells</td><td>系統可用shell表單。</td></tr><tr><td>
+/etc/spwd.db</td><td>機構可讀的密碼檔。</td></tr><tr><td>
+/etc/sysconfig/</td><td>系統啟動時所需參數表。</td></tr><tr><td>
+/etc/termcap</td><td>(terminal capabilities) 描述終端的控制順序。</td></tr><tr><td>
+/etc/inittab</td><td>init程式所需的組態檔。</td></tr><tr><td>
+/etc/exports</td><td>NFS輸出一覽表。</td></tr><tr><td>
+/etc/ftpusers</td><td>不允許使用ftp的使用者一覽表。</td></tr><tr><td>
+/etc/host.conf</td><td>是描述DNS解析步驟。</td></tr><tr><td>
+/etc/hosts</td><td>DNS與主機名稱對應檔。</td></tr><tr><td>
+/etc/host.equiv</td><td>外界主機名稱，允許不需要密碼的使用者登入。</td></tr><tr><td>
+/etc/hosts.lpd</td><td>允許外界主機使用lpd spooler。</td></tr><tr><td>
+/etc/inetd.conf</td><td>inetd所需的組態檔，主要是關於TCP/IP的服務。</td></tr><tr><td>
+/etc/named.conf</td><td>named所需的組態檔。</td></tr><tr><td>
+/etc/protocols</td><td>協定一覽表。</td></tr><tr><td>
+/etc/service</td><td>IP服務一覽表。</td></tr><tr><td>
+
+<caption> /etc 下非網路配置檔案?</caption>
+</td></tr></table></center>
+       
+<p>
+<p>
+<p>
+<p>
+<p>/etc/rc.d
+<p>Linux系統啟動時，會執行一些script files(類似DOS下的批次檔，但不
+太一樣)，而這些 script files都放在 /etc/rc.d下。
+<p>/home
+<p>一般我們把系統上所有使用者的Home Directory都放在這個目錄底下，
+也就是使用者的家。
+<p>/mnt
+系統內定的掛入點(mount point)，假如您要臨時掛入額外的系統檔案，一
+般我們拿/mnt當做mount point。
+<p>/proc
+<p>proc是虛擬的檔案系統，主要放在記憶體內，而非放在硬碟內。系統會
+將每個processID給予一個檔名，對於process猶如對於檔案的管理一般，
+提供目前系統正在使用的IRQ、I/O埠、DMA通道、CPU的種類...等等
+資訊，有助於process的管理與除錯。      
+<p>/root
+<p>系統管理者root的Home Directory。
+<p>/tmp
+<p>這是讓一般使用者暫時存放檔案的目錄。所以/tmp目錄下時常會有些亂
+七八糟檔案，身為管理者的您，應該定期清理/tmp。
+<p>/usr
+<p>顧名思義，這個目錄主要擺放一些和使用者有關的檔案，此目錄下還有
+很多子目錄，分門別類的以不同的目錄名稱放置不同種類的檔案和程
+式。大概如下，往下只介紹較重要的目錄:
+<p>
+<center><table BORDER><tr><td>
+
+　doc/　</td><td>　info/　</td><td>　sbin/　</td><td>　share/　</td></tr><tr><td>
+　X11R6/　</td><td>　etc/　</td><td>　lib/　</td><td>　games/　</td></tr><tr><td>
+　libexec/　</td><td>　src/　</td><td>　admin/　</td><td>　i486-Linux-libc5/ </td></tr><tr><td>
+　bin/　</td><td>　i386-redhat-linux/　</td><td>　man/　</td><td>　dict/　</td></tr><tr><td>
+　include/　</td><td>　i386-glibc20-linux/　</td><td>　local/　</td></tr><tr><td>
+
+<caption> /usr 下重要的目錄?</caption>
+</td></tr></table></center>
+                  
+<p>■ X11R6/
+擺放X Window System的檔案，
+<p>■/usr/etc
+主要放系統的組態檔，及一些系統管理維護的程式和工具(utility)，一般
+都將/etc連結至此。
+<p>■/usr/doc
+主要擺放文件做為參考用。
+<p>■/usr/local
+自行裝設之軟體大多放在這邊，其目錄下還包含bin、lib、include、src、
+man...等等目錄。
+<p>■/usr/include
+擺放系統函式的含括檔(include file)，就是一些檔名以.h為結尾的檔案。
+<p>■/usr/lib
+擺放公用函式庫(shared library)，例如系統的I/O和一些數學函式，而這
+些函式的檔名通常是libx.a的形式(x可能不只一個字母)。一般都將/lib
+連結到這個目錄。
+<p>■/usr/man
+主要放置一些線上說明檔(manual file)，給man指令使用的man page file。
+<p>■/usr/src
+一些已安裝軟體的原始程式碼(source file)，如sendmail、xview等程式的
+source。
+<p>大致上/usr目錄下較重要的檔案目錄就是以上這些，往下再跟您介紹
+這個目錄的檔案內容。          
+<p>/var
+<p>/var和/usr的功能類似，很多檔案也都和/usr連結，不過和/usr不同的是，
+/var裡面的檔案都是較易變動的，如/var/log這個目錄，系統運作過程
+中，產生的某些紀錄檔都會常常更新到這個目錄;/var/spool這個目錄就
+是提供spool服務的目錄，許多程式如電子郵件系統、列印系統、以及
+crontab程式都會時常變更/var/spool裡面的資料。
+<p>/var/spool/
+擺放佇列(queue)檔案，如printer queue、mail spool等。
+<p>基本上大概了解上面介紹的這些目錄，您就可以概觀的認識Linux的檔
+案結構，及什麼檔案該擺放的適當位子，以後在安裝軟體的時候，記得適當
+的擺放各種類型檔案的位置，才不會把Linux的檔案結構弄的亂七八糟，否
+則要找某個檔案將都變得很不容易。不過現在的Linux軟體在安裝時，都會
+指定適合於Linux檔案結構的路徑，只要您不要任意修改軟體安裝路徑的內
+定值，應該不會有什麼大問題發生才對。
+<p>
+</li>
+</ol>
+<p>
+<h2><a NAME="ss8.3">8.3 檔案系統</a>
+</h2>
+
+<p>『drwxrwxrwx』是什麼東西，且用來做什麼?其實這是檔案使用的權限，其每一個字母，
+都有特別的意義，分別解釋如下：
+<p>開頭的第一個字元，有很多的字母， 像
+<p>
+<ul>
+<li>&quot;d&quot;是代表目錄、</li>
+<li>&quot;l&quot;是代表鏈結、</li>
+<li>&quot;c&quot;是代表字元設備、</li>
+<li>&quot;b&quot;是代表區塊設備、</li>
+<li>&quot;s&quot;是代表socket、</li>
+<li>&quot;p&quot;是代表pipe、?/LI&gt;
+</ul>
+<p>接著第一個字元下來的第一組rwx是代表檔案擁有人的使用權限，其中
+<p>&quot;r&quot;代表可讀、<br>
+&quot;w&quot;代表可寫，<br>
+&quot;x&quot;代表可執行，<br>
+<p>倘若沒有這一種屬性的其中之一，那便以&quot;-&quot;為代表；第二組與第
+三組的rwx則是分別為同群組使用者和其它使用者的使用權限。<br>
+<p>所謂『同群組使用者』，是指屬於相同群組[group]的使用者，例如所有的學生帳號，
+就全都為student群組，至於group如何設定，XLinux中的Genie設定精靈可以幫我們做到。?而『其它使用者』是指同群組以外的使用者。還有在下圖中，您應該有看到兩個root那這是什麼呢？其實這是指該檔的擁有人，及擁有人所屬的群組，這樣可讓別人知道這檔案是誰的，也就是說能夠修改檔使用權限的人。             
+<blockquote><code>
+<pre>
+ 
+drwxr-xr-x   4 root     nobody       1024 Aug 15 11:57 samba
+drwx------   6 tom      tom          1024 Aug 16 02:12 tom
+-rw-r--r--   1 root     root       620497 Oct 14 21:42 zwin-2.xpm
+-rw-r--r--   1 root     root       620497 Oct 14 21:43 zwin-3.xpm 
+</pre>
+</code></blockquote>
+<p>請同時參考本手冊第七章之<code>
+<a HREF="install-7.html#chmod-ref">chmod指令說明</a></code>)。
+<p>
+<h2><a NAME="ss8.4">8.4 核心的奧秘</a>
+</h2>
+
+<p>
+<h3>XLinux 開機程序</h3>
+
+<p>
+<ol>
+<li> LILO 簡介
+<p>請參見本手冊第5章5.4節<code>
+<a HREF="install-5.html#LILO-ref">設定啟動管理員</a></code>
+<ul>
+<br>
+<li>LILO 安裝程式 
+<a NAME="LILO2-ref"></a> 
+<p>lilo 的設定檔在 /etc/lilo.conf，當使用者以 root 身份執行 lilo 程式的時候，
+lilo 就會去讀取 /etc/lilo.conf，並依照其內容安裝 LILO，在命令列執行 lilo
+來安裝 Linux 開機程式的時候有幾個選項可以使用：
+<p>-C config-file 用 config-file 當作設定檔，不去讀取 /etc/lilo.conf
+的設定。
+<p>-d delay 開機時在 &quot;LILO:&quot; 提示符號等待 delay 秒，讓使用者輸入參數。
+<p>-D label 預設用 &quot;label&quot; 這個系統核心開機，label 需在設定檔中定義。
+<p>-l 用 linear 模式來定址硬碟上的磁區 (sector)，在某些 SCSI 硬碟上是必要的。
+<p>-v 顯示安裝的詳細過程，用越多個 &quot;-v&quot; 會顯示越詳細的訊息。
+<p>-u 將安裝在磁碟上的 LILO 移除。              
+<p>一般我們會編輯設定檔 /etc/lilo.conf，把詳細的設定跟參數寫在設定檔裡面，
+然後直接執行：
+<blockquote><code>
+<pre>
+lilo -v -v -v
+</pre>
+</code></blockquote>
+<p>來完成更新 LILO 的工作。
+<p>關於 lilo 更詳細的用法，請參考 lilo 的說明頁 (man lilo)，或查閱系統中位於
+/usr/doc/ 底下的 lilo 文件。
+<p>
+</li>
+<li>/etc/lilo.conf
+<p>lilo.conf 是 lilo 的設定檔，設定檔中包含了 LILO 安裝的位置、可以用來開的系統核心
+或其他作業系統、要傳遞給系統核心的參數，以及一些
+LILO 的參數，一個典型的 lilo.conf 的內容如下：
+<p>boot=/dev/hda
+<p>map=/boot/map
+<p>install=/boot/boot.b
+<p>prompt
+<p>timeout=50                
+<p>image=/boot/vmlinuz-2.2.12-4CLE
+<p>label=linux
+<p>root=/dev/hda9
+<p>append = &quot;mem=95M&quot;
+<p>read-only
+<p>image=/boot/vmlinuz-2.2.12-4CLE
+<p>label=old_linux       
+<p>root=/dev/hda9
+<p>append = &quot;mem=95M&quot;
+<p>read-only
+<p>other=/dev/hda1
+<p>label=dos
+<p>table=/dev/hda
+<p>這個檔案可以概略分成兩部份，從第一個 &quot;image&quot; 參數開始到檔案結尾這一段是用來定義?不同的開機系統，在上面這個例子裡面我們定義了三個可以開機的系統，兩個是不同的
+Linux 核心，一個 Win95 的系統，他們的標籤 (label) 分別是 &quot;linux&quot;、&quot;old_linux&quot;
+以及 &quot;dos&quot;，系統預設會用第一個系統來開機，但是也可以在開機出現 &quot;LILO:&quot;
+提示符號時輸入其他的 label 從不同系統開機。       
+<p>在每個 &quot;image&quot; 之間是各個不同開機系統的設定參數，常用的參數有：
+<p><b>image=???</b> 用來開機的 kernel 位置。
+<p><b>other=???</b> 用來開機的非 Linux 作業系統位置。
+<p><b>label=???</b> 這個開機系統的標籤。
+<p><b>root=???</b> 開機的根目錄分割區。
+<p><b>append=???</b> 要透過 LILO 傳遞給 Linux 系統核心的參數。
+<p><b>ramdisk=???</b> 啟動系統核心前先載入記憶體磁碟影像檔 (initrd)，在用 SCSI
+裝置開機時是必要的。
+<p>在第一個 &quot;image&quot; 之上的這一段是對整個 LILO 程式的設定，常常會用到的參數有： 
+<p><b>boot=/dev/???</b> 
+安裝 LILO 的位置，若指定的是一個硬碟分割區，如 /dev/hda1
+的話，lilo 會將 LILO 安裝在此分割區的第一個磁區之上，就是一般所謂安裝在
+root partition 的狀況，若指定的是一整個硬碟，如上例的 /dev/hda，LILO
+就會被安裝該硬碟的 MBR 上面。
+<p><b>default=label</b> 
+預設用標籤為 label 的系統開機，而不是第一個 &quot;image&quot;。
+<p><b>timeout=delay_sec</b> 
+開機時在 &quot;LILO:&quot; 提示符號等待 delay_sec 秒，讓使用者輸入參數。
+<p><b>message=message_file</b> 
+在開機顯示 &quot;LILO:&quot; 提示符號前先顯示 message_file
+的內容。
+<p><b>password=...</b>
+設定開機密碼。
+<p><b>linear</b> 
+用 linear 模式來定址硬碟上的磁區 (sector)，某些硬碟機的組態要用這個選項才
+可以正常的開機，在硬碟開機失敗時不妨加上這個選項後，重新安裝 LILO 試試看。
+<p><b>prompt</b> 
+開機時顯示提示符號。
+<p><b>restricted</b> 
+只有當使用者在 &quot;LILO:&quot; 提示符號下有輸入開機選項的時候才要求輸入密碼。
+<p>讀者可以看一下上面範例中這些參數的設定狀況，更詳細的設定跟參數列表，
+請參考 lilo.conf 的說明頁 (man lilo.conf)。  
+</li>
+<li></li>
+</ul>
+<p>
+</li>
+<li> 開機流程
+<p>當我們把一台 x86 系統的電腦電源打開的時候，系統的 BIOS 會先接管
+機器的主控權，進行硬體設備檢查，初始化...等等工作，當 BIOS 的工作完成，
+他會依據設定的開機順序，搜尋軟碟、光碟、硬碟上的開機磁區，
+若是從硬碟開機的話，BIOS 就會在硬碟的 MBR 上找尋開機磁區，
+把放在開機磁區上面的開機程式載入記憶體，並將系統的控制權交給這個程式
+進行後續的開機動作，假如 LILO 是安裝在系統的 MBR 的話，
+這個時候就會啟動 LILO，並進行一連串的 Linux 開機程序。
+<p>本節的內容將會為大家 XLinux 系統的開機過程，
+以及在開機過程中需要特別注意的事項，希望讀者能夠對整個開機程序有完整概念，
+在遇到問題時有能力自行找到發生問題的地方並加以排除。        
+<ul>
+<br>
+<li>kernel 開機選項
+<p>LILO 接管硬體的控制權以後就會在螢幕上印出 &quot;LILO:&quot; 的提示符號，
+此時使用者可以按 【Enter】 以預設模式啟動 Linux，也可以選擇其他的作業
+系統或其他的 Linux 系統核心來開機，此外，也可以在此時傳遞參數給 Linux 系統核心，
+改變核心開機的預設狀態，這些參數的傳遞方法可以在 Linux &quot;BootPrompt-HOWTO&quot; 
+這分文件裡面找到詳細的說明，底下則歸納幾個在 &quot;LILO:&quot; 提示符號下常用的參數：
+<p>【tab】: 顯示可以用來開機的作業系統或系統核心的標籤 (label)。
+<p><b>label-name</b>
+<p>輸入其他標籤名稱後，就可以從其他作業系統或系統核心開機，
+如系統上有裝 Windows 的時候，預設是用 &quot;dos&quot; 就可以進入 Windows 系統。
+<p><b>linux root=/dev/???</b> 
+<p>指定開機時的根目錄 &quot;/&quot; 所在的磁碟位置， ??? 為磁碟的分割區裝
+置檔，如 hda1、sda3... 等等。   
+<p><b>linux init=?</b> 
+<p>指定開機後要進入的 runlevel，runlevel 的概念會在本章的後面介紹。
+<p><b>linux hd?=cdrom </b>
+<p>指定某個 IDE 裝置為 CDROM，有時候 Linux 會無法正確抓到您的
+IDE CDROM，此時可以直接指定 CDROM 位置讓 Linux 使用。
+<p><b>linux mem=??M </b>
+<p>在某些情況下，Linux 無法自動抓到系統全部的記憶體，此時就可以用
+mem 參數直接告訴 Linux 系統的記憶大小。
+<p>上述參數中 &quot;init=1&quot; 是很常使用的一個，&quot;linux init=1&quot; 會以 RunLevel
+1 登入系統，這個模式是單人使用，無須密碼就可以進入，所以在系統遇到如
+root 密碼忘記、檔案系統毀壞... 等等意外狀況的時候，
+可以用 init=1 進入系統解決問題。
+<p>其他還有許多指定硬體週邊裝置的參數，請參考 BootPrompt-HOWTO。
+<p>
+</li>
+<li>載入 initrd
+<p>若安裝 LILO 時有設定啟動記憶體磁碟影像檔 (ramdisk=...) 的話，
+LILO 會先讀取此一影像檔，把它載入記憶體中，這在從 SCSI 磁碟開機的系統
+上是必要的動作，因為 XLinux 的系統核心並沒有內含 SCSI 卡的驅動程式，
+若您的系統是從 SCSI 裝置開機的話，一定要先用 initrd 的方式把 SCSI 
+驅動模組放到記憶體裡面，系統核心才有辦法驅動 SCSI 卡，從
+SCSI 磁碟開機。   
+<p>
+</li>
+<li>kernel 載入與 dmesg 指令
+<p>在載入 initrd 之後，LILO 就會正式讀取系統核心並交出控制權，
+此時系統核心便會一一檢查您系統上所有的裝置，並且為各個裝置配置裝置驅動檔
+(/dev/*)，您可以在螢幕上看到整個開機的詳細過程，
+跟每個裝置分配到的裝置驅動案編號，最後系統核心會將系統的根目錄掛上，
+並且退居幕後，將系統控制權交給 &quot;init&quot; 程式。
+<p>系統開機的過程會出現很多有用的訊息，若想要看這些資訊的話，可以執行
+&quot;dmesg&quot; 指令，dmesg 會列出系統核心訊息。
+<p>
+</li>
+<li>init 與 XLinux 的 SysV 開機程序
+<p>init 是 Linux 系統上的一個特別的程式，它是系統上第一個啟動的程序，
+PID 等於 1，是系統上所有程序的父程序，您可以在 Linux 上下指令看看 
+init 是不是在執行：
+<p>
+<blockquote><code>
+<pre>
+ 
+[root@xlinux1 /root]# ps aux | grep init
+root 1 0.0 0.0 1096 52 ? S 00:38 0:02 init
+root 13634 0.0 0.5 1768 504 pts/1 S 16:00 0:00 grep init
+[root@xlinux /root]#
+</pre>
+</code></blockquote>
+<p>當 init 從系統核心手上取得系統的控制權以後，它會去讀取 /etc/inittab
+這個檔案，並依據其中的設定來啟動程式，在 XLinux 裡面是用 SysV
+的開機程序來啟動系統，系統的啟動方式定義在 /etc/inittab 裡面，
+我們稱之為不同的 &quot;RunLevel&quot;，預設的 runlevel 設定如下：                         
+<p>Default runlevel. The runlevels used by XLinux are:
+<p>0 - halt (Do NOT set initdefault to this)
+<p>1 - Single user mode
+<p>2 - Multiuser, without NFS (The same as 3, if you do not have networking)
+<p>3 - Full multiuser mode
+<p>4 - unused
+<p>5 - X11
+<p>6 - reboot (Do NOT set initdefault to this)
+<p>比較常用的包括 &quot;1&quot; 的單人使用模式，可以用來進行系統維護工作，
+&quot;3&quot; 是文字介面的完整多人多工模式，
+&quot;6&quot; 也是完整的多工模式，不過會啟動 xdm，預設就進入圖形介面。     
+<p>/etc/inittab 裡面 &quot;id:3:initdefault:&quot; 這一行便定義了預設進入
+的 runlevel，init 程式得知預設進入的 runlevel 以後 (前例為 &quot;3&quot;)，
+便依據這個 runlevel 執行後面在 inittab 中定義的服務，這包括：
+<p>1. 執行 /etc/rc.d/rc.sysinit，設定系統的基本組態。
+<p>2. 依照 runlevel 3 去執行 &quot;/etc/rc.d/rc 3&quot;，這個 script 會依照數字順序去執行
+/etc/rc.d/rc3.d/ 底下的所有以 &quot;S&quot; 開頭的程式，/etc/rc.d/rc3/ 目錄下放的都是連?/etc/rc.d/init.d/ 底下 script 的符號連結，一個 script 都代表一種系統服務，所以
+在該 runlevel 目錄下有連結的 script 就會被執行到，而啟動該項系統服務，SysV
+的開機程序便利用這種符號連結的機制來管理每個不同 runlevel 在開機時所要啟動的系
+統服務。
+<p>3. 執行 /etc/rc.d/rc.local
+<p>4. 啟動 login 程式或 xdm，讓使用者登入，把控制權交給其他程式。
+<p>如此便完成開機程序，成功的啟動一個完整的 Linux 系統了。  
+<p>
+</li>
+</ul>
+  
+<p>
+</li>
+<li> 系統服務
+<p>Server 系統架設的目的就是要能夠提供各式各樣的服務，
+在 Linux 底下，各樣的服務都由一個特定的服務程式
+(daemon) 提供，系統上要有執行這個程式才能對外提供服務，
+例如要當 mail server 就必須執行 sendmail 程式，
+要作為全球資訊網主機就要執行 httpd 程式，
+因此各式服務的管理也是一個系統管理員必備的知識。    
+<p>
+<ol>
+<li>更動開機時啟動的服務
+<p>在開機程序中，系統管理員最感到興趣的是開機時啟動的服務，
+如前所述，XLinux 的開機程序會依據 runlevel 來啟動每個 
+runlevel 目錄底下有連結 script 的程序，
+讀者可以下指令 &quot;ls -la /etc/rc.d/rc3.d/&quot; 看看在 runlevel 3 時
+執行的服務有那些，也可以看出這些服務其實都是連結到 /etc/rc.d/init.d/
+底下的 script 檔案，只要增加或刪除這些符號連就可以增減開機時啟動的服務。
+<p>
+</li>
+<li> 在開機後啟動或停止服務
+<p>一個好的系統管理員一定會妥善的管理系統上所提供的服務，
+管理的原則很簡單，跑的服務越少越好就對了；系統上執行太多不必要的服務，
+是對記憶體的浪費，更佔用系統時間，影響系統效能，更嚴重的是安全的問題，
+多提供一項網路服務就會在系統上多開一個被侵入的管道，
+過多不必要的網路服務會造成系統安全的漏洞。所以，在安裝系統時一定仔細思考每
+項服務的必要性，沒有需要用到的服務就不要開啟，這樣才能維護系統的效能與安全性。 
+</li>
+</ol>
+</li>
+</ol>
+<h3>XLinux 的系統核心套件</h3>
+
+<p>XLinux 是利用 rpm 架構出來的系統，核心程式也一樣是包在 rpm 套件之中，
+這一節便為大家介紹 XLinux 之中的系統核心 rpm 套件、模組化核心的使用，
+並說明利用 rpm 更新核心的詳細步驟。  
+<p>
+<ol>
+<li>認識 Linux kernel 的版本意義
+<p>Linux 系統核心的開發是建築在一個 &quot;菜市場&quot; 模式上面，
+還在開發中的核心會放出來讓大家測試，參與程式的寫作；
+為了把這些開發中的核心版本跟一般穩定的核心區分開來，
+Linus 便用不同的版本系列來區分，核心版本第二碼編號為偶數的是穩定的
+核心版本，編號為奇數的是開發中的版本，例如目前穩定版最新的核心是
+2.2.10，開發中版本最新的是 2.3.11；開發中的核心常有許多還在實驗中的
+新功能，往往非常的不穩定，不適合一般人使用，不過當這些功能被完整測試，
+而且 Linus 覺得有必要讓大家使用的時候，就會把它合併進偶數編號的新版
+核心裡面，一般系統都應該用編號偶數的穩定系列系統核心。 
+<p>
+</li>
+<li> kernel 相關 rpm 檔說明
+<p>XLinux 裡面的系統核心套件包括了六個 rpm 檔：
+<p>kernel 包含系統核心與驅動程式模組跟相關工具程式，
+是系統必要的套件；安裝後會將系統核心放在 /boot 底下，
+將核心驅動程式模放在 /lib/modules/ 目錄之下。
+<p>kernel-doc 關於系統核心的說明文件，
+安裝後會放在 /usr/doc/kernel... 底下。
+<p>kernel-headers 核心相關的標頭檔，在編譯程式的時候會用到。
+<p>kernel-ibcs IBCS 模組，可以用來執行符合 IBCS2 標準的程式，
+如 SCO Unix 上的程式就可以用這模組來執行。
+<p>kernel-pcmcia-cs PCMCIA 裝置的驅動程式與工具程式。
+<p>kernel-source 系統核心的原始碼，會安裝在 /usr/src/linux 目錄下，
+讓您可以自行編譯系統核心。
+<p>這些 rpm 檔中 kernel、kerne-headers 是必要安裝的套件，kernel-pcmcia-cs      
+在使用 PCMCIA 裝置的系統上 (如 Notebook) 是必要的，kernel-source 
+在需要重新編譯系統核心時會用到，kernel-ibcs 則幾乎是不會用到的功能，
+可以不必安裝。
+<p>
+</li>
+<li>用 rpm 檔更新系統核心
+<p>Linux 核心的發展是持續性的，所以往往過一陣子就會在網路上看到有新版的系統核心出現
+，此時一個好的系統管理員不會盲目的更新系統核心，而會冷靜的先評估一下更新核心的必
+要性，要考量的地方主要有三個問題：
+<p>1. 新核心是否提供了新的驅動程式，可以驅動系統上本來不能使用的裝置？
+<p>2. 新核心是否修正了嚴重的安全漏洞，例如修補了某個可以造成 DoS 攻擊的漏洞？
+<p>3. 新核心是否修正了某個嚴重的效能問題，讓系統效能、穩定性提高？
+<p>記住，沒有必要不需輕易去升級系統核心，更沒有必要去要求系統一定是用最新版本的程式
+，事實上網路上還有許多機器是使用 Linux-1.2.xx 的核心在提供服務，
+原則就是在升級前認清自己的需求，沒有必要去更動已能夠妥善達成任務的系統。
+<p>真的有必要更新系統核心的時候，可以在網路上找到新版核心的 rpm 檔，將這些
+rpm 檔都抓回來以後，放在同一個目錄底下，然後循以下程序更新系統核心：   
+<p>1. &quot;rpm -Fhv kernel-*.rpm&quot; 將所有新版核心套件都安裝上去。
+<p>2. &quot;rpm -q kernel&quot; 查詢新版核心的版本編號，並記錄下來，這個編號是 &quot;2.x.x-??&quot;
+的形式，接下來便用 kernel-ver 來表示這個版本編號。
+<p>3. &quot;mkinitrd /boot/initrd kernel-ver&quot; 更新系統的 initrd，在用 SCSI 
+硬碟開機的系統上是必要的動作，IDE 系統則可以略過，
+執行範例如 &quot;mkinitrd /boot/initrd 2.0.5-15CLE&quot;。
+<p>4. 用文字編輯軟體修改 /etc/lilo.conf 的內容，將開機 image 檔的版本改成
+kernel-ver。
+<p>5. &quot;lilo -v -v -v&quot; 執行 lilo 重新安裝開機程式。
+<p>6. &quot;reboot&quot; 用新的系統核心開，完成更新核心的程序。
+<p>
+</li>
+<li>製作開機片 
+<p>永遠持有一份系統的開機磁片是聰明的系統管理員必定會做的事，因為如此方可在遇到問題
+時從磁片開機，進入系統解決問題，系統在系統核心作過更動時，就有必要重新製作開機片
+來配合新的系統，當然，開機片遺失的話，也可以用這一節提到的方法重作一片開機片，以
+備不時之需。
+<p>PoweLinux 提供的設定工具&quot;Genie&quot;可以用來製作開機片，製作的程序請參考第六章6.2
+Genie的預設項目.
+<p>用這種方式製作出來的開機片還可以用來跟 XLinux 中的救急磁片配合，
+在開機時打入&quot;rescue&quot;，接著插入用 rescue.img 影像檔製作的磁碟片，
+就可以開機進入一個有常用工具的簡易 Linux 系統，在您管理的系統發生問題時，
+可以用 rescue 模式進入進行救急的工作。                                       
+<p>
+</li>
+<li>kernel 模組
+
+<ol>
+<li>核心模組概說 
+<p>&quot;核心模組&quot; (kernel modules) 是 2.0.x 版以後的系統核心提供的新功能，
+XLinux 便是利用核心模組的方式來管理系統所有的驅動程式。
+<p>XLinux 預先編譯的系統核心內含的驅動程式很少，並且把所有週邊、SCSI
+卡的驅動程式都編譯成模組的形式，這些編譯好的核心模組都以 .o 檔的形式放在
+/lib/modules/ 目錄底下，一個 .o 檔就是一種設備的驅動程式，這些 &quot;核心模組&quot;
+只在用到的時候才被載入系統，如此一來既可以保持核心的大小達到最小的狀態，
+又可以支援各式各樣的週邊裝置，充分利用到了新版核心的優點。
+<p>
+</li>
+<li>核心模組的安裝、移除
+<p>XLinux 系統上提供了一系列的工具程式來進行核心模組的管理：
+<p>在Genie的預設項目中提供了此一設定工具, 請參見第六章.
+<p>
+</li>
+<li>檔案系統模組
+<p>在目錄 /lib/modules/{kernel_version}/fs/ 目錄下有一系列關於檔案系統的模組，
+他們可以當作 mount 指令 &quot;-t&quot; 選項的參數，有指定 &quot;-t&quot; 的話，在 mount 的時候 kmod
+便會自動去載入模組，例如用下面指令可以在 /mnt/win98 目錄下掛上 /dev/hda1
+這個 Win98 的 FAT32 分割區：
+<p>mount -t vfat /dev/hda1 /mnt/win98/
+<p>&quot;vfat&quot; 這個模組支援 FAT16/FAT32，所以要掛上 Windows 分割區的話，
+可以使用此一模組，其他關於檔案系統模組的支援請參考
+/usr/src/linux/Documentation/filesystems 底下文件的說明。      
+</li>
+</ol>
+                     </li>
+</ol>
+<p>
+<h3>訂製系統核心</h3>
+
+<p>Linux 系統受到歡迎的一個重要因素就是打造系統的自由，系統上幾乎所有的程式都
+有原始碼可以用，連系統核心也不例外；Linux 的系統核心因為程式碼開放的緣故，
+早已經成為程式設計高手們練功的天堂，想要學習作業系統實做的細節、
+想要磨練自己的程式設計技巧，不管您的目的為何，每個人都可以在這裡
+找到一片天地；對 Linux 系統的管理者而言，可以取得系統核心的原始程式代表的
+是一種系統中沒有不明黑洞的保證，也代表自己可以依照系統的需求打造最適合的系
+統核心，本節的內容便是要為大家介紹一下自行編譯系統核心的過程，並討論一下需
+要自己動手編譯核心的時機。 
+<p>
+<ol>
+<li> Linux 硬體探索
+<p>在編譯系統核心之前一定要先對您的系統硬體配備有相當的了解，這個時候您應該把
+機器的說明書拿出來，弄清楚系統上的各項配接卡的規格跟配備，尤其是該配接卡所
+使用的晶片組的廠牌跟型號，要注意的是，有時候知道配接卡的型號是沒用的，
+要在說明書或卡上查出使用的晶片是哪一塊才行，知道硬體的配置以後，就可以去查
+一查 Linux 支援這個硬體的狀況，供作等一下設定的參考。 
+<p>關於目前 Linux 的硬體支援情況可以參考下列網站或本手冊的附錄二：
+<p><code> 
+<a HREF="http://www.xlinux.com.tw">http://www.xlinux.com.tw</a></code>
+有 XLinux 的最新硬體支援狀況。
+<p><code> 
+<a HREF="http://www.linuxhq.com">http://www.linuxhg.com</a></code>
+LinuxHQ 網站，紀錄各版本 Linux 核心程式的差異以及
+最新系核心的硬體支援情形。
+<p>
+</li>
+<li>重新編譯核心
+<p>1. 取得新版系統核心程式  
+<p>重新編譯核心之前的首要工作當然是取得核心原始碼，此時您可以選擇安裝
+&quot;kernel-source&quot; 的 rpm 檔，或者從網路上取得最新的核心程式碼，
+在台灣的讀者可以隨時從ftp://linux.cis.nctu.edu.tw 取得最新的核心版本，
+下載的核心檔是 .tar.gz 的檔案，檔名格式是 &quot;linux-2.2.XX.tar.gz&quot;。
+<p>若在系統上有安裝 &quot;kernel-source&quot; 但又準備要下載新的核心原始碼來使用的朋友，
+必須要先將&quot;kernel-source&quot;的 rpm 檔移除：
+<p>rpm -e kernel-source 
+<p>2. 解開 kernel 原始程式
+<p>下載完程式之後，可以用下列指令在 /usr/src 下解開程式原始碼：
+<p>cd /usr/src
+<p>tar xvfz linux-2.2.XX.tar.gz
+<p>3. 核心原始碼內必看的說明檔
+<p>上面指令會將核心的原始碼解開在 /usr/src/linux 底下，在進行後續的動作之前，
+這裡面有幾個檔案是必須先看一下，才能對這個新版的系統核心有確實的了解：
+<p><b>README</b> 說明編譯核心的詳細過程。
+<p><b>Documentation/Changes</b> 說明這個核心跟較早版本核心之間的變動，
+此外還說明了這個核心需要搭配的其他程式的版本，使用前要先看這個檔案的內容來檢查系統上的程式是否可以配合新核心運作，必要時要先一一更新系統程式。  
+<p><b>Documentation/Configure.help</b> 關於核心設定的參數說明，
+可以幫助您等一下設定系統核心。
+<p>4. 設定系統核心
+<p>接著可以用 &quot;make config&quot; 或 &quot;make menuconfig&quot; 或 &quot;make xconfig&quot; 來設定核心：
+<p><b>make config</b> 
+<p>是用文字介面、一行一行的問題來讓您設定核心的組態，程式詢問時回答
+&quot;Y&quot; 表示編譯的核心要支援該功能，&quot;N&quot; 表示不支援，&quot;M&quot; 表示編譯成模組的方式，
+若按 【Enter】 的話則會用預設值 (提示時大寫的值)。
+<p><b>make menuconfig</b> 
+<p>用文字介面的選單來設定，可以用空白鍵切換設定，【Tab】
+在各個選項之間切換，還可以儲存設定供以後使用，
+<p><b>make xcnfig</b> 
+<p>用圖形介面的設定，可以用滑鼠設定。             
+設定核心的選項眾多，並且會依每個版本的核心而有所不同，所以在這邊不多作介紹，
+讀者要自行參閱&quot;Documentation/Configure.help&quot; 檔案跟設定時提供的訊息，
+妥善的設定自己要使用的核心，設定時的原則是選用最適合的 CPU 跟晶片組型號、
+用不到的功能不設、有可能用到但跟開機無關的設成模組，目的是讓
+核心盡可能的小，並且打開所有可以增進系統效能的選項。
+<p>5. 編譯核心
+<p>完成核心組態的設定以後，就可以進行核心編譯的工作：
+<p><b>make dep</b>
+<p><b>make bzImage</b>
+<p>編譯出來的新的系統核心會放在 /usr/src/linux/arch/i386/boot/bzImage。
+<p>6. 編譯與安裝模組
+<p>有設定模組的話，還要記得要編譯模組與安裝模組：
+<p><b>make modules</b>
+<p><b>make modules_install</b>                 
+<p>安裝模組 &quot;make modules_install&quot; 的時候要特別注意一下模組安裝的目錄所在，
+記一下模組是安裝在 /lib/modules 目錄下的哪個子目錄裡面，這個子目錄名稱就是等一下會用到的 kernel_version。
+<p>7. 安裝新的系統核心
+<p>接著可以安裝新的系統核心了：
+<p><b>cp /usr/src/linux/arch/i386/boot/bzImage /boot/vmlinuz-2.2.XX</b>
+<p>把新的核心複製過去時記住不要蓋掉原有的核心，必要時取一個新的名稱，核心的檔名並
+不重要，只要等一下在 lilo.conf 中記清楚就好了。  
+<p>8. 重作 initrd
+<p><b>mkinitrd /boot/initrd-kernel_version kernel_version</b>
+<p>上面指令中的 &quot;kernel_version&quot; 記得要換成模組安裝的目錄，才能做出正確的
+initrd。
+<p>9. 重新安裝 LILO
+<p>用文字編輯軟體修改 /etc/lilo.conf 檔案，在原先的系統核心之前再多加一個
+image 設定，可以複製原先系統核心的整個區段，再更改 image、ramdisk
+這兩項的參數檔案，指到剛剛新的系統核心跟新的 initrd 檔，記得也要更改
+label，不要讓兩個系統核心的 label 一樣，加入新的系統核心時先不要把舊的刪除，
+在萬一新的核心開機失敗時，還可以用舊的核心進入系統補救。改好
+/etc/lilo.conf 以後，重新安裝 LILO：
+<p><b>lilo -v -v -v </b>                                          
+<p>10. 重新開機
+<p><b>reboot</b>
+<p>重新開機後，系統的核心就更新完成了；若萬一開機後不能進入系統，則在
+&quot;LILO:&quot; 下打入舊核心的 label，用舊的核心開機，檢查問題所在並重編核心、
+重新安裝 LILO；若開機後一切如故，還是用到舊的系統核心，
+則檢查 /etc/lilo.conf 的設定，重新安裝 LILO。     
+<p>
+</li>
+<li> 編譯核心的時機與必要性
+<p>坊間的一些 Linux 書籍與網路上的資訊來源常常跟使用者傳達自行編譯核心的重要性
+與必要性，事實上這已經是過時與不正確的觀念，在 2.0.xx 以後的系統核心都支援了
+核心模組與動態載入的功能，安裝套件提供的系統核心已把絕大多數的東西都作成模組，
+必要時才會載入，這個預設核心所耗用的記憶體跟硬體資源也已經很小，
+除非您對系統的硬體跟 Linux 系統核心的設定參數有非常深刻的了解，
+否則是不容易做出更有效率的核心，一個好的系統管理員不應該讓自己管理的系統變動
+太快太頻繁，所以不要為了更新而更新，跟先前用 rpm 更新核心時提過的一樣，
+更新核心前先想一想是不是有必要：               
+<p>1. 新核心是否提供了新的驅動程式，可以驅動系統上本來不能使用的裝置？
+<p>2. 新核心是否修正了嚴重的安全漏洞，例如修補了某個可以造成 DoS 攻擊的漏洞？
+<p>3. 新核心是否修正了某個嚴重的效能問題，讓系統效能、穩定性提高？
+<p>
+</li>
+</ol>
+     
+<p>
+<h2><a NAME="ss8.5">8.5 開機和關機</a>
+</h2>
+
+<p>
+<ol>
+<li>啟動您的XLinux系統
+<p>讓您的電腦運行XLinux需要的過程可能和您以前的有點不同. 如果您的電腦沒有
+裝其他作業系統, 只需接通電源, 然後等待. 您將看到電腦顯示LILO 時會暫停一會,
+但它會繼續顯示各種開機訊息.
+<p>但是, 如果您讓XLinux和其他作業系統共享您的電腦? 您就必須執行以下任務之一:
+<p>在LILO提示下選擇XLinux(如果您設定的名稱是XLinux) -- 如果您安裝了LILO,
+並為包含其他作業系統的分區標註了啟動標記, 您的電腦就被配置成多重啟動.
+這就意味著您可以在LILO Boot:提示符號下輸入您想啟動的作業系統的名稱.
+如果您在LILO 提示下按【Tab】, 您會看到LILO可以啟動的作業系統的清單.
+選擇XLinux, 您就可以運行了!
+<p>從軟碟啟動 -- 如果您在安裝XLinux時制作了啟動軟碟, 您可以從軟碟啟動. 
+確信您已將啟動磁片插入您的電腦的第一個軟碟區, 然後接通電源或按RESET按鈕
+或按【Ctrl】,【Alt】, 和【Del】.                                                      
+<p>
+<p>
+</li>
+<li>關閉XLinux系統
+<p>在您結束使用XLinux系統後, 您需要關閉它. 然而, 這不僅僅是切斷電源. 以下是理由:
+<p>雖然您可能在準備關閉時沒有運行任何程序, 那並不意味著您的XLinux系統上沒有運行
+任何東西. 為了理解這點, 輸入這條命令:
+<p>ps ax
+<p>ps顯示的每一行代表了一個進程. 您可以把進程看作'運行著 的程序'. 每個進程都可能正在對
+文件進行操作, 如果您僅僅切斷電源, 這些進程就沒有機會關閉那些文件, 正常結束運行. 所以在關閉您的系統時, 您必須告訴所有的進程結束運行. 這就是使用shutdown命令.(您也可以使用XLinux的Genie設定精靈幫您完成. 請參考本手冊第六章<code>
+<a HREF="install-6.html#GEN-ref">Genie的預設項目</a></code>) 
+<p>shutdown只能由root運行, 所有您必須或者以root登入,或者用su 命令'變成'root身份.
+<p>shutdown 的格式是:
+<p>shutdown 【options】 【time】
+<p>請注意: shutdown程序在/sbin目錄. 如果您的PATH 環境變量不包括/sbin, 您必須在輸入
+命令時包含路徑(例如,/sbin/shutdown -h now).
+<p>多數情況下, 您必須包含下列選項之一:
+<p>-h -- 在關閉完成後停止(Halt)系統.
+<p>-r -- 在關閉完成後重啟動(Reboot)系統.
+<p>如果您不包含任何選項, shutdown將使您的系統進入'單人使用'模式(single user mode).
+除非您知道為什麼要進入單人使用模式, 否則您可能不會願意進入單人使用模式.
+輸入關閉命令 (用-h 或 -r), 關閉將正常完成.
+<p>shutdown命令還可以使您在時間上有一定靈活性. 如果您想立即關閉, 只要輸入'now'. 如果
+您想五分鐘以後關閉, 您可以輸入'+5'. 因此,命令如下:
+<p>shutdown -r +15
+<p>意味著, '十五分鐘後關閉系統,當關閉完成後重啟動系統'. shutdown 還包括許多選項, 我們
+只介紹了基本的選項. 如果您有興趣學習更多的, 輸入man shutdown 可以更多地了解shutdown.        
+<p>
+<p>關閉Linux系統時，遵循正確的過程是很重要的。否則，檔案系統可能成為廢物，文件可能變
+成雜亂的。 這是因為Linux是使用磁碟緩存，並不立即將資料寫到磁碟，而是間歇行地寫回。 
+這大大地改善了其性能，但同時也意味著如果你只是關閉電源，cache可能保留著大量資料數據
+，而磁碟上的數據可能不是一個完整的正在工作的檔案系統(因為有些資料已經回寫到硬碟，
+但有些沒有)。         
+<p>另一個不能直接關閉電源的原因是﹕在多工的系統中，後端可能運行著很多東西，關閉電源
+可能損失慘重。使用正確的關機程序，可以確證所有的後端程序得以保存他們的資料。   
+<p>正常關閉Linux系統的命令是shutdown 。 它通常使用2種方法之一。   
+<p>如果系統只有你一個使用者，使用shutdown 的通常方法是退出所有運行程序， 從所有虛擬控
+制台退出，用root登入(如果你已經是root，當然不必再退出、登入，但應該換到根目錄，
+以免由於unmount出現問題)，然後運行命令shutdown -h now  (雖然單一使用者時一般不必
+要，但如果需要一個緩和的時間，可用一個加號加一個表示分鐘的數目代替now) 
+<p>如果系統是多個使用者，可使用命令shutdown -h +time message， time是到系統停止的分
+鐘數，message是告知所有使用者系統關機原因的訊息。 
+<p>
+<blockquote><code>
+<pre>
+ 
+   # shutdown -h +10 'We will install a new disk. System
+   should 
+   &gt; be back on-line in three hours.' 
+   # 
+</pre>
+</code></blockquote>
+ 
+<p>上面的命令警告所有使用者，系統將在10分鐘後關閉，他們最好保存目前的工作，否則將流失。 
+警告訊息將顯示在所有登入的終端上，包括所有的xterm 上: 
+<blockquote><code>
+<pre>
+ 
+   Broadcast message from root (ttyp0) Wed Aug 2 01:03:25
+   1999... 
+
+   We will install a new disk. System should 
+   be back on-line in three hours. 
+   The system is going DOWN for system halt in 10 minutes !! 
+</pre>
+</code></blockquote>
+<p>警告在系統關閉前將自動重復數遍，隨著時間流逝，間隔越來越短。   
+<p>當延遲時間之後關閉系統真正開始時，所有文件系統(除了根目錄)被unmount，所有使用者的程序(如果有
+人還未退出)將被終止，所有東西都停下來。此後，init 會顯示出一條訊息告
+知你可以關掉電源了。此時，也只有在此時，你才可以關閉電源。   
+<p>有時(雖然在任何好的系統上極少)，系統可能不能正常關閉。例如，核心紊亂、崩潰等不正常
+情況，可能無法輸入任何命令， 因此正常關機可能有些困難，這時只能直接關機。問題可能
+沒那麼嚴重，例如，有人誤動了你的鍵盤，核心和update  程序還在正常運行，等待一些時
+間可能是個好建議，這能使update 有機會將緩沖cache 中的資料回存硬碟，然後再直接關
+機。               
+<p>有人喜歡用輸入sync三遍來關閉系統，等到磁碟I/O停止，然後在關閉電源。如果沒有什麼
+程序運行著，這和用shutdown 是同等效應。 然而，它不unmount任何檔案系統，可能導致ext2fs
+的檔案系統標誌出問題。這種3遍sync的方法是不推薦使用的。   
+<p>(In case you're wondering: the reason for three syncs is that in the early days of UNIX, when the
+commands were typed separately, that usually gave sufficient time for most disk I/O to be finished.)
+</li>
+</ol>
+ 
+<p>
+<h2><a NAME="ss8.6">8.6 登入和簽出</a>
+</h2>
+
+<p>XLinux啟動後, 您將看到類似以下的信息:
+<blockquote><code>
+<pre>
+ 
+   XLinux release 1.0g (Machiato)  
+   Kernel 2.2.12-4CLE on an i686 
+   login: 
+</pre>
+</code></blockquote>
+
+從最後一行可以看出, 現在該登入了........ 
+<p>
+<ol>
+<li>登入
+<p>第一次登入XLinux系統, 您必須以'root'身份登入. 這個帳號對系統的一切都有完全的
+控制權限. 通常root帳號是用來執行系統管理任務, 例如建立新的使用者帳號, 關機等等. 
+因為root的權限不受限制, 如果您輸入錯誤的命令可能導致不好的後果. 所以在以root登入時, 必須格外小心, 並且只有在必要時才用root登入. 即使要管理系統，也請盡量用 su
+指令來暫時管理系統，然後記得定期(如一個月)更換 root 的密碼，這樣才可使 root
+密碼被窺知的危險性降低。 
+<p>為了登入, 在login:提示符號處輸入root. 按【Enter】(或【Return】)鍵. 
+會出現Password: 提示. 輸入您root的密碼, 按【Enter】.您應該看到類似以下的信息: 
+<p>[root@xlinux /root]#
+<p>恭喜! 您已經成功地登入! 接下來我們來學習如何簽出. 
+<p>
+</li>
+<li>簽出
+<p>在您用完XLinux系統, 您必須簽出. 雖然大多數shell有logout 命令, 
+多數人輸入【Ctrl】-【D】. 這會使您回到login提示符號. 
+<p>請注意: 如果您使用X Window系統, 根據您如何啟動X, 您的退出方法會有所不同. 
+我們將在以後章節討論. 
+<p>現在您知道如何登入和簽出, 讓我們繼續.......... 
+<p>
+<p>
+</li>
+<li> su命令
+<p>有時您可能想作為其他使用者發出命令. 通常系統管理員需要這個功能 -- 他們(想所有好的系
+統管理員)在大多數時間用他們自己的帳號. 但可能需要修改一個使用者的密碼, 或者修改一個系
+統文件的使用權限. 這種事只需要一分鐘, 所以簽出,作為 root登入,
+做完root要做的事情, 再簽出, 最後再用自己的帳號登入, 這很麻煩的事. 
+<p>簡單的方法就是用su命令. 用su, 使您當前的登入階段能'變成' root(或其他使用者)的登入階段. 
+在下面的例子中, wang 使用者決定做一些root要做的事:<br> <br>
+[wang@xlinux wang]$ su <br>
+Password: <br>
+[root@xlinux wang]# <br>
+<p>您可以看到, 輸入su命令後, 會要求您輸入密碼 -- root的密碼. 正確輸入後, 出現了通常的
+shell 提示符號. 但如果您仔細看的話, 會發現這個shell提示符號有所不同. 第一, 它以root開始, 
+表明當前使用者已經改變了. 其次, 提示符號的結束符號不同, 從美元符號($)變成了井字號(#). 
+這是表明shell是以root運行的, 表示取得root存取權，但不繼承root的環境變數. 
+<p>也可以用su變成其他使用者. 這時, 您必須作為root運行su, 輸入出使用者名稱. 
+從root變成wang, 您只需輸入指令su wang. 這時不需要密碼 -- 因為您已經是root, 
+所以密碼是多餘的. 
+<p>您會發現su帶來很多便利, 特別是您作為自己系統的管理員. 
+<p>
+</li>
+</ol>
+<p>
+<h2><a NAME="ss8.7">8.7 管理使用者帳號</a>
+</h2>
+
+<p>我們已經提到過, 一直用root帳號登入不是一個好主意. 您不可避免地會犯錯誤, 而權限檢查在
+這是不能保護您的.
+<p>如果, 您不用root登入, 您用誰來登入呢?
+<p>當然是您自己.
+<p>但為了做到這一點, 您必須知道如何在Linux系統中增加使用者帳號.    
+<ol>
+<li>建立帳號(增加user) 
+<p><b>/usr/sbin/adduser</b><br>
+<p>usage: <br>  
+adduser [-u uid [-o]] [-g group] [-G group,...] [-d home] [-s shell] <br>   
+adduser  -D [-g  group] [-b base] [-s shell] [-f inactive] [-e expire]       
+<p>
+<p>建立新的帳號有幾種方法. 您也可以利用Genie中的【User/Group/Quota設定】界面幫您
+做到(請參考本手冊的第六章<code>
+<a HREF="install-6.html#GEN-ref">Genie的預設項目</a></code>). 這裡我們將使用最基本的方法; adduser 命令. 基本上, 
+所有您要輸入的
+(記住,作為root!)就是:
+<p>[root@xlinux /root]# adduser wang <br> 
+[root@xlinux /root]#
+<p>好, 現在讓我們用wang登入:
+<p>XLinux release 1.0g (Machiato) <br>
+Kernel 2.2.12-4CLE on an i686 <br>
+login: wang <br>
+Password: <br>
+Login incorrect <br>
+<p>login:<br>
+<p>因為不知道wang的密碼, 我們只是按[Enter]. 那不是正確的密碼. 那麼, 
+您為新的帳號設定的密碼是什麼呢?   
+<p>
+</li>
+<li>使用者密碼
+<p>passwd命令可以用來:
+<ul>
+<li> 為新建立的使用者分配密碼.</li>
+<li> 修改已存在的使用者的密碼.</li>
+<li> 修改您登錄的使用者的密碼.</li>
+</ul>
+<br>
+前兩種情況實際上是一樣的; 一個新建立的使用者(user)和一個已存在五年的使用者(user)沒什麼區別(至少對passwd
+是這樣的). 記住您必須以root身份登入, 並且您必須知道哪個使用者帳號的密碼是您想修改的. 用我們剛才建立
+的帳號, 來試一下passwd:
+<p>[root@xlinux /root]# passwd wang <br>
+New UNIX password: <br>
+Retype new UNIX password: <br>
+passwd: all authentication tokens updated successfully <br>
+[root@xlinux /root]# <br>
+<p>您可能已經猜到, 密碼不會顯示出來. 您還必須輸入兩次密碼, 以確保您沒有輸入錯. 讓我們再來
+試一下用新帳號登入:
+<p>XLinux release 1.0g (Machiato) <br> 
+Kernel 2.2.12-4CLE on an i686 <br>
+login: wang <br>
+Password: <br>
+[wang@xlinux wang]$ <br>                                                     
+<p>一旦您登入了一個帳號, 您可以用passwd命令來修改密碼. 這時會詢問您目前的密碼, 然後是
+新密碼:
+<p>[wang@xlinux wang]$ passwd <br>
+Changing password for wang <br> 
+(current) UNIX password: <br>
+New UNIX password: <br>
+Retype new UNIX password: <br>
+passwd: all authentication tokens updated successfully <br>
+[wang@xlinux wang]$ <br>
+<p>就這麼簡單.                                            
+<p>
+</li>
+<li>刪除使用者的帳號<br>
+<p><b>/usr/sbin/userdel</b><br><br>
+當你要刪除使用者的帳號時 ，另外還要刪掉以下二個地方  :
+<ul>
+<li>1./usr/spool/mail/<br></li>
+<li>2.使用者的所在目錄</li>
+</ul>
+</li>
+</ol>
+ 
+<h2><a NAME="ss8.8">8.8 備份工具</a>
+</h2>
+
+<p>
+<ol>
+<li>選擇備份裝置 
+<p>備份所需的最重要的決定是選擇備份裝置。需要考慮成本、可靠性、速度、可得到、
+可用性。
+成本是很重要的，因為你的考量可能需要多個存儲、多個備份。便宜的裝置可以用很多。
+可靠性是最重要的，因為壞的備份會雪上加霜。備份裝置必須能存儲資料多年而
+不損壞。 作為備份裝置，使用方法影響可靠性。硬碟一般是很可靠的，但作為備份
+裝置並非很可靠， 如果它和備份源在同一台電腦的話。
+<p>速度通常不太重要，如果備份可以非交互地完成。備份花2個小時無所謂，無須監督，
+多長時間都沒有關系。 另一方面，if the backup can't be done when the computer
+would otherwise be idle, 那麼速度也是個問題。
+<p>可用性是決定備份周期的主要因素。備份裝置越容易使用越好。 
+備份裝置不能太難以使用。
+<p>一般用磁片和磁帶。磁片很便宜，還算可靠，不太快，很容易得到，但資料量大時不
+容易使用。 磁帶也很便宜，還算可靠，還算快，很容易得到，而且依賴於磁帶的容量
+，使用很輕鬆。
+<p>
+</li>
+<li>選擇備份工具  
+<p>備份有很多工具，傳統的 UNIX 備份工具是 tar 、 cpio 和 dump 。
+備份裝置的選擇可能影響工具的選擇。
+<p>tar 和cpio 類似， 從備份來看二者的效能相當。都能將文件存到磁帶並取出文件。
+都能使用幾乎所有裝置， 因為核心設備驅動處理低階設備操作，對使用者級看來所有
+設備都差不多。 有寫Unix版本的tar 和cpio  對不是普通文件可能有問題(符號連接、
+設備文件、極長路徑名的文件等等)， 但Linux的能正確處理所有文件。
+<p>dump 不同，它直接讀檔案系統，而不通過檔案系統。 It is also written
+specifically for backups;
+tar 和cpio  are really for archiving files, although they work for backups
+as well.<br>
+直接讀檔案系統有些優點，它可能不考慮time stamps備份所有文件；對於tar和cpio ，
+必須先將檔案系統只讀安裝。如果所有東西都要備份，直接讀檔案系統更有效，
+因為它使磁頭移動最少。 它的主要缺點是每個檔案系統種類需要特定的備份程序，
+Linux的dump 程序只理解ext2檔案系統。
+<p>
+</li>
+<li>簡單備份 
+<p>一個簡單的備份方案是一次備份所有東西，然後備份上次備份後改變的所有東西。
+第一個備份叫完全的備份(full backup)，後來的叫增量的備份(ncremental backups)。
+完全的備份比增量的備份費時費力，因為有更多的東西要寫到磁帶，而且完全的備份
+可能不能放入一個磁帶中(更別說磁片了)。 回存增量的備份比完全的備份可能要花更
+多的時間。
+<p>備份可以這樣簡化的，就是自上次完全的備份以後，再用增量的備份保存所有改過的
+文件。
+<p>這樣，備份可能需要多一些的工作，但你只需回存一個完全的備份和一個增量的備份。  
+<p>
+<ul>
+<li>用tar備份
+<p>一個完全的備份可以很容易地用tar去完成 ﹕<br><br>
+# tar -create -file /dev/ftape /usr/srci<br>
+tar: Removing leading / from absolute path names in the
+archive<br>
+#<br><br>
+上面的例子使用GNU版本的tar及其長選項名。 傳統版本的tar只理解單字符號選項。
+GNU版還能處理一張磁片不能容納的備份，及很長的路徑名；這不是所有
+傳統的版本能作到的。 (Linux只使用GNU tar 。)
+<p>如果你的備份是一個磁片不能容納，你需要使用-multi-volume (-M)選項﹕<br><br>
+# tar -cMf /dev/fd0H1440 /usr/src<br>
+tar: Removing leading / from absolute path names in the
+archive <br>
+Prepare volume #2 for /dev/fd0H1440 and hit return:<br>
+# <br>
+<p>注意開始備份前要格式化所有軟碟磁片，或在tar 需要新磁片時用另一個虛擬控制台或
+虛擬終端格式化它。
+<p>備份完後，應該檢查它是否完好，可用-compare (-d)選項﹕<br><br>
+# tar -compare -verbose -f /dev/ftape<br>
+usr/src/
+usr/src/linux
+usr/src/linux-1.2.10-includes/<br>
+....<br>
+#<br><br>
+失敗的備份檢查意味著如果你丟失了原始資料，備份也無法恢復。         
+<p>增量的備份可用參數 -newer (-N)選項的tar 來實現﹕<br><br>
+# tar -create -newer '8 Sep 1995' -file /dev/ftape /usr/src
+-verbose<br>
+tar: Removing leading / from absolute path names in the
+archive<br>
+usr/src/<br>
+usr/src/linux-1.2.10-includes/ <br>
+usr/src/linux-1.2.10-includes/include/ <br>
+usr/src/linux-1.2.10-includes/include/linux/
+usr/src/linux-1.2.10-includes/include/linux/modules/
+usr/src/linux-1.2.10-includes/include/asm-generic/
+usr/src/linux-1.2.10-includes/include/asm-i386/
+usr/src/linux-1.2.10-includes/include/asm-mips/
+usr/src/linux-1.2.10-includes/include/asm-alpha/
+usr/src/linux-1.2.10-includes/include/asm-m68k/
+usr/src/linux-1.2.10-includes/include/asm-sparc/<br>
+usr/src/patch-1.2.11.gz<br>
+#<br>
+<p>不幸的是，tar不能知道一個檔案的節點訊息變化，例如，檔案的權限變化，或文件名?化。這可用find 命令和比較當前檔案系統狀態和先前備份的文件列表。        
+<p>
+<p>
+</li>
+<li>用tar回存
+<p>用tar 的-extract (-x)選項展開文件﹕<br>
+# tar -extract -same-permissions -verbose -file 
+/dev/fd0H1440 <br>
+usr/src/ <br>
+usr/src/linux/<br>
+usr/src/linux-1.2.10-includes/<br>
+usr/src/linux-1.2.10-includes/include/ <br>
+usr/src/linux-1.2.10-includes/include/linux/
+usr/src/linux-1.2.10-includes/include/linux/hdreg.h
+usr/src/linux-1.2.10-includes/include/linux/kernel.h <br>
+...<br>
+#<br><br>
+也可以用命令行來展開特定的檔案和目錄(及其中的檔案和子目錄)﹕<br><br>
+# tar xpvf /dev/fd0H1440 <br>
+usr/src/linux-1.2.10-includes/include/linux/hdreg.h
+usr/src/linux-1.2.10-includes/include/linux/hdreg.h <br>
+#<br>                                                         <br>
+用-list (-t)選項看一個備份檔案中有什麼文件﹕
+<p># tar -list -file /dev/fd0H1440 <br>
+usr/src/ <br>
+usr/src/linux <br>
+usr/src/linux-1.2.10-includes/<br>
+usr/src/linux-1.2.10-includes/include/<br>
+usr/src/linux-1.2.10-includes/include/linux/
+usr/src/linux-1.2.10-includes/include/linux/hdreg.h
+usr/src/linux-1.2.10-includes/include/linux/kernel.h <br>
+...<br>
+#<br>
+<p>注意tar永遠是依順序讀一個備份檔案， 因此太大的備份檔案會很慢。
+使用磁帶機或其他順序裝置時不可能使用隨機存取資料庫技術。
+<p>tar 不處理刪除文件屬性。 如果你需要從一個完全的備份和一個增量的備份恢復
+一個檔案系統，並且兩個備份之間你刪除了一個文件，當你恢復完後，這個文件又
+存在了。如果這個文件包含應該刪除的敏感資料， 這是個大問題。                
+<p>
+</li>
+</ul>
+</li>
+</ol>
+          
+<p>
+<hr>
+<a HREF="install-9.html">Next</a>
+<a HREF="install-7.html">Previous</a>
+<a HREF="install.html#toc8">Contents</a>
+</body>
+</html>

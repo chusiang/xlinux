@@ -1,0 +1,256 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head><meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+ <meta NAME="GENERATOR" CONTENT="SGML-Tools 1.0.9">
+ <title>XLinux安裝手冊和使用說明: 如何尋找文件檔</title>
+ <link HREF="install-12.html" REL="next">
+ <link HREF="install-10.html" REL="previous">
+ <link HREF="install.html#toc11" REL="contents">
+<meta name="Microsoft Theme" content="sumipntg 011, default"></head>
+<body background="http://mouse.oit.edu.tw/htdocs/_themes/sumipntg/sumtextb.jpg" bgcolor="#FFFFFF" text="#000066" link="#3333CC" vlink="#666699" alink="#990099"><!--mstheme--><font face="新細明體">
+<a HREF="install-12.html">Next</a>
+<a HREF="install-10.html">Previous</a>
+<a HREF="install.html#toc11">Contents</a>
+<!--msthemeseparator--><p align="center"><img src="http://mouse.oit.edu.tw/htdocs/_themes/sumipntg/sumhorsa.gif" width="600" height="10"></p>
+<h2><!--mstheme--><font color="#003366"><a NAME="s11">11. 如何尋找文件檔</a><!--mstheme--></font></h2>
+
+<p>XLinux包含有幾千頁的線上文件檔來幫助您學習如何使用系統. 線上輔助, 訊息文檔, 
+和文本文件提供了幾乎Linux每個方面的訊息. 如果您安裝了的話, XLinux 還包括
+Linux Documentation Project提供的文件檔. 
+<p>
+<h2><!--mstheme--><font color="#003366"><a NAME="online-ref"></a> <a NAME="ss11.1">11.1 線上輔助 </a>
+         <!--mstheme--></font></h2>
+
+<p>各種的線上輔助是很好學習Linux的工具, 以下是常用且方便的線上輔助工具:
+<ol>
+<li> Man Pages 的使用
+<p>您的系統上幾乎每條指令都有相關的'man page'. 在您有問題或困難時, 您可以立刻得到這個
+文件檔. 例如, 如果您使用ls命令時遇到困難, 您可以輸入man ls得到幫助訊息. 
+這會顯示出 ls 的man page. 
+<p>由於man page是用less程序來看的(可以方便地使瑩幕上翻和下翻), 所以在man page裡可以
+使用less的所有選項. 在less中比較重要的鍵有: 
+<p>【q】退出 <br>
+【Enter】一行行地下翻 <br> 
+【Space】一頁頁地下翻 <br> 
+【b】往上翻一頁 <br>
+【/】往後尋找一個字串和【Enter】來尋找字串 <br>
+【n】尋找上一次查尋的下一個符合的字串 <br>
+<p>有時從紙張閱讀更方便. 假定您有一個印表機, 您也可以把man page列印出來.如果您沒有列印
+Postscript的能力, 只想列印ASCII碼, 您可以用: 
+<p><b>man COMMAND | lpr</b>
+<p>如果您有postscript印表機, 您可以用: 
+<p><b>man -t COMMAND | lpr</b>
+<p>請把上面的'COMMAND'改為您想要得到幫助的指令. 
+<p>有時您將發現某些系統部件有不止一個man page. 下表顯示了man page分成的部份: 
+<p>
+<center><!--mstheme--></font><table BORDER><tr><td><!--mstheme--><font face="新細明體">
+
+　　代號(Section)　<!--mstheme--></font></td><td><!--mstheme--><font face="新細明體"> 　　內容(Contents)?　　<!--mstheme--></font></td><td><!--mstheme--><font face="新細明體"> 　　　　中文說明?　　　<!--mstheme--></font></td></tr><tr><td><!--mstheme--><font face="新細明體">
+　　　　1<!--mstheme--></font></td><td><!--mstheme--><font face="新細明體"> user commands <!--mstheme--></font></td><td><!--mstheme--><font face="新細明體"> 使用者指令<!--mstheme--></font></td></tr><tr><td><!--mstheme--><font face="新細明體">
+　　　　8<!--mstheme--></font></td><td><!--mstheme--><font face="新細明體"> system commands <!--mstheme--></font></td><td><!--mstheme--><font face="新細明體"> 系統調適用指令<!--mstheme--></font></td></tr><tr><td><!--mstheme--><font face="新細明體">
+　　　　2<!--mstheme--></font></td><td><!--mstheme--><font face="新細明體"> system calls <!--mstheme--></font></td><td><!--mstheme--><font face="新細明體"> 系統呼叫<!--mstheme--></font></td></tr><tr><td><!--mstheme--><font face="新細明體">
+　　　　3<!--mstheme--></font></td><td><!--mstheme--><font face="新細明體"> library calls <!--mstheme--></font></td><td><!--mstheme--><font face="新細明體"> 函式庫呼叫<!--mstheme--></font></td></tr><tr><td><!--mstheme--><font face="新細明體">
+　　　　4<!--mstheme--></font></td><td><!--mstheme--><font face="新細明體"> devices <!--mstheme--></font></td><td><!--mstheme--><font face="新細明體"> 裝置<!--mstheme--></font></td></tr><tr><td><!--mstheme--><font face="新細明體">
+　　　　5<!--mstheme--></font></td><td><!--mstheme--><font face="新細明體"> file formats <!--mstheme--></font></td><td><!--mstheme--><font face="新細明體"> 檔案格式<!--mstheme--></font></td></tr><tr><td><!--mstheme--><font face="新細明體">
+　　　　6<!--mstheme--></font></td><td><!--mstheme--><font face="新細明體"> games?<!--mstheme--></font></td><td><!--mstheme--><font face="新細明體"> 遊戲<!--mstheme--></font></td></tr><tr><td><!--mstheme--><font face="新細明體">
+　　　　7<!--mstheme--></font></td><td><!--mstheme--><font face="新細明體"> miscellaneous <!--mstheme--></font></td><td><!--mstheme--><font face="新細明體"> 其它<!--mstheme--></font></td></tr><tr><td><!--mstheme--><font face="新細明體">
+　　　　9<!--mstheme--></font></td><td><!--mstheme--><font face="新細明體"> kernel internals <!--mstheme--></font></td><td><!--mstheme--><font face="新細明體"> 核心內部<!--mstheme--></font></td></tr><tr><td><!--mstheme--><font face="新細明體">
+　　　　n<!--mstheme--></font></td><td><!--mstheme--><font face="新細明體"> Tcl/Tk commands <!--mstheme--></font></td><td><!--mstheme--><font face="新細明體"> Tcl/Tk指令<!--mstheme--></font></td></tr><tr><td><!--mstheme--><font face="新細明體">
+
+<caption> Man Page 代號對應表 </caption>
+<!--mstheme--></font></td></tr></table><!--mstheme--><font face="新細明體"></center>
+                                                 
+<p>這也是man page尋找的順序. 這個順序有時很重要, 例如: 
+<p>假定我們要看系統調適用指令swapon的man page. 因此, 您輸入man swapon. 實際上您會看到swapon(8)
+的man page, 那是用來控制交換的指令. 從上表您可以看出您要的'系統調適用指令'在第2個部份. 你可以
+輸入man 2 swapon. 這都是因為 man 是以上述的順序來尋找的, 也就是說swapon(8)在swapon(2)
+之前. 
+<p>您還可以在man page中尋找你要的字串符號, 使用man -k string_to_search_for. 但是只有
+建立了makewhatis資料庫, 才能使用上述指令. 在 XLinux, 這是由晚上的Cron Job做的. 如
+果您的系統晚上不運行, 這個資料庫就不會建立. 這時您可以以root身份去執行以下指令: 
+<p>/etc/cron.weekly/makewhatis.cron
+<p>一旦您完成了(注意那可能要花一些時間), 您可以輸入man -k swapon. 這條指令將輸出: 
+<p># man -k swapon <br>
+swapon, swapoff (2) - start/stop swapping to file/device <br>
+swapon, swapoff (8) - enable/disable devices and files for \
+paging and swapping <br>
+<p>您可以看到在第2和第8個部份中都有有關於swapon(在這個例子中還有swapoff)的man page. 
+<p>
+<p>
+<!--mstheme--></font><!--msthemelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+<!--msthemelist--><tr><td valign="baseline" width="42"><img src="http://mouse.oit.edu.tw/htdocs/_themes/sumipntg/sumbul2a.gif" width="12" height="12" hspace="15"></td><td valign="top" width="100%"><!--mstheme--><font face="新細明體"> 如何閱讀Man Page
+
+<p>Man page在很少的空間裡提供了使用者很多的線上幫助. 因此, 它可能比較難閱讀. 
+這裡概述了大多數man page中都有的部分:<br> <br>
+<ol>
+<li>Name -- 程序名. 如果一些程序密切相關的話, 可能放在一起. </li>
+<li>Synopsis -- 命令的格式, 顯示所有的選項和參數. </li>
+<li>Description -- 程序功能的描述. </li>
+<li>Options -- 所有選項的清單和他們的描述. </li>
+<li>See Also -- 如果有的話, 列出和這個程序相關的其他程序. </li>
+<li>Files -- 如果有的話, 列出這個程序使用或修改的文件. </li>
+<li>History -- 如果有的話, 列出這個程序開發的重要里程碑. </li>
+<li>Authors -- 寫這個程序的作者. </li>
+</ol>
+<br>
+如果您是Linux新手, 不要把man page當成教程; 它只是簡明的參考資料. 試圖用 
+man page來學習Linux就好像試圖用字典來學習英語. 如果您開始學習Linux, 
+還有許多其它的資源; 讓我們繼續尋找文檔... 
+<p>
+<!--mstheme--></font><!--msthemelist--></td></tr>
+<!--msthemelist--><tr><td valign="baseline" width="42"><img src="http://mouse.oit.edu.tw/htdocs/_themes/sumipntg/sumbul2a.gif" width="12" height="12" hspace="15"></td><td valign="top" width="100%"><!--mstheme--><font face="新細明體">中文 Man Pages 
+<p>在 CLE-v0.7 以後的版本裡面，man 已經可以正確的處理中文， 使用者只要執行
+&quot;man man&quot; 就可以看到中文說明， 所缺的只是大家一起貢獻心力來翻譯罷了， 
+這些 man page 的檔案都擺在 /usr/man/、/usr/X11R6/man/ 底下，也可以用 &quot;man -w&quot; 指令來查詢位置，例如我想知道 shutdown 的 man page 擺放位置，就可以： 
+<blockquote><code>
+<!--mstheme--></font><pre>
+[wang@xlinux wang]$ man -w shutdown
+/usr/man/zh_TW.Big5/man8/shutdown.8
+[wang@xlinux wang]$
+</pre><!--mstheme--><font face="新細明體">
+</code></blockquote>
+<p>所以 shutdown 的 man page 就是 /usr/man/zh_TW.Big5/man8/shutdown.8。
+<p>
+<!--mstheme--></font><!--msthemelist--></td></tr>
+<!--msthemelist--></table><!--mstheme--><font face="新細明體">
+<p>
+</li>
+<li> 內包的文件檔 (DOC)   
+<p>許多套件都包有README文件和其他文件檔. 專為XLinux製作的內包的文件檔
+定義了一個標準的地方存放那些文檔, 所以您不需要到處尋找它們. 
+每個包裝的文件檔都放在 /usr/doc下的一個子目錄中. 
+<p>子目錄名稱取決於套件的名稱和版本號. 例如zip套件可能是2.1版. 那麼, 它的文件檔就
+放在/usr/doc/zip-2.1目錄. 
+<p>大多數情況, /usr/doc中的文檔是ASCII碼. 您可以用more filename 或者less
+filename來閱讀. 
+<p>有了這些文件檔事情就簡單了, 但是如果您想找一個指令(或文件), 可是又不
+知道這個指令來自哪個套件, 怎麼辦? 沒關系! 例如, 如果您不知道
+/usr/bin/rtin屬於哪個套件, 又想了解關於它的訊息. 只需輸入: 
+<p>rpm -qdf /usr/bin/rtin
+<p>這條指令將從含有文件/usr/bin/rtin的套件那裡列出所有的文件檔(包括man page). 
+當然, RPM的能力還不止這些. 第8章將介紹RPM. 
+<p>
+</li>
+<li> HOWTO和FAQ
+<p>如果您安裝了它們, Linux文檔計劃的大多數內容將在您的系統的/usr/doc 目錄中找到. 
+目錄/usr/doc/HOWTO包含了您的XLinux CD-ROM發行時所能找到的所有
+HOWTO. 為了節約空間它們用gzip壓縮了, 所有您在閱讀之前必須解壓 縮. 有一種方法可以
+閱讀壓縮的HOWTO, 不會讓解壓縮後的文件搞亂您的硬碟, 即使用 zless: 
+<p>zless 3Dfx-HOWTO.gz
+<p>zless使用和less一樣的鍵, 所以您可以在HOWTO中容易地翻頁. 
+<p>/usr/doc/HOWTO/mini包含了所有的mini-HOWTOs. 它們沒有壓縮可以直接 用more 或
+者 less來閱讀.
+/usr/doc/HOWTO/other-formats/html 包含了HTML格式的所有的HOWTO以及 Linux
+Installation and Getting Started. 使用您喜歡的瀏覽器來看. 
+/usr/doc/FAQ 包含了ASCII格式(和部分HTML格式)的一些FAQ(常見問題). 可以用more
+或者 less(或者瀏覽器)來閱讀. 
+<p>
+</li>
+<li>&quot;locate&quot;命令
+<p>如果您不知道一個命令或文件的全名, 但想找到它, 您可以用locate命令來找到它. 
+locate 是使用一個資料庫來發現您系統的所有文件. 通常這個資料庫是在晚上由一個
+Cron Job建立的. 但如果您的電腦不是一直運行Linux, 您可以用以下命令: 
+<p>/etc/cron.daily/updatedb.cron
+<p>執行完這個命令後必須重啟動系統, 才能使locate正常工作. 
+<p>例如: 如果您想找所有的'telnet'文件, 您可以執行: 
+<p>locate telnet 
+<p>它的輸出可能是: 
+<p>/usr/man/man1/telnet.1 <br>
+/usr/man/man8/in.telnetd.8 <br>
+/usr/man/man8/telnetd.8 <br>
+/usr/sbin/in.telnetd <br>
+/usr/share/terminfo/t/tgtelnet <br>            
+<p>注意locate不僅返回文件名, 而且返回目錄名. 所以, 如果您有一個 /home/abc/telnet/
+目錄, 它將返回這個目錄的所有文件. 
+<p>
+</li>
+<li>&quot;find&quot;命令
+<p>Linux 的檔案結構如此的複雜，如果您突然需要修改某個檔案來更新您的
+系統，在這茫茫的大海中，您要如何去找到該檔案呢?為了這個需求，
+目前 Linux 上有三個常用指令可以達到這個功能，那就是每一種 UNIX
+系統會一定有的『find』指令和『whereis』指令，至於『locate』這個指令則並非每一種
+UNIX 系統都會安裝，不過在 Linux 上已經幫您安裝了, 詳細使用方法請參考本章節的第四點。 
+這三個搜尋指令當然以 find 最強大，因為它有以下的功能:<br><br>
+<ol>
+<li>監視硬碟的功用 </li>
+<li>找出可能會對系統造成安全問題的檔案</li>
+<li>重覆檔案處理工作，</li>
+</ol>
+<br>
+但是大多數的人平常並不喜歡它，因為它太操硬碟了。只要您試用過之
+後，會發現當您用 find 指令時，您的硬碟會一直不停的呱呱叫，如果
+使用 whereis 和 locate 則不會有這種情形，因為資料已經存在 DataBase
+File中。搜尋檔案時，您的硬碟並沒什麼動靜，您可以很安穩的就找到您想
+找的檔案。所以平時如果您只想找單一個小檔案而已，就用locate或是
+whereis，如果要進行系統管理的工作時，不妨用find配合其他參數達到您
+想做到的需求。
+範例如下：<br><br>
+<b>$find /home/lin -name hash</b><br>
+在 /home/lin 目錄下找尋 hash 這個檔案
+<p><b>$ find / -name 'fs*' -print</b><br>
+從 / 根目錄開始搜尋所有以 fs 為開頭的檔名 'fs'，然後用參數 -print
+印出符合條件的檔案路徑。
+<p><b>$ find. -name '*.c' -exec rm-f{ }\e</b><br>
+代表在使用者現在的目錄 『.』，搜尋所以 .c
+為結尾的檔名『'*.c'』然後用參數 -exec 執行 rm-f{ }\e 刪除全部以 .c
+結尾的檔案。(注意，大括號裡面沒有空白。)                  
+<p>
+</li>
+<li>&quot;info&quot;頁
+<p>man是最普遍的文檔格式, 而info則更有力. 它提供了超文本連接使大量的文檔更易於閱讀, 同
+時為文檔的作者提供了許多特性. 在Red Hat的不同方面(特別是GNU部分), 有一些非常完成的info
+文檔. 
+<p>閱讀info文檔可以使用 info 程序(不要來參數). 它將列出一 個文檔的清單. 
+如果您沒有發現您所需要的, 那可能是因為您沒有安裝包含那個文檔的軟 件包. 
+用RPM安裝後再試. 
+<p>如果您喜歡使用emacs, 它有一個內置的info文檔瀏覽器. 使用【Ctrl-h】【i】鍵就可以
+看到它. 
+<p>info系統是一個超文本系統. 任何高亮度顯示的文字都有一個連結導向更多的信息. 
+使用【Tab】將光棒移到連結, 並按【Enter】進入連結. 按【p】返回上一頁, 
+【n】 翻到下一頁, 而 【u】 回到 文檔的上一層. 退出info, 按【Ctrl-x】+【Ctrl-c】 (control-x 然後再按 control-c). 
+<p>學習如何使用 info 的最佳方法是用它閱讀info文檔. 如果您閱讀了 info顯示的第一頁, 您將
+有能力繼續.  
+</li>
+</ol>
+<p>
+<h2><!--mstheme--><font color="#003366"><a NAME="ss11.2">11.2 從Internet得到幫助        </a>
+<!--mstheme--></font></h2>
+
+<p>
+<ol>
+<li>您可參考XLinux的網站:
+<p><code> 
+<a HREF="http://www.XLinux.com.tw">XLinux網站</a></code>  
+</li>
+<li> RedHat 郵件列表 (Mailing List)
+請參看以下網址:
+<p><code> 
+<a HREF="http://www.redhat.com/community/list_subscribe.html"> RedHat Mailing List 列表</a></code>
+</li>
+<li> USENET新聞組群    
+<p>另一個好的訊息來源是USENET中的comp.os.linux. 如果您熟悉新聞組, 可以用它. 
+<p>
+</li>
+<li>Linux Documentation Project (Linux文件計劃):
+<p> <code> 
+<a HREF="http://metalab.unc.edu/mdw/index.html">Linux文件計劃</a></code>
+<p>
+</li>
+<li>CLDP-中文文件計劃:
+<p> <code> 
+<a HREF="http://www.linux.org.tw/CLDP/">中文文件計劃</a></code> 
+</li>
+<li>百資科技:
+
+<p><code> 
+<a HREF="http://www.linpus.com.tw">百資科技</a></code>
+</li>
+</ol>
+       
+<p>
+<!--msthemeseparator--><p align="center"><img src="http://mouse.oit.edu.tw/htdocs/_themes/sumipntg/sumhorsa.gif" width="600" height="10"></p>
+<a HREF="install-12.html">Next</a>
+<a HREF="install-10.html">Previous</a>
+<a HREF="install.html#toc11">Contents</a>
+<!--mstheme--></font></body>
+</html>
