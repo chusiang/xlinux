@@ -1,0 +1,297 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head><meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+ <meta NAME="GENERATOR" CONTENT="SGML-Tools 1.0.9">
+ <title>XLinux安裝手冊和使用說明: X 視窗系統</title>
+ <link HREF="install-11.html" REL="next">
+ <link HREF="install-9.html" REL="previous">
+ <link HREF="install.html#toc10" REL="contents">
+<meta name="Microsoft Theme" content="sumipntg 011, default"></head>
+<body background="http://mouse.oit.edu.tw/htdocs/_themes/sumipntg/sumtextb.jpg" bgcolor="#FFFFFF" text="#000066" link="#3333CC" vlink="#666699" alink="#990099"><!--mstheme--><font face="新細明體">
+<a HREF="install-11.html">Next</a>
+<a HREF="install-9.html">Previous</a>
+<a HREF="install.html#toc10">Contents</a>
+<!--msthemeseparator--><p align="center"><img src="http://mouse.oit.edu.tw/htdocs/_themes/sumipntg/sumhorsa.gif" width="600" height="10"></p>
+<h2><!--mstheme--><font color="#003366"><a NAME="s10">10. X 視窗系統</a><!--mstheme--></font></h2>
+
+<p>
+<h2><!--mstheme--><font color="#003366"><a NAME="ss10.1">10.1 簡介        </a>
+<!--mstheme--></font></h2>
+
+<p>
+<ol>
+<li>X的簡史
+<p>X視窗系統的發展開始於1984的麻省理工學院，它是由麻省理工學院電腦科學實驗室與雅
+典娜(Athena)計劃所贊助。因為IBM和DEC原本有參與了 Athena計劃，所以 X從一開始
+就有來自業界的支援。1986年初，DEC發表了第一套商業的X，這是含在VAXstation-
+II/GPX跑的 Ultrix作業系統裡，版本是 X version10，release 3，簡稱 X11R3。很快
+的，X吸引了其它工作站廠商的注意，像是Hewlett-Packward，Apollo
+Camputer(Apollo現已跟Hewlett-Packward合併)，Sun Microsystems以及Tektronix.
+由於使用者的反應，計劃的成員重新設計了X協定，在 1986年11月，X1OR4發表了，這是
+X version10的最後一個release，之後就是X version 11了。
+<p>1987年一月，在第一屆X技術會議舉行期間，11家主要電腦廠商宣佈了對於X11的支
+持與標準化，X11的第一個release-X11R1在1987年發表，為了確保X能在一個開
+放組織的控制下持續改進，一個非營利的組織-麻省理工學院 XConsortium 於1988年一
+月成立，在X的主要設計者-Robert W. Scheifler的領導下，XConsortium 負責推
+展 X，X視窗系統的發展控制也轉交給X Consortium。   
+<p>1988年三月，X11R2發表，1988十月底，X11R3發表，1990年一月，X Consortium發
+表 X11R4，X11R5則是接著在1991年八月。當 X在工作站的世界普及後，X
+Consortium仍不遺餘力的在許多方面改進X，包含讓 C++也可以設計 X程式，以及加
+進一個物件導向程式設計工具，叫 Fresco等等，這些都在1994年4月發表的 X11R6裡，
+X11的X協定在這些release中並沒更改，所有的加強都是經由 X協定所提供的功能，
+<p>
+</li>
+<li> 了解X視窗系統
+<p>X視窗系統這名詞指的是好幾個部份，這幾個部份使得在不同位元映射顯示
+上，以視窗為基礎的圖形輸出更方便。
+X的核心是X server，一個程序(process)，也就是一個執行中的電腦程式，它
+控制顯示。鍵盤，滑鼠，應用程式則統稱X clients，與X server以內部程序通
+訊(interprocess communication，ipc)的機制溝通，顯示出整個輸出。X server
+和X clients之間是以一個定義好的協定，叫X protocol的通訊協定來溝通，X
+clients，X protocol，X還包含C寫成的程式庫，叫Xlib，當作與X server溝
+通的程式介面。              
+<p>
+</li>
+<li> Clients 和 Servers
+<p>X Server 又稱為 X Terminal，簡單地說，您可以將自己眼前的螢幕，
+就看作是 X Server。在實際運作的場合上，X Server 是 X Window
+的主要核心程式，必須比 X Client 更早啟動，它負責控制螢幕、
+顯示卡、鍵盤、滑鼠等硬體設備，為使用者準備好一個「可供顯示視窗
+的資源環境」，用以等待網路上的 X Client 程式，前來提出「顯示
+要求」。簡而言之，X Server 負責顯示並處理鍵盤滑鼠的動靜 (後者
+稱為 X Event)，而 X Client 負責執行並產生視窗等影像要求 (後者
+稱為 X Request)。
+<p>在 X Window 環境中，X Request 與 X Event 傳遞的關係如下：
+<p>
+<figure>
+<eps FILE="images/xwindow.eps">
+<img SRC="images/xwindow.jpg" WIDTH="352" HEIGHT="72">
+<caption> X 協定?/CAPTION&gt;
+</figure>
+   
+<p>
+<p>若是您已經安裝好 Linux 系統，而且裡頭也有完整的 X Window 程式套件，
+那麼試著查看 /usr/X11R6/bin 目錄裡的檔案內容，這裡頭放置的全是
+X Window 的可執行檔或工具程式，不過，我們可以進一步將它們分成 X Server
+與 X Client 兩類程式，例如 XF86_Mach64、XF86_SVGA、XF86_FBDev，這些
+檔案都是 X Server 程式，例如 crxvt、netscape、x11amp 等，這些檔案
+都是 X Client 程式。
+<p>有一個非常重要的觀念：X Protocol 的溝通內容，與一般常見的
+TELNET 或 HTTP 通訊協定，觀念上有部份不同，因此很容易造成初學者的
+混淆。
+<p>舉例來說，當您在使用 TELNET 通訊協定時，連結溝通的兩端主機，
+大多時間都只是在互傳 ASCII 文字串，對使用者而言，應該可以
+想像並理解自己是連線至遠端的主機，存取遠端 Server 的資料。
+類似的情節，也能夠應用在 Netscape 瀏覽器 (Client) 的例子上，
+經由滑鼠點選各式的 URL 連結，我們可以想像這個「要求」，透過
+HTTP 通訊協定傳至遠端的網頁伺服器，由 Server 判讀出 Client
+的要求內容，再傳回所需的資料。
+<p>就是說，一般的印象中，總認為 Server 與 Client 必定是分開的，
+而且 Server 通常代表一部位於網路遠端、功能強大、系統資源眾多
+的高檔主機，例如 File Server、FTP Server、WWW Server 等，反過
+來說，Client 則多半是自己電腦上的一個小程式，例如 telnet 程式
+或 netscape 程式等。但在 X Protocol 分工的情況下，X Server
+負責影像顯示的工作，它主要耗用的是「螢幕」「顯示卡」等系統資源
+，而 X Client 負責程式執行的工作，它主要耗用的是「處理器」「記憶體」
+等系統資源。系統管理員可以依照系統資源及網路狀況，規畫出合適的
+系統架構。
+<p>X Server 與 X Client 之間的位置關係，最單純的型式，便是兩者
+都位於您面前的同一台主機上，不過，請特別注意到，它們仍舊是
+維持著 Client/Server 關係。接著，若 X Server 於您面前的主機上執行，
+而接受網路上別台主機上的 X Client 程式執行的結果 (即所產生的
+視窗影像)，您得為此配合一個不錯的網路環境，這類情況也蠻常見的。
+不論如何，X Server 沒有在您面前的主機螢幕上執行顯示，怎麼說都是
+相當特異的，通常也是沒有意義的事，而這類無意義的事何時會發生呢?
+當您嘗試 telnet 到另一台主機，然後執行 startx 時，這樣的事情便
+發生了。
+<p>
+</li>
+<li> 什麼是 window manager ?
+<p>在架構上，我們已經認識 X Protocol 規範了 X Server 與 X Client 之間
+的溝通方式，在實務上，當 X Server 為使用者準備好一個顯示環境時，
+您應該就能發現螢幕上會出現有底色 (僅是慘淡單調的顏色) 變化，
+而且滑鼠指標也啟動就緒，接下來，我們會看到一連串 X Client 的工作，
+而當中，最重要的 X Client 程式，就是 window manager 程式了。
+<p>window manager 程式是其他 X Client 程式的「總管」，所有 X Client
+程式的視窗外觀與操作控制都會受到 window manager 的影響，我們稱之為
+「look and feel」，舉凡視窗的外框型式、桌面選單、圖示、虛擬桌面、
+按鈕樣式、工具列樣式等，都是由 window manager 所管理。而令人高興的是
+(或是讓某些人大感焦慮)，X Window 的天地無比自由廣闊，透過 window
+manager 的設定，我們可以完成大部份的介面設計，打造一個符合個人風格
+的工作環境。
+<p>當今 X Window 環境，已發展出許多豐富美麗的 window manager 程式，
+除了一般的功能外，也有加入讓人目炫神迷的多媒體效果。早期的 window
+manager 程式有：
+<p>●twm (Tab Window Manager)
+<p>●mwm (Motif Window Manager)
+<p>●fvwm, fvwm2, fvwm95 (F? Virtual Window Manager)
+<p>●olwm (OpenLook Window Manager)
+<p>近期所發展的大多有其獨到之處，因此大量吸引人氣聚集： 
+<p>●Afterstep
+<p>●Enlightenment
+<p>●WindowMaker
+<p>
+</li>
+</ol>
+<p>
+<h2><!--mstheme--><font color="#003366"><a NAME="ss10.2">10.2 XLinux上如何設定 X 視窗</a>
+<!--mstheme--></font></h2>
+
+<p>如果你習慣了工作站上的圖形環境，那你就會希望很快的設定好X，讓你在
+XLinux上也有相同的環境。
+<p>如果你想發展XLinux的圖形化軟體，那你也會想設定好X，讓你的軟體有個發
+展與測試的環境。
+<p>想設定X，先得要設定出一個檔，叫XF86Config，這個檔包含了相關硬體的
+資訊，XFree86 3.3.5 隨附了一個工具程式xf86config，它可以幫你建立
+XF86Config這個設定檔。但在XLinux中, 您只要利用Genie的設定精靈,
+便可在短短的時間內設定好您的 X 視窗。 請參考本手冊第六章<code>
+<a HREF="install-6.html#genie2-ref">Genie 的動態設定項目?/A&gt;</code>。
+<p>接下來幾節會指引你設定 X 視窗的相關準備動作，讓你可以在XLinux上啟動X。
+<p>
+<ol>
+<li> 了解相關硬體的資料
+<p>要設定 X 視窗，那你就得先了解 X 所會使用到的硬體的資料，從這章一開
+始的介紹，你可以知道 X 控制了那些硬體。 
+<p>● 顯示卡<br>
+● 螢幕<br>
+● 鍵盤<br>
+● 滑鼠<br>
+<p>X server得有這些硬體的資料才能運作順利。
+<p>
+<!--mstheme--></font><!--msthemelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+<!--msthemelist--><tr><td valign="baseline" width="42"><img src="http://mouse.oit.edu.tw/htdocs/_themes/sumipntg/sumbul2a.gif" width="12" height="12" hspace="15"></td><td valign="top" width="100%"><!--mstheme--><font face="新細明體">顯示卡
+<p>XFree86已經提供了各種特定晶片組(產生控制螢幕訊號的積體電路晶片)的X
+servers，想知道用那個server，那就得知道顯示卡是那一種晶片組。
+即使是同一系列晶片組的顯示卡，也可能會有不同的設定參數，因此也得知道
+哪一個廠商生產的，型號等等。
+至少，你得提供以下的資訊:  
+<p>
+<!--mstheme--></font><!--msthemelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+<!--msthemelist--><tr><td valign="baseline" width="42"><img src="http://mouse.oit.edu.tw/htdocs/_themes/sumipntg/sumbul3a.gif" width="12" height="12" hspace="15"></td><td valign="top" width="100%"><!--mstheme--><font face="新細明體">顯示晶片組， 如 S3 或是 ATI Mach64。 
+<!--mstheme--></font><!--msthemelist--></td></tr>
+<!--msthemelist--><tr><td valign="baseline" width="42"><img src="http://mouse.oit.edu.tw/htdocs/_themes/sumipntg/sumbul3a.gif" width="12" height="12" hspace="15"></td><td valign="top" width="100%"><!--mstheme--><font face="新細明體">製造廠商和型號， 像是Diamond Stealth 64 VRAM，Number Nine GXE64，
+或是ATI Graphics Xpression。         
+<!--mstheme--></font><!--msthemelist--></td></tr>
+<!--msthemelist--><tr><td valign="baseline" width="42"><img src="http://mouse.oit.edu.tw/htdocs/_themes/sumipntg/sumbul3a.gif" width="12" height="12" hspace="15"></td><td valign="top" width="100%"><!--mstheme--><font face="新細明體">視訊記憶體的數目，是 1MB還是 2MB。<!--mstheme--></font><!--msthemelist--></td></tr>
+<!--msthemelist--></table><!--mstheme--><font face="新細明體">
+<p>
+<!--mstheme--></font><!--msthemelist--></td></tr>
+<!--msthemelist--><tr><td valign="baseline" width="42"><img src="http://mouse.oit.edu.tw/htdocs/_themes/sumipntg/sumbul2a.gif" width="12" height="12" hspace="15"></td><td valign="top" width="100%"><!--mstheme--><font face="新細明體">螢幕
+<p>X server經由顯示卡控制螢幕，它讓顯示卡送出各種訊號給螢幕(來控制畫
+raser線要多快，舉例來說，整個螢幕重畫的頻率)，如果螢幕做了超過它能力
+所能做的事(譬如重畫raser線太快)，那螢幕就可能會損壞，為了確保訊號是
+在螢幕可以接受的範圍，XFree86需要知道螢幕特性。
+至少，你得提供下列的資訊: 
+<p>
+<!--mstheme--></font><!--msthemelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+<!--msthemelist--><tr><td valign="baseline" width="42"><img src="http://mouse.oit.edu.tw/htdocs/_themes/sumipntg/sumbul3a.gif" width="12" height="12" hspace="15"></td><td valign="top" width="100%"><!--mstheme--><font face="新細明體">水平同步頻率的範圍，傳統應該是 30-64 kHz。<!--mstheme--></font><!--msthemelist--></td></tr>
+<!--msthemelist--><tr><td valign="baseline" width="42"><img src="http://mouse.oit.edu.tw/htdocs/_themes/sumipntg/sumbul3a.gif" width="12" height="12" hspace="15"></td><td valign="top" width="100%"><!--mstheme--><font face="新細明體">垂直同步頻率(也就是垂直更新頻率)的範圍．像是50-90Hz。<!--mstheme--></font><!--msthemelist--></td></tr>
+<!--msthemelist--><tr><td valign="baseline" width="42"><img src="http://mouse.oit.edu.tw/htdocs/_themes/sumipntg/sumbul3a.gif" width="12" height="12" hspace="15"></td><td valign="top" width="100%"><!--mstheme--><font face="新細明體">如果查得到頻寬的話，那就更好，如 75 MHz。<!--mstheme--></font><!--msthemelist--></td></tr>
+<!--msthemelist--></table><!--mstheme--><font face="新細明體">
+<p>
+<!--mstheme--></font><!--msthemelist--></td></tr>
+<!--msthemelist--><tr><td valign="baseline" width="42"><img src="http://mouse.oit.edu.tw/htdocs/_themes/sumipntg/sumbul2a.gif" width="12" height="12" hspace="15"></td><td valign="top" width="100%"><!--mstheme--><font face="新細明體">滑鼠 
+<p>滑鼠是圖形介面的一部份，因為使用者得用它來點選所要的項目，完成所要做
+的工作，當你移動滑鼠時，X server就會移動螢幕上的指標，X server會偵測
+滑鼠的按鍵，送出適當的控制事件(mouse-clickevents)給滑鼠指標所指向的應
+用程式。
+<p>雖然在安裝XLinux時你已經設定過滑鼠了，不過你還是得提供滑鼠的資訊給X
+server，如果無法使用滑鼠，那麼XFree86就無法啟動。
+要設定滑鼠，得注意下面情況:
+<p>
+<!--mstheme--></font><!--msthemelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+<!--msthemelist--><tr><td valign="baseline" width="42"><img src="http://mouse.oit.edu.tw/htdocs/_themes/sumipntg/sumbul3a.gif" width="12" height="12" hspace="15"></td><td valign="top" width="100%"><!--mstheme--><font face="新細明體">滑鼠的種類，是Microsoft，Logitech，Busmouse還是PS/2-style。<!--mstheme--></font><!--msthemelist--></td></tr>
+<!--msthemelist--><tr><td valign="baseline" width="42"><img src="http://mouse.oit.edu.tw/htdocs/_themes/sumipntg/sumbul3a.gif" width="12" height="12" hspace="15"></td><td valign="top" width="100%"><!--mstheme--><font face="新細明體">滑鼠連接的方式，經串列埠或是Bus連接。<!--mstheme--></font><!--msthemelist--></td></tr>
+<!--msthemelist--><tr><td valign="baseline" width="42"><img src="http://mouse.oit.edu.tw/htdocs/_themes/sumipntg/sumbul3a.gif" width="12" height="12" hspace="15"></td><td valign="top" width="100%"><!--mstheme--><font face="新細明體">滑鼠的設備名稱(devicename)，你可以直接設定為/dev/mouse，這是個link
+指到Linux中真正代表滑鼠的設備檔案，檔案的名稱隨滑鼠的種類與連接
+的，方式而不同。<!--mstheme--></font><!--msthemelist--></td></tr>
+<!--msthemelist--></table><!--mstheme--><font face="新細明體">
+<p>只要設備名稱和滑鼠的種類是正確的，那麼應該不會有任何問題。
+如果你的滑鼠是以bus方式來連接，那要注意不要跑gpm(這是個可以讓你在文字模
+式下剪貼文字的程式)，因為它會影響X的運作，你可以用下列的指令去看看是不是有
+跑gpm:                         
+<p>ps aux│grep gpm
+<p>如果有的話，在你進 X 以前，用kill這個指令去結束這個程式。 
+<!--mstheme--></font><!--msthemelist--></td></tr>
+<!--msthemelist--></table><!--mstheme--><font face="新細明體">
+</li>
+</ol>
+                  
+<p>
+<h2><!--mstheme--><font color="#003366"><a NAME="ss10.3">10.3 啟動與結束 X 視窗</a>
+<!--mstheme--></font></h2>
+
+<p>         
+<ol>
+<li>執行 X
+<p>X Window 的開啟，至少有兩種主要的方式，一種是輸入 startx 指令，
+另一種是執行 xdm 程式。
+<p>
+<!--mstheme--></font><!--msthemelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+<!--msthemelist--><tr><td valign="baseline" width="42"><img src="http://mouse.oit.edu.tw/htdocs/_themes/sumipntg/sumbul2a.gif" width="12" height="12" hspace="15"></td><td valign="top" width="100%"><!--mstheme--><font face="新細明體">執行startx
+<p>tartx 指令其實是系統裡的一個 shell script，
+我們可以透過文字編輯器直接觀看及修改其內容，而 startx 指令執行時，
+本身也可以指定選項，例如 startx -- -bpp 16 則是常見的選項方式，
+用於指定 X Server 以 16 bpp (bit per pixel)，即每個 pixel 可表達 2^16
+相當於 16 百萬的色彩數。當您遇到 startx 的預設 bpp 為 8 時，表示
+每個 pixel 只能用以顯示 256 色，可能在使用上便顯捉襟見肘了。
+<p>
+<p>startx 這個 script，它是在/usr/X11R6/bin 這個目錄中，
+所以之前要看看PATH這個環境變數有沒有含括這個目錄。
+<p>執行startx時，startx會去找另一個script叫.xinitrc，首先它會去home directory
+找，如果沒有，會以/usr/X11R6/lib/X11/xinit/xinitrc當做預設檔，注意喔，
+這個預設檔不像home directory裡的.xinitrc前面有個句號。
+<p>如果你有修改home directory裡的.xinitrc，那改變後的 .xinitrc檔，
+最後結尾的幾行應該是像下面這樣的:
+<blockquote><code>
+<!--mstheme--></font><pre>
+# start some nice programs
+xsetroot-solid SteelBlue
+xterm -sb -name Linux &amp;
+fvwm
+</pre><!--mstheme--><font face="新細明體">
+</code></blockquote>
+<p>#開頭表示之後的文字是註解，xsetroot這個程式把桌面背景設成SteelBlue。
+xterm則是一個終端機模擬器，在xterm那一行最後那個 &amp; 記號，則是讓   
+xterm在背景執行，最後，fvwm則是啟動視窗管理員。
+<p>
+<p>現在，可以在xterm(在主題捲軸有Linux這個字那個)這個視窗中下命令，
+視窗管理員(像是fvwm)總是被放在.xinitrc的最後一行。這樣你可以藉由結束
+視窗管理員來結束X回到文字畫面。  
+<p>
+<!--mstheme--></font><!--msthemelist--></td></tr>
+<!--msthemelist--><tr><td valign="baseline" width="42"><img src="http://mouse.oit.edu.tw/htdocs/_themes/sumipntg/sumbul2a.gif" width="12" height="12" hspace="15"></td><td valign="top" width="100%"><!--mstheme--><font face="新細明體">xdm
+<p>xdm 是開啟 X Window 另一種常見的方式，您可以使用 root 帳號執行 xdm
+指令，隨後會出現一個「登錄系統」的提示畫面，您必須正確輸入帳號與密碼
+後才能開始使用各式應用程式，這點與上述 startx 的方式大有不同。
+使用者也可以修改 /etc/inittab 檔案內容，請先找到下列的一行資料：
+<blockquote><code>
+<!--mstheme--></font><pre>
+ 
+id:3:initdefault:
+</pre><!--mstheme--><font face="新細明體">
+</code></blockquote>
+<p>然後把 3 改成 5，這樣一來，系統一開機後就入直接開啟 xdm 登錄畫面。
+<p>有些人會直接使用 xinit 程式來啟動 X Window，這樣的「古典方式」    
+並不建議新手使用，一般僅適用於特殊場合。
+<!--mstheme--></font><!--msthemelist--></td></tr>
+<!--msthemelist--></table><!--mstheme--><font face="新細明體">
+<p>
+</li>
+<li>結束 X 視窗
+<p>關閉 X Window 的方式，一般正常情況下，請依不同的 window manager
+來點選 logout 按鈕，或是直接使用 Ctrl + Alt + Backspace 三鍵，
+也可以離開整個 X Window 環境。如果是使用 xdm，則上述的方式僅會讓您
+回到登錄畫面，想回到文字命令列模式的話，請試著按下 Ctrl + R 鍵。
+<p>
+</li>
+</ol>
+        
+<p>
+<p>
+<!--msthemeseparator--><p align="center"><img src="http://mouse.oit.edu.tw/htdocs/_themes/sumipntg/sumhorsa.gif" width="600" height="10"></p>
+<a HREF="install-11.html">Next</a>
+<a HREF="install-9.html">Previous</a>
+<a HREF="install.html#toc10">Contents</a>
+<!--mstheme--></font></body>
+</html>

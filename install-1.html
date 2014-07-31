@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head><meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+ <meta NAME="GENERATOR" CONTENT="SGML-Tools 1.0.9">
+ <title>XLinux安裝手冊和使用說明: 甚麼是Linux? </title>
+ <link HREF="install-2.html" REL="next">
+
+ <link HREF="install.html#toc1" REL="contents">
+<meta name="Microsoft Theme" content="sumipntg 011, default"></head>
+<body background="http://mouse.oit.edu.tw/htdocs/_themes/sumipntg/sumtextb.jpg" bgcolor="#FFFFFF" text="#000066" link="#3333CC" vlink="#666699" alink="#990099"><!--mstheme--><font face="新細明體">
+<a HREF="install-2.html">Next</a>
+Previous
+<a HREF="install.html#toc1">Contents</a>
+<!--msthemeseparator--><p align="center"><img src="http://mouse.oit.edu.tw/htdocs/_themes/sumipntg/sumhorsa.gif" width="600" height="10"></p>
+<h2><!--mstheme--><font color="#003366"><a NAME="s1">1. 甚麼是Linux? </a><!--mstheme--></font></h2>
+
+<p>1991年8月,芬蘭的一個學生在comp.os.minix新聞組貼上了以下這段話: 
+<p>&quot;你好,所有使用minix的人 - 
+<p>我正在為386(486)AT做一個免費的操作系統(只是為了愛好,
+不會像GNU那樣很大很專業.&quot; 
+<p>這名學生就是Linus Torvalds, 而他所說的'愛好'就變成我們今天知道的Linux. 
+作為一個具備所有特性的類似POSIX的操作系統, Linux並非僅由Linus一人開發, 
+而是由全世界幾百個程式設計員共同開發的. 有趣的是這個巨大的全世界的開發活動不是很協調. 當然, Linus 為核心定了步調, 但Linux並不只是核心. 沒有一個管理組織; 
+一個俄羅斯學生得到一塊新的主機板, 就寫了驅動程式支持這塊主機板. 馬里蘭的一個系統管理員需要備份軟體, 就寫一個, 並把它傳給任何需要的人. 好像總是在正確的時間發生正確的事. 
+<p>另一個有趣的事是你可不花錢就得到Linux. 你只要有時間並願意下載, 
+你就可以免費得到大多數軟體. 但並不是所有人都有時間... 
+<p>　　國內報章雜誌已經慢慢浮現越來越多的 Linux
+相關報導，在美國，〝Linux現象〞也早就引起一陣
+討論的熱潮，不過相信國內大多數人對 Linux 可能
+還是非常的陌生，大概不少人心中都有〝甚麼是
+Linux 呢？〞的疑問，其實 Linux 一點都不奇怪，
+簡單的說，Linux 是一套 UNIX-like 的作業系統，
+是 UNIX 的一種，它控制整個系統基本服務的核心
+程式（kernel）是由 芬蘭人 Linus Torvalds 帶頭開發
+出來的，〝Linux〞這個名稱便是以〝Linus's 
+unix〞 來命名。 1991 年，當時還是個大學生的
+Linus 在網路上首次發表 Linux 核心程式的原始
+碼，並且選擇用〝大眾公有版權（GPL）〞的方式
+來發行這份程式 (關於GPL的詳細內容, 可參見本手冊
+<code>
+<a HREF="install-15.html#GPL-ref">附錄一</a></code>)，
+這版權允許任何人以任何形式複
+製與散佈 Linux 的原始程式，在網際網路的日漸盛
+行以及 Linux 開放自由的版權之下，吸引了無數電
+腦高手投入開發、改善 Linux 的核心程式，使得
+Linux 的功能日見強大。
+<p>　　除了核心程式以外，一個作業系統還需要其他
+的系統程式跟應用程式才有實用性，Linux 系統中
+常用的系統程式大部份是美國自由軟體基金會
+（Free Software Foundation）開發出來的軟體，而
+且也有不少機構或個人利用自己閒暇時間，不計報
+酬的為 Linux 開發應用程式，這些程式一樣大多都
+是自由軟體，任何人都可以免費的在網路上取得。
+<p>　　不過自行去取得這些程式再一一安裝非常不
+便，於是便有某些有系統整合能力的公司會去搜集
+、整合 Linux 上的程式，把〝核心-系統程式-應用
+程式〞總合起來構成一個完整的作業系統，讓一般
+使用者可以簡便的安裝完整個系統，這就是所謂的
+〝安裝套件〞（distribution）。
+<p>　　我們一般講的 Linux 系統便是針對這些安裝套
+件而言，Linux 安裝套件的種類繁多，著名的有早
+期在台灣非常流行的 Slackware 套件，還有近來越
+來越多人使用 Debian 跟在國外已經是佔有率超過一
+半的 RedHat Linux，這些不同的安裝套件都算是
+Linux 系統，同樣都用 Linux 核心，收錄的程式大
+同小異，相互之間的程式都可以共用，不同的地方
+只在於一些系統設定跟程式套件的管理方式而已。
+<p>　　同樣是 Linux 系統，卻分成不同公司、機構整
+合出來的不同安裝套件，這就是大家常常在網路上
+看到 Linux 有那麼多〝種〞的原因。
+<p>　　Linux 具有 UNIX 系統的程式介面跟操作方
+式，也繼承了 UNIX 穩定有效率的特點，網路上安
+裝 Linux 的主機連續運做一年以上而不曾當機、不
+必關機是稀鬆平常的事，不過 Linux 但是卻不像一
+般 UNIX 須負擔龐大的版權費用、而且要在專屬的
+昂貴硬體上才可以使用。
+<p>　　Linux 可以在一般的 i386 PC 上執行，自然而然
+的接收了過去幾十年來在 UNIX 上累積的程式資源
+跟使用者，加上 GPL 的版權允許大家免費傳播散佈
+Linux 的原始碼，並針對自己的需求修改程式，使
+得Linux 在目前已經成為非常受人歡迎的一個多人
+多工、免費、穩定、效率高、可以在包括 i386、
+Sparc、Alpha、Mips、PPC... 等眾多不同電腦系統
+平台上執行的作業系統。
+<p>　　提供中文化簡易〝控制台〞，MIS 可透過 web
+中文畫面輕易設定 email 帳號、 DNS、proxy，…等
+等參數。
+<p>
+<p>
+<!--msthemeseparator--><p align="center"><img src="http://mouse.oit.edu.tw/htdocs/_themes/sumipntg/sumhorsa.gif" width="600" height="10"></p>
+<a HREF="install-2.html">Next</a>
+Previous
+<a HREF="install.html#toc1">Contents</a>
+<!--mstheme--></font></body>
+</html>

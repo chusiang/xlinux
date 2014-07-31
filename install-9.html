@@ -1,0 +1,233 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+ <META NAME="GENERATOR" CONTENT="SGML-Tools 1.0.9">
+ <TITLE>XLinux安裝手冊和使用說明: 中文的使用</TITLE>
+ <LINK HREF="install-10.html" REL=next>
+ <LINK HREF="install-8.html" REL=previous>
+ <LINK HREF="install.html#toc9" REL=contents>
+</HEAD>
+<BODY>
+<A HREF="install-10.html">Next</A>
+<A HREF="install-8.html">Previous</A>
+<A HREF="install.html#toc9">Contents</A>
+<HR>
+<H2><A NAME="s9">9. 中文的使用</A></H2>
+
+<P>
+<H2><A NAME="ss9.1">9.1 基本操作        </A>
+</H2>
+
+<P>
+<P>CLE 其實就是英文字 Chinese Linux Extensions 的縮寫，
+中文稱為「中文延伸安裝套件」，編者為鄭原忠 (Platin)。
+嚴格來說，目前的 CLE，並不是一個新的安裝套件或是一項新的發明，
+多數的中文包裹檔案，都來自於其他現成的中文發展計畫或程式模組，
+因此，我們可以說，CLE 是現有 Linux 中文應用的集大成。
+也因為如此，完成此一工作的主角，我們稱之為「編者」或「收集者」，
+會比「作者」來得更貼切。
+<P>目前, 整個 CLE 的建構方式，是以 RedHat-5.x 為基礎，但並不希望以此為限，
+整理與收錄的原則，則以「提供實用的中文使用環境」為考量，
+並作為往後開發真正中文 Linux 安裝套件的基礎。  
+<P>在此, 引述一段編者的說明：
+<P>對我而言，CLE 其實是在 1998 年 6 月 才出現的概念，而且這個名稱
+是由陳永昇 (cdchen) 建議使用的，最初我只是把一些中文相關的軟體
+加上修正，製作成 rpm 檔案，目的只是為了方便我安裝身邊的工作站罷了，
+可是慢慢的，我包出來的中文 rpm 檔案越來越多，也發覺到，
+把這些中文相關軟體作一個整合，並且包裝成一組安裝套件，
+可以節省許多一一設定的時間，於是乎，在與陳永昇
+用電子郵件溝通過一些觀念以後，我決定把這些東西放到一起，
+並且在 1998 年 6 月 20 日於網路上發表 CLE v0.3，這就是起源了。 
+<P>在XLinux 中, 您已經可以享受中文化的環境, 不需要在去作額外的安裝。 
+<P>
+<H2><A NAME="ss9.2">9.2 中文系統與中文終端機</A>
+</H2>
+
+<P>
+<CENTER><TABLE BORDER><TR><TD>
+
+名稱</TD><TD>作者</TD><TD>簡述</TD></TR><TR><TD>
+chdrv</TD><TD>wycc </TD><TD>文字模式下的中文系統，操作介面類似倚天中文。</TD></TR><TR><TD>
+crxvt</TD><TD>xcin team</TD><TD> 支援中文的VT102 終端機模擬程式。</TD></TR><TR><TD>
+
+<CAPTION> 終端機模擬程式(在文字或 X 視窗系統底下使用的中文終端機程式)</CAPTION>
+</TD></TR></TABLE></CENTER>
+                   
+<P>
+<P>
+<H2><A NAME="ss9.3">9.3 中文輸入</A>
+</H2>
+
+<P>xcin 是目前 X Window 上，使用人口最多的國產中文輸入法，目前最新
+的發展將往 XIM 的架構改進，而初步看來，Qt 2.0 對於 XIM 的支援上
+並沒有任何進展，對於中文的進一步支援上，有不小的影響。KDE 因為
+發展歷史較長，應用程式呈現量多而穩定的小幅領先局面，目前已開始
+累積 KOffice 的成果了，相當令人期待。
+<P>XLinux最大的特色除了可在X-windows下顯示中文外，更可在各類應用程式裡輸入中文讓
+Xlinux的普及化向前邁開一大步。您可在桌面空白處按一下，出現「應用程式選單」後，按一下「中文輸入」選項即可出現Xcin(中文輸入程式)。
+<P>Xcin的操作如下：
+<P>● Xcin內定的輸入法有：英數、注音、詞音、內碼，
+您可使用滑鼠左鍵按一下Xcin上的【英數】區，藉以轉換其它輸入法，
+或是按【Ctrl】+【Shift】鍵轉換其它輸入法。
+<P>●按【Ctrl】+【Alt】+【3】鍵可切換成一般注音輸入法。
+<P>●按【Ctrl】+【Alt】+【6】鍵可切換成詞音輸入法，類似忘形輸入法。
+<P>●按【Ctrl】+【Alt】+【0】鍵可切換成內碼輸入法。
+<P>●按【Ctrl】+【Space】鍵可做【英數】與目前輸入法的切換。
+<P>若您要加掛其它的輸入法，如：倉頡輸入法，請在crxvt裡輸入：   
+<BLOCKQUOTE><CODE>
+<PRE>
+# xcin2.3   -in1   cj.tab
+</PRE>
+</CODE></BLOCKQUOTE>
+
+上例中參數-in後接切換鍵的號碼，如：in1表示按【Ctrl】+【Alt】+【1】，
+-in2表示按【Ctrl】+【Alt】+【2】；宣告參數-in後，再輸入「輸入法對應檔」，
+如倉頡輸入法為：cj.tab。
+<P>下面列出各類「輸入法對應檔」的檔名：
+<P>
+<CENTER><TABLE BORDER><TR><TD>
+
+輸入法</TD><TD>檔名</TD></TR><TR><TD>
+倉頡輸入法</TD><TD>cj.tab</TD></TR><TR><TD>
+30鍵行列輸入法</TD><TD>array30.tab</TD></TR><TR><TD>
+無蝦米輸入法</TD><TD>liu5.tab</TD></TR><TR><TD>
+我倉輸入法</TD><TD>mycj.tab</TD></TR><TR><TD>
+拼音輸入法</TD><TD>pinyin.tab</TD></TR><TR><TD>
+簡無輸入法</TD><TD>zmdbosh.tab</TD></TR><TR><TD>
+
+<CAPTION>輸入法對應檔名</CAPTION>
+</TD></TR></TABLE></CENTER>
+      
+<P>若您使用的鍵盤對應法是以天注音輸入法，請在crxvt裡輸入：
+<BLOCKQUOTE><CODE>
+<PRE>
+# xcin2.3   -phokbm    et
+</PRE>
+</CODE></BLOCKQUOTE>
+<P>上例中, 參數 -phokbm 用來指定使用注音方式輸入的輸入法，其後可接et(倚天一般輸入法)、et26(倚天26鍵輸入 k)、zo(零壹輸入法)、hsu(許氏輸入法)。
+<P>利用crxvt啟動中文輸入法並非良策，您可以在個人home目錄的.Xdefaults檔裡(隱藏檔)，
+對外掛輸入法及鍵盤對應法做定義，請在.Xdefaults檔尾輸入如下： 
+<BLOCKQUOTE><CODE>
+<PRE>
+xcin.in1:            cj.tab          -> 記得以 : 號隔開
+xcin.phokbm:         et              -> 記得以 : 號隔開
+</PRE>
+</CODE></BLOCKQUOTE>
+<P>在Xdefaults檔裡對外掛輸入法做定義，xcin.inN：「輸入法對應檔」語法達成，其�
+N 表示按鍵數目，1為按鍵[1]，2為按鍵[2]......；輸入法對應檔可為：cj.tab、array30.
+tab、liu5.tab、mycj.tab、pinyin.tab、zmdbosh.tab其中之一。
+<P>對鍵盤對應法做定義，則以 xcin.phokbm：[鍵盤對應法]語法達成，鍵盤對應法可為：et、et26、zo、hsu其中之一。 若您想對xcin有更詳盡的了解，請參考 /usr/doc/xcin2.3-2.3.04/howto/xcin.HOWTO裡的文件說明。                    
+<P>
+<H2><A NAME="ss9.4">9.4 中文列印</A>
+</H2>
+
+<P>在XLinux之下您已經可以方便的使用中文列印, 以下是支援的列印軟體:<BR>
+<CENTER><TABLE BORDER><TR><TD>
+
+名稱</TD><TD>作者</TD><TD>簡述</TD></TR><TR><TD>
+bg5ps</TD><TD>cschin</TD><TD>一個Python 小程式，可以用來列印中文純文字檔跟netscape 產生的中文滬� PS 檔，配合修改過的rhs-printfilter 就可以在Linux 底下直接用lpr列印中文檔案。</TD></TR><TR><TD>
+rhs- printfilters</TD><TD>Platin</TD><TD>修正過的列印過濾器(printfilters)，配合bg5ps 使用，就可以直接用lpr 列印中文文字檔及mpage 、netscape 產生的PS 檔。</TD></TR><TR><TD>
+ttfprint</TD><TD>Wukai</TD><TD>功能強大的中文文字檔列印工具，有套印功能。</TD></TR><TR><TD>
+
+<CAPTION> 列印軟體(用來列印各種中文檔案的工具)</CAPTION>
+</TD></TR></TABLE></CENTER>
+                     
+<P>
+<H2><A NAME="ss9.5">9.5 中文字型</A>
+</H2>
+
+<P>
+<P>
+<CENTER><TABLE BORDER><TR><TD>
+
+名稱</TD><TD>作者</TD><TD>簡述</TD></TR><TR><TD>
+taipeifonts</TD><TD>? </TD><TD>給X-Window 使用的"taipei" 中文bdf/pcf 字形，在提供中文True-Type 字型的X 視窗系統底下是一個選擇性的配備，可以提供比較好看的16 點跟24 點字型</TD></TR><TR><TD>
+ttf-moe&thinsp;kai</TD><TD> Wukai</TD><TD>台灣教育部標準楷書ttf 字形檔，供bg5ps、ttfprint、chitex、X 等軟體使用。</TD></TR><TR><TD>
+ttf-moe&thinsp;sung</TD><TD>Wukai</TD><TD>台灣教育部標準宋體ttf 字形檔，供bg5ps、ttfprint、chitex、X 等軟體使用。</TD></TR><TR><TD>
+
+<CAPTION> 中文字型 </CAPTION>
+</TD></TR></TABLE></CENTER>
+             
+<P>
+<P>
+<H2><A NAME="ss9.6">9.6 中文文書編輯</A>
+</H2>
+
+<P>
+<CENTER><TABLE BORDER><TR><TD>
+
+名稱</TD><TD>作者</TD><TD>簡述</TD></TR><TR><TD>
+ChiTeX</TD><TD>陳弘毅教授</TD><TD>中文TeX/LaTeX 套件，新版ChiTeX 內含的ttf2pk 使用freetype的True-Type 函式館，可以使用華康字型了。</TD></TR><TR><TD>
+Xemacs-mule</TD><TD>Clement </TD><TD>使用了Clement 的xemacs 中文套件，在zh&thinsp;TW.Big5 locale 下內定支援big5 編碼的xemacs-20.4+mule。</TD></TR><TR><TD>
+LyX</TD><TD>wycc </TD><TD>功能強大的文書處理器</TD></TR><TR><TD>
+bg5sgmltools</TD><TD>cwhuang </TD><TD>中文SGMLtools 套件。</TD></TR><TR><TD>
+QE</TD><TD>Jiann-Ching Liu</TD><TD>一個介面類似PE2、支援彩色顯示的中文文書編輯程式。</TD></TR><TR><TD>
+utf-converter</TD><TD>Ross Paterson </TD><TD>提供中文Big5 及GB 碼跟UTF-8、UTF-7 編碼之間互轉的程式，也可以用來作為Big5 碼文件與GB 碼文件之間互轉之用。</TD></TR><TR><TD>
+mswordview</TD><TD>caolan </TD><TD>用來將Office-97 的word 檔轉為HTML 檔的程式，產生的HTML 檔是UTF-8 編碼，可以用netscape 來看，或者用utf-converter 轉成Big5 碼之後再看。</TD></TR><TR><TD>
+
+<CAPTION> 中文的文件、文書處理處理中文文字檔、製做中文文書的工具。</CAPTION>
+</TD></TR></TABLE></CENTER>
+<P>以下介紹兩個Gnome 計劃中好用的文書處理編輯器:
+<UL>
+<LI>Lyx
+<P>Lyx是一套X-windows下強大的文書編輯器，用法與Word相近，也可用來編輯數學公式，請按
+一下桌面空白處、「CLE應用程式」、「LyX文書處理程式」啟動Lyx。
+<P>
+</LI>
+<LI>Xemacs
+<P>Xemacs是個功能超級強大的程式編輯器，它也是GNU計劃下所發展的軟體，是X-windows下程式設計師的最愛，它用來編輯c、c++、perl、tcl、tk......等程式，
+並且可以除錯或編譯程式，是一套您不可錯過的超級工具，請按一下桌面空白處、「Redhat應用程式選單」、「Chinese」、「CXEmacs」啟動XEmacs。  
+<P>
+</LI>
+</UL>
+<P>
+<H2><A NAME="ss9.7">9.7 中文化軟體</A>
+</H2>
+
+<P>在XLinux裡已將一些常用的工具如:Calendar、gEdit、lyx、XEmace、pe2......等程式
+中文化，並且可在程式裡輸入中文。Calendar相當於windows下的行事曆，gEdit相當於wind
+ows下的小作家(更應該說類似於Ultra Editor)，您可按一下「主選單」、「Application」、「gEdit」(Calendar)啟動程式。 
+<P>然而, 這兩個程式是屬於Gnome計劃裡所發展的軟體，Gnome所發展的程式具備一大特色，幾
+乎用法與windows的應用程式操作方式相近無異，舉凡利用滑鼠拖曳做區塊、 按右鍵出現「快取式功能表」、按[Ctrl]+[C]做複製、按[Ctrl]+[V]做貼上.......等動作
+與windows程式操作相同。
+<P>
+<OL>
+<LI>網路軟體
+<P>
+<CENTER><TABLE BORDER><TR><TD>
+
+名稱</TD><TD>作者</TD><TD>簡述</TD></TR><TR><TD>
+netscape</TD><TD>Li Wei Jih </TD><TD>中文化的netscape。</TD></TR><TR><TD>
+Mutt</TD><TD>?</TD><TD>可以處理中文信件標題、內容的mutt。</TD></TR><TR><TD>
+Elm</TD><TD>?</TD><TD>可以處理中文信件標題、內容的elm。</TD></TR><TR><TD>
+pine</TD><TD>Avatar Liang </TD><TD>這是經過Avatar 修改過的pine 3.96 版，大部份的訊息、選單都中文化了，也可以正確無誤的處理中文信件，是個很方便的讀信軟體。</TD></TR><TR><TD>
+
+<CAPTION> 一些 patch 過，能正確處理中文的上網程式 </CAPTION>
+</TD></TR></TABLE></CENTER>
+           
+<P>
+<P>
+</LI>
+<LI>X Window 軟體
+<P>
+<CENTER><TABLE BORDER><TR><TD>
+
+名稱</TD><TD>作者</TD><TD>簡述</TD></TR><TR><TD>
+XFree86</TD><TD>?</TD><TD>中文化的X Server 跟相關程式館，利用xtt 的True-Type 字型修補程式提供中、英文True-Type 字型支援，可以直接在netscape、gimp、LyX 等等程式裡面使用中� True-Type 字型；CXWin 經過avatar 的建議加進了八種不同大小字型的判斷，解決中文對位不齊的問題。</TD></TR><TR><TD>
+xa+cv</TD><TD>weijr</TD><TD>利用LD&thinsp;PRELOAD 的機制，可以用來在使用X 函式館的程式裡面輸入中文的小工具。</TD></TR><TR><TD>
+xinitrc</TD><TD>Platin</TD><TD>提供視窗管理程式的中文設定檔與預設的KDE、GNOME + Window Maker 環境；並且包含了一個簡單的TK 命令手稿，幫助使用者在第一次啟動X 視窗系統的時候選擇合適的視窗環境。</TD></TR><TR><TD>
+xcin</TD><TD>xcin team</TD><TD>在X 底下輸入中文的程式，在這個版本的xcin 套件裡面還有一個經過CXIMS 修補的xcin 可執行檔，檔名為xcin-cxims，這個程式在crxvt 及XIM 架構下都可以正常運作，要試試X 中文locale 的人可以拿來用。</TD></TR><TR><TD>
+xcin-gb</TD><TD>xcin team</TD><TD>支援國標碼(GB code) 的xcin。
+<CAPTION>跟 X 視窗系統中文化有關的軟體。</CAPTION>
+</TD></TR></TABLE></CENTER>
+                                      
+<P>
+</LI>
+</OL>
+<P>
+<HR>
+<A HREF="install-10.html">Next</A>
+<A HREF="install-8.html">Previous</A>
+<A HREF="install.html#toc9">Contents</A>
+</BODY>
+</HTML>
