@@ -2,7 +2,7 @@
 <HTML>
 <HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
  <META NAME="GENERATOR" CONTENT="SGML-Tools 1.0.9">
- <TITLE>XLinux�w�ˤ�U�M�ϥλ���: �򥻾ާ@</TITLE>
+ <TITLE>XLinux安裝手冊和使用說明: 基本操作</TITLE>
  <LINK HREF="install-8.html" REL=next>
  <LINK HREF="install-6.html" REL=previous>
  <LINK HREF="install.html#toc7" REL=contents>
@@ -12,159 +12,159 @@
 <A HREF="install-6.html">Previous</A>
 <A HREF="install.html#toc7">Contents</A>
 <HR>
-<H2><A NAME="s7">7. �򥻾ާ@</A></H2>
+<H2><A NAME="s7">7. 基本操作</A></H2>
 
 <P>
-<H2><A NAME="ss7.1">7.1 LINUX�t�Ϊ��򥻷���        </A>
+<H2><A NAME="ss7.1">7.1 LINUX系統的基本概念        </A>
 </H2>
 
 <P>
 <OL>
-<LI> Unix ������
+<LI> Unix 的介紹
 <P>
 <UL>
-<LI> Unix �����v
-<P>UNIX �����v�i�H�^����@�E���E�~�A�� Ken Thompson �M Dennis Ritchie
-( �Y C �y�����Щl�� K &amp; R ���䤤�@�� ) �M�@�s�u�{�v�A�b�@�x��b����
-���`�ϥΪ� PDP-7 �W�A�βզX�y���g���@�ǵ{���A��ӴN�C�C�t�ܦ� UNIX �t�ΡC
-UNIX �t�Ω�@�E�C�|�~������~�o���A���b�̪�Q�~���A�D�n���o�i�P��i
-���O�b��������Ņ̀������C
-<P>�Ĥ@�� UNIX �O�� PDP-11/20 ���զX�y���g���A�䤤�� roff �Q AT &amp; T
-���M�Q�����ΨӳB�z���ƪ�( roff ����ܦ� nroff )�C�@�E�C�T�~�A
-UNIX �� C �y�����s�g�L�A�q���Y�Q�n���Ө�s���w��W�A�i�H�b�X�Ӥ�
-�����ק粒���C��F�褸�@�E�C���~�A��������ǱN UNIX ����l�X���}��
-�U�j�Ǭ�s�AUNIX �}�l�b����Ǥ��~�y�ǡA�o�]�O UNIX �}�l���w��A
-�åX�{���P�y�����_�I�C
-<P>�q���H��A���\�h�n�餽�q�}�l�o�i�X���P�W�٪� "UNIX"�A�Ҧp Ultrix�BAIX�B
-SunOS�BSolaris�BHP-UX ���A��h�W�A���̳��O�w�藍�P�w�饭�x�A���L�A���վ�
-���t�ΡC                    
+<LI> Unix 的歷史
+<P>UNIX 的歷史可以回溯到一九六九年，由 Ken Thompson 和 Dennis Ritchie
+( 即 C 語言的創始者 K &amp; R 的其中一位 ) 和一群工程師，在一台放在角落
+不常使用的 PDP-7 上，用組合語言寫的一些程式，後來就慢慢演變成 UNIX 系統。
+UNIX 系統於一九七四年正式對外發表，但在最初十年內，主要的發展與改進
+都是在貝爾實驗室裡完成的。
+<P>第一版 UNIX 是用 PDP-11/20 的組合語言寫的，其中的 roff 被 AT &amp; T
+的專利部門用來處理文件排版( roff 後來變成 nroff )。一九七三年，
+UNIX 用 C 語言重新寫過，從此若想要移植到新的硬體上，可以在幾個月
+之內修改完成。到了西元一九七五年，貝爾實驗室將 UNIX 的原始碼公開給
+各大學研究，UNIX 開始在實驗室之外流傳，這也是 UNIX 開始受歡迎，
+並出現不同流派的起點。
+<P>從此以後，有許多軟體公司開始發展出不同名稱的 "UNIX"，例如 Ultrix、AIX、
+SunOS、Solaris、HP-UX 等，原則上，它們都是針對不同硬體平台，做過適應調整
+的系統。                    
 <P>
 </LI>
-<LI> Unix ���y�� 
-<P>�ѩ� UNIX �O���U�ӼСA�ӥB�۱q��l�X���Ѭ�s�ðӫ~�ƫ�A
-�j�a�b�q���W�H "Unix" �@�������u�κ١v���ΡC
-<P>��ثe����AUnix ����j�y���GAT &amp; T �� System V( V �N��ù���Ʀr�� 5 )�M
-BSD( Berkeley Software Distribution )�C SVR4 ( System V Release 4 )
-�h�O�ĦX��j�y�������~�CBSD ����i���֦ӥB�ǳN���D���@�A�o�Ӭy�����
-���s UNIX ���D�`�j���^�m�A�\�h����i�]���O BSD �����X�Ӫ��C
-BSD �o�Ӭy���A�ثe�b PC �W�]����o�i���A�����ϥΪ��w�諸������
-NetBSD�BOpenBSD �M FreeBSD �C
-<P>��Ų�� Unix �b�o�q���������������A�y���t�γ]�p�W���[���A
-Unix �~�̶}�l���N�N�t�ΦU�譱���H�зǤơA�䤤�P�{���]�p��
-�t�Τu�㤶�������������A�N�O�� IEEE �Ҵ��X�� POSIX �зǡC  
+<LI> Unix 的流派 
+<P>由於 UNIX 是註冊商標，而且自從原始碼提供研究並商品化後，
+大家在默契上以 "Unix" 一詞做為「統稱」之用。
+<P>到目前為止，Unix 有兩大流派：AT &amp; T 的 System V( V 代表羅馬數字的 5 )和
+BSD( Berkeley Software Distribution )。 SVR4 ( System V Release 4 )
+則是融合兩大流派的產品。BSD 的改進較快而且學術味道較濃，這個流派對於
+推廣 UNIX 有非常大的貢獻，許多的改進也都是 BSD 先做出來的。
+BSD 這個流派，目前在 PC 上也持續發展中，較受使用者歡迎的版本有
+NetBSD、OpenBSD 和 FreeBSD 。
+<P>有鑑於 Unix 在這段期間的版本分派，造成系統設計上的歧異，
+Unix 業者開始有意將系統各方面予以標準化，其中與程式設計及
+系統工具介面有關的部份，就是由 IEEE 所提出之 POSIX 標準。  
 <P>
 </LI>
-<LI>Unix �P Linux �����Y
-<P>Linux �t�Ϊ��D�n�{���X�A�P�ǲΪ� Unix ��l�X�õL���Y�A�� Linux
-���o�i�P�ާ@�����A�o����{�� Unix �t�ά۷��j���v�T�C���̪쪺
-�o�i�� Linus Torvalds �Ө��A��� Linux �֤ߪ��o�i�t�i�A�èS��
-�Ӧh�w�����W�e�P���\�A�j��O�����u��ΥD�q�v�������Ө��C
-���M�[�c�W�D�n�O�̷� POSIX �o�ӼзǡA��� POSIX �зǤ���|�������A
-�h�ĥ� System V ����@��k�C�����������W�h�����ޤJ BSD ���]�p�A
-�s System V �� TLI �������S�������A�]�� Linux �b�֤߳]�p�W�A
-�j��H��λP�Ĳv���Ҷq�C
-<P>���X�֤ߨt�ΨӬݡA�쥻 Unix �t�θ̱`���� X �����t�ΡA�]���Q�a
-�Q��X���� Linux �ާ@�޲z���������n�����A��� GNOME �P KDE 
-��X�����Ҫ��s���Q�סA�w��� Linux�u�����W��v����O�L�H�A�N�j�j�Q���ܡC
+<LI>Unix 與 Linux 的關係
+<P>Linux 系統的主要程式碼，與傳統的 Unix 原始碼並無關係，但 Linux
+的發展與操作介面，卻受到現有 Unix 系統相當大的影響。對於最初的
+發展者 Linus Torvalds 而言，整個 Linux 核心的發展演進，並沒有
+太多預先的規畫與期許，大抵是順應「實用主義」的概念來走。
+雖然架構上主要是依照 POSIX 這個標準，對於 POSIX 標準中遺漏的部份，
+則採用 System V 的實作方法。但網路介面上則完全引入 BSD 的設計，
+連 System V 的 TLI 介面都沒有模擬，因此 Linux 在核心設計上，
+大抵以實用與效率為考量。
+<P>跳出核心系統來看，原本 Unix 系統裡常見的 X 視窗系統，也順利地
+被整合成為 Linux 操作管理介面的重要部份，近來 GNOME 與 KDE 
+整合式環境的廣受討論，已顯示 Linux「不易上手」的刻板印象，將大大被改變。
 <P>
 </LI>
 </UL>
 </LI>
-<LI>Linux �t�Ϊ��o�i²�v  
+<LI>Linux 系統的發展簡史  
 <P>
 <UL>
-<LI> �L�ߴ��h�צ���
-<P>Linux �b�̪񦨬��۷����������D�A�����ä��O�@�M�s���t�ΡA���b�@�E�E�@
-�~���A�K�Ѫ�����������j�Ǫ��ǥ� -- Linus Torvalds�A�]�ӤH����A
-�Ӷ}�l�g�@�t�Ϊ��֤ߡA�L�ç�֤ߪ���l�X���㤽�}������W�A���Ѻ���
-�@�P��s�P�Q�סC�ܵu���ɶ����A�����W���ߪ��B�ͯɯɥ[�J�o�i��C�A��
-�@�E�E�G�~��A��Өt�Τw�g�i�H�b�j������ Intel PC �W�w�ˤαҰʡC��
-Linux �o�ӦW�١A�K�Ӧ۩� Linus's Unix �@���A���ܤ���ALinux �֤ߨt��
-���D�n�o�i��V�A���� Linus Torvalds �ҥD�ɡC
-<P>��Өt�Τj�q���� GNU �p�e���u��{���A�÷f�t BSD �P X �t�ΤW�����G
-�A�~�v����ƹ�ΩʡA�ӵ���Өt�ά۷�������A���H��o�˪��t��
-( �]�A�֤ߵ{���P�Ѧh���ε{���P�}�o���� )��X�����u�w�ˮM��v�A
-�ϱo Linux ��e���s�x�Q�j���ϥΡC�o�i�ܤ��ALinux �`��O�n���X�Y�F�A
+<LI> 無心插柳終成蔭
+<P>Linux 在最近成為相當熱門的話題，但它並不是一套新的系統，早在一九九一
+年底，便由芬蘭赫爾辛基大學的學生 -- Linus Torvalds，因個人興趣，
+而開始寫作系統的核心，他並把核心的原始碼完整公開到網路上，提供網友
+一同研究與討論。很短的時間內，網路上熱心的朋友紛紛加入發展行列，於
+一九九二年初，整個系統已經可以在大部份的 Intel PC 上安裝及啟動。而
+Linux 這個名稱，便來自於 Linus's Unix 一詞，直至今日，Linux 核心系統
+的主要發展方向，仍由 Linus Torvalds 所主導。
+<P>後來系統大量應用 GNU 計畫的工具程式，並搭配 BSD 與 X 系統上的成果
+，才逐漸具備實用性，而等整個系統相當成熟後，有人把這樣的系統
+( 包括核心程式與諸多應用程式與開發環境 )整合成為「安裝套件」，
+使得 Linux 更容易廣泛被大眾使用。發展至今，Linux 總算是要熬出頭了，
 <P>
 </LI>
-<LI> �³��ܻ��
-<P>�b�E�K�~���A�ѩ� Open Source �B�ʤj�|�i�}�ALinux ���զ����E���O�U
-���J�I�A���ެO�n��o�i�p�e�A�άO�t�Ӫ�����ʧ@�A�j�h���|���� Linux
-�o�Ӥ���w�諸�s�����x�C�ڭ̧�@�t�C���j�����v�ƥ��z�X�ӡA��e��
-�ݥX��� Open Source �B�ʪ����p�G
-<P>* �@�붡 Netscape �ŧG�s������l�X���}�C
-<P>* �T�붡 John Kirch ���}�@�g "Microsoft Windows NT Server 4.0 versus
-Unix" ���峹�C
-<P>* ���붡 IBM �ŧG�䴩 Apache �������A���o�i�p�e�C
-<P>* �C�붡 Informix �ŧG�䴩��Ʈw�t�Ω� Linux ���x�C
-<P>* �Q�붡 Intel �P Netscape ���j�t�ŧG��� Red Hat ���q�C
-<P>* �Q�G�붡 IDC ���q���i���X�ALinux ���������v�� 17%�A�����v�O
-150%�A��ᦨ���v�w�p�|�j�T�����L�@�~�t�Υ��x�C    
+<LI> 麻雀變鳳凰
+<P>在九八年間，由於 Open Source 運動大舉展開，Linux 順勢成為聚光燈下
+的焦點，不管是軟體發展計畫，或是廠商的支持動作，大多都會提及 Linux
+這個日受歡迎的新興平台。我們把一系列重大的歷史事件整理出來，更容易
+看出整個 Open Source 運動的狀況：
+<P>* 一月間 Netscape 宣佈瀏覽器原始碼公開。
+<P>* 三月間 John Kirch 公開一篇 "Microsoft Windows NT Server 4.0 versus
+Unix" 的文章。
+<P>* 六月間 IBM 宣佈支援 Apache 網頁伺服器發展計畫。
+<P>* 七月間 Informix 宣佈支援資料庫系統於 Linux 平台。
+<P>* 十月間 Intel 與 Netscape 等大廠宣佈投資 Red Hat 公司。
+<P>* 十二月間 IDC 公司報告指出，Linux 市場佔有率佔 17%，成長率逾
+150%，日後成長率預計會大幅領先其他作業系統平台。    
 <P>
 </LI>
-<LI>�̷s�� Linux �O�X�� ?!
+<LI>最新的 Linux 是幾版 ?!
 <P> 
-�u�����v���D�b Unix ���@�ɸ̡A�ܮe���O�H�V�c�A�S�O�O���J Unix / Linux
-���󪺪B�͡A�κD�F DOS / Win95 / WinNT �A�ѩ� MicroSoft �|�w�����i Windows
-���u�̷s�����v�A�M��j�a�i�H�ܧֳz�L�C��o���X�������C�|�Ҩӻ��G
-<P>�u�z���D MS Windows NT �X��X���F�ܡS�v ( ���M�A5.0 ���A ���媩�����F )
-�u���z���D MS Office �X��X���F�ܡS�v ( ���M�]���D�A Office 2000
-�����W�]�ݱo��F )
-�u�z���D Windows NT kernel �O�X���ܡS�v ( �x? ���o�ӡu���~�v��? ���̦��b��? �v
-<P>�U�q���w�q�A�|�N Linux �������w�b�u�֤ߵ{�����o�i�����v�A���@��
-�C��A�j�h�ĥη��s�q�����k�A�ϱo Linux �����u�{�w�v�W�e������
-�H�_�ǳ_���~�ѡC                
+「版本」問題在 Unix 的世界裡，很容易令人混淆，特別是對初入 Unix / Linux
+殿堂的朋友，用慣了 DOS / Win95 / WinNT ，由於 MicroSoft 會定期公告 Windows
+的「最新版本」，然後大家可以很快透過媒體得知出版消息。舉例來說：
+<P>「您知道 MS Windows NT 出到幾版了嗎﹖」 ( 當然，5.0 版， 中文版都有了 )
+「那您知道 MS Office 出到幾版了嗎﹖」 ( 當然也知道， Office 2000
+市面上也看得到了 )
+「您知道 Windows NT kernel 是幾版嗎﹖」 ( 咦? 有這個「產品」嗎? 哪裡有在賣? 」
+<P>狹義的定義，會將 Linux 版本限定在「核心程式的發展版本」，但一般
+媒體，大多採用極廣義的說法，使得 Linux 版本「認定」上容易產生
+以訛傳訛的誤解。                
 <P>
 </LI>
-<LI>����O�֤ߵ{�� (kernel) ?!
-<P>�b Linux ���@�ɸ̡A��Өt�Υi�Q�������C�H�U��ӳ���:
-<P>���u�֤ߵ{���v(kernel)<BR>
-���u�u��{���v(utilities/applications) ��ӳ����A<BR>
-<P>���̪��o�i�q�`�O���ۿW�ߪ��A�۵M���̥i�H���U�۪������Ǹ��C
-�z���藍�|�]�� Office 97 ���ݥ@�A �ӻ{�� Windows NT �]�O 97 �F�a�C
-<P>Linux �֤ߪ������A�@��S�����u�������v(release) �P�u���ժ��v(beta)�A
-�I�ܤ��鬰��ALinux ���֤ߵ{���������� 2.2.9�A�Ӵ��ժ��� 2.3.5�C
-�γ\�zŪ���媺�P�ɡA�s�����֤ߧ�s�{���S�b�����W�X�{�F�C
-����ı�o��_�A Linux ��Өt�Φb���ں����U���n�ⶰ��s�q�U�A
-�ثe�����򽴫k�o�i�����A��s�t�׺�O�۷��֡C  
+<LI>什麼是核心程式 (kernel) ?!
+<P>在 Linux 的世界裡，整個系統可被概分為列以下兩個部分:
+<P>●「核心程式」(kernel)<BR>
+●「工具程式」(utilities/applications) 兩個部分，<BR>
+<P>它們的發展通常是互相獨立的，自然它們可以有各自的版本序號。
+您絕對不會因為 Office 97 的問世， 而認為 Windows NT 也是 97 了吧。
+<P>Linux 核心的版本，一般又分為「正式版」(release) 與「測試版」(beta)，
+截至今日為止，Linux 的核心程式正式版為 2.2.9，而測試版為 2.3.5。
+或許您讀本文的同時，新版的核心更新程式又在網路上出現了。
+不必覺得驚奇， Linux 整個系統在網際網路各路好手集思廣益下，
+目前仍持續蓬勃發展當中，更新速度算是相當快。  
 </LI>
 </UL>
 <P>
 </LI>
-<LI>Linux���۰ʸɥ��\��
-<P>�۰ʸɥ����\��A�O���]�n�U�����O�ܪ��A�Ϊ̫��O�᭱�n�����ɦW�ܪ�� A�o�Ӯɭԥu�n��
-�@�ӡiTab�j��Abash �N�|�b�i�઺���O���ɦW�̭���M�ǰt���A��쪺�ܴN�|�۰����z�ɻ��A���M�աI�ϥΪ̥����r���V�h�Abash���`�ǰt���ɦW�Ϋ��O�N�V�e�����C
-<P>��p�����@���ɦW�Ϋ��O�s��Iorikyo�A�ϥΪ̥u�O�oiori�o�|�Ӧr�����ܡA�b���ܲŸ��U�
-�Jiori����b���iTab�j��A�p�GIorikyo�o�ӦW�r�O�W�@�L�G���ܡA�o�ɴN�|���A�ɻ�kyo
-�o�T�Ӧr�o�I�n�O���O�W�@�L�G���ܡA��p���٦�Iorikyo1�BIorikyo2&nbsp;&nbsp;&nbsp;���A�o�ɧA���iT
-ab�j����M���|�]�X���o�I�o�ɧA�����s�����U�iTab�j�A�A�|ť��ͤ@�nbash
-�N�|��Ҧ��ŦX���W�ٵ��C�X�ӡA�M��A�b�Ѧ�bash�ҦC�X�Ӫ��W�٦A��J��h�r���H�Kba
-sh�ӿ�{�A�ҭn���W�١I
+<LI>Linux的自動補全功能
+<P>自動補全的功能，是假設要下的指令很長，或者指令後面要給的檔名很長� A這個時候只要按
+一個【Tab】鍵，bash 就會在可能的指令或檔名裡面找尋匹配的，找到的話就會自動幫您補齊，當然啦！使用者打的字元越多，bash收循匹配的檔名或指令就越容易找到。
+<P>比如說有一個檔名或指令叫做Iorikyo，使用者只記得iori這四個字元的話，在提示符號下�
+擗Jiori之後在按【Tab】鍵，如果Iorikyo這個名字是獨一無二的話，這時就會幫你補齊kyo
+這三個字囉！要是不是獨一無二的話，比如說還有Iorikyo1、Iorikyo2&nbsp;&nbsp;&nbsp;等，這時你按【T
+ab】鍵當然不會跑出來囉！這時你必須連續按兩下【Tab】，你會聽到嗶一聲bash
+就會把所有符合的名稱給列出來，然後你在參考bash所列出來的名稱再輸入更多字元以便ba
+sh來辨認你所要的名稱！
 <P>
 </LI>
-<LI>�R�O�C�s��{��
-<P>bash���R�O�C�s���O�O���ت��A�o�إ\��H�{�b�ӻ��A�i���O�z�ҷ��M�A�N�O�A�b���ܲ�
-���U�A�i�良���檺���O�r�����N���ק�A�Y�ϫ����F�]���ݭn���s��J��өR�O�A�u�ݦb
-������O�e�ϥΥ��k��V�䲾�ʴ�СA�Ρibackspace�j�Ρidel�j�R����Ыe�@�Ӧr���ӽs
-�襴�������O�s��\��ȥ����~�Y�i�A�o�ר�A�X�󤾪������|�W�ٷ��@�Ѽƪ��R�O�ɡC
-<P>���~�A�ictrl�j+�ia�j�|���в�����O���̫e���A�Ρictrl�j+�ie�j�i�H���в��ʨ���O���̫᭱�A�D�`��K�C�Ρictrl�j+�ic�j�i�H���_�ثe�b�s�誺�o����O�A����@��s�����ܲŸ����s��J�A���~�A�b�{�����椤�A�ictrl�j+�ic�j�٥i�H�Ψӱj�椤�_�{��������A�^�촣�ܲŸ��C���o�ؽƦX��A���̶��K�b�����@�ǻ����J
-<P>�ictrl�j+�iC�j�J����R�O�ε{��������C<BR>
-�ictrl�j+�iD�j�J�����J��ñ�X�t�Τ]�N�O�ҿת�logout�I<BR>
-�ictrl�j+�iS�j�J�Ȯɰ���ù�����X�A�l�ù����e���d�A���V�W���ʡC<BR>
-�ictrl�j+�iQ�j�J��_�ù���X�C<BR>
-�ictrl�j+�i\�j�J�פ�@�ӳB�z�{�Ǫ�����C<BR>
-<P>���A���o�ǽƦX��ɡA���ɿù��|��� ^ �o�˪��Ÿ��A��p���ictrl�j+�ic�j�աA
-�N�|�X�{ ^c ���r�ˡA�]�N�O�� ^ �N���ۡictrl�j��C 
+<LI>命令列編輯程式
+<P>bash的命令列編輯能力是內建的，這種功能以現在來說，可說是理所當然，就是你在提示符
+號下，可對未執行的指令字元任意的修改，即使拼錯了也不需要重新輸入整個命令，只需在
+執行指令前使用左右方向鍵移動游標，用【backspace】或【del】刪除游標前一個字元來編
+輯打錯的指令編輯功能糾正錯誤即可，這尤其適合於冗長的路徑名稱當作參數的命令時。
+<P>此外，【ctrl】+【a】會把游標移到指令的最前面，用【ctrl】+【e】可以把游標移動到指令的最後面，非常方便。用【ctrl】+【c】可以中斷目前在編輯的這行指令，跳到一行新的提示符號重新輸入，此外，在程式執行中，【ctrl】+【c】還可以用來強行中斷程式的執行，回到提示符號。對於這種複合鍵，筆者順便在此做一些說明︰
+<P>【ctrl】+【C】︰停止命令或程式的執行。<BR>
+【ctrl】+【D】︰停止輸入或簽出系統也就是所謂的logout！<BR>
+【ctrl】+【S】︰暫時停止螢幕的輸出，始螢幕內容滯留，不向上捲動。<BR>
+【ctrl】+【Q】︰恢復螢幕輸出。<BR>
+【ctrl】+【\】︰終止一個處理程序的執行。<BR>
+<P>當你按這些複合鍵時，有時螢幕會顯示 ^ 這樣的符號，比如說【ctrl】+【c】啦，
+就會出現 ^c 的字樣，也就是說 ^ 代表著【ctrl】鍵。 
 <P>
 </LI>
-<LI>�R�O���{(command history)
-<P>�ҿת��R�O���{�N�O��A���g��J�L�����O�����_�ӡA��K��᪺�d�߻P�ϥΡC�ӳo�]�O��
-�̳̱`�Ϊ��\��A�N�n���ODOS�Ҧ�����doskey�\��@�ˡA���O�\���j��I�n�O�ڭ��i������ۦP�����������O�A�u�n����V�䤤���V�W��N�i�H�s�X�e�@�ӫ��O�A�A���@���V�W��N�i�H�s�X��e�@�ӫ��O�A�̦������A�ΦV�U��i�H�^��U�ӫ��O�A�ҥH�ΤW�B�U��N�i�H��ܥH�e��J�L�����O�A�A�t�X�s����O���\��N�i�H�֥��ܦh�r�A�o����i�o�ʤ⪺�H�i�O�@�j�֭��I
-<P>�p�B���Hhistory���u��{���O���F�A�Ұ���L�����O�AHistory�{���O�@�صu���O�СA�O��
-�F�H�̪���檺���O�A�]�������O���O�Ӥw�A�u�n�A���b���ܲŸ��U��J�r���åB���iEnte
-r�j�����L���ܡA���|�Q�����U�ӳ�I 
-<P>�ϥΤ�k�O�b���ܲŸ��U�ڭ���Jhistory���O��A�ù��K�|�C�X�@�q�Τ@�j�ꪺ�R�O�����
-�{(�ݧA���L�h���o�I)�A�p�U�J
+<LI>命令歷程(command history)
+<P>所謂的命令歷程就是把你曾經輸入過的指令紀錄起來，方便日後的查詢與使用。而這也是我
+們最常用的功能，就好像是DOS模式中的doskey功能一樣，但是功能更強喔！要是我們懶的孕摒萓P或類似的指令，只要按方向鍵中的向上鍵就可以叫出前一個指令，再按一次向上鍵就可以叫出更前一個指令，依此類推，用向下鍵可以回到下個指令，所以用上、下鍵就可以選擇以前輸入過的指令，再配合編輯指令的功能就可以少打很多字，這對於懶得動手的人可是一大福音！
+<P>況且它以history的工具程式記錄了你所執行過的指令，History程式是一種短期記憶，記錄
+了以最近執行的指令，也不完全是指令而已，只要你曾在提示符號下鍵入字元並且按【Ente
+r】鍵執行過的話，都會被紀錄下來喔！ 
+<P>使用方法是在提示符號下我們鍵入history指令後，螢幕便會列出一段或一大串的命令的歷�
+程(看你打過多少囉！)，如下︰
 <BLOCKQUOTE><CODE>
 <PRE>
 [root@xlinux down]# history
@@ -180,205 +180,205 @@ r�j�����L���ܡA���|�Q�����U�ӳ�I
 10  ls -la
 </PRE>
 </CODE></BLOCKQUOTE>
-<P>�R�O���{�O��1�}�l�s���A�w�]�����ӬO1000�A�s�������X�V�j�A���ܩҰ���L�����O���ث
-�e�ɶ��̪�A�ϥΪ̥i�H�o�˨ӿ�O�C
+<P>命令歷程是由1開始編號，預設值應該是1000，編號的號碼越大，表示所執行過的指令離目�
+前時間最近，使用者可以這樣來辨別。
 <P>
 </LI>
-<LI>�S���r�� 
-<P>�bUNIX�t�θ̡A���@�է󧹳ƪ��S���N�q�r���A�o�N�O�ҿת��U�Φr��(meta -
-character)�A���g�ιLDOS�t�Ϊ��H�A���ӷP�줣���͡A�� *
-�o�زŸ��i�H��K�ڭ̰���t���ɮת��d�ߡA�b���ڭ̱N���Ц�����UNIX���S���r���A�p�G
-���[�Q�γo�ǯS���r�����ܡA��linux���q�i���O�o������I
-<P>�ϥθU�Φr�����n�B���G
-<P>�� ��ֿ�J�ikey  in�j�ɶ�<BR>
-�� ���y�ϥΪ̨ϥΨ}�n���ɮשR�W�覡 <BR>
-�� ²��Shell Script���]�p�u�@<BR>
-<P>�{�b�ڭ̭n�C�X�@�Ǳ`�Ϊ��U�Φr�����N�q�A�ѱz�ѦҡG 
+<LI>特殊字元 
+<P>在UNIX系統裡，有一組更完備的特殊意義字元，這就是所謂的萬用字元(meta -
+character)，曾經用過DOS系統的人，應該感到不陌生，像 *
+這種符號可以方便我們執行系統檔案的查詢，在此我們將介紹有關於UNIX的特殊字元，如果
+善加利用這些特殊字元的話，跟linux溝通可說是得心應手！
+<P>使用萬用字元的好處為：
+<P>● 減少輸入【key  in】時間<BR>
+● 鼓勵使用者使用良好的檔案命名方式 <BR>
+● 簡化Shell Script的設計工作<BR>
+<P>現在我們要列出一些常用的萬用字元的意義，供您參考： 
 <P>
 <CENTER><TABLE BORDER><TR><TD>
 
-�@�@�@�U�Φr���@�@�@</TD><TD>�@�N�q�@</TD></TR><TR><TD>
-�@..�@</TD><TD>�W�@�h�ؿ��A�Pcd���O�t�X�Τ���h</TD></TR><TR><TD>
-�@.�@</TD><TD>���ثe�u�@���ؿ�</TD></TR><TR><TD>
-�@*�@</TD><TD>���N���ת��r��</TD></TR><TR><TD>
-�@?�@</TD><TD>���׬��@�Ӫ����N�r��</TD></TR><TR><TD>
-�@[ .. ]�@</TD><TD>�A�������@�Ӧr��</TD></TR><TR><TD>
-�@\m�@</TD><TD>����Y�ӸU�Φr���A�p*�B? ��</TD></TR><TR><TD>
-�@[ a- z ] * �@</TD><TD>�p�g�r���}�Y���Ҧ��r��</TD></TR><TR><TD>
-�@\�@</TD><TD>����Ÿ��A�ΥH�Ѱ��S���r�����S���N�q</TD></TR><TR><TD>
-�@~�@</TD><TD>�ϥΪ̥ؿ�</TD></TR><TR><TD>
-�@;�@</TD><TD>���j�Ÿ��A���R�O�C���h�ӫ��O�ɡA�����j��</TD></TR><TR><TD>
-�@$�@</TD><TD>Bourne shell�����ܲŸ��A�P�ɤ]��shell�y������}�Ѽ�</TD></TR><TR><TD>
-�@#�@</TD><TD>�����ѥ�</TD></TR><TR><TD>
-�@|�@</TD><TD> �إߤ@�Ӻ޽u�A�Ϥ@�R�O����X�@���t�@�өR�O����J</TD></TR><TR><TD>
-�@&amp;�@</TD><TD>�N�R�O�H���᪺�覡����</TD></TR><TR><TD>
-�@>�@</TD><TD>�N�R�O����X���ɤJ�ɮפ�</TD></TR><TR><TD>
-�@&lt;�@</TD><TD>�N�R�O����J�y���w�����ɮפ����J�A��>�ۤϴN��F�I</TD></TR><TR><TD>
-�@>>�@</TD><TD> �N�R�O����X�[�b�@�Ӥw�g�s�b���ɮ׫᭱</TD></TR><TR><TD>
-�@{ .. }</TD><TD>�A�������@�Ӧr��</TD></TR><TR><TD>
+　　　萬用字元　　　</TD><TD>　意義　</TD></TR><TR><TD>
+　..　</TD><TD>上一層目錄，與cd指令配合用比較多</TD></TR><TR><TD>
+　.　</TD><TD>表目前工作的目錄</TD></TR><TR><TD>
+　*　</TD><TD>任意長度的字元</TD></TR><TR><TD>
+　?　</TD><TD>長度為一個的任意字元</TD></TR><TR><TD>
+　[ .. ]　</TD><TD>括號內的一個字元</TD></TR><TR><TD>
+　\m　</TD><TD>等於某個萬用字元，如*、? 等</TD></TR><TR><TD>
+　[ a- z ] * 　</TD><TD>小寫字母開頭的所有字串</TD></TR><TR><TD>
+　\　</TD><TD>跳脫符號，用以解除特殊字元的特殊意義</TD></TR><TR><TD>
+　~　</TD><TD>使用者目錄</TD></TR><TR><TD>
+　;　</TD><TD>分隔符號，當命令列有多個指令時，做分隔用</TD></TR><TR><TD>
+　$　</TD><TD>Bourne shell的提示符號，同時也為shell語言的位址參數</TD></TR><TR><TD>
+　#　</TD><TD>做註解用</TD></TR><TR><TD>
+　|　</TD><TD> 建立一個管線，使一命令的輸出作為另一個命令的輸入</TD></TR><TR><TD>
+　&amp;　</TD><TD>將命令以幕後的方式執行</TD></TR><TR><TD>
+　>　</TD><TD>將命令的輸出重導入檔案中</TD></TR><TR><TD>
+　&lt;　</TD><TD>將命令的輸入流指定為由檔案中載入，跟>相反就對了！</TD></TR><TR><TD>
+　>>　</TD><TD> 將命令的輸出加在一個已經存在的檔案後面</TD></TR><TR><TD>
+　{ .. }</TD><TD>括號內的一個字串</TD></TR><TR><TD>
 
-<CAPTION> �U�Φr�� </CAPTION>
+<CAPTION> 萬用字元 </CAPTION>
 </TD></TR></TABLE></CENTER>
               
 <P>
 </LI>
 </OL>
-<H2><A NAME="ss7.2">7.2 LINUX���򥻫��O       </A>
+<H2><A NAME="ss7.2">7.2 LINUX的基本指令       </A>
 </H2>
 
-<P>�ѩ�Linux�t�ι�z�ӻ��A�i��O�@�M���s���@�~�t��
-�խY�z�H�e���ϥιLUnix�A��Linux��z�ӻ��@�w�����͡A�b���n��Linux���`�ΰ�
-���O�Ӱ���²���A�ܩ���O������ܶ��Ϊk�A�ڭ̤]�O²���`�Ϊ��ѼơA�o�˹��
-Linux����Ǫ̨ӻ��A�i��|�����j�����U�C
-<P>�խY�zı�o�z�ٷQ��`���F�ѫ��O���䥦�j�j�\��A�z�i�H��Linux���Ѫ�man���O
-[�u�W��U]�A�����z����`���F�ѡA���p�z�Q�Τ@�ӳo�̨S�����쪺���O�A
-�ӱz�o�]���|�ϥΡA�o�ɤ]�i��man���O�����U�z�Cman���`�λy�k�аѾ\����U��
+<P>由於Linux系統對您來說，可能是一套全新的作業系統
+倘若您以前有使用過Unix，那Linux對您來說一定不陌生，在此要對Linux的常用基本
+指令來做個簡介，至於指令中的選擇項用法，我們也是簡介常用的參數，這樣對於
+Linux的初學者來說，可能會有莫大的幫助。
+<P>倘若您覺得您還想更深的了解指令的其它強大功能，您可以用Linux提供的man指令
+[線上手冊]，來讓您有更深的了解，假如您想用一個這裡沒有提到的指令，
+而您卻也不會使用，這時也可用man指令來幫助您。man的常用語法請參閱本手冊的
 <CODE>
-<A HREF="install-11.html#online-ref">�ĤQ�@��</A></CODE>�C 
-<P>���O�@�w���W�١A�����@�w�ݭn��ܶ��M�ѼơA�u�n����ɭԬݨ�t�δ���
-�r��[$:����bash�mLinux�w�]�n�B%:����tcsh�B#:���ܬ��t�κ޲z��]�A
-�N�i����t�Ϋ��O�C
-<P>�ܦh���O������ܶ��A�Q�ο�ܶ��z�i�H�h�������O�A�ϰ���ʧ@���ͤ��P�����G�C
-�ӿ�ܶ��ҥH "-"��"�w"�Ӥ޾ɡC���z�n�ϥΫܦh����ܶ��ɡA��e�᪺���Ǥ��|
-�v�T���O���ʧ@�A���n�`�N���O�j�p�g���Ϥ��C�Ѽƪ��ت��O�y�z���O�һݪ��@��
-�T��[�p:�ɮצW��]�A�ӳo�ǰT���b�C������ӫ��O�ɳ��|���Ҥ��P�C
+<A HREF="install-11.html#online-ref">第十一章</A></CODE>。 
+<P>指令一定有名稱，但不一定需要選擇項和參數，只要任何時候看到系統提示
+字元[$:表示bash《Linux預設》、%:表示tcsh、#:表示為系統管理者]，
+就可執行系統指令。
+<P>很多指令都有選擇項，利用選擇項您可以去指揮指令，使執行動作產生不同的結果。
+而選擇項皆以 "-"或"─"來引導。當您要使用很多的選擇項時，其前後的次序不會
+影響指令的動作，但要注意的是大小寫的區分。參數的目的是描述指令所需的一些
+訊息[如:檔案名稱]，而這些訊息在每次執行該指令時都會有所不同。
 w
 <P>
 <OL>
-<LI>cat,more,less���O-��ܤ��Dls���O-�d�ݥؿ����ɮ�</LI>
-<LI>chmod���O�w�ܧ��ɮרϥ��v��</LI>
-<LI>chown���O�w�ܧ��ɮת��֦��H�Ω��ݸs��</LI>
-<LI>cp���O�w�����ɮ�</LI>
-<LI>mkdir�Brmdir���O�@�غc�ؿ��B�R���ؿ�</LI>
-<LI>rm���O�w�R���ɮ�/�ؿ�</LI>
-<LI>cd���O�w�����ؿ�</LI>
-<LI>passwd�w�ק�K�X</LI>
-<LI>find���O�w�j�M�ɮ׻P�ؿ�</LI>
-<LI>mv���O�w�ɮ�/�ؿ���W�ηh��</LI>
-<LI>gzip�Btar�w���Y/�����Y�u��</LI>
-<LI>df�Bdu���O�w�d�ߺϺЪŶ��ϥα���</LI>
-<LI>ps���O�w�d�M�{�ǰ��檬�A</LI>
-<LI>top���O�w�{�Ǻʵ�</LI>
-<LI>w�Bwho�w�u�W�ϥΪ�</LI>
-<LI>sync�Breboot���O</LI>
-<LI>mount�Bumount���O�w���W,���U�ɮרt�γ]��</LI>
-<LI>ln���O�w�s�@�쵲��</LI>
+<LI>cat,more,less指令-顯示文件．ls指令-查看目錄及檔案</LI>
+<LI>chmod指令─變更檔案使用權限</LI>
+<LI>chown指令─變更檔案的擁有人及所屬群組</LI>
+<LI>cp指令─拷貝檔案</LI>
+<LI>mkdir、rmdir指令一建構目錄、刪除目錄</LI>
+<LI>rm指令─刪除檔案/目錄</LI>
+<LI>cd指令─切換目錄</LI>
+<LI>passwd─修改密碼</LI>
+<LI>find指令─搜尋檔案與目錄</LI>
+<LI>mv指令─檔案/目錄更名或搬移</LI>
+<LI>gzip、tar─壓縮/解壓縮工具</LI>
+<LI>df、du指令─查詢磁碟空間使用情形</LI>
+<LI>ps指令─查尋程序執行狀態</LI>
+<LI>top指令─程序監視</LI>
+<LI>w、who─線上使用者</LI>
+<LI>sync、reboot指令</LI>
+<LI>mount、umount指令─掛上,卸下檔案系統設備</LI>
+<LI>ln指令─製作鏈結檔</LI>
 <LI>traceroute</LI>
-<LI>halt�Bshutdown���O�w���T������k</LI>
+<LI>halt、shutdown指令─正確關機方法</LI>
 </OL>
-<P>�H�U�N���Ф@�ǰ򥻪����O:
+<P>以下將介紹一些基本的指令:
 <UL>
-<LI>more���O
-<P><B>���O�W��:</B>    more<BR>
-<B>�\��:</B>        �@���H�@��page��� <BR>
-<B>�y�k:</B>      
+<LI>more指令
+<P><B>指令名稱:</B>    more<BR>
+<B>功能:</B>        一次以一個page顯示 <BR>
+<B>語法:</B>      
 <BLOCKQUOTE><CODE>
 <PRE>
- more  �ɮצW��
+ more  檔案名稱
 </PRE>
 </CODE></BLOCKQUOTE>
 
-<B>�y�z:</B><BR>          
-<P>�q�`�ڭ̭n�ݤ@�g�ܪ������A���Ʊ�O�q�Y�ݨ���A�bLinux���Amore��
-�O�i�H���z�H�@��page�����A�Ӭݧ��z�����C
-<P>���z�ϥ�more, �z�i�ݤ@�U�ù������U��A����--more--���T���A
-�o�ɱz�Y���U�iEnter�j��A�h�|��ܤU�@��;�Y���U�iSpacebar�j��A
-�h�|��ܤU�@��page�C �ܩ�more���d�ҡA�ڭ̱N�n��more���Ω�ls�����A
-�G�Ь�ls���d�ҡC 
+<B>描述:</B><BR>          
+<P>通常我們要看一篇很長的文件，都希望是從頭看到尾，在Linux中，more指
+令可以讓您以一個page為單位，來看完您的文件。
+<P>當您使用more, 您可看一下螢幕的左下方，有個--more--的訊息，
+這時您若按下【Enter】鍵，則會顯示下一行;若按下【Spacebar】鍵，
+則會顯示下一個page。 至於more的範例，我們將要把more應用於ls之中，
+故請看ls的範例。 
 <P>
 </LI>
-<LI> ls���O
-<P><B>���O�W��:</B>    ls<BR>
-<B>�\��:</B>        �d�ݥؿ����ɮ� <BR>
-<B>�y�k:</B>      
+<LI> ls指令
+<P><B>指令名稱:</B>    ls<BR>
+<B>功能:</B>        查看目錄及檔案 <BR>
+<B>語法:</B>      
 <BLOCKQUOTE><CODE>
 <PRE>
  ls
 </PRE>
 </CODE></BLOCKQUOTE>
 
-<B>�y�z:</B><BR>                
-<P>ls���O�O�Ψ��s���ɮ׻P�ؿ��A�o�Ӱʧ@�۷���DOS����dir���O�C
-<P>�b�U�Ϥ��A��Jls�A�h�|�X�{�ӥؿ��������e�A�B�H��V�ƦC�A�䤤���ǦW
-�٪��᭱��"/"�A�h���ؿ��A���C�⬰�Ŧ�A�p:Server/�Bfonts/;���ǦW��
-���᭱��"@"�A�h���쵲�� [�i�쵲�ɮשΥؿ�]�A���C�⬰�C��A�p:
-libXll.so.3@�BXll@;���ǦW�٪��᭱��"*"�A�h���i�����ɡA���C�⬰���A
-�p:libXll.so.3.1.0*�BlibXaw.so.6.0*�C
-<P>�t�~�٦��@�ǬO�b�U�Ϥ��ҨS�����A�����Y�ɩҥN�����C�⬰����A�p:
-�Dgz�B.tar�B.zip���A�]���ɩҥN�����C�⬰����A�p:fd0�Bhda���C
-�ЬݤU���ҥ�:                                
+<B>描述:</B><BR>                
+<P>ls指令是用來瀏覽檔案與目錄，這個動作相當於DOS中的dir指令。
+<P>在下圖中，鍵入ls，則會出現該目錄內的內容，且以橫向排列，其中有些名
+稱的後面有"/"，則為目錄，其顏色為藍色，如:Server/、fonts/;有些名稱
+的後面有"@"，則為鏈結檔 [可鏈結檔案或目錄]，其顏色為青色，如:
+libXll.so.3@、Xll@;有些名稱的後面有"*"，則為可執行檔，其顏色為綠色，
+如:libXll.so.3.1.0*、libXaw.so.6.0*。
+<P>另外還有一些是在下圖中所沒有的，像壓縮檔所代表的顏色為紅色，如:
+．gz、.tar、.zip等，設備檔所代表的顏色為黃色，如:fd0、hda等。
+請看下表所示:                                
 <BLOCKQUOTE><CODE>
 <PRE>
-linux1:/usr/X11R6/lib#ls        �� �s��/usr/X11R6/lib�������e
+linux1:/usr/X11R6/lib#ls        ← 瀏覽/usr/X11R6/lib內的內容
 Server/    libX11.so.3@         libXaw.so.6@      libXt.sa
 X11@       libX11.so.3.1.0*     libXaW.so.6.0*    libXt.so.3@
 fonts/     libX11.so.6@         libXdmcp.a        libXt.so.3.1.0*
 libFS.a    libX11.so.6.0*       libXext.a         libXt.so.6@
-             �� �᭱�٦��ɮסA�]���Ӧh�A�G�b���ٲ�
+             ← 後面還有檔案，因為太多，故在此省略
 </PRE>
 </CODE></BLOCKQUOTE>
-<P>�b�W�����ϥܤ��A�z�i���٬ݤ��X���쵲�ɬO�b������Ϊ��A����쵲�ɬO
-�Ψӫ��V�T�w���ɮשΥؿ��A���p���@���ɮת��W�٫ܪ�[�bLinux���A�ɮרt
-�ά����ɦW]�A�ӥB�b�ܲ`�h���ؿ����A�o�˨C���n�ϥθ��ɮ׮ɡA���_�r�ӴN
-�|��֡A�o�ɥu�n�Τ@�ӫ�²�檺�W�١A�B���V���ɮסA�H�K�Φ��쵲�ɡA�o��
-�H��u�n����o²�檺�W�١A�N���������ɮסC
-<P>�ܩ�n�p��~��ݨ��쵲�ɬO���V���̩O?����²��A�z�u�n�Uls-al��
-�O�Y�i�A�䤤��ܶ�a���n���������[�����ɳ��O�H"�D"���}�Y���ɮסA�p:
-.netscape/�B.bash_history]�A��ܶ�l���n�H���榡��ܡC�Ш��U���ҥ�: 
+<P>在上面的圖示中，您可能還看不出來鏈結檔是在做什麼用的，其實鏈結檔是
+用來指向固定的檔案或目錄，假如有一個檔案的名稱很長[在Linux中，檔案系
+統為長檔名]，而且在很深層的目錄內，這樣每次要使用該檔案時，打起字來就
+會恨累，這時只要用一個很簡單的名稱，且指向該檔案，以便形成鏈結檔，這樣
+以後只要執行這簡單的名稱，就等於執行該檔案。
+<P>至於要如何才能看到鏈結檔是指向那裡呢?其實很簡單，您只要下ls-al指
+令即可，其中選擇項a為要顯示隱藏檔[隱藏檔都是以"．"為開頭的檔案，如:
+.netscape/、.bash_history]，選擇項l為要以長格式顯示。請見下表所示: 
 <BLOCKQUOTE><CODE>
 <PRE>
  
-ipproxy:/usr/X11R6/lib# ls -al �xmore
-total 5850     ���ɮ׾֦��H�N��
-drwxr-xr-x  6 root root 2048 Jun 6 14:26�D/
-drwxr-xr-x  7 root root 1024 Jun 6 14:27�L/
-drwxr-xr-x  7 root root 1024 Jun 5 21:27 Server/ ��X11���V�ؿ�
+ipproxy:/usr/X11R6/lib# ls -al │more
+total 5850     ↓檔案擁有人代號
+drwxr-xr-x  6 root root 2048 Jun 6 14:26．/
+drwxr-xr-x  7 root root 1024 Jun 6 14:27‥/
+drwxr-xr-x  7 root root 1024 Jun 5 21:27 Server/ ↓X11指向目錄
 lrwxrwxrwx 1 root root 14 Mar 1 03:10 X11 -> /var/X11R6/lib/
 drwxr-xr-x 10 root root 1024 Jun 5 20:30 fonts/
-���ɮ׾֦��H�s�եN��
+↑檔案擁有人群組代號
 -rw-r--r--  1 root wheel  65520 Jan 29 1997 libFS.a
 -rw-r--r--  1 root wheel 103614 Jan 29 1997 libICE.a
-^^^^^^^�ɮרϥ��v��                                  
+^^^^^^^檔案使用權限                                  
 </PRE>
 </CODE></BLOCKQUOTE>
-<P>�b�H�W�d�Ҥ��ҤU�����O��[ls-al�Umore]�A�䤤"�U"���޹D�A�]�N�O
-��ls-al���ʧ@�g�Ѻ޹D�e��more�A�A��more��X�ʧ@�A�H�F���Ϊ��榡����
-�ܥؿ����e�A�åB��X�@��page��N�Ȱ��C     
-<P>�Ӧb�W�����A�z�γ\�٦������դ��B�A���o�ӡudrwxrwxrwx�v�O����F��A
-�B�ΨӰ�����?���o�O�ɮרϥ��v���A��C�@�Ӧr���A������S�O���N�q�A
-�аѦҥ���U�ĤK��8.3�`�ɮרt�Ϊ������C 
+<P>在以上範例中所下的指令為[ls-al｜more]，其中"｜"為管道，也就是
+說ls-al的動作經由管道送給more，再由more輸出動作，以達成用長格式來顯
+示目錄內容，並且輸出一個page後就暫停。     
+<P>而在上表中，您或許還有不明白之處，像這個「drwxrwxrwx」是什麼東西，
+且用來做什麼?其實這是檔案使用權限，其每一個字母，都有其特別的意義，
+請參考本手冊第八章8.3節檔案系統的說明。 
 <P>
 </LI>
-<LI>cp���O
-<P><B>���O�W��:</B>    cp<BR>
-<B>�\��:</B>        �����ɮ� <BR>
-<B>�y�k:</B>      
+<LI>cp指令
+<P><B>指令名稱:</B>    cp<BR>
+<B>功能:</B>        拷貝檔案 <BR>
+<B>語法:</B>      
 <BLOCKQUOTE><CODE>
 <PRE>
- :cp [-r] �ɮ�  �ت��a�
+ :cp [-r] 檔案  目的地�
 </PRE>
 </CODE></BLOCKQUOTE>
 
-<B>�y�z:</B><BR>       
-<P>���cp���y�k�PDos��copy�y�k�j�P�ۦP�A��cp���\���٬O��Dos����copy
-�j�j�\�h�A�䤤��ܶ�"-r"�N�O�@��[�b�y�k���ϥΤ��A���O���ܸӿ�ܶ��O
-�i�ϥΩΥi���ϥΡA�@�����ѨϥΪ̨ӨM�w]�A�����N��O�����p�z�n�����@��
-�ؿ��A���ӥؿ����٦��n�h�ӥؿ����ܡA�z�i�H�ϥ�"-r"�A�����z�����ؿ���
-���ؿ��ɮסA�åB�b�����ɷ|�۰����z�إؿ��A�ӳo�\��N�۷���Dos����
-xcopy�C
-<P>�٦��@�I���`�N���O�A�b�ϥ�cp�ɤ@�w�n���ت��a�~��A�bDos����copy
-�ɡA���ɬO�i�ٲ��ت��a�A���bLinux���N�L�k�o�˰��C�bcp���ڭ̤]�i�H�ϥ�
-��U�Φr���A��*�B?���A
-<P>�Ҧp:�ڭ̭n�Nroot�ؿ������Ҧ��ɮ�[�]�A�ؿ�]�A�����]
-�A�����ɡA�����ܮڥؿ��U��temp���A��@�k��:
+<B>描述:</B><BR>       
+<P>其實cp的語法與Dos的copy語法大致相同，但cp的功能還是比Dos中的copy
+強大許多，其中選擇項"-r"就是一例[在語法中使用中括號是表示該選擇項是
+可使用或可不使用，一切都由使用者來決定]，它的意思是說假如您要拷貝一個
+目錄，但該目錄內還有好多個目錄的話，您可以使用"-r"，來幫您拷貝目錄內
+的目錄檔案，並且在拷貝時會自動幫您建目錄，而這功能就相當於Dos內的
+xcopy。
+<P>還有一點須注意的是，在使用cp時一定要有目的地才行，在Dos中做copy
+時，有時是可省略目的地，但在Linux中就無法這樣做。在cp中我們也可以使用
+到萬用字元，像*、?等，
+<P>例如:我們要將root目錄內的所有檔案[包括目錄]，但不包
+括隱藏檔，拷貝至根目錄下的temp內，其作法為:
 <BLOCKQUOTE><CODE>
 <PRE>
 cp -r /root/* /temp
 </PRE>
 </CODE></BLOCKQUOTE>
 
-�Y�n�����Ҧ��p�g�r���}�Y������[�]�A���åؿ�]���ܡA��
-�@�k��:
+若要拷貝所有小寫字母開頭隱藏檔[包括隱藏目錄]的話，其
+作法為:
 <BLOCKQUOTE><CODE>
 <PRE>
 cp -r /root/.[a-z]* /temp                          
@@ -387,84 +387,84 @@ cp -r /root/.[a-z]* /temp
 <P>
 <P>
 </LI>
-<LI> mkdir�Brmdir���O 
-<P><B>���O�W��:</B>    mkdir/rmdir<BR>
-<B>�\��:</B>        �غc�ؿ��B�R���ؿ� <BR>
-<B>�y�k:</B>      
+<LI> mkdir、rmdir指令 
+<P><B>指令名稱:</B>    mkdir/rmdir<BR>
+<B>功能:</B>        建構目錄、刪除目錄 <BR>
+<B>語法:</B>      
 <BLOCKQUOTE><CODE>
 <PRE>
-mkdir  �ؿ��W��
-rmdir  �ؿ��W��
+mkdir  目錄名稱
+rmdir  目錄名稱
 </PRE>
 </CODE></BLOCKQUOTE>
-<P><B>�y�z:</B><BR>  
-<P>���U�ӧڭ̭n�ԭz �bLinux���p��غc�ؿ��B�p��R���ؿ��A
-���o�ǫ��O�ާ@��k�PDos����md�Brd�O�����ۦP�A�t�O�u�O�������W�٤��P�Ӥw�C
-�O�~, �b�ϥ�rmdir�ɡA�n�T�O�ӥؿ����w�L�����ɮצs�b�A�~�i�ϥθӫ��O�C
+<P><B>描述:</B><BR>  
+<P>接下來我們要敘述 在Linux中如何建構目錄、如何刪除目錄，
+其實這些指令操作方法與Dos中的md、rd是完全相同，差別只是指有的名稱不同而已。
+令外, 在使用rmdir時，要確保該目錄內已無任何的檔案存在，才可使用該指令。
 <P>
 </LI>
-<LI>  cd���O
-<P><B>���O�W��:</B>    cd<BR>
-<B>�\��:</B>        �����ؿ� <BR>
-<B>�y�k:</B>      
+<LI>  cd指令
+<P><B>指令名稱:</B>    cd<BR>
+<B>功能:</B>        切換目錄 <BR>
+<B>語法:</B>      
 <BLOCKQUOTE><CODE>
 <PRE>
- cd �ؿ��W���
+ cd 目錄名稱�
 </PRE>
 </CODE></BLOCKQUOTE>
 
-<B>�y�z:</B><BR>  
-<P>cd���F�������ؿ����\��~�A�٦��@�ӥ\��N�O���z���ަb���ӥؿ����A�u
-�n�Ucd���O���α�����ѼơA�N�i�^��z���ϥΪ̥ؿ���[home directory]�A
-�q�`�ϥΪ̥ؿ�[home directory]���i��"&nbsp;"�ӥN���C�٦�Linux���𪬵��c
-�ؿ��PDos�����ۦP(���ODos��Unix�Ө�)�C   
+<B>描述:</B><BR>  
+<P>cd除了有切換目錄的功能外，還有一個功能就是當您不管在那個目錄內，只
+要下cd指令不用接任何參數，就可回到您的使用者目錄內[home directory]，
+通常使用者目錄[home directory]都可用"&nbsp;"來代表。還有Linux的樹狀結構
+目錄與Dos完全相同(其實是Dos學Unix而來)。   
 <P>
 <P>
 </LI>
-<LI>rm���O 
-<P><B>���O�W��:</B>    rm<BR>
-<B>�\��:</B>        �R���ɮ�/�ؿ� <BR>
-<B>�y�k:</B>
+<LI>rm指令 
+<P><B>指令名稱:</B>    rm<BR>
+<B>功能:</B>        刪除檔案/目錄 <BR>
+<B>語法:</B>
 <BLOCKQUOTE><CODE>
 <PRE>
-rm [-r] �ɮ� / �ؿ�
+rm [-r] 檔案 / 目錄
 </PRE>
 </CODE></BLOCKQUOTE>
    
-<B>�y�z:</B><BR>
-<P>rm�PDos��del���O�����������B�A���P���O�Arm�\�઺�j�j�P��۹����
-�O�����ODos��del�i�H�ۤ�C�u�n�O�ɮשΥؿ��A���ަ��L���áA�άO�ɮ�
-�ϥ��v���u�]�w����Ū�Arm�ҥi�R���A
-<P>�b���n�`�N���O��ܶ�"-r"�A�o��-r�Pcp�����i���������\��A���q�`
-���ΨӤ@�֧R���ؿ������ؿ��ɮסA�o�ӥ\��N�۷���Dos����deltree�\��A
-�q�`�b�ϥ�deltree�ɳ��|�����ܻy�A���bLinux���ϥ�rm�N�S�����󪺴��ܻy�A
-�٦����V�|���O�w�R�����ɮ׬O�L�k�Ϧ^�Ӫ��A�ҥH�b�ϥ�rm�ɭn�S�O�p�ߡC
-�Ҧp:�ڭ̭n�R��temp�ؿ��A�ڭ̥i�H�ΤU�����򥻤�k�Ӱ��R�����ʧ@:            
-<P>������temp���N�ɮץ����R��:
+<B>描述:</B><BR>
+<P>rm與Dos的del指令有些類似之處，不同的是，rm功能的強大與其相對殺傷
+力遠不是Dos的del可以相比。只要是檔案或目錄，不管有無隱藏，或是檔案
+使用權限只設定成唯讀，rm皆可刪除，
+<P>在此要注意的是選擇項"-r"，這個-r與cp中的可有類似的功能，它通常
+都用來一併刪除目錄內的目錄檔案，這個功能就相當於Dos中的deltree功能，
+通常在使用deltree時都會有提示語，但在Linux中使用rm就沒有任何的提示語，
+還有最糟糕的是已刪除的檔案是無法救回來的，所以在使用rm時要特別小心。
+例如:我們要刪除temp目錄，我們可以用下面的基本方法來做刪除的動作:            
+<P>●先到temp內將檔案全部刪除:
 <BLOCKQUOTE><CODE>
 <PRE>
  
-    cd temp�Frm*
+    cd temp；rm*
 </PRE>
 </CODE></BLOCKQUOTE>
-<P>�bLinux���n�@���U��Ӥ��P�����O�ɡA�u�ݦb���O�P���O�����[
-�W�����Y�i�A�o��Linux�K�|�̷ӱƦC�����ᦸ�ǨӨ������A�b��
-�Ҥ��A�|������cd temp �A���� rm*�C
-<P>�����ptemp���٦��ؿ��A�h���M�ΤW������k�A�ӧR���ؿ������ɮסC  
-<P>���N�ؿ�������temp�ؿ��A�M��N�C�Ӫťؿ��R��:
+<P>在Linux中要一次下兩個不同的指令時，只需在指令與指令之間加
+上分號即可，這樣Linux便會依照排列的先後次序來依續執行，在本
+例中，會先執行cd temp 再執行 rm*。
+<P>●假如temp內還有目錄，則仍然用上面的方法，來刪除目錄內的檔案。  
+<P>●將目錄切換至temp目錄，然後將每個空目錄刪除:
 <BLOCKQUOTE><CODE>
 <PRE>
 cd..; rmdir.temp
 </PRE>
 </CODE></BLOCKQUOTE>
-<P>���h�^�D�ؿ��A�̫�Ntemp�ؿ��R��:
+<P>●退回主目錄，最後將temp目錄刪除:
 <BLOCKQUOTE><CODE>
 <PRE>
 cd / ; rmdir temp
 </PRE>
 </CODE></BLOCKQUOTE>
-<P>�H�W�O�򥻪���k�A���t�פӺC�A�]���z�٭n�����ؿ��A�b���n
-��rm���O�@���N�i�����R���A�o�˳t�פS�֤S��K�A�Ш��U��:    
+<P>以上是基本的方法，但速度太慢，因為您還要切換目錄，在此要
+用rm指令一次就可完全刪除，這樣速度又快又方便，請見下示:    
 <BLOCKQUOTE><CODE>
 <PRE>
  
@@ -474,127 +474,127 @@ rm -r /temp
 <P>
 <P>
 </LI>
-<LI>mv���O 
-<P><B>���O�W��:</B>    mv<BR>
-<B>�\��:</B>        �ɮ�/�ؿ���W�ηh�� <BR>
-<B>�y�k:</B>
+<LI>mv指令 
+<P><B>指令名稱:</B>    mv<BR>
+<B>功能:</B>        檔案/目錄更名或搬移 <BR>
+<B>語法:</B>
 <BLOCKQUOTE><CODE>
 <PRE>
-mv �ɮ�/�ؿ��W�� �h�����ت��a(�Χ�諸�s�W)
+mv 檔案/目錄名稱 搬移的目的地(或更改的新名)
 </PRE>
 </CODE></BLOCKQUOTE>
-<P><B>�y�z:</B><BR> 
-�����ɫ�ڭ̷|���ɮ�/�ؿ���W���ʧ@�A�άO�h���ɮ�/�ؿ��A����ɮ�/
-�ؿ���W�P�h���ɮ�/�ؿ����ʧ@��z�O�@�˪��A�t�O�u�O���|�����P�C
-<P>���mv���O�q�`���Ψӷh���ɮסA���ڭ̭n���ɮק�W�ɡA�u�n���ܤ@�U�N�i�C
-�Ҧp:�ڭ̭n��{�b�Ҧb���ؿ�����netscape�ɮסA�h��/usr���A�i��:
+<P><B>描述:</B><BR> 
+有的時後我們會做檔案/目錄更名的動作，或是搬移檔案/目錄，其實檔案/
+目錄更名與搬移檔案/目錄的動作原理是一樣的，差別只是路徑的不同。
+<P>其實mv指令通常都用來搬移檔案，當我們要做檔案更名時，只要改變一下就可。
+例如:我們要把現在所在的目錄中的netscape檔案，搬到/usr內，可用:
 <BLOCKQUOTE><CODE>
 <PRE>
 mv  netscape  /usr
 </PRE>
 </CODE></BLOCKQUOTE>
 
-�Ҧp:�ڭ̭n��/temp���ؿ��A��W��/tmp�A��@�k��:
+例如:我們要把/temp的目錄，更名為/tmp，其作法為:
 <BLOCKQUOTE><CODE>
 <PRE>
 mv /temp /tmp
 </PRE>
 </CODE></BLOCKQUOTE>
 
-[�`�N:�¦W�ٻP�s�W�٭n�@�˪����|�~��]                          
+[注意:舊名稱與新名稱要一樣的路徑才行]                          
 <P>
 <P>
 </LI>
 </UL>
-<H2><A NAME="ss7.3">7.3 �t�κ޲z���O����        </A>
+<H2><A NAME="ss7.3">7.3 系統管理指令介紹        </A>
 </H2>
 
-<P>�t�κ޲z(system administration)�O�O���q���t�Ϋ���B�@�}�n�A�ҥ��ݰ���
-�u�@�A�{�b�X�G�j�������q�����w�g�W�����F�A�]�����t�@�����u�@�O�h�O
-�������Z�q�C�o�����S�s�����޲z(network administration)�A�@�Ӵ��q�`�I�i��
-�|���ӥ�¾���t�κ޲z��(system administrator)�Ӷi��Ҧ����t�λP�����޲z
-�u�@�C�j���`�I�h�i��|�N�t�λP�����޲z�u�@�@��Ӫ��ӤH�Ϥ��A�p�G�A�u
-�O�b�a�]Linux�A�Υu�O�ޤp���q�̪��p�W�Ҩt�ΡA���N�i�ਭ�ݨt�λP����
-�޲z�̡C                                             
-<P>Linux���ۨt�λP�����޲z�һݪ��򥻫��O�P�u��.�����|����䤤�@�ǩR
-�O�A��7.7���h�|�y�z�����޲z�򥻫��O�C
+<P>系統管理(system administration)是保持電腦系統持續運作良好，所必需做的
+工作，現在幾乎大部份的電腦都已經上網路了，因此有另一部份工作是去保
+持網路暢通。這部份又叫網路管理(network administration)，一個普通節點可能
+會有個全職的系統管理者(system administrator)來進行所有的系統與網路管理
+工作。大的節點則可能會將系統與網路管理工作作更細的個人區分，如果你只
+是在家跑Linux，或只是管小公司裡的小規模系統，那就可能身兼系統與網路
+管理者。                                             
+<P>Linux有著系統與網路管理所需的基本指令與工具.本章會講到其中一些命
+令，第7.7章則會描述網路管理基本指令。
 <P>
 <OL>
-<LI>�t�κ޲z�̨ϥΪ��޲z���O
+<LI>系統管理者使用的管理指令
 <P>
 <UL>
 <LI>su
-Password:            (��Jroot���K�X)
-�t�ΰ���root������Shellscript��A�S���^��
+Password:            (輸入root的密碼)
+系統執行root本身的Shellscript後，又跳回到
 $
-�ù���ܪ��O�@��ϥΪ̴��ܲŸ� $�A���z���u�������o�w�g�ܦ��Froot�A
-���|����root�n�J�ɡA���ܲŸ��O #����e�����O�H���D�z�ثe�O�H
-root�n�J�t�ΤF�C�}���������Aroot�O���L�A���Droot�K�X���@��ϥ�
-��(���ۤv�}�]���b��)�N�O�����C   
+螢幕顯示的是一般使用者提示符號 $，但您的真正身份卻已經變成了root，
+不會像用root登入時，提示符號是 #那麼容易讓別人知道您目前是以
+root登入系統了。開玩笑的說，root是本尊，知道root密碼的一般使用
+者(為自己開設的帳號)就是分身。   
 </LI>
-<LI>mount�Bumount���O
-<P><B>���O�W��:</B>    mount�Bumount<BR>
-<B>�\��:</B>        ���W �B���U�ɮרt��[�]��] <BR>
-<B>�y�k:</B>      
+<LI>mount、umount指令
+<P><B>指令名稱:</B>    mount、umount<BR>
+<B>功能:</B>        掛上 、卸下檔案系統[設備] <BR>
+<B>語法:</B>      
 <BLOCKQUOTE><CODE>
 <PRE>
-mount  -t  �ɮ׮榡[-o conv=auto]�]���ɦW  �n�~�����ؿ� 
+mount  -t  檔案格式[-o conv=auto]設備檔名  要外掛的目錄 
 </PRE>
 </CODE></BLOCKQUOTE>
-<P><B>�ϥΪ�:</B> root<BR>
-<B>�y�z:</B><BR>
-<P>�q�`�ڭ̭n�ϥγn�СB�w�ЩΥ��о������ɮרt�ήɡA�N�n�����ɮרt�ε�
-�~���i�ӡA�o�ˤ~��ϥΡA���b�~�����e�A�z�����n���D�zLinux��kernel[��
-�ߵ{��]�A�O�_���䴩��z�ҭn�~�����ɮרt�ή榡�A�Y�S���z�����n����s
-kernel�~��Akernel����s�Ьݫ᭱�����`�C 
-<P>�bLinux���A�ڭ̱`�Ψ쪺�ɮרt�ά�msdos�Bext2�Bhpfs�Biso9660���榡�A
-�ܩ��٦���L���榡�����ӱ`�ΡA�G�ڭ̬ٲ��C
-<P>ext2�ɮ׮榡�OLinux�t�ή榡���@�A�]�O�̼s���ϥΪ�;
-<P>hpfs�ɮ׮榡�OOS/2���ɮ׮榡;
-<P>iso9660�ɮ׮榡�O��CD-ROM�˸m���ɮ׮榡�A
-���pCD-ROM�������Ф����ɮ׳��OMS-Dos��
-�榡�A���n�ϥθӥ��Ф��ɡA���M�n�ϥ�iso9660���ɮ׮榡�C
-<P>mount�`�λy�k:mount -t �ɮ׮榡[-o conv=auto]�]���ɦW �n�~�����ؿ��C
-��ܶ�"-t�ɮ׮榡"�A�O���w�z�n�~�����@�ت��ɮרt�ή榡�A�b�ϥ�
-mount�ɡA�@�w�n��"-t �ɮ׮榡"��ܶ�;��ܶ�"-o conv=auto"�A�O���N
-�~���i�Ӫ��ɮרt�ΰ��۰��ഫ�A�ഫ��Linux�榡�A�o�Ӧ۰��ഫ�u���r
-�ɦ��ΡA�쥻�bDos���Τ�ѽs�边[pe2�B�~��]�g��������ɡA����Linux��
-��A�A��Linux����ѽs�边[vi�Bjoe]�ӬݸӤ���ɡA�|���㪺�o�{��b�C��
-�����B��"^M"�Ÿ��A�o�ɥu�n��"-o conv=auto"��ܶ��A�N�i�ഫ��Linux
-���榡�C
-<P>�]���ɦW�O���z�n�~�����n�СB�w�ЩάO���о����A���n�Ъ�A�Ѭ�/dev/
-fd0�BB�ѴN��/dev/fd1[�b���O�����ϺЮe�q�A�]��Linux�|�۰ʰ���];�ӵw
-�Ъ�C�ѴN��/dev/hda1�BD�ѴN��/dev/hda2��/dev/hdb1�A�o�ӴN�n�ݱz���X
-�ӵw�СA�H�αz�p��W�epartitions�өw�A�q�`hda�O���Ĥ@�ӵw�СA��hdb�N�O
-���ĤG�ӵw�СA��1�B2�O���@���w�Ф����U��partitions�N��;���о��q�`����/
-dev/cdrom��/dev/sbpcd�A
-<P>�bLinux�����@�ӯS�w���ؿ��A�O�M�����z�~���ɮרt�αM�Ϊ��A�o�ӥؿ�
-��/mnt�A�q�`/mnt���O�ťؿ�;��CD-ROM�]�O���T�w���ؿ��A�N�O��/cdrom�C
-<P>���z�Q�n�N�Y�@���ɮרt�ΰh�X�ɡA�z�i�H�ϥ�umount���O�A
-<P>��y�k��: [�Ҧ����ɮרt�ΡA���i�ϥθӻy�k�Ө��U�ɮרt��]
-<P>umount�`�λy�k:   
+<P><B>使用者:</B> root<BR>
+<B>描述:</B><BR>
+<P>通常我們要使用軟碟、硬碟或光碟機內的檔案系統時，就要先把檔案系統給
+外掛進來，這樣才能使用，但在外掛之前，您必須要知道您Linux的kernel[核
+心程式]，是否有支援到您所要外掛的檔案系統格式，若沒有您必須要先更新
+kernel才行，kernel的更新請看後面的章節。 
+<P>在Linux中，我們常用到的檔案系統為msdos、ext2、hpfs、iso9660等格式，
+至於還有其他的格式都不太常用，故我們省略。
+<P>ext2檔案格式是Linux系統格式之一，也是最廣為使用的;
+<P>hpfs檔案格式是OS/2的檔案格式;
+<P>iso9660檔案格式是為CD-ROM裝置的檔案格式，
+假如CD-ROM內的光碟片的檔案都是MS-Dos的
+格式，當要使用該光碟片時，仍然要使用iso9660的檔案格式。
+<P>mount常用語法:mount -t 檔案格式[-o conv=auto]設備檔名 要外掛的目錄。
+選擇項"-t檔案格式"，是指定您要外掛那一種的檔案系統格式，在使用
+mount時，一定要有"-t 檔案格式"選擇項;選擇項"-o conv=auto"，是說將
+外掛進來的檔案系統做自動轉換，轉換成Linux格式，這個自動轉換只對文字
+檔有用，原本在Dos中用文書編輯器[pe2、漢書]寫成的文件檔，拷到Linux裡
+後，再用Linux的文書編輯器[vi、joe]來看該文件檔，會明顯的發現到在每行
+結尾處有"^M"符號，這時只要用"-o conv=auto"選擇項，就可轉換成Linux
+文件格式。
+<P>設備檔名是指您要外掛的軟碟、硬碟或是光碟機等，像軟碟的A槽為/dev/
+fd0、B槽就為/dev/fd1[在此是不分磁碟容量，因為Linux會自動偵測];而硬
+碟的C槽就為/dev/hda1、D槽就為/dev/hda2或/dev/hdb1，這個就要看您有幾
+個硬碟，以及您如何規畫partitions而定，通常hda是指第一個硬碟，那hdb就是
+指第二個硬碟，而1、2是指一顆硬碟內的各個partitions代號;光碟機通常都為/
+dev/cdrom或/dev/sbpcd，
+<P>在Linux中有一個特定的目錄，是專門給您外掛檔案系統專用的，這個目錄
+為/mnt，通常/mnt都是空目錄;而CD-ROM也是有固定的目錄，就是為/cdrom。
+<P>當您想要將某一個檔案系統退出時，您可以使用umount指令，
+<P>其語法為: [所有的檔案系統，都可使用該語法來卸下檔案系統]
+<P>umount常用語法:   
 <BLOCKQUOTE><CODE>
 <PRE>
         
-umount  ���ɮרt�Ϊ��ؿ�
+umount  掛檔案系統的目錄
 </PRE>
 </CODE></BLOCKQUOTE>
 <P>
 </LI>
-<LI>ln ���O
-<P><B>���O�W��:</B>   ln <BR>
-<B>�\��:</B>  �s�@�쵲�� �<BR>
-<B>�y�k:</B> 
+<LI>ln 指令
+<P><B>指令名稱:</B>   ln <BR>
+<B>功能:</B>  製作鏈結檔 �<BR>
+<B>語法:</B> 
 <BLOCKQUOTE><CODE>
 <PRE>
-ln   -s �n���V���ɮשΥؿ�  �쵲�ɦW 
+ln   -s 要指向的檔案或目錄  鏈結檔名 
 </PRE>
 </CODE></BLOCKQUOTE>
-<P><B>�ϥΪ�:</B>   �C�@��ϥΪ��<BR>
-<B>�y�z:</B><BR>
-<P>�쵲�ɳq�`�Ω�n�sĶ�{�����ɫ�A�q�`�쵲�ɳ��O���V�Y��lib�禡�w�A
-�Ϊ�include�ɮ׵��A���o�˰����O���F��K�sĶ�ΰ���A
-<P>�Ҧp:�z�n�Nx���VXF86_W32*�������ɡA��@�k��:
+<P><B>使用者:</B>   每一位使用者�<BR>
+<B>描述:</B><BR>
+<P>鏈結檔通常用於要編譯程式的時後，通常鏈結檔都是指向某個lib函式庫，
+或者include檔案等，其實這樣做都是為了方便編譯或執行，
+<P>例如:您要將x指向XF86_W32*的執行檔，其作法為:
 <BLOCKQUOTE><CODE>
 <PRE>
 ln -s XF86_W32 X 
@@ -602,77 +602,77 @@ ln -s XF86_W32 X
 </CODE></BLOCKQUOTE>
 <P>
 </LI>
-<LI>top ���O 
-<P><B>���O�W��:</B>    top<BR>
-<B>�\��:</B>   � �{�Ǻʵ����O <BR>
-<B>�y�k:</B>      
+<LI>top 指令 
+<P><B>指令名稱:</B>    top<BR>
+<B>功能:</B>   � 程序監視指令 <BR>
+<B>語法:</B>      
 <BLOCKQUOTE><CODE>
 <PRE>
 top 
 </PRE>
 </CODE></BLOCKQUOTE>
-<P><B>�ϥΪ�:</B>   �C�@��ϥΪ��<BR> 
-<B>�y�z:</B><BR>
-top�i�H�ʺA�ʵ��{�ǰ��檬�A[Process state]�A��C�������۰ʧ�s�ʵ�
-�e���A�H��̷ܳs�����p�C �n�������b���檺top�A�z�i�H���U"q"��N�i���}�C   
+<P><B>使用者:</B>   每一位使用者�<BR> 
+<B>描述:</B><BR>
+top可以動態監視程序執行狀態[Process state]，其每五秒鐘自動更新監視
+畫面，以顯示最新的情況。 要結束正在執行的top，您可以按下"q"鍵就可離開。   
 <P>
 </LI>
-<LI>sudo���O
-<P><B>���O�W��:</B>    sudo<BR>
-<B>�\��:</B>   �Hroot����������R�O�<BR>
-<B>�y�k:</B>      
+<LI>sudo指令
+<P><B>指令名稱:</B>    sudo<BR>
+<B>功能:</B>   以root的身分執行命令�<BR>
+<B>語法:</B>      
 <BLOCKQUOTE><CODE>
 <PRE>
-sudo ��L���O
+sudo 其他指令
 </PRE>
 </CODE></BLOCKQUOTE>
-<P><B>�ϥΪ�:</B>   �Qroot�[�J�y/etc/sudoers�z�ɮפ����ϥΪ�<BR>
-<B>�y�z:</B><BR>
-<P>sudo�o�@�ӫ��O�ݭn�B�~�w�ˡA�򥻤W�Asudo�i���O��su�w��
-�ʧ󰪪����O�A������O?
-<P>1.root���K�X���Froot���H���D�~�A���ݳQ��L�ݭn�Ψ�root�v����
-�Ϊ̪��D�A�]���ϥ�sudo�ɡA�n�D��J���K�X�O�y�Ӧ�ϥΪ̦ۤv
-���K�X�C�z
-<P>2.��Ҧ��i����sudo���O���ϥΪ̳��W�d�b�y/etc/sudoers�z�o���ɮ�
-���Aroot�i�H�ܮe�����x����Өt�ΡC        
+<P><B>使用者:</B>   被root加入『/etc/sudoers』檔案中的使用者<BR>
+<B>描述:</B><BR>
+<P>sudo這一個指令需要額外安裝，基本上，sudo可說是比su安全
+性更高的指令，為什麼呢?
+<P>1.root的密碼除了root本人知道外，不需被其他需要用到root權限使
+用者知道，因為使用sudo時，要求輸入的密碼是『該位使用者自己
+的密碼。』
+<P>2.把所有可執行sudo指令的使用者都規範在『/etc/sudoers』這個檔案
+中，root可以很容易的掌控整個系統。        
 <P>
 </LI>
 </UL>
 <P>
 </LI>
-<LI> �ϥΪ��ɮ��v���޲z���O
-<P>Linux�W�C�@���ɮ׳����T���w�q�Ҧ��H�W��(Owner)�B�s�զW��(Group)
-�M�ɮת��ϥ��v�����C�]���C�@��t�ΤW���ϥΪ̳����v�O�]���q�ȾA����
-�W�w�ۤvHome�ؿ��U���ɮ��v���A�H���@�ۤv���ɮצw���C�H�U���X�ӱ`�Ϊ���
-�O���СA�Ʊ�Ū�̳���`�O�b�ߡC
+<LI> 使用者檔案權限管理指令
+<P>Linux上每一個檔案都明確的定義所有人名稱(Owner)、群組名稱(Group)
+和檔案的使用權限等。因此每一位系統上的使用者都有權力也有義務適當的
+規定自己Home目錄下的檔案權限，以維護自己的檔案安全。以下的幾個常用的指
+令介紹，希望讀者都能常記在心。
 <P>
 <UL>
-<LI> chown ���O 
+<LI> chown 指令 
 <P> 
-<B>���O�W��:</B>    chown<BR>
-<B>�\��:</B>   �����ɮ׾֦���<BR>
-<B>�y�k:</B>  
+<B>指令名稱:</B>    chown<BR>
+<B>功能:</B>   改變檔案擁有者<BR>
+<B>語法:</B>  
 <BLOCKQUOTE><CODE>
 <PRE>
- chown   �ϥΪ̱b��  �ɮשΥؿ��W��
+ chown   使用者帳號  檔案或目錄名稱
 </PRE>
 </CODE></BLOCKQUOTE>
-<P><B>�ϥΪ�:</B>   ���ɮשΥؿ����֦��̩Mroot <BR>
-<B>�y�z:</B><BR>
-<P>�p�G�z(���]�b���Oxlinux1)���@���ɦW��file.list���ɮסA�Ҧ��v�n
-�����t�@��b����xlinux2���P�ơA�h�i��chown�ӹF���o�Ӱʧ@�A����
-�z���ܧ��ɮ׾֦��̤���A���ɮ����M�b�z��Home�ؿ��U�A���z�w�g
-�L����ק�ΧR�����ɮת��v���A���IŪ�����S�O�`�N�C�q�`�|�Ψ�o
-�ӫ��O���ɾ��A���ӬO�z�Q��Linux�����W���Y��ϥΪ̨�z��Home
-�U���άY���ɮ׮ɷ|�Ψ�C
-�d��:
+<P><B>使用者:</B>   該檔案或目錄的擁有者和root <BR>
+<B>描述:</B><BR>
+<P>如果您(假設帳號是xlinux1)有一個檔名為file.list的檔案，所有權要
+給予另一位帳號為xlinux2的同事，則可用chown來達成這個動作，但當
+您改變完檔案擁有者之後，該檔案雖然在您的Home目錄下，但您已經
+無任何修改或刪除該檔案的權限，此點讀者應特別注意。通常會用到這
+個指令的時機，應該是您想讓Linux機器上的某位使用者到您的Home
+下取用某個檔案時會用到。
+範例:
 <BLOCKQUOTE><CODE>
 <PRE>
 -rw-------1     xlinux1 users  6 Oct 4 12:50  file.list
 $ chown xlinux2 file.txt
 </PRE>
 </CODE></BLOCKQUOTE>
-<P>(�U�����O��ݬݡA�Ҧ��H���W�٧��ܤF��!)
+<P>(下完指令後看看，所有人的名稱改變了喔!)
 <BLOCKQUOTE><CODE>
 <PRE>
 -rw-------1     xlinux2 users  6 Oct 4 12:50  file.list      
@@ -681,30 +681,30 @@ $ chown xlinux2 file.txt
 <P>
 </LI>
 <LI>chgrp 
-<P><B>���O�W��:</B>     chgrp <BR>
-<B>�\��:</B>   �����ɮת����ݸs���<BR>
-<B>�y�k:</B>      
+<P><B>指令名稱:</B>     chgrp <BR>
+<B>功能:</B>   改變檔案的所屬群組�<BR>
+<B>語法:</B>      
 <BLOCKQUOTE><CODE>
 <PRE>
- chgrp  �s�ݦW��(group�W��)  �ɮשΥؿ��W�� 
+ chgrp  群屬名稱(group名稱)  檔案或目錄名稱 
 </PRE>
 </CODE></BLOCKQUOTE>
-<P><B>�ϥΪ�:</B>   root <BR>
-<B>�y�z:</B><BR>
-<P>�ӫ��O�Mchown�Ϊk�@�ˡA��\��O���ɮשΥؿ����ݪ��s��(group)��
-���t�@��group�C�ӳo�ӫ��O���ӷ|��chown�`�Τ@�I�A�Ҧp:�Yroot�Q
-���wsystem�o��group���Ҧ��ϥΪ̡A���i�H��shutdown�o�ӫ��O�A�u
-�n��chgrp��shutdowm�令���ݸs�լO�ysystem�z�o��group�ɡA�A��
-shutdown���ϥ��v���]���y-rwxr-x---�z�A�h�ݩ�system group���ϥΪ̡A
-�����ϥ�shutdown�������v���C
-�d��:
+<P><B>使用者:</B>   root <BR>
+<B>描述:</B><BR>
+<P>該指令和chown用法一樣，其功能是把檔案或目錄所屬的群組(group)改
+成另一個group。而這個指令應該會比chown常用一點，例如:若root想
+指定system這個group的所有使用者，都可以用shutdown這個指令，只
+要用chgrp把shutdowm改成所屬群組是『system』這個group時，再把
+shutdown的使用權限設成『-rwxr-x---』，則屬於system group的使用者，
+都有使用shutdown關機的權限。
+範例:
 <BLOCKQUOTE><CODE>
 <PRE>
 -rwxr-x---   1 root bin  11700 Oct 12 06:48 shutdown*
 # chgrp system /sbin/shutdown
 </PRE>
 </CODE></BLOCKQUOTE>
-<P>����chgrp��shutdown���ݸs�է令system�o��group                    
+<P>執行chgrp把shutdown所屬群組改成system這個group                    
 <BLOCKQUOTE><CODE>
 <PRE>
 -rwxr-x---   1 root system 11700 Oct 18 06:48 shutdown * 
@@ -714,36 +714,36 @@ shutdown���ϥ��v���]���y-rwxr-x---�z�A�h�ݩ�system group���ϥΪ̡A
 </LI>
 <LI>chmod  
 <A NAME="chmod-ref"></A> 
-<P><B>���O�W��:</B>    chmod<BR>
-<B>�\��:</B>   �ק��ɮת��v���<BR>
-<B>�y�k:</B>      
+<P><B>指令名稱:</B>    chmod<BR>
+<B>功能:</B>   修改檔案的權限�<BR>
+<B>語法:</B>      
 <BLOCKQUOTE><CODE>
 <PRE>
- chmod   �v���Ѽ�  �ɮשΥؿ��W���
+ chmod   權限參數  檔案或目錄名稱�
 </PRE>
 </CODE></BLOCKQUOTE>
-<P><B>�ϥΪ�:</B>   �C�@��ϥΪ� <BR>
-<B>�y�z:</B><BR>
-<P>����U�b����ls���O�ɡA�w�g�����ɮת��U���v���κA�A�Ҧp -rwx-----�C
-�n�]�w�o���ɮת��κA�N�� chmod�o�ӫ��O�ӳ]�w�A�M�ӭn�ϥ�chmod
-���e�N�n���A�� �y�v���Ѽơz���Ϊk�C�򥻤W�v���Ѽƥi�H����بϥ�
-��k: 
-<P>���^��r�����ܪk<BR>
-���Ʀr���ܪk<BR>
-<P>�@�B�^��r�����ܪk<BR>
-<P>���e���L�A�@���ɮץΤQ�Ӥp���O���ɮת��v���A�Ĥ@�p��ΥH�N��
-�ؿ�(d)�άO�s��(1)�ɮ׵��A�A�ӬO�C�T�p��N���@�����ϥΪ̪��v���C
-�e�T�p��ϥΪ�(User)�������v���A�Ρyu�z�N��;�����T�p��N���M��
-�Ϊ̦P�@�Ӹs��(Group)���v���A�Ρyg�z�N��;�̫�T�p��N����L�ϥ�
-��(Other)���v���A�Ρyo�z�N���C�Y:
--rwx------�ݩ�ϥΪ̦s���v���Ρyu�z�N��
-----rwx---�ݩ�s�ըϥΪ̦s���v���Ρyg�v�N��
--------rwx�ݩ��L�ϥΪ̦s���v���Ρyo�z�N��    
-���Fu�Bg�Bo�~�A�ڭ̥i�H�����Ρya�z�N���Ҧ��H(All)�C�ӨC�@�بϥ�
-�̪��v���N�����Ρyr�z�B�yw�z�B�yX�z�ӥN�����ɮץiŪ�B�i�g�B�i��
-��A�M��A�Ρy+�z�Ρy-�z�Ρy=�z�N�U�����ϥΪ̥N���Ÿ�u�Bg�Bo�M
-rwx�T�Ӧr���s���_�ӧY�i�C�|�ӨҤl�AŪ�����ӴN�ܮe�����F�C
-�d�ҡG
+<P><B>使用者:</B>   每一位使用者 <BR>
+<B>描述:</B><BR>
+<P>本手冊在介紹ls指令時，已經介紹檔案的各種權限形態，例如 -rwx-----。
+要設定這些檔案的形態就用 chmod這個指令來設定，然而要使用chmod
+之前就要先瞭解 『權限參數』的用法。基本上權限參數可以有兩種使用
+方法: 
+<P>●英文字母表示法<BR>
+●數字表示法<BR>
+<P>一、英文字母表示法<BR>
+<P>先前講過，一個檔案用十個小格位記錄檔案的權限，第一小格用以代表
+目錄(d)或是連結(1)檔案等，再來是每三小格代表一類型使用者的權限。
+前三小格使用者(User)本身的權限，用『u』代表;中間三小格代表和使
+用者同一個群組(Group)的權限，用『g』代表;最後三小格代表其他使用
+者(Other)的權限，用『o』代表。即:
+-rwx------屬於使用者存取權限用『u』代表
+----rwx---屬於群組使用者存取權限用『g」代表
+-------rwx屬於其他使用者存取權限用『o』代表    
+除了u、g、o外，我們可以直接用『a』代表所有人(All)。而每一種使用
+者的權限就直接用『r』、『w』、『X』來代表對檔案可讀、可寫、可執
+行，然後再用『+』或『-』或『=』將各類型使用者代表符號u、g、o和
+rwx三個字母連結起來即可。舉個例子，讀者應該就很容易懂了。
+範例：
 <P>
 <BLOCKQUOTE><CODE>
 <PRE>
@@ -751,576 +751,576 @@ rwx�T�Ӧr���s���_�ӧY�i�C�|�ӨҤl�AŪ�����ӴN�ܮe�����F�C
 </PRE>
 </CODE></BLOCKQUOTE>
  
-<P>�ϥΪ̥�����file1�i�H�i��Ū�g���檺�ʧ@
+<P>使用者本身對file1可以進行讀寫執行的動作
 <BLOCKQUOTE><CODE>
 <PRE>
 -rw-------     chmod  u-x    file1
 </PRE>
 </CODE></BLOCKQUOTE>
 
-�R���ϥΪ̹�file1���i�����v��
+刪除使用者對file1的可執行權限
 <BLOCKQUOTE><CODE>
 <PRE>
 -rw-rw-r--     chmod   g+rw,o+r file 1
 </PRE>
 </CODE></BLOCKQUOTE>
 
-�s�ըϥΪ̹�file1�W�[����Ū�g�A��L�ϥΪ̫h�u��Ū�C(�C�@���v����
-�ƥΡy,�z�p���_��)
+群組使用者對file1增加為所讀寫，其他使用者則只能讀。(每一個權限參
+數用『,』聯結起來)
 <BLOCKQUOTE><CODE>
 <PRE>
 -rwxrwxrwxchmod   a+rwx   file 1
 </PRE>
 </CODE></BLOCKQUOTE>
-<P>�Ҧ��ϥΪ̹�file1���iŪ�g�ð��楦
+<P>所有使用者對file1都可讀寫並執行它
 <BLOCKQUOTE><CODE>
 <PRE>
 -rwxr--r--   chmod  g-rw,o-rwfile1
 </PRE>
 </CODE></BLOCKQUOTE>
 
-�R���s�ըϥΪ̩M��L�ϥΪ̹�file1��Ū�g�v��
-<P>�G�B�Ʀr���ܪk<BR>
-<P>�μƦr���ܪk�]�\�|��έ^��r�����ܪk�Ӫ��e���A�p�G�@�U�l�L�k��
-���Ĥ@�ت��ܪk�A�i�H�Ǿǳo�ت��ܪk�A���L�̦n�O��س��ǰ_�Ӱ�
-�W�A�Ʀr���ܪk�O�Ρy�T�z��ƦrXXX�A(���ɥi�Υ|��)�̤j�Ȭ��y777�z
-�Ӫ��ܪ��C
-<P>�Ĥ@�ӼƦr  �N���ϥΪ̦s���v���C<BR>
-�ĤG�ӼƦr  �N���s�ըϥ��v���C<BR>
-�ĤT�ӼƦr  �N����L�ϥΪ̦s���v���C<BR>
-<P>���e���Ъ��y�iŪ���v���A�z��μƦr�y4�z�N���A�y�i�g���v��w�z  
-<P>��Ρy2�z�N���A�ӡy�i���檺�v��x�z��Ρy1�z�N���A�Y:
+刪除群組使用者和其他使用者對file1的讀寫權限
+<P>二、數字表示法<BR>
+<P>用數字表示法也許會比用英文字母表示法來的容易，如果一下子無法接
+受第一種表示法，可以學學這種表示法，不過最好是兩種都學起來基本
+上，數字表示法是用『三』位數字XXX，(有時可用四位)最大值為『777』
+來表示的。
+<P>第一個數字  代表使用者存取權限。<BR>
+第二個數字  代表群組使用權限。<BR>
+第三個數字  代表其他使用者存取權限。<BR>
+<P>先前介紹的『可讀的權限，』改用數字『4』代表，『可寫的權限w』  
+<P>改用『2』代表，而『可執行的權限x』改用『1』代表，即:
 <P>r=4  w=2  x=1
-<P>���]�ϥΪ̹�file1���v���O�iŪ�i�g�i����yrwx�z�A�h�ڭ̧�4,2,1
-�[�_�ӵ���y7�z�A�N�O�N���ϥΪ̹�file1�o���ɮץiŪ�i�g�i����C�Y:
+<P>假設使用者對file1的權限是可讀可寫可執行『rwx』，則我們把4,2,1
+加起來等於『7』，就是代表使用者對file1這個檔案可讀可寫可執行。即:
 <P>rwx=4+1+2+1=7
-<P>�ܩ�s�ըϥΪ̩M��L�ϥΪ̪��v���A�N�̧ǫ��w�ĤG��Ʀr�M�ĤT��       
-�Ʀr�Y�i�C�p�G�����w�����v�����ܡA�N�n�ɡy0�z!!!���U�|�X�ӽd
-�ҴN�i���A�A��Ū�̪`�N�Ʀr���ܤơC
-<P>�d��:
+<P>至於群組使用者和其他使用者的權限，就依序指定第二位數字和第三位       
+數字即可。如果不指定任何權限的話，就要補『0』!!!底下舉幾個範
+例就可明瞭，請讀者注意數字的變化。
+<P>範例:
 <P>-rwx------     chmod 700 file1
-<P>���w�ϥΪ̹�file1���v���O�iŪ,�i�g,�i����
+<P>指定使用者對file1的權限是可讀,可寫,可執行
 <P>-rw-------     chmod 600 file1
-<P>���w�ϥΪ̹�file1���v���O�iŪ,�i�g
+<P>指定使用者對file1的權限是可讀,可寫
 <P>-r--------   chmod 400 file1
-<P>���w�ϥΪ̹�file1���v���O�y�iŪ�z�Ӥw
+<P>指定使用者對file1的權限是『可讀』而已
 <P>--w------- chmod 200 file1          
-<P>���w�ϥΪ̹�file1���v���O�y�i�g�z�Ӥw
+<P>指定使用者對file1的權限是『可寫』而已
 <P>---x------    chmod 100 file1
-<P>���w�ϥΪ̹�file1���v���u���y�i����z�Ӥw
+<P>指定使用者對file1的權限只有『可執行』而已
 <P>----rwx---    chmod 070 file1
-<P>���w�y�s�ըϥΪ̡z��file1���v���O�iŪ,�i�g,�i����
+<P>指定『群組使用者』對file1的權限是可讀,可寫,可執行
 <P>-rwxrwx---     chmod 770 file1
-<P>���w�ϥΪ̩M�s�ըϥΪ̹�file1���v���O�iŪ,�i�g,�i����
+<P>指定使用者和群組使用者對file1的權限是可讀,可寫,可執行
 <P>-------rw-     chmod 006 file1                     
-<P>���w �y��L�ϥΪ̡z��file1���v���O�iŪ�g
+<P>指定 『其他使用者』對file1的權限是可讀寫
 <P>-rwxrwxrwx     chmod 777 file1
-<P>���w�Ҧ��ϥΪ̹�file1���v���O�iŪ,�i�g,�i����
-<P>�ϥ��N�O�N�T��Ʀr�����T�����A�C����쳣�O4,2,1�ۥ[���N����
-�X�C
+<P>指定所有使用者對file1的權限是可讀,可寫,可執行
+<P>反正就是將三位數字分成三個欄位，每個欄位都是4,2,1相加任意的組
+合。
 <P>
 </LI>
 <LI> chsh
-<P><B>���O�W��:</B>    chsh<BR>
-<B>�\��:</B>   ���ܨϥΪ̩ҥΪ�Shell�<BR>
-<B>�y�k:</B>      
+<P><B>指令名稱:</B>    chsh<BR>
+<B>功能:</B>   改變使用者所用的Shell�<BR>
+<B>語法:</B>      
 <BLOCKQUOTE><CODE>
 <PRE>
  chsh 
 </PRE>
 </CODE></BLOCKQUOTE>
-<P><B>�ϥΪ�:</B>   �C�@������W���ϥΪ� <BR>
-<B>�y�z:</B><BR>
-<P>����root�b�s�W�ϥΪ̮ɡA�i�ೣ�Τ@�Ӥ��w��Shell�A�Ҧp��Bash���@�@��ϥΪ�
-�����wShell�A�����ǨϥΪ̥i�ण���w��Bash�A�ӷQ�令��L Shell�A�pcsh�BTcsh
-���A���ɴN�i�H�ϥ�chsh�o�ӫ��O���ܦۤv�ثe���b�ϥΪ�Shell�C
-<P>�d��:
+<P><B>使用者:</B>   每一位機器上的使用者 <BR>
+<B>描述:</B><BR>
+<P>當初root在新增使用者時，可能都用一個內定的Shell，例如用Bash當作一般使用者
+的內定Shell，但有些使用者可能不喜歡用Bash，而想改成其他 Shell，如csh、Tcsh
+等，此時就可以使用chsh這個指令改變自己目前正在使用的Shell。
+<P>範例:
 <BLOCKQUOTE><CODE>
 <PRE>
 $ chsh
-password:                      ��J�ϥΪ̦ۤv���K�X
-[/bin/Bash]:/bin/Tcsh          �令�ϥ�Tcsh 
+password:                      輸入使用者自己的密碼
+[/bin/Bash]:/bin/Tcsh          改成使用Tcsh 
 </PRE>
 </CODE></BLOCKQUOTE>
 <P>
 </LI>
 <LI> chfn 
-<P><B>���O�W��:</B>    chfn <BR>
-<B>�\��:</B>   ���ܨϥΪ̸�ƨ<BR>
-<B>�y�k:</B>      
+<P><B>指令名稱:</B>    chfn <BR>
+<B>功能:</B>   改變使用者資料�<BR>
+<B>語法:</B>      
 <BLOCKQUOTE><CODE>
 <PRE>
  chfn 
 </PRE>
 </CODE></BLOCKQUOTE>
 
-<B>�ϥΪ�:</B>   �C�@������W�ϥΪ�� <BR>
-<B>�y�z:</B><BR>             
-<P>�@��ϥΪ̳����v�O����chfn�ק�y������ۤv���ΦW��ơz�A����
-�򻡰ΦW��ƩO?�]���X�G�����W���Ҧ��ϥΪ̳��O�H�ΦW�b�M�O�H��
-�q�A�u���t�Ϊ�root�~���D�N���z�u����������ơA���O�H��finger��
-�O�d�M�z���ӤH��ơA�άO�z�H�eE-mail���O�H�ɡA�H�H�H����Ƴ��O
-�z�۳]���ΦW��ơA���M�z�]�i�H�]�������ŦX�z���u���ơA�H�z�����C
-<P>�d��:
-<P>���]�Hwang�o�ӱb������chfn�o�ӫ��O  
+<B>使用者:</B>   每一位機器上使用者� <BR>
+<B>描述:</B><BR>             
+<P>一位使用者都有權力執行chfn修改『有關於自己的匿名資料』，為什
+麼說匿名資料呢?因為幾乎網路上的所有使用者都是以匿名在和別人溝
+通，只有系統的root才知道代表您真正身份的資料，當別人用finger指
+令查尋您的個人資料，或是您寄送E-mail給別人時，寄信人的資料都是
+您自設的匿名資料，當然您也可以設成完全符合您的真實資料，隨您高興。
+<P>範例:
+<P>假設以wang這個帳號執行chfn這個指令  
 <BLOCKQUOTE><CODE>
 <PRE>
 $chfn   
 </PRE>
 </CODE></BLOCKQUOTE>
-<P>�X�{���e���̧Ǧp�U:
+<P>出現的畫面依序如下:
 <BLOCKQUOTE><CODE>
 <PRE>
 [wang@xlinux wang]$ chfn
 Changing finger information for wang.
 Password:
-Name [wang]:���p��              ���A���̭���Name�O���w�ȡA�z�i�۳]�z���w���W�r�C
-Office []:Dept. of R/D         �]�w�z���줽�ǦW�٩άO�a�}
-Office Phone []:(07)5565080    �]�w�줽�Ǫ��q�ܸ��X
-Home Phone []: (07)5565080     �]�w�a���q�ܸ��X
-Finger information changed.    �t�Φ^���z���ӤH��Ƥw�g���� 
+Name [wang]:王小明              中括號裡面的Name是內定值，您可自設您喜歡的名字。
+Office []:Dept. of R/D         設定您的辦公室名稱或是地址
+Office Phone []:(07)5565080    設定辦公室的電話號碼
+Home Phone []: (07)5565080     設定家中電話號碼
+Finger information changed.    系統回應您的個人資料已經改變 
 </PRE>
 </CODE></BLOCKQUOTE>
-<P>�ק粒��ƫ�A���z�H�e E-mail���O�H�A�άO�O�Hfinger(�d��)�z���ӤH��ƮɡA
-��ܪ��N�O�z��chfn��J����ơC
+<P>修改完資料後，當您寄送 E-mail給別人，或是別人finger(查看)您的個人資料時，
+顯示的就是您用chfn輸入的資料。
 </LI>
 </UL>
 </LI>
 </OL>
       
 <P>
-<H2><A NAME="ss7.4">7.4 ��ѽs�边����--�uVI�v        </A>
+<H2><A NAME="ss7.4">7.4 文書編輯器介紹--「VI」        </A>
 </H2>
 
-<P>vi(m)�b�j�h�ƪ�unix�t�Τ�(�]�Alinux)������vi(m)�s�边�C�p�G�z�Y�N����linux�t�κ�
-�z�̡A�άO���ɶ��blinux���Ҥ��u�@�A�z�̦n�Ƿ|vi(m)�A�]���z�𦭷|�ϥΨ쥦�A�Ѩ�O
-�t�ΥX���p�ɡC��s��Ө��A�Ĥ@���ϥ�vi(m)���L�{�O�D�`�h�W���A�ƦܰQ�����A�]�����
-��ާ@�覡�P�@���s���������P�C���O�A�@���z�Ƿ|�p��ާ@���ɡA�z�|�復�R������A�
-�]�������\���b�ӱj�F�Cvi(m)�N�O�o���A���H�S�R�S��C
-<P>�ƹ�Wlinux�t�Τ���vi���Ovim�Cvi�Pvim���Ϊk�ܹ��A�]�����Ovi���W�j���A
-�]��vi������\��vim�����A�ӥBvim�s�W�\�hvi�S�����\��A�ӥB��vi�e���ϥΡC              
+<P>vi(m)在大多數的unix系統中(包括linux)都內建vi(m)編輯器。如果您即將成為linux系統管
+理者，或是長時間在linux環境中工作，您最好學會vi(m)，因為您遲早會使用到它，由其是
+系統出狀況時。對新手而言，第一次使用vi(m)的過程是非常痛苦的，甚至討厭它，因為它�
+瑣犑@方式與一般輯編器完全不同。但是，一但您學會如何操作它時，您會對它愛不釋手，�
+因為它的功能實在太強了。vi(m)就是這像，讓人又愛又恨。
+<P>事實上linux系統中的vi其實是vim。vi與vim的用法很像，因為它是vi的增強版，
+因此vi有什麼功能vim都有，而且vim新增許多vi沒有的功能，而且比vi容易使用。              
 <P>
 <OL>
-<LI> vi(m)���T�ؼҦ�²�� 
+<LI> vi(m)的三種模式簡介 
 <P> 
 <OL>
-<LI> <B>�@��Ҧ�</B>
+<LI> <B>一般模式</B>
 <P> 
-�b�@��Ҧ��U�A�z�ү�i�檺�ʧ@�u�����ʴ�пù��W����m�A�аO�B
-�R���B�h���B�ƻs�r���Τ�r�϶��C���~�z�i�H�ѩR�O�Ҧ��i�H��J
-�Ҧ����R�O�C�Ҧ��C<BR>
+在一般模式下，您所能進行的動作只有移動游標螢幕上的位置，標記、
+刪除、搬移、複製字元或文字區塊。此外您可以由命令模式進人輸入
+模式雖命令列模式。<BR>
 <P>
 </LI>
-<LI> <B>��J�Ҧ�</B>
-<P>�u���b��J�Ҧ��U�A�~�i�i���r��ƿ�J�A��
-ESC��i�H�^��@��Ҧ��C<BR>
+<LI> <B>輸入模式</B>
+<P>只有在輸入模式下，才可進行文字資料輸入，按
+ESC鍵可以回到一般模式。<BR>
 <P>
 </LI>
-<LI> <B>�R�O�C�Ҧ�</B>
-<P>�N�ɮ׼g�J�����}�s�边�A��i�]�w�s�����ҡA�p
-�M��r��B�C�X�渹�L���C   
+<LI> <B>命令列模式</B>
+<P>將檔案寫入或離開編輯器，亦可設定編輯環境，如
+尋找字串、列出行號‥等。   
 <P>
 </LI>
 </OL>
 </LI>
-<LI> vi(m)���򥻾ާ@
+<LI> vi(m)的基本操作
 <P>   
 <OL>
-<LI> �i�Hvi
-<P>�b�t�δ��ܲŸ��U��Jvi���ɮצW�٫�Y�i�J
-vi���ù��s��e���A�B�b�@��Ҧ��U�C
-��J�Ҧ��U�s����:<BR>
-�b�@��Ҧ��U�i��'i'��'a'��'o'�T��i�J�s��Ҧ��D
+<LI> 進人vi
+<P>在系統提示符號下輸入vi及檔案名稱後即進入
+vi全螢幕編輯畫面，且在一般模式下。
+輸入模式下編輯文件:<BR>
+在一般模式下可按'i'或'a'或'o'三鍵進入編輯模式．
 <UL>
-<LI> "i" insert - �b�ثe��Ф��B���J�ҭn��J����r�D</LI>
-<LI> "a" append - �b�ثe��ЩҦb���U�@��}�l��J��r</LI>
-<LI> "o" open - �s�W�@��b��Ъ��U�A�ñq�歺�}�l��H��r               </LI>
+<LI> "i" insert - 在目前游標之處插入所要輸入之文字．</LI>
+<LI> "a" append - 在目前游標所在的下一行開始輸入文字</LI>
+<LI> "o" open - 新增一行在游標的下，並從行首開始輸人文字               </LI>
 </UL>
 <P>
 </LI>
-<LI> ���}vi�Φs��
-<P>�b�@��Ҧ��U�i�� ':' ��i�H�R�O�C�Ҧ��A <BR>
+<LI> 離開vi及存檔
+<P>在一般模式下可按 ':' 鍵進人命令列模式， <BR>
 <UL>
-<LI> <P>:w filename(�s�J���w�ɮ�)�D
+<LI> <P>:w filename(存入指定檔案)．
 </LI>
-<LI> <P>:wq (�g�J�����}vi)�D
+<LI> <P>:wq (寫入並離開vi)．
 </LI>
-<LI> <P>:q!(�j�����}�é��s�誺�ɮ�)�D
+<LI> <P>:q!(強迫離開並放棄編輯的檔案)．
 </LI>
-<LI> <P>:n[�ɮ�] - �ޤJ�U�@���ɮסD
+<LI> <P>:n[檔案] - 引入下一個檔案．
 </LI>
-<LI> <P>:l�Al2d - �R���ۦ�l�ܦ�l2����r�D
+<LI> <P>:l，l2d - 刪除自行l至行l2的文字．
 </LI>
-<LI> <P>:l�Al2s/patternl/pattern2/g - �N��l�ܦ�l2����r�A
-patternl���r��אּpattern2���r��A�p�Lg�h�ȧ�
-�C�@��Ҥǰt���Ĥ@�Ӧr��A�p��g�h�N�C�@�Ӧr�ꧡ���󴫡D       
+<LI> <P>:l，l2s/patternl/pattern2/g - 將行l至行l2的文字，
+patternl的字串改為pattern2的字串，如無g則僅更換
+每一行所匹配的第一個字串，如有g則將每一個字串均做更換．       
 </LI>
 </UL>
 </LI>
 </OL>
 <P>
 </LI>
-<LI>�@��Ҧ��\����²�� 
+<LI>一般模式功能鍵簡介 
 <P>
 <UL>
-<LI> ���ʴ��
-<P> h�Bj�Bk�Bl:���O�����Х��B�U�B�g�B�k���@��<BR>
+<LI> 移動游標
+<P> h、j、k、l:分別控制游標左、下、土、右移一格<BR>
 <UL>
-<LI>Ctrl+b : ����@�� </LI>
-<LI>Ctrl+f : ���e�@��</LI>
-<LI>G : �����ɮ׳̫�</LI>
-<LI>w : ����U��word���}�Y </LI>
-<LI>b : ���ܤW��wore���}�Y</LI>
+<LI>Ctrl+b : 往後一頁 </LI>
+<LI>Ctrl+f : 往前一頁</LI>
+<LI>G : 移到檔案最後�</LI>
+<LI>w : 移到下個word的開頭 </LI>
+<LI>b : 跳至上個wore的開頭</LI>
 </UL>
 <P>
 </LI>
-<LI>�R��
+<LI>刪除
 <P>
 <UL>
-<LI>x:�R���Ҧb�᭱�@�Ӧr��</LI>
-<LI>#x:ex:5x���R��5�Ӧr��</LI>
-<LI>dd:�R����ЩҦb����  </LI>
-<LI>#dd:�ҡA5dd���R���۴�к�_��5��  </LI>
+<LI>x:刪除所在後面一個字元</LI>
+<LI>#x:ex:5x表刪除5個字元</LI>
+<LI>dd:刪除游標所在之行  </LI>
+<LI>#dd:例，5dd表刪除自游標算起之5行  </LI>
 </UL>
                 
 <P>
 </LI>
-<LI>��� 
+<LI>更改 
 <P>
 <UL>
-<LI>cw:����гB���r�즹�@��r���r���B  </LI>
-<LI>c#w:�ҡAc3w�����3�Ӧr</LI>
+<LI>cw:更改游標處之字到此一單字之字尾處  </LI>
+<LI>c#w:例，c3w表更改3個字</LI>
 </UL>
      
 <P>
 </LI>
-<LI>���N
+<LI>取代
 <P>
 <UL>
-<LI>r:���N��гB���r��</LI>
-<LI>R:���N�r�������ESC����</LI>
+<LI>r:取代游標處之字元</LI>
+<LI>R:取代字元直到按ESC為止</LI>
 </UL>
    
 <P>
 </LI>
-<LI>�ƻs
+<LI>複製
 <P>
 <UL>
-<LI>yw:������гB���r��r���ܽw�İ� </LI>
-<LI>P:��w�İϤ���ƶK�W��</LI>
-<LI>yy:������ЩҦb����ܽw�İ�</LI>
-<LI>#yy:ex:5yy�A������ЩҦb���B�H�U5��ܽw�İ�</LI>
+<LI>yw:拷貝游標處之字到字尾至緩衝區 </LI>
+<LI>P:把緩衝區之資料貼上來</LI>
+<LI>yy:拷貝游標所在之行至緩衝區</LI>
+<LI>#yy:ex:5yy，拷貝游標所在之處以下5行至緩衝區</LI>
 </UL>
     
 <P>
 <P>
 </LI>
-<LI>�_��
-<P>u�Gundo�A�_��ܤW�@�ʧ@
+<LI>復原
+<P>u：undo，復原至上一動作
 <P>
 </LI>
-<LI>���ܫ��w����
-<P>g:�C�X�渹�A�ά�����T 
+<LI>跳至指定之行
+<P>g:列出行號，及相關資訊 
 </LI>
 </UL>
 <P>
 </LI>
-<LI>�R�O�C�U���O²�� 
-<P>�`�N:�ϥΫe�Х���ESC��T�w�b�@��Ҧ��U
-��':'��'/'��'?'�T��Y�i�i�J�R�O�C�Ҧ� <BR>     
+<LI>命令列下指令簡介 
+<P>注意:使用前請先按ESC鍵確定在一般模式下
+按':'或'/'或'?'三鍵即可進入命令列模式 <BR>     
 <UL>
-<LI>�C�X�渹
+<LI>列出行號
 <P>:set nu 
 </LI>
-<LI>�M��r��  
+<LI>尋找字串  
 <P>
 <UL>
-<LI>word(�ѭ��ܧ��M��)�A��n�i���U�~���D</LI>
-<LI>?word(�ѧ��ܭ��M��)�A��N�i���e�~���D </LI>
+<LI>word(由首至尾尋找)，按n可往下繼續找．</LI>
+<LI>?word(由尾至首尋找)，按N可往前繼續找． </LI>
 </UL>
                       
 </LI>
-<LI>����
-<P> :100-�i���ܲ�100��
+<LI>跳行
+<P> :100-可跳至第100行
 </LI>
 </UL>
 </LI>
 </OL>
          
 <P>
-<H2><A NAME="ss7.5">7.5 ��ѽs�边����--�uJOE�v</A>
+<H2><A NAME="ss7.5">7.5 文書編輯器介紹--「JOE」</A>
 </H2>
 
-<P>�o�O�@�M��ѽs��n��A�����bDOS���U��PE2�A�OLinux�t�Τ��̨��w�諸��ѽs
-��n��A���z�w�˦nLinux��Ajoe�o�M��ѽs��n��N�w�g�w�˦n�F�AŪ�̤���
-�n�A�w�ˤ@���C
-<P>���]�ڭ̭n��joe�g�@�Ӥ�r�ɮ�test�A�u�n����:
+<P>這是一套文書編輯軟體，類似在DOS之下的PE2，是Linux系統中最受歡迎的文書編
+輯軟體，當您安裝好Linux後，joe這套文書編輯軟體就已經安裝好了，讀者不需
+要再安裝一次。
+<P>假設我們要用joe寫一個文字檔案test，只要執行:
 <P>
 <BLOCKQUOTE><CODE>
 <PRE>
 joe test
 </PRE>
 </CODE></BLOCKQUOTE>
-<P>�N�i�H�}�l�s���r�ɤF�Cjoe�n�餤���Ҧh���O�i�H�ϥΡAŪ�̥u�n��
-(Ctrl+k+h)�N�|�X�{Joe�n�骺���O�\�໡���A�p�U�ϩҥ�:             
+<P>就可以開始編輯文字檔了。joe軟體中有所多指令可以使用，讀者只要按
+(Ctrl+k+h)就會出現Joe軟體的指令功能說明，如下圖所示:             
 <P>
 <P>
-<P>��Ū�̪`�N�b���O�������A�i^�j�Y�N���iCtrl�j��A�ڭ̦b�o��²�������Ф@�U���O
-���ϥ�:
+<P>請讀者注意在指令說明中，【^】即代表【Ctrl】鍵，我們在這裡簡略的介紹一下指令
+的使用:
 <P>
 <PRE>
-�� ��г���(CURSOR)
-�iCtrl+f�j      �N��Щ��k����       
-�iCtrl+b�j      �N��Щ�������
-�iCtrl+p�j      �N��Щ��W����
-�iCtrl+n�j      �N��Щ��U����
-�iCtrl+z�j      �N��Щ������ʤ@�Ӷ��j
-�iCtrl+x�j      �N��Щ��k���ʤ@�Ӷ��j
+● 游標部分(CURSOR)
+【Ctrl+f】      將游標往右移動       
+【Ctrl+b】      將游標往左移動
+【Ctrl+p】      將游標往上移動
+【Ctrl+n】      將游標往下移動
+【Ctrl+z】      將游標往左移動一個間隔
+【Ctrl+x】      將游標往右移動一個間隔
 </PRE>
  
 <P>
 <PRE>
-�� �j�M����(SEARCH)
-�iCtrl+k+f�j  �j�M��r
-�iCtrl+l�j    �p�G���e�����O�S���j�M��A�Q�n����r�A���o�ӫ��O�N�|�~�򩹤U
-              �j�M�A�n�䪺��r
+● 搜尋部分(SEARCH)
+【Ctrl+k+f】  搜尋單字
+【Ctrl+l】    如果之前的指令沒有搜尋到你想要的單字，按這個指令就會繼續往下
+              搜尋你要找的單字
 </PRE>
 <P>
 <PRE>
-�� �峹������(GO TO)
-�iCtrl+u�j      �N�峹�V�W���ʤ@�Ӭq��
-�iCtrl+v�j      �N�峹�V�U���ʤ@�Ӭq��
-�iCtrl+a�j      �N��в���y�l���̫e��
-�iCtrl+e�j      �N��в���y�l���̥���
-�iCtrl+k+u�j    �N��в���峹���̫e��
-�iCtrl+k+v�j    �N��в���峹���̥���
-�iCtrl+k+l�j    �N��в���峹���ĴX��
+● 文章的移動(GO TO)
+【Ctrl+u】      將文章向上移動一個段落
+【Ctrl+v】      將文章向下移動一個段落
+【Ctrl+a】      將游標移到句子的最前端
+【Ctrl+e】      將游標移到句子的最末端
+【Ctrl+k+u】    將游標移到文章的最前端
+【Ctrl+k+v】    將游標移到文章的最末端
+【Ctrl+k+l】    將游標移到文章的第幾行
 </PRE>
 <P>
 <PRE>
-�� �Хܰ϶�(BLOCK)
-�iCtrl+k+b�j   �Хܰ϶����_�Y                   
-�iCtrl+k+k�j   �Хܰ϶�������
-�iCtrl+k+m�j   �N�ҼХܪ��϶��h��
-�iCtrl+k+c�j   �N�ҼХܪ��϶�����
-�iCtrl+k+w�j   �N�ҼХܪ��϶��x�s���t�@���ɮ�
-�iCtrl+k+y�j   �N�ҼХܪ��϶��R��
-�iCtrl+k+/�j   �N�ҼХܪ��϶�
+● 標示區塊(BLOCK)
+【Ctrl+k+b】   標示區塊的起頭                   
+【Ctrl+k+k】   標示區塊的尾端
+【Ctrl+k+m】   將所標示的區塊搬移
+【Ctrl+k+c】   將所標示的區塊拷貝
+【Ctrl+k+w】   將所標示的區塊儲存成另一個檔案
+【Ctrl+k+y】   將所標示的區塊刪除
+【Ctrl+k+/】   將所標示的區塊
 </PRE>
 <P>
 <PRE>
-�� �R������(DELETE)
-�iCtrl+d�j     �R���@�Ӧr��
-�iCtrl+y�j     �R���@��r
-�iCtrl+w�j     �R����ЩҦb�k�䪺��r
-�iCtrl+o�j     �R����ЩҦb���䪺��r
-�iCtrl+j�j     �R����ЩҦb�k�䪺�@���r       
+● 刪除部分(DELETE)
+【Ctrl+d】     刪除一個字元
+【Ctrl+y】     刪除一行字
+【Ctrl+w】     刪除游標所在右邊的單字
+【Ctrl+o】     刪除游標所在左邊的單字
+【Ctrl+j】     刪除游標所在右邊的一行單字       
 </PRE>
 <P>
 <PRE>
-�� ��r����(MISC)
-�iCtrl+t�j     ��ܿﶵ
-�iCtrl+@�j     ���J��r
+● 文字部分(MISC)
+【Ctrl+t】     選擇選項
+【Ctrl+@】     插入文字
 </PRE>
 <P>
 <PRE>
-�� ���}����(EXIT)
-�iCtrl+k+x�j   �x�s�ɮרåB���}
-�iCtrl+c�j     ���x�s���}
+● 離開部分(EXIT)
+【Ctrl+k+x】   儲存檔案並且離開
+【Ctrl+c】     不儲存離開
 </PRE>
-�j
+】
 <P>
 <PRE>
-�� ��󳡤�(FILE)
-�iCtrl+k+e�j   �s��t�@�ӷs�ɮ�
-�iCtrl+k+r�j   ���J�t�@���ɮפ��e
-�iCtrl+k+d�j   �x�s�ɮצ������}
+● 文件部分(FILE)
+【Ctrl+k+e】   編輯另一個新檔案
+【Ctrl+k+r】   插入另一個檔案內容
+【Ctrl+k+d】   儲存檔案但不離開
 </PRE>
 <P>
-<H2><A NAME="ss7.6">7.6 ���Y�B�����Y���u��        </A>
+<H2><A NAME="ss7.6">7.6 壓縮、解壓縮的工具        </A>
 </H2>
 
-<P>���U���Ф@�Ǳ`�Ϊ������Y�B���Y�u��:
+<P>底下介紹一些常用的解壓縮、壓縮工具:
 <OL>
 <LI>gzip.gz
 <P>  
--9 �Ʀr9���̨ܳ����Y�A�p�G�O-l���ܡA���ܧֳt���Y<BR>
--r recusive�A�p�G�z�Q�n����ӥؿ����U���ɮת��ܴN�|
-�Ψ�̤@�ѼơA
-���O���O�|�侀�U���ɮװ��ӧO���Y�A���U�|���Ы��N��ӥؿ������@��
-�ɮסD
+-9 數字9表示最佳壓縮，如果是-l的話，表示快速壓縮<BR>
+-r recusive，如果您想要壓整個目錄底下的檔案的話就會
+用到最一參數，
+但是此是會對底下的檔案做個別壓縮，底下會介紹怎麼將整個目錄壓成一個
+檔案．
 <P>
 </LI>
-<LI> gunzip��.gz���ɮ� 
-<P>-r resusive�A�Mgzip-d-r file.gz�\��ۦP<BR>
--d decompress�A�����Y���N��!<BR>          
+<LI> gunzip解.gz的檔案 
+<P>-r resusive，和gzip-d-r file.gz功能相同<BR>
+-d decompress，解壓縮的意思!<BR>          
 <P>
 </LI>
 <LI> tar
-<P>-c.tar.gz or .tgz���ͤ@�����Y��<BR>
--z �N�ؿ�tar�_�ӫ�A��gzip����ɮצA���Y�_��<BR>
--f �ҨϥΤ����Y���ɦW<BR>
-ex:tar-czf mail.tar.gz mbox/�i�H�Nmbox��ӥؿ����Y���@���ɮ�<BR>
--x ��.tar.gz or .tgz�N�ɮ�tar�}�A�p�G�A�t�X-z���ܴN�ܦ������Y�D<BR>
+<P>-c.tar.gz or .tgz產生一個壓縮檔<BR>
+-z 將目錄tar起來後再用gzip把該檔案再壓縮起來<BR>
+-f 所使用之壓縮後檔名<BR>
+ex:tar-czf mail.tar.gz mbox/可以將mbox整個目錄壓縮成一個檔案<BR>
+-x 解.tar.gz or .tgz將檔案tar開，如果再配合-z的話就變成解壓縮．<BR>
 ex: tar-zxf mail.tar.gz<BR>
-compress.Z-d���Y���DZ���ɮ�<BR>
-uncompress��.Z�ɮת�����uncompress mail.Z�N�i�����Y�F�D<BR>
+compress.Z-d壓縮成．Z的檔案<BR>
+uncompress解.Z檔案直接打uncompress mail.Z就可解壓縮了．<BR>
 <P>
 </LI>
 </OL>
            
 <P>
-<H2><A NAME="ss7.7">7.7 LINUX�򥻪������\��        </A>
+<H2><A NAME="ss7.7">7.7 LINUX基本的網路功能        </A>
 </H2>
 
 <P>
 <OL>
-<LI>Linux ��������O
+<LI>Linux 的網路能力
 <P> 
-�Ѧr���W�ݨӡA�����N���F�q���M�q����������ƥ洫�A�d��q�ܧC������ڳs
-�u���w(protocol)���u������ƥ洫�C������w(network protocol)�����N�O
-�Q�z�L�����洫��ƪ�����A�����P�N�����q�覡�C
-���P��������w�Φb���P�������h���A�b����h�A�o�Ӽh���y�z���O�줸��ƶ�
-�骺�C���A���O�q�l�A�o�ɨϥΪ���w�N�OEthernet�άOToken Ring�A���L�O�A
-���ε{���ä��O�b����h����w�B�@�A�Ҩ̴`����w�A�O�ΨӳB�z�����ơC�o
-�Ǩ�w�]�A�FNovell��Internet Packet Exchange(IPX)�A�M���W��Transmission
-Control Protocol/Internet Protocol(TCP/IP)�C                      
-<P>������w���h���i�H�H�����ҫ��Ӫ��ܡA����ڼзǲ�´(International
-Standards Organization�AISO)�ҵo�i�X�A�C�Ӽh�����}��t�Τ��sOSI(Open
-Systems Interconnection)�ѦҼҫ��N�O�@�ӨҤl�A
-�зǪ�������w���OTCP/IP�A�O�q�����s�Φ��ϰ�����P�s������A������
-����A��w���\�o�Ǥp���������s�A�{�b�Ҽ��������s�����N�OInternet�A   
+由字面上看來，網路代表了電腦和電腦彼此的資料交換，範圍從很低階的實際連
+線到協定(protocol)中真正的資料交換。網路協定(network protocol)指的就是
+想透過網路交換資料的雙方，彼此同意的溝通方式。
+不同的網路協定用在不同的網路層次，在實體層，這個層次描述的是位元資料傳
+輸的媒介，像是電纜，這時使用的協定就是Ethernet或是Token Ring，不過呢，
+應用程式並不是在實體層的協定運作，所依循的協定，是用來處理成串資料。這
+些協定包括了Novell的Internet Packet Exchange(IPX)，和知名的Transmission
+Control Protocol/Internet Protocol(TCP/IP)。                      
+<P>網路協定的層次可以以網路模型來表示，像國際標準組織(International
+Standards Organization，ISO)所發展出，七個層次的開放系統互連OSI(Open
+Systems Interconnection)參考模型就是一個例子，
+標準的網路協定像是TCP/IP，是電腦互連形成區域網路與廣域網路，成長的
+關鍵，協定允許這些小網路的互連，現在所熟知的互連網路就是Internet，   
 <P>
 <UL>
 <LI>TCP/IP  
-<P>Unix��������O�O�����̭ȱo�ٹD���a��A�S�O���O�A���ҩP����TCP/IP��
-�w�A�۲Ĥ@���b1982�~�X�{�bBSD UNIX����A�N�w�g�OUnix�̪��@����
-�F�A�{�bTCP/IP�O���Internet�s���������w�C
-Linux�䴩TCP/IP�H��telnet�Aftp�Arlogin�o�Ǻ������ε{���A�b����������
-�h�ALinux���۳\�hEthernet�d���X�ʵ{���A���Mtoken ring�èS��X�i
-Linux�A���L�A�٬O�i�H�bInternet���o�i�̤W���otoken ring�X�ʵ{���C
-Linux�䴩TCP/IP�@�o��Internet�v�T�̤j����w�O�ܦ۵M���A�]��Linux��
-�ֳt�o�i�O�Ӧ۳\�h�@�ɦU�a�o�i�̪��X�@�A�ӳo�X�@�N�O�z�LInternet�A
-<P>Linux�]�t�FBerkeley Socket(�o�˩R�W����]�O�]��1982�~socket�����Ĥ@
-���bBerkeley Unix�X�{)�w�o�O�ӫܬy�檺TCP/IP�����{���]�p����.�墨��
-��C�{���]�p�g�窺�H�ASocket�����O�Ѧn�X��C�����Y��(header files)�A�H
-�δX�ӯ����A�إ߳s�u�P���o��ƪ��禡�Ҳզ��C
-�A�i�H�ϥ�Berkeley Socket�{�������h�o�iInternet�u��A���OWorld Wide Web
-(WWW)�s�����C�]���j������TCP/IP�{�����O��Socket�����A�Ӥ]�]��
-Linux�䴩socket�����A�ҥH�n���o�ǵ{���i�H�bLinux�W����O�ܮe�����C  
+<P>Unix的網路能力是早期最值得稱道的地方，特別的是，眾所周知的TCP/IP協
+定，自第一次在1982年出現在BSD UNIX之後，就已經是Unix裡的一部份
+了，現在TCP/IP是整個Internet廣域網路的協定。
+Linux支援TCP/IP以及telnet，ftp，rlogin這些網路應用程式，在網路的實體
+層，Linux有著許多Ethernet卡的驅動程式，雖然token ring並沒整合進
+Linux，不過你還是可以在Internet的發展者上取得token ring驅動程式。
+Linux支援TCP/IP一這個Internet影響最大的協定是很自然的，因為Linux的
+快速發展是來自許多世界各地發展者的合作，而這合作就是透過Internet，
+<P>Linux包含了Berkeley Socket(這樣命名的原因是因為1982年socket介面第一
+次在Berkeley Unix出現)─這是個很流行的TCP/IP網路程式設計介面.對那些
+有C程式設計經驗的人，Socket介面是由好幾個C的標頭檔(header files)，以
+及幾個能讓你建立連線與收發資料的函式所組成。
+你可以使用Berkeley Socket程式介面去發展Internet工具，像是World Wide Web
+(WWW)瀏灠器。因為大部份的TCP/IP程式都是用Socket介面，而也因著
+Linux支援socket介面，所以要讓這些程式可以在Linux上執行是很容易的。  
 <P>
 </LI>
-<LI>Slip�MPPP  
-<P>���O�C�ӤH�����Ethernet�sInternet�A�S�O�O���Ǧb�a�̨ϥ�Linux���H�A���@
-�ӥi�H�z�L�q�ܽu�P�ƾھ��A�ϥ�TCP/IP��w�PIntetnet�s�u����k�A�����A��
-�n�@�Ӧ��A��(server)�w�o�O�@�ӻPInternet�s�u�åB���������s�u���t�ΡC  
-<P>�{�b�A��Internet�A�Ȩ�����(Internet Service Providers- ISP)���ѳo�˪��s�u
-���O�A��.�p�G�A���Q����A���b�A�u�@���a���ݬݬO���O�����ѳo�تA
-�ȡA�o�ëD���i���A�S�O�p�G�A�O��Linux PC�b�a�����q�o�iUNIX�n
-��A���q�̫ܥi��N�|���C
-���A�Q�z�Lserver�sInternet�A����o�Ӧ��A���ܤֱo�䴩�U����ب�w����
-���@��:
+<LI>Slip和PPP  
+<P>不是每個人都能用Ethernet連Internet，特別是那些在家裡使用Linux的人，有一
+個可以透過電話線與數據機，使用TCP/IP協定與Intetnet連線的方法，首先你需
+要一個伺服器(server)─這是一個與Internet連線並且接受撥號連線的系統。  
+<P>現在，有Internet服務供應商(Internet Service Providers- ISP)提供這樣的連線
+收費服務.如果你不想花錢，那在你工作的地方找看看是不是有提供這種服
+務，這並非不可能喔，特別如果你是用Linux PC在家幫公司發展UNIX軟
+體，公司裡很可能就會有。
+當你想透過server連Internet，那麼這個伺服器至少得支援下面兩種協定的其
+中一種:
 <P>Serial Line Internet Protocol(SLIP)
 Point-to-Point Protocol(PPP)
-<P>�o��س��䴩�b�q�ܽu�W�ϥ�TCP/IP��w�ASLIP��PPP²��A���L����¡A
-PPP�䴩���h���s�u�S�ʡA�n�F���s�u�A�A�t�ΤW�Ϊ���w�o�Mserver�@�ˡC 
-<P>SLIP�MPPP�o���Linux���䴩�A�A�i�H��Linux�ܦ�SLIP��PPP server��
-����Genie���]�w���ؤ��|�����p��h�]�wppp�C  
+<P>這兩種都支援在電話線上使用TCP/IP協定，SLIP比PPP簡單，不過比較舊，
+PPP支援較多的連線特性，要達成連線，你系統上用的協定得和server一樣。 
+<P>SLIP和PPP這兩種Linux都支援，你可以讓Linux變成SLIP或PPP server第
+六章Genie的設定項目中會說明如何去設定ppp。  
 <P>
 </LI>
 <LI>NFS  
 <A NAME="NFS-ref"></A>  
 <P> 
-�b MSDOS�M Microsfot Windows�@�ɸ̡A�A���ӹ��ɮצ��A��(file server)��
-�����A�o�O�@�Ӻ��@���n�ɮסA������L�b�����W���t�Υi�H���ɳo���ɮת�
-�t�ΡC�Ҧ��b�����W�� PC �����ɤ@�Ʀh�ӺϺо� �A�b DOS�M Windows���A
-server���ɥX�Ӫ��Ϻо��b�ϥΪ̬ݨӸ�L���������W�Ϻо��O�@�˪��A���|
-���@�ӺϺо����X�A���O U�A�b PC �������A�n�����ɮפ��ɡA�`�O�ϥ�
-Novell�� Netware�άO Microsoft �� LAN Manager��w �C
-�ɮפ��ɪ��[���P�˦s�b�� UNIX�ANetwork File System(NFS)�N���ѤF�@�Ӹ�
-�V�����ۤ��s���ɮת��зǤ覡�A��ϥΪ̦Ө��A����t�Ϊ��ɮ׬O�H���a�t
-�Υؿ����Φ��X�{ �C
-Linux�@�˦� NFS�A�A�i�H���ɧALinux�t�θ̪��ؿ����P�ˤ䴩 NFS ���t��
-���ǧQ�� NFS �s���A�ɮת��t�Τ��@�w�n�O UNIX �A�]�N�O���A�A�i�H��
-Linux���@�ɮצ��A���A�����Ƕ] DOS�M Windows�� PC �ϥΡAXLinux����
-Genie�ʺA�]�w���ؤ��|��i�@�B�бz�� NFS �[�]�_�� �C
+在 MSDOS和 Microsfot Windows世界裡，你應該對檔案伺服器(file server)有
+概念，這是一個維護重要檔案，並讓其他在網路上的系統可以分享這些檔案的
+系統。所有在網路上的 PC 都分享一副多個磁碟機 ，在 DOS和 Windows中，
+server分享出來的磁碟機在使用者看來跟他本身機器上磁碟機是一樣的，都會
+有一個磁碟機號碼，像是 U，在 PC 網路中，要做到檔案分享，常是使用
+Novell的 Netware或是 Microsoft 的 LAN Manager協定 。
+檔案分享的觀念同樣存在於 UNIX，Network File System(NFS)就提供了一個跨
+越網路相互存取檔案的標準方式，對使用者而言，遠方系統的檔案是以本地系
+統目錄的形式出現 。
+Linux一樣有 NFS，你可以分享你Linux系統裡的目錄給同樣支援 NFS 的系統
+那些利用 NFS 存取你檔案的系統不一定要是 UNIX ，也就是說，你可以把
+Linux當作檔案伺服器，給那些跑 DOS和 Windows的 PC 使用，XLinux中的
+Genie動態設定項目中會更進一步教您把 NFS 架設起來 。
 <P>
 </LI>
 <LI>UUCP
-<P>UUCP(UNIX-to-UNIX Copy)�O�@�Ӹ��¦��O���ܭ��n����w.�o�Ө�w���M�O
-�q�l�l��M�����s�D(news)�洫����k���@�C�ϥΪ̺����s�D(USENET news)-
-Internet���G�i��t�Ϊ��o���A�ʥͤFUUCP�A���q���O�H�q�ܽu�MModem�s
-�q�ɡA���O�HUUCP�o�Ө�w�ӥ洫�q�l�l��T���A�s�D���ءA�ɮ׵����C��
-���W�A�o�ǰT���M�s�D�O�H���O���覡�q�@�x�q���Ǩ�t�@�x�C�o��O�D�`
-�C�C���M�{�b���q�l�l��M�s�D�j���O�b�����_�s�u�������ǰe�A��UUCP
-���M���ѤF�\�h�����t�Τ@�ӥi�H�ϥ�USENET news�M�q�l�l��²����
-�k�A�P�ɤ]�����̦���Internet���@���l�C
-Linux�̦�UUCP�C�p�G�A��Modem�A�ӥB�A�Q�Q�μ������覡�M�䥦�t�Υ�   
-���ɮסA�i�H�Ҽ{UUCP�A
+<P>UUCP(UNIX-to-UNIX Copy)是一個較舊但是仍很重要的協定.這個協定仍然是
+電子郵件和網路新聞(news)交換的方法之一。使用者網路新聞(USENET news)-
+Internet的佈告欄系統的發明，催生了UUCP，當電腦是以電話線和Modem連
+通時，都是以UUCP這個協定來交換電子郵件訊息，新聞項目，檔案等等。基
+本上，這些訊息和新聞是以接力的方式從一台電腦傳到另一台。這花費非常
+低。雖然現在的電子郵件和新聞大都是在不間斷連線的網路傳送，但UUCP
+仍然提供了許多偏遠系統一個可以使用USENET news和電子郵件的簡易方
+法，同時也讓它們成為Internet的一份子。
+Linux裡有UUCP。如果你有Modem，而且你想利用撥接的方式和其它系統交   
+換檔案，可以考慮UUCP，
 <P>
 </LI>
 </UL>
 </LI>
-<LI>�򥻺������O²��
+<LI>基本網路指令簡介
 <UL>
-<LI>telnet���O(�P���ݲ׺ݾ��s�u)
-<P>�bInternet�W�ѩ󦳫ܦh�����I��}�A��Ū�̷Q�n�i�J���ݪ��q���ɡA�i�H�Q��telnet��
-���P���ݲ׺ݾ��s�u���ʧ@�C��y�k�p�U:
-<P>�� <B>telnet�`�λy�k :        �i telnet   ������}/�Ӿ��W�� �j</B>
+<LI>telnet指令(與遠端終端機連線)
+<P>在Internet上由於有很多的網點位址，當讀者想要進入遠端的電腦時，可以利用telnet來
+做與遠端終端機連線的動作。其語法如下:
+<P>● <B>telnet常用語法 :        【 telnet   網路位址/該機名稱 】</B>
 <P>
 </LI>
-<LI>ftp���O(�U��/�W���ɮ�)
-<P>ftp �O�Ω� Internet �W���ɮ׶ǿ�u��C
-<P>�� <B>ftp �y�k:  �i ftp   ������}/�Ӿ��W�� �j</B>
-<P>���]Ū�̥�ftp�Q�n�h��j�U���ɮר�Ū�̦ۤv���q�����A�i�H�o�˰���
+<LI>ftp指令(下傳/上載檔案)
+<P>ftp 是用於 Internet 上的檔案傳輸工具。
+<P>● <B>ftp 語法:  【 ftp   網路位址/該機名稱 】</B>
+<P>假設讀者用ftp想要去交大下傳檔案到讀者自己的電腦內，可以這樣執行
 <P>
 <BLOCKQUOTE><CODE>
 <PRE>
 ftp  nctuccca.edu.tw                  
 </PRE>
 </CODE></BLOCKQUOTE>
-<P>�@�}�l��j�� ftp server�|�߰�Ū�̪� login
-name�A�ѩ�ڭ̳��S���b��j���b���A�G�b
-����login name����Janonymous�Ϊ�ftp�A���U�ӷ|�߰�Ū��password�A�o��password
-�N��JŪ�̦ۤv��E-mail�b���Y�i�A�o�˴N��i�J��j��ftp server�h����Ū�̷Q�n����
-�סC
-<P>�b�����ɮפ��e�A�ڭ̳��|���X�ӫ��O�ʧ@�A�Ĥ@�ӫ��O��bin�A�o�O�]�w�b�ǿ��ɮ׮ɡA
-�ΤG�i��ibinary �j�Ӷǿ�A�ĤG�ӫ��O��hash�A�����O�O�����C�ǿ�1024bytes�A�N�|�X
-�{�@��#�A�Φ��i�[��X�b�ǿ�ɬO�_���_�u�����εo�͡A�ĤT�ӫ��O��prom�A�����O�O�b
-�ǿ��ɮ׮�������ͥ\��A�H�W�[�ǿ�t�v�C  
-�b�����W�����ʧ@��A�N�n�u���������ɮסA�䮻�ɪ����O����ӡA�@�Ӭ�get�A�o�ӫ��O
-�u��@�������@���ɮסA�ӥB�b�U���O�ɡA�䮻�����ɦW����ϥθU�Φr��; 
-�t�@�Ӭ�mget�A�o�ӫ��O�@���i�����ƭ��ɮסA�ӥB�b�U���O�ɡA�䮻�����ɦW�i�ϥθU�Φr���C 
-<P>�ܩ�W���ɮת����O��put�Pmput�A��Ϊk�Pget�Bmget�����ۦP�A�b���N���h�[�֭z�C�Ӧb
-�W�����ɫ�A�O���@�ǭ���A�䭭�Ū�̥����b�Ӿ��W��Ū�̪��b����server���Ѧ��v��
-ftp server�A�o�ˤ~��W���ɮסC
-<P>�n���}ftp�A�Х�bye��exit���}�C
+<P>一開始交大的 ftp server會詢問讀者的 login
+name，由於我們都沒有在交大有帳號，故在
+此的login name都鍵入anonymous或者ftp，接下來會詢問讀者password，這時password
+就輸入讀者自己的E-mail帳號即可，這樣就能進入交大的ftp server去捉取讀者想要的檔
+案。
+<P>在捉取檔案之前，我們都會做幾個指令動作，第一個指令為bin，這是設定在傳輸檔案時，
+用二進位【binary 】來傳輸，第二個指令為hash，此指令是說當每傳輸1024bytes，就會出
+現一個#，用此可觀察出在傳輸時是否有斷線的情形發生，第三個指令為prom，此指令是在
+傳輸檔案時關掉交談功能，以增加傳輸速率。  
+在做完上面的動作後，就要真正的捉取檔案，其捉檔的指令有兩個，一個為get，這個指令
+只能一次捉取一個檔案，而且在下指令時，其捉取的檔名不能使用萬用字元; 
+另一個為mget，這個指令一次可捉取數個檔案，而且在下指令時，其捉取的檔名可使用萬用字元。 
+<P>至於上載檔案的指令為put與mput，其用法與get、mget完全相同，在此就不多加累述。而在
+上載的時後，是有一些限制，其限制為讀者必須在該機上有讀者的帳號或server提供此權限
+ftp server，這樣才行上載檔案。
+<P>要離開ftp，請打bye或exit離開。
 <P>
 </LI>
 <LI>ncftp
-<P>�b���`�n���Ъ��O�@�M������ftp��Shareware�n��wncftp�A�������W�Onice ftp�A
-�U�W��q�O�@�M���n�Ϊ�ftp�{���A���[�j�F�@�Ƕǲ�ftp���\��A�ר�O�i�H�N���
-�ؿ��]�t�l�ؿ����㪺�h�^�ӡC
-<P>���o�ӵ{����ftp������覡�j�P�p���A���]�ڭ̭n�s��192.192.73.9�o�x
-FTP Server�A�d�Ҧp�U:
+<P>在本節要介紹的是一套有關於ftp的Shareware軟體─ncftp，它的全名是nice ftp，
+顧名思義是一套滿好用的ftp程式，它加強了一些傳統ftp的功能，尤其是可以將整個
+目錄包含子目錄完整的搬回來。
+<P>其實這個程式跟ftp的執行方式大同小異，假設我們要連往192.192.73.9這台
+FTP Server，範例如下:
 <P>
 <BLOCKQUOTE><CODE>
 <PRE>
-ncftp �i -u user �j 192.192.73.9
+ncftp 【 -u user 】 192.192.73.9
 </PRE>
 </CODE></BLOCKQUOTE>
-<P>�p�G�S��-u�ﶵ�A�h�|�۰ʥ�anonymous�������i�JFTP Server�A
-�A�i�H�b�imisc>�j�o�Ӵ��ܤU��J�A�n���檺���O�A���ncftp��ftp�����O�\��
-�O�j�P�p�����AŪ�̥i�H����i?�j�Ӭd��ncftp�o�ӵ{�������O�A�A�i�H�o�{���O
-�j�������O�@�˪��A���@�I���P���O�Ancftp�o�ӵ{���̦��ǫ��O�i�H�t�~�[�W
-�ѼƨӴ������O���\��A
-<P>�d�Ҧp�U:
-<P>misc>?get    ���b���ܲŸ��U�A����i ? �j�Ӭd�ݡi get �j���O���\��
+<P>如果沒有-u選項，則會自動用anonymous的身分進入FTP Server，
+你可以在【misc>】這個提示下輸入你要執行的指令，其實ncftp跟ftp的指令功能
+是大同小異的，讀者可以執行【?】來查看ncftp這個程式的指令，你可以發現指令
+大部分都是一樣的，有一點不同的是，ncftp這個程式裡有些指令可以另外加上
+參數來提高指令的功能，
+<P>範例如下:
+<P>misc>?get    ←在提示符號下，執行【 ? 】來查看【 get 】指令的功能
 <P>
 <BLOCKQUOTE><CODE>
 <PRE>
 get: fetches files from the remote host.
-Usage: get �i-flags�jfilel �ifile2...�j
+Usage: get 【-flags】filel 【file2...】
 Flags:
 -C   : Force continuation (reget).
 -f   : Force overwrite.
@@ -1337,100 +1337,100 @@ Examples:
  get -z WIN.INI ~/junk/windows-init-file
 </PRE>
 </CODE></BLOCKQUOTE>
-<P>�q�H�W���������A�ڭ̥i�H�M�������D�iget -R �ؿ� �j�i�H�N��ӥؿ����ǿ�ܧA������
-�W�A�iget -z �j�i�H�����ɮצW�١A�ҥH���̫�ĳŪ�̭̭n�n�n�����Ρi?�j�ӤF�ѨC
-�@�ӫ��O���\��A�|���U��Ū�̭̹� ncftp �o�ӵ{����[�����x�C
+<P>從以上的說明中，我們可以清楚的知道【get -R 目錄 】可以將整個目錄都傳輸至你的機器
+上，【get -z 】可以改變檔案名稱，所以筆者建議讀者們要好好的應用【?】來了解每
+一個指令的功能，會有助於讀者們對 ncftp 這個程式更加的熟悉。
 <P>
 </LI>
 </UL>
 
 </LI>
-<LI>mail���O (���H�P�H�H)
-<P>��Ū�̭n�b���W�g�H��Ū�̪��B�ͮɡAŪ�̥i�H�o�˰��� :
+<LI>mail指令 (收信與寄信)
+<P>當讀者要在站上寫信給讀者的朋友時，讀者可以這樣執行 :
 <BLOCKQUOTE><CODE>
 <PRE>
  
-mail (��誺)E-mail Address
+mail (對方的)E-mail Address
 </PRE>
 </CODE></BLOCKQUOTE>
  
-<P>���]�ڭ̭n�H�@�ʫH�� www.xlinux.com.tw �o�x������ partner �ϥΪ̡A�d�Ҧp�U :
+<P>假設我們要寄一封信給 www.xlinux.com.tw 這台機器的 partner 使用者，範例如下 :
 <P>
 <BLOCKQUOTE><CODE>
 <PRE>
 mail partner@www.xlinux.com.tw
 </PRE>
 </CODE></BLOCKQUOTE>
-<P>Subject���o�ʫH�����D�A�ڭ̼gtest�A��Enter��A�N�O�o�ʫH�����e�A�ڭ̬O�gthis
-is test letter.�A�g�����e��A��Enter�A�A���i.�j���A�A��Enter�A�o�ʫH�N�H�X�h�F�C
-���pŪ�̭n�H�H����H�A��Mail Server�O��Ū�̦P�@�x�������AŪ�̥u�n����mail
-�ϥΪ̪��W�r�N�i�H�F�C�S�Ϊ�Ū�̬O�n�H�@�Ӥ�r�ɩάOŪ�̽s�n���ɮסA
-Ū�̥i�H�o�˰��� :      
+<P>Subject為這封信的標題，我們寫test，按Enter後，就是這封信的內容，我們是寫this
+is test letter.，寫完內容後，按Enter，再按【.】號，再按Enter，這封信就寄出去了。
+假如讀者要寄信的對象，其Mail Server是跟讀者同一台機器的，讀者只要執行mail
+使用者的名字就可以了。又或者讀者是要寄一個文字檔或是讀者編好的檔案，
+讀者可以這樣執行 :      
 <BLOCKQUOTE><CODE>
 <PRE>
  
-mail �ϥΪ̪�E-mail Address &lt; ��r�ɮ�
+mail 使用者的E-mail Address &lt; 文字檔案
 </PRE>
 </CODE></BLOCKQUOTE>
-<P>���]�ڭn�Htest.doc�� www.xlinux.com.tw �o�x����partner�o�ӨϥΪ̡A�h�O�n�o�˼g :
+<P>假設我要寄test.doc給 www.xlinux.com.tw 這台機器partner這個使用者，則是要這樣寫 :
 <BLOCKQUOTE><CODE>
 <PRE>
 mail partner@www.xlinux.com.tw  &lt;  test. doc
 </PRE>
 </CODE></BLOCKQUOTE>
  
-<P>��Ū�̦��s���H��ɡA�t�η|�q��Ū�̦��s�H��i�ӡAŪ�̥u�n����   
+<P>當讀者有新的信件時，系統會通知讀者有新信件進來，讀者只要執行   
 <BLOCKQUOTE><CODE>
 <PRE>
 mail
 </PRE>
 </CODE></BLOCKQUOTE>
-<P>���[����ѼơA�N�i�H�ݫH�F�C
-<P>You have new mail.  ���t�γq��Ū�̦��s�H��A���U�Ӱ���mail�ݫH�C�d�Ҧp�U :
+<P>不加任何參數，就可以看信了。
+<P>You have new mail.  ←系統通知讀者有新信件，接下來執行mail看信。範例如下 :
 <P>
 <BLOCKQUOTE><CODE>
 <PRE>
 Mail version 5.5  6/1/90.  Type? for help.
 "/var/mail/lee" :   1 message 1 new
 >N 1 root  Fri  Aug  14  14 : 50  14/406  "test"
-&amp; 1       ������ 1�A�ݲĤ@�ʫH
+&amp; 1       ←執行 1，看第一封信
 Message 1 :
-From daemon Fri  Aug  14  14 : 50 : 17  1998               ���H�󪺤��
-Date : Fri , 14  Aug  1998  14 : 50 : 17  +0800   (CST)    ���H���F�����
-From : partner &lt;root�n   ���H�󪺨ӳB
-To : lee@xlinux.com.tw    �����H�̪�E-mail Address
-Subject : test           ���H�󪺼��D
+From daemon Fri  Aug  14  14 : 50 : 17  1998               ←信件的日期
+Date : Fri , 14  Aug  1998  14 : 50 : 17  +0800   (CST)    ←信件到達的日期
+From : partner &lt;root》   ←信件的來處
+To : lee@xlinux.com.tw    ←收信者的E-mail Address
+Subject : test           ←信件的標題
 
-This is test later.      ���H�󪺤��e
+This is test later.      ←信件的內容
 
 &amp;
 </PRE>
 </CODE></BLOCKQUOTE>
-<P>Ū�̭n�A�ݫH�ɡA�٥i�H�b���ܲŸ�"&amp;"���U�[�@�ǰѼơA�ӳB�z�H��A�d�Ҧp�U:
-<P>��Ū�̬ݧ��@�ʫH�A�n�R�����ɡA��
+<P>讀者要再看信時，還可以在提示符號"&amp;"之下加一些參數，來處理信件，範例如下:
+<P>當讀者看完一封信，要刪除它時，用
 <P><B>&amp; d</B>
-<P>���]Ū�̦���ܦh�ʫH�A�Q�R���Ĥ@�ʨ�Ĥ��ʡA�h��   
+<P>假設讀者收到很多封信，想刪除第一封到第五封，則用   
 <P><B>&amp; d 1-5</B>
-<P>�R�������h��
+<P>刪掉全部則用
 <P><B>&amp; d*</B>
-<P>�N�H�t�x�s���@���ɮ�(���]�ڭ̭n�N�H�t�s�@�ӷs�� letters)�h��
+<P>將信另儲存成一個檔案(假設我們要將信另存一個新檔 letters)則用
 <P><B>&amp; s letters</B>   
-<P>�^�H�h��
+<P>回信則用
 <P><B>&amp; r</B>
-<P>Ū�̷Q���D�䥦���Ѽƥ\��A�h��
+<P>讀者想知道其它的參數功能，則用
 <P><B>&amp; ?</B>
-<P>���}�t�ΡA�����N�ҬݹL���H�x�s��mbox�A�h��
+<P>離開系統，但不將所看過的信儲存成mbox，則用
 <P><B>&amp; x</B>
-<P>���}�t�ΡA�N�ҬݹL���H�x�s��mbox�A�h��
+<P>離開系統，將所看過的信儲存成mbox，則用
 <P><B>&amp; q</B>
 <P>
 </LI>
-<LI>ping ���O (���ջ��ݹq���O�_�b�u�W)
-<P>��Ū�̷Q�n�s�u��Y�@�ӻ��ݹq�����e�A�i�H���Q��ping�Ӵ��ջ�
-�ݪ��q���O�_���b�u�W�A�Y���b�u�W���ܡA�h�i�H���`���ϥΡA�Y�S���b�u�W�ɡA
-�i��O���ݪ��q���w�����A�Ϊ̬O�����u�W���x�D���w�����A�ҳy�������G�C
-<P>���YŪ�̦b�ϥκ����ɡAı�o�������`�AŪ�̥i���ۦ���դ@�U�A�K�i���D���@�x
-�D�������������εo�͡C���U�O ping 192.192.73.1�A�B���b�u�W���d�ҡA�p�U�ҥ�:
+<LI>ping 指令 (測試遠端電腦是否在線上)
+<P>當讀者想要連線到某一個遠端電腦之前，可以先利用ping來測試遠
+端的電腦是否有在線上，若有在線上的話，則可以正常的使用，若沒有在線上時，
+可能是遠端的電腦已關掉，或者是網路線上有台主機已當機，所造成的結果。
+<P>假若讀者在使用網路時，覺得網路異常，讀者可先自行測試一下，便可知道那一台
+主機有當機的情形發生。底下是 ping 192.192.73.1，且有在線上的範例，如下所示:
 <BLOCKQUOTE><CODE>
 <PRE>
 ping 192.73.18.6
@@ -1438,135 +1438,135 @@ ping 192.73.18.6
 </CODE></BLOCKQUOTE>
 <P>
 </LI>
-<LI>traceroute ���O (�C�X�Ҹg�L���h�D��)
-<P>�o�ӫ��O�O�C�X��Ū�̭n�s�u�컷������ɡA�һݭn�g�L���h�D���A�q
-�`�O�ΨӬd�ݺ����O�_�ॿ�`�B�@�C
-<P><B>tranceroute �`�Ϊ��y�k:     �itranceroute IP ��} �j</B> 
-<P>���]�ڭ̭n�d�X�q���������s��192.192.180.180 (�x���ӱM)
-�o�Ӧ�}�ɡA�n�g�L���ǹh�D���AŪ�̥i�H�o�˰���C
+<LI>traceroute 指令 (列出所經過的閘道器)
+<P>這個指令是列出當讀者要連線到遠方機器時，所需要經過的閘道器，通
+常是用來查看網路是否能正常運作。
+<P><B>tranceroute 常用的語法:     【tranceroute IP 位址 】</B> 
+<P>假設我們要查出從本身機器連到192.192.180.180 (台中商專)
+這個位址時，要經過哪些閘道器，讀者可以這樣執行。
 <BLOCKQUOTE><CODE>
 <PRE>
 wwwl : ~# traceroute  192.192.180.180
 </PRE>
 </CODE></BLOCKQUOTE>
-<P>�q�H�W���d�ҡA�ڭ̥i�H���D�q�����������n�s�� 192.192.180.180
-�o�Ӧ�}�ɡA�i��n�n�g�L���h�D���C
+<P>從以上的範例，我們可以知道從本身的機器要連到 192.192.180.180
+這個位址時，可能要要經過的閘道器。
 <P>
 <P>
 </LI>
-<LI>ifconfig ���O (�]�w�P�޲z��������)
-<P>�o�O�Ψӳ]�w�P�޲z�������������O�A���������x�������d�BPPP�BSLIP�BLoopback �����C���U�ӧڭ̤���ifconfig���@��Ϊk :
-<P><B>ifconfig �`�λy�k:�i ifconfig -a �j</B>
-<P>�o�i�H�d�ߩҦ��������������ΡA      
-<P>�|��  :�p�GŪ���h�æۤv���������������F�A�h�i�H����H�U���O�C
-<P><B>www1: /# ifconfig de0 down��������������C</B><BR>
-<B>www1: /# ifconfig de0 up���A�Ұʺ��������C</B><BR>
-<B>www1: /# ping 192.192.73.1���H�K�@�x���ݾ����C</B><BR>
+<LI>ifconfig 指令 (設定與管理網路介面)
+<P>這是用來設定與管理網路介面的指令，網路介面泛指網路卡、PPP、SLIP、Loopback 等等。接下來我們介紹ifconfig的一般用法 :
+<P><B>ifconfig 常用語法:【 ifconfig -a 】</B>
+<P>這可以查詢所有的網路介面情形，      
+<P>舉例  :如果讀者懷疑自己的網路介面當掉了，則可以執行以下指令。
+<P><B>www1: /# ifconfig de0 down←停止網路介面。</B><BR>
+<B>www1: /# ifconfig de0 up←再啟動網路介面。</B><BR>
+<B>www1: /# ping 192.192.73.1←隨便一台遠端機器。</B><BR>
 <P>
 </LI>
-<LI>netstat ���O (�d�ߺ����ϥα���)        
-<P>�o�@�ӫ��O�i�H��Ū�̬d�߲{�b�������ϥΥH�γs�u�����ΡC
-<P>netstat�`�Ϋ��O:�i netstat�u�Ѽơv�j
-<P>1.�{�b�ڭ̨Ӭd�ݺ��������y�q�A�i��J
-<P><B>netstat -i �xmore</B>
-<P>�H�U���N������:<BR>
-Ipkte:�����쪺�]�ʡC<BR>
-Ierrs:��������O���l���]�ʡC<BR>
-Opkts:�e�X�h���]�ʡC<BR>
-Oerrs:�e�X�h���O���l���]�ʡC<BR>
-Coll:���ܵo�͸I�������ơC<BR>
-<P>2.�d��TCP�����s�u�����ΡA�i��J
-<P><B>netstat -t �xmore</B>  
-<P>3.�d�M�Ҧ��������s�u�����ΡA�i��J
-<P><B>netstat -a �xmore</B>
+<LI>netstat 指令 (查詢網路使用情形)        
+<P>這一個指令可以讓讀者查詢現在的網路使用以及連線的情形。
+<P>netstat常用指令:【 netstat「參數」】
+<P>1.現在我們來查看網路介面流量，可鍵入
+<P><B>netstat -i │more</B>
+<P>以下為代表的值:<BR>
+Ipkte:接收到的包封。<BR>
+Ierrs:接收到但是受損的包封。<BR>
+Opkts:送出去的包封。<BR>
+Oerrs:送出去但是受損的包封。<BR>
+Coll:表示發生碰撞的次數。<BR>
+<P>2.查詢TCP網路連線的情形，可鍵入
+<P><B>netstat -t │more</B>  
+<P>3.查尋所有路網路連線的情形，可鍵入
+<P><B>netstat -a │more</B>
 <P>
 </LI>
 </OL>
            
 <P>
-<H2><A NAME="ss7.8">7.8 QUOTA���ϥ�        </A>
+<H2><A NAME="ss7.8">7.8 QUOTA的使用        </A>
 </H2>
 
 <P>
 <OL>
-<LI> �w��Quota�ϥΪ̵w�ЪŶ��޲z:<BR>
-Quota���]�w�bXLinux���N���z��e���a�]�w��, �i�Ѧҥ���U�Ĥ���6.2�`<CODE>
-<A HREF="install-6.html#GEN-ref">Genie���w�]����</A></CODE>����User/Group/Quota�]�w�C<BR>
-�H�U�O�ǲΪ�Quota�]�w��k:
+<LI> 安裝Quota使用者硬碟空間管理:<BR>
+Quota的設定在XLinux中將讓您更容易地設定它, 可參考本手冊第六章6.2節<CODE>
+<A HREF="install-6.html#GEN-ref">Genie的預設項目</A></CODE>中的User/Group/Quota設定。<BR>
+以下是傳統的Quota設定方法:
 
-<P>�B�J:
+<P>步驟:
 <UL>
-<LI>�ק�/etc/stfab�<BR>
-�W�[�����partition�p/dev/hdaI/ext2defaults,usrquota, grpquota 11<BR><BR>
+<LI>修改/etc/stfab�<BR>
+增加欲限制的partition如/dev/hdaI/ext2defaults,usrquota, grpquota 11<BR><BR>
         </LI>
-<LI>���s�}�������<BR> <BR>
+<LI>重新開機後執行<BR> <BR>
 <EM>quotacheck -a</EM> <BR>     <BR></LI>
-<LI>�}��Quota�\�� (2,3����@���Y�i��ᤣ������)<BR><BR>
+<LI>開啟Quota功能 (2,3執行一次即可日後不必執行)<BR><BR>
 <EM>quotaon -avug</EM> <BR>                 <BR>
         </LI>
-<LI>�b�]�wuser��Quota����, �O�ϥ�<BR><BR>
+<LI>在設定user的Quota限制, 是使用<BR><BR>
   
 <EM>edquota  -a  username</EM><BR>   <BR>
-�ӳ]�wuser Quota������A�ӭn�]�wgroup��Quota����A�O�ϥ�<BR><BR>
+來設定user Quota的限制，而要設定group的Quota限制，是使用<BR><BR>
 <EM>edquota -g groupname</EM><BR>  <BR>
-�q�`�ڭ̪��@�k�O���]�w��@user��Quota��A�A�]�w�Ҧ�
-���ϥΪ̡A�ϥέ�~�ҳ]�w����@user��Quota�ȡA�o�˨C�@�ӨϥΪ�
-��Quota����N�|�ۦP�C���p�ڭ̥��]�w�@��ǥͱb��a8530614��Quota
-�i��<BR><BR>
+通常我們的作法是先設定單一user的Quota後，再設定所有
+的使用者，使用剛才所設定的單一user的Quota值，這樣每一個使用者
+的Quota限制就會相同。假如我們先設定一位學生帳號a8530614的Quota
+可用<BR><BR>
 <EM>edquota   -u   a8530614</EM><BR><BR>
-�����|�X�{�@��vi�e���A��e���p�U�ҥܡG<BR><BR>
+執行後會出現一個vi畫面，其畫面如下所示：<BR><BR>
         
 <CODE>Quotas for user a8530614i</CODE><BR>
-<CODE>/user�Gblocks in use�G8 , limits(soft=4000 , hard=5000)</CODE><BR>
-<CODE>inodes  in use�G8 , limits(soft=200 , hard=300)</CODE><BR><BR>
+<CODE>/user：blocks in use：8 , limits(soft=4000 , hard=5000)</CODE><BR>
+<CODE>inodes  in use：8 , limits(soft=200 , hard=300)</CODE><BR><BR>
 
-�b�W�����Ϥ��A�ҭn��諸�u��soft�Mhard�������Ʀr�A��blocks(�e�q)��
-�r�O�H�uKbyte�v�����Ainodes(�ɮ�)�Ʀr�O�H�u�ӡv�����A�䤤soft
-�O�����ӨϥΪ��`�@���x�s����Ƥw�W�L4000K�A�άO�ɮפw�W�L200�Ӯ�
-�AQuota�|�X�{�@�ӰT���q���ӨϥΪ̡A��������x�s���Ŷ��w�g�֭n��
-�F�A�����n�M���@�Ǥw���Ϊ���ơA�o�ˤ~�|���h�l���Ŷ������ӨϥΪ�
-�x�s��ơA�C���p�G���L�k��Ϊ��ܡA�N�T��g�J�����ɮסA�䤤hard
-�O���ӨϥΪ̷��ϥεw�Ш�F5000K�A�άO�ɮ׶W�L300�ӮɡA�hQuota�N
-���|���ӨϥΪ��x�s�Ӹ�ơA�ߨ�T��g�J�ɮסC���D�ϥΪ̥h�M���@��
-�S�Ϊ���ơA�˥X�������Ŷ��~���x�s�C<BR><BR>
-���pŪ�̷Q�n����Quota�\��AŪ�̥u�n�Nsoft�Bhard���ȡA�令0�N�i�H           
-����Quota�C<BR>
+在上面的圖中，所要更改的只有soft和hard項中的數字，而blocks(容量)數
+字是以「Kbyte」為單位，inodes(檔案)數字是以「個」為單位，其中soft
+是指當該使用者總共所儲存的資料已超過4000K，或是檔案已超過200個時
+，Quota會出現一個訊息通知該使用者，說能夠所儲存的空間已經快要滿
+了，必須要清除一些已不用的資料，這樣才會有多餘的空間能讓該使用者
+儲存資料，七日後如果仍無法改諄的話，將禁止寫入任何檔案，其中hard
+是指該使用者當使用硬碟到達5000K，或是檔案超過300個時，則Quota就
+不會讓該使用者儲存該資料，立刻禁止寫入檔案。除非使用者去清除一些
+沒用的資料，騰出足夠的空間才能儲存。<BR><BR>
+假如讀者想要關閉Quota功能，讀者只要將soft、hard的值，改成0就可以           
+關閉Quota。<BR>
 
-�b�]�w����@�ϥΪ̪�Quota��A�ڭ̴N�n��Guser1�Buser2�Buser3�ϥΪ�
-���]�w�������ҳ]�w��@�ϥΪ̪�Quota�ȡA�i��<BR><BR>
+在設定完單一使用者的Quota後，我們就要把：user1、user2、user3使用者
+都設定成為剛剛所設定單一使用者的Quota值，可用<BR><BR>
 <EM>edquota  -p  user_source  user1_target, user2_target, user3_target</EM><BR><BR>
-�䤤user_source�O���ncopy���ӷ�user�A��user_target�O���ncopy���ت�user�C
-�p�G�n�@���ӧ����Ҧ��ǥͱb����Quota�]�w�A�ڭ̪��@�k�O���������
-�Ϊ̥ؿ��Ҧb��A�A����<BR><BR>
+其中user_source是指要copy的來源user，而user_target是指要copy的目的user。
+如果要一次來完成所有學生帳號的Quota設定，我們的作法是先切換到使
+用者目錄所在後，再執行<BR><BR>
 <EM>edquota   -p   a8530614  * </EM><BR><BR>
-�o�˩Ҧ��ϥΪ̪�Quota�ȡA�N�|�Pa8530614��Quota�ȬۦP�C��group���]�w�Muser�]�O�@
-�˪��A���]�ڭ̭n�]student�o��group��quota�]�w�AŪ�̥i�H�o�˰���G<BR><BR>
+這樣所有使用者的Quota值，就會與a8530614的Quota值相同。而group的設定和user也是一
+樣的，假設我們要設student這個group的quota設定，讀者可以這樣執行：<BR><BR>
                            
 <EM>edquota   -g   student</EM><BR><BR>
-���YŪ�̷Q�n�d�ݤ@��user�Τ@��group��Quota�]�w�AŪ�̥i�H�ϥΡG<BR><BR>
+假若讀者想要查看一位user或一個group的Quota設定，讀者可以使用：<BR><BR>
 <EM>quota -qv -u uaername</EM> <BR>
 <EM>quota -qv -g groupname</EM> <BR><BR>
-�W���y�k���A"-q�Ѽ�"����ܷ��w�W�LŪ�̩ҳ]�w��soft�H��hard�w�쭭��F "
-v�Ѽ�"�O�ϥΩ�Ū���٨S���Ұ��ɮרt�Ϊ�Quota�A�Ϊ̨ϥΩ�Ū�̤w�Ұ�Quota�A���٨S��
-���t����blocks�C<BR><BR>
-�t�κ޲z�̩άO�㦳Operator group ���ϥΪ̡A�i�H����<EM>repquota -v -a</EM>
-�Ӭd�ߩҦ��ϥΪ̪�QUOTA�ϥα��ΡC<BR>                            </LI>
+上面語法中，"-q參數"為顯示當已超過讀者所設定的soft以及hard已到限制； "
+v參數"是使用於讀者還沒有啟動檔案系統的Quota，或者使用於讀者已啟動Quota，但還沒有
+分配任何的blocks。<BR><BR>
+系統管理者或是具有Operator group 的使用者，可以執行<EM>repquota -v -a</EM>
+來查詢所有使用者的QUOTA使用情形。<BR>                            </LI>
 </UL>
 <BR>
 </LI>
-<LI>Quota�`�N�ƶ� 
-<P>�b�إߨϥΪ�quota�w�Юe�q�t�B�ɡA���@�Ӱ��D�ɱ`�o�͡A�Y�OUID�M�ϥΪ̱b���d�V�F�A
-���D�o�ͪ��I���O�@��Ш|���`�Q�ΧK�O��FreeBSD��Linux���Ѿǥ͹q�l�H�c�M�ӤH����
-�A�ȡA���ɨt�κޮI�̤j�h�|�ϥξǥͪ��Ǹ��ӷ��@�b���A��K��᪺�޲z�A�p�G�������O
-�ǥͪ��Ǹ��������O���ԧB�Ʀr���ܡA���D�K�o�ͤF�C���ڭ̨ϥ�edquota   -u
-uaername�ӳ]�w�ϥΪ�quota�w�Юe�q�t�B�ɡA�p�Guaername�����ԧB�Ʀr���ܫh�t��
-�]�w�OUID(�ϥΪ��ѧO��)�A�ӫD�Ӧ�ϥΪ̡I�ҥH�b����ĳ�����b�������O���ԧB��
-�r���ǥ;Ǹ��e���[�ӭ^��r���ӷ��@�b���A�׶}���@���D�C<BR>
-���ɧڭ̥i��s�W�[�ϥΪ̫�A�o�ѤF�P�ɭ���ϥΪ�quota�w�Юe�q�t�B�A�ϱo�t��
-���Y�쪺�M���A�ҥH��`���ˬd�O���ݪ��A�����ڭ̤����ܨϥΪ̦��ϥΪ̪��ؿ����A
-�@��O/home�A<BR><BR>
-����<EM>cd </EM>home�Fquota   -u *  more/�A�ˬd�@�U�O�_���|�������C���U�Ӱ���
-<EM>cd </EM>home�Fquota  -q  -v  -u *�Amore/�A�ˬd�@�U�W�L�����t�B���ϥΪ̡C
+<LI>Quota注意事項 
+<P>在建立使用者quota硬碟容量配額時，有一個問題時常發生，即是UID和使用者帳號搞混了，
+問題發生的背景是一般教育單位常利用免費的FreeBSD或Linux提供學生電子信箱和個人首頁
+服務，此時系統管埋者大多會使用學生的學號來當作帳號，方便日後的管理，如果不巧的是
+學生的學號全部均是阿拉伯數字的話，問題便發生了。當我們使用edquota   -u
+uaername來設定使用者quota硬碟容量配額時，如果uaername為阿拉伯數字的話則系統
+設定是UID(使用者識別號)，而非該位使用者！所以在此建議不妨在全部均是阿拉伯數
+字的學生學號前面加個英文字母來當作帳號，避開此一問題。<BR>
+有時我們可能新增加使用者後，卻忘了同時限制使用者quota硬碟容量配額，使得系統
+有崩潰的危機，所以日常的檢查是必需的，首先我們切換至使用者有使用者的目錄中，
+一般是/home，<BR><BR>
+執行<EM>cd </EM>home；quota   -u *  more/，檢查一下是否有漏網之魚。接下來執行
+<EM>cd </EM>home；quota  -q  -v  -u *，more/，檢查一下超過提醒配額的使用者。
 <P>
 </LI>
 </OL>

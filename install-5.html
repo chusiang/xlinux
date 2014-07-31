@@ -2,7 +2,7 @@
 <html>
 <head><meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
  <meta NAME="GENERATOR" CONTENT="SGML-Tools 1.0.9">
- <title>XLinux�w�ˤ�U�M�ϥλ���: XLinux ���w��</title>
+ <title>XLinux安裝手冊和使用說明: XLinux 的安裝</title>
  <link HREF="install-6.html" REL="next">
  <link HREF="install-4.html" REL="previous">
  <link HREF="install.html#toc5" REL="contents">
@@ -12,137 +12,137 @@
 <a HREF="install-4.html">Previous</a>
 <a HREF="install.html#toc5">Contents</a>
 <hr>
-<h2><a NAME="s5">5. XLinux ���w��</a></h2>
+<h2><a NAME="s5">5. XLinux 的安裝</a></h2>
 
-<p>�ݤF XLinux �Ѧh���u�I��A�۫H�z�w�����Ϋݪ��Q�n�w�� XLinux�A�b�|��
-�w�ˤ��e�A�Х��T�w�z�Q�N XLinux �w�쬰���A���D���άO�u�@���άO�H�K�����C
-�ƹ�W XLinux �һݪ��w��]�ƨä����APentium133+32MB RAM+64MB SWAP�Ŷ��A
-�ҵo���X�Ӫ��Ĳv�N�۷������C�U�C�ҫ�ĳ���w��]�ƾA�Ω�Server�P
-Workstation���Űt�ơC�ȨѰѦҡC
+<p>看了 XLinux 諸多的優點後，相信您已迫不及待的想要安裝 XLinux，在尚未
+安裝之前，請先確定您想將 XLinux 定位為伺服器主機或是工作站或是隨便玩玩。
+事實上 XLinux 所需的硬體設備並不高，Pentium133+32MB RAM+64MB SWAP空間，
+所發揮出來的效率就相當不錯。下列所建議的硬體設備適用於Server與
+Workstation等級配備。僅供參考。
 <p>
-<h2><a NAME="ss5.1">5.1 �ǳƤu�@        </a>
+<h2><a NAME="ss5.1">5.1 準備工作        </a>
 </h2>
 
 <p>
 <p>
 <ol>
-<li><b>�w��ݨD</b>
+<li><b>硬體需求</b>
 <p>
 <ul>
 <li> CPU
 <p> 
-�@���֦�586 P-133���ťH�W��Intel�B�z���AAMD�BCyrix CPU��i�A�Y�O�z�p���w��
-XLinux������إH�W��Server(WWW/FTP/PROXY/MAIL/BBS/NEWS)�̦n�ϥ�PentiumII266
-�H�W��CPU�A���M�O����n�V�h�V�n�CXLinux�i�䴩4��CPU�A�]���hCPU�����إ�
-�i�B�@�A�į�۷����n�C    
+一部擁有586 P-133等級以上的Intel處理器，AMD、Cyrix CPU亦可，若是您計劃安裝
+XLinux成為兩種以上的Server(WWW/FTP/PROXY/MAIL/BBS/NEWS)最好使用PentiumII266
+以上的CPU，當然記憶體要越多越好。XLinux可支援4顆CPU，因此多CPU的機種亦
+可運作，效能相當的好。    
 <p>
 </li>
 <li> RAM
-<p>�ܤ�64MB RAM�CRAM���M�O�h�h�q���A�̦n��128MB�H�W�A�O�Ҩt�ήį�u�S�����v�C�H
-�ثeRAM�p�����K�y�A192MB��256MB�O�������_�C        
+<p>至少64MB RAM。RAM當然是多多益善，最好能128MB以上，保證系統效能「沒話講」。以
+目前RAM如此的便宜，192MB或256MB是不足為奇。        
 <p>
 </li>
-<li> SCSI�d
-<p>�i���i�L�A�Y�O�@�����A���D�����ܡA�j�P��ĳ�ϥ�AHA-294x (W/UW/D/WD) SCSI�d�A
-�p AHA-2935 U2W�AAHA2940 UW ��SCSI�d�C
-�άO�ۮe��AIC-777x�AAIC-785x�AAIC-787x�AAIC-788x SCSI on board 
-�]�ܦn�ΡA�A���MDC 390U/F�B TekRam�t�C��SCSI�d��i�C  
+<li> SCSI卡
+<p>可有可無，若是作為伺服器主機的話，強烈建議使用AHA-294x (W/UW/D/WD) SCSI卡，
+如 AHA-2935 U2W，AHA2940 UW 等SCSI卡。
+或是相容的AIC-777x，AIC-785x，AIC-787x，AIC-788x SCSI on board 
+也很好用，再不然DC 390U/F、 TekRam系列的SCSI卡亦可。  
 <p>
 </li>
-<li>�w�� 
-<p>4.3GB�H�W��SCSI�w�ЩάOIDE Ultra DMA�A�Y�n�������A�D���̦n��@�ު��w�СA�ר�
-�ONEWS�BBBS�BMail Server�C�������A�D�����w�ЬO�����e�q(��3.2-4.5GB)�h�ƶq����
-(�Y�h���w��)�A�p���i��ֺϺЪ�Ū�����Ƥήɶ��A�i�O�w�йةR�����C
-<p>�w�˧���Server����420MB <br>
-�w�˧���Workstation����500MB <br>
-�w�˧���M�󪩬�1GB�H�W<br>
+<li>硬碟 
+<p>4.3GB以上的SCSI硬碟或是IDE Ultra DMA，若要做為伺服主機最好選耐操的硬碟，尤其
+是NEWS、BBS、Mail Server。做為伺服主機的硬碟是中等容量(約3.2-4.5GB)多數量為佳
+(即多顆硬碟)，如此可減少磁碟的讀取次數及時間，可保硬碟壽命延長。
+<p>安裝完整Server版約420MB <br>
+安裝完整Workstation版約500MB <br>
+安裝完整套件版約1GB以上<br>
 <p>
 </li>
-<li>���о�
-<p>SCSI�άOIDE�C���ǳ�IDE���о��N���ΤF�C
+<li>光碟機
+<p>SCSI或是IDE。其實準備IDE光碟機就夠用了。
 <p>
 </li>
-<li>��ܥd?<p>�j�P��ĳ�ϥ�S3 Trio64 V2+/Virge��PCI�t�C��ܥd�A2MB�H�W��Video Memory�A
-SIS 6326 AGP�BmartoxMGA G400�BIntel I740�BnVida TNT ��ܥd��i�A
-��ܥd���n�Τӷs���ڦ��A�Y�ϥ�S3 Trio V2+/Virge�t�C��ܥd�A�t�ק�O�֪����o�F�C�Y�z�O�ϥ�AGP��ܥd�O�o���d�����䴩VESA 2.0�AXLinux�٬O�i������C
-<p>�䥦�ۮe��ܥd�аѨ�����U�����G.
+<li>顯示卡?<p>強烈建議使用S3 Trio64 V2+/Virge等PCI系列顯示卡，2MB以上的Video Memory，
+SIS 6326 AGP、martoxMGA G400、Intel I740、nVida TNT 顯示卡亦可，
+顯示卡不要用太新的款式，若使用S3 Trio V2+/Virge系列顯示卡，速度更是快的不得了。若您是使用AGP顯示卡記得此卡必須支援VESA 2.0，XLinux還是可偵測到。
+<p>其它相容顯示卡請參見本手冊附錄二.
 <code>
-<a HREF="install-16.html#compatibility-ref">XLinux �w��ۮe�C��</a></code>   
+<a HREF="install-16.html#compatibility-ref">XLinux 硬體相容列表</a></code>   
 <p>
 </li>
-<li>�ƹ�
-<p>Microsoft compatible/Serial mouse 2 or 3��/PS2�ƹ��A�@�몺�ƹ��N�i�H�F�A
+<li>滑鼠
+<p>Microsoft compatible/Serial mouse 2 or 3鍵/PS2滑鼠，一般的滑鼠就可以了，
 <p>
 <p>
 </li>
-<li>�����d
-<p>Dlink DE530 TX�B3Com 3c905B �BRealTech8139�BIntel ExpressPro �ҥi�C
-Dlink DE530 TX �O�̮e���ʶR�������d�C��L�����W��ISA PNP�����d�A
-��ĳ�z������PNP�\��A�b�ϥΤ�ʤ覡�]�w I/O Port �� IRQ�C<br>
-<p>�䥦�ۮe�����d�аѨ�����U�����G. 
+<li>網路卡
+<p>Dlink DE530 TX、3Com 3c905B 、RealTech8139、Intel ExpressPro 皆可。
+Dlink DE530 TX 是最容易購買的網路卡。其他不知名的ISA PNP網路卡，
+建議您先關掉PNP功能，在使用手動方式設定 I/O Port 及 IRQ。<br>
+<p>其它相容網路卡請參見本手冊附錄二. 
 <code>
-<a HREF="install-16.html#compatibility-ref">XLinux �w��ۮe�C��</a></code>            <br>
+<a HREF="install-16.html#compatibility-ref">XLinux 硬體相容列表</a></code>            <br>
 <p>
 </li>
-<li>���ĥd
-<p>�i���i�L�A�Y�����n�w�˭��ĥd�ɡA�п�γХ��t�C(SB16 �� SB �ۮe)���ĥd��
-ESS 186x/ESS 16xx ���ĥd�C      
+<li>音效卡
+<p>可有可無，若有必要安裝音效卡時，請選用創巨系列(SB16 或 SB 相容)音效卡或
+ESS 186x/ESS 16xx 音效卡。      
 <p>
 </li>
 </ul>
 </li>
-<li> <b>���o XLinux</b> 
-<p>�i�ѥH�U�覡���o XLinux <br>
+<li> <b>取得 XLinux</b> 
+<p>可由以下方式取得 XLinux <br>
 <p>
 <ul>
-<li><b>�q�L Internet �U�� XLinux</b><br>
-���}: ftp.xlinux.com.tw, 
-�]�i�Ѧ� XLinux �蹳 (mirror) �����I�C���C<br>
+<li><b>通過 Internet 下載 XLinux</b><br>
+網址: ftp.xlinux.com.tw, 
+也可參考 XLinux 鏡像 (mirror) 的站點列表。<br>
 <code>
-<a HREF="http://www.xlinux.com.tw/">XLinux mirror���C��</a></code></li>
+<a HREF="http://www.xlinux.com.tw/">XLinux mirror站列表</a></code></li>
 </ul>
 <p>
 </li>
-<li><b>�ǳƬ������w�˸�T</b> <br>
-<p> �b�w��XLinux���e, �i�H���F�Ѥ@�U�z���w��]�ƥH�κ����������T��.<br> <br>
+<li><b>準備相關的安裝資訊</b> <br>
+<p> 在安裝XLinux之前, 可以先了解一下您的硬體設備以及網路的相關訊息.<br> <br>
 <ul>
-<li><b>�򥻪��w��t��:</b>
-<p>�z������z�q���W�Ҹ˵w�馳�@�Ӱ򥻷���, �]�A: 
-�w�� -- �S�O�O�ƶq, �e�q�M����. �p�G�z���w�Ф���@��, �z���Ӫ��D���ӬO�Ĥ@��, 
-�G������. �٭n���D�z���w�ЬOIDE���٬OSCSI��. �p�G�z���@IDE�w��, �z�����ˬd�z��
-�q����BIOS�H�F�ѱz�w�Ъ�LBA�Ҧ�. 
+<li><b>基本的硬體配備:</b>
+<p>您必須對您電腦上所裝硬體有一個基本概念, 包括: 
+硬碟 -- 特別是數量, 容量和類型. 如果您的硬碟不止一顆, 您應該知道哪個是第一顆, 
+二顆等等. 還要知道您的硬碟是IDE的還是SCSI的. 如果您有一IDE硬碟, 您應該檢查您的
+電腦的BIOS以了解您硬碟的LBA模式. 
 <p>
 <ol>
-<li><b>�O����</b> -- �z���q���Ҹ˰O���骺�ƶq. 
+<li><b>記憶體</b> -- 您的電腦所裝記憶體的數量. 
  </li>
-<li><b>CD-ROM</b> -- �̭��n���O���f����(IDE, SCSI�٬O��L), ���DIDE�ΫDSCSI��CD-ROM�n���D����. IDE��CD-ROM(�]�sATAPI)�O�ثe�̱`��������. 
+<li><b>CD-ROM</b> -- 最重要的是接口類型(IDE, SCSI還是其他), 對於非IDE或非SCSI的CD-ROM要知道型號. IDE的CD-ROM(也叫ATAPI)是目前最常見的類型. 
 </li>
-<li><b>SCSI�d</b> -- �d������.<br> </li>
-<li><b>�����d</b> -- �����d������. 
+<li><b>SCSI卡</b> -- 卡的型號.<br> </li>
+<li><b>網路卡</b> -- 網路卡的型號. 
 </li>
-<li><b>�ƹ�</b> -- �ƹ�������(�ǦC�� (COM port) �� �ƹ��� (PS/2 port), �εL�u�ƹ�),�s�y��(Microsoft , Logitech, IBM, MouseMan ����.), ���䪺�ƶq; ��ǦC��ƹ��٭n���D�����b����Port. </li>
+<li><b>滑鼠</b> -- 滑鼠的類型(序列埠 (COM port) 或 滑鼠埠 (PS/2 port), 或無線滑鼠),製造商(Microsoft , Logitech, IBM, MouseMan 等等.), 按鍵的數量; 對序列埠滑鼠還要知道它接在哪個Port. </li>
 </ol>
 <br>
-**<code>���\�h�s���t��, �w�˵{�ǯ�۰��ѧO�j�h�Ƶw��. �M��, �ƥ��j���T�����O�@�Ӧn�D�N.</code><br> <br>
+**<code>對於許多新的系統, 安裝程序能自動識別大多數硬體. 然而, 事先搜集訊息仍是一個好主意.</code><br> <br>
 </li>
-<li><b>��ܰt��:</b>
+<li><b>顯示配備:</b>
 <p> 
-�p�G�z�N�w��X Window�t��, �z�������x�H�U�ƶ�:<br>
-�z����ܥd -- ��ܥd������(�Ϊ̥��Ϊ�������) <br>
-��ܰO���骺�ƶq. (�j�h��PCI�i�H�Q�w�˵{���۰ʰ���)<br>
-�z����ܾ� -- ����, �H�Τ����M������s�W�v���d��.<br> <br>
+如果您將安裝X Window系統, 您必須熟悉以下事項:<br>
+您的顯示卡 -- 顯示卡的型號(或者它用的晶片組) <br>
+顯示記憶體的數量. (大多數PCI可以被安裝程式自動偵測)<br>
+您的顯示器 -- 型號, 以及水平和垂直更新頻率的範圍.<br> <br>
 </li>
-<li><b>������������T:</b>
-<p>�p�G�z�N�s�W��, �T�H�z���D�H�U���: <br>
+<li><b>有關網路的資訊:</b>
+<p>如果您將連上網, 確信您知道以下資料: <br>
 <ol>
-<li><b>IP�a�}</b> -- �q�`�O���I���}���|�ӼƦr, �p10.0.2.15.   </li>
-<li><b>�B�n(netmask)</b> -- �t�@�ե��I���}���|�ӼƦr. �p255.255.255.0. </li>
-<li><b>�q�T�h(gateway)IP��}</b> -- �٬O�@�ե��I���}���|�ӼƦr. �p10.0.2.254.  </li>
-<li><b>����W�٦��A��IP�a�}</b> -- �@�өδX�ӥ��I���}���Ʀr��. 10.0.2.1 �N�i��O�@�Ӻ���W�٦��A������}.  </li>
-<li><b>����W��</b> -- �z����쪺�W�r. �Ҧp�����ڦ��@�Ӻ���W�٥s xlinux.com.tw. </li>
-<li><b>�D���W��(hostname)</b> -- �z���q���W�r. �p�@�ӹq���W�٥i��W��XLinux1. 
+<li><b>IP地址</b> -- 通常是用點分開的四個數字, 如10.0.2.15.   </li>
+<li><b>遮罩(netmask)</b> -- 另一組用點分開的四個數字. 如255.255.255.0. </li>
+<li><b>通訊閘(gateway)IP位址</b> -- 還是一組用點分開的四個數字. 如10.0.2.254.  </li>
+<li><b>網域名稱伺服器IP地址</b> -- 一個或幾個用點分開的數字組. 10.0.2.1 就可能是一個網域名稱伺服器的位址.  </li>
+<li><b>網域名稱</b> -- 您的單位的名字. 例如網虎國際有一個網域名稱叫 xlinux.com.tw. </li>
+<li><b>主機名稱(hostname)</b> -- 您的電腦名字. 如一個電腦名稱可能名為XLinux1. 
 
-�p�G�����D�H�W��ƥi�߰ݱz�������޲z��.
+如果不知道以上資料可詢問您的網路管理員.
 </li>
 </ol>
 </li>
@@ -152,562 +152,562 @@ ESS 186x/ESS 16xx ���ĥd�C
 </ol>
  
 <p>
-<h2><a NAME="ss5.2">5.2 �w��XLinux </a>
+<h2><a NAME="ss5.2">5.2 安裝XLinux </a>
 </h2>
 
 <p> 
 <ol>
-<li> �w�˼Ҧ�
-<p>XLinux���w�˼Ҧ������H�U�X��:
+<li> 安裝模式
+<p>XLinux的安裝模式分成以下幾類:
 <p>
 <ol>
-<li>X-Linux: (�@��w��)</li>
-<li>Express: (�۰ʦw��)?/LI&gt;
-<li>Floppy: (�n�Цw��) </li>
+<li>X-Linux: (一般安裝)</li>
+<li>Express: (自動安裝)?/LI&gt;
+<li>Floppy: (軟碟安裝) </li>
 </ol>
 <br>
 </li>
-<li> �w�˵{�Ǫ��Τ�ɭ�����  
-<p>XLinux���w�˵{�ǩM�]�w�u��(Genie)�O�ϥιϧεe�����P��ܦ����, ���]�t��
-�j�h�ƪ���O�M�ϧΥΤ�ɭ��@�˪�. 
-�H�U�O�X�ӳ̭��n�����󻡩�:<br> 
+<li> 安裝程序的用戶界面介紹  
+<p>XLinux的安裝程序和設定工具(Genie)是使用圖形畫介面與對話式方塊, 它包含的
+大多數物件是和圖形用戶界面一樣的. 
+以下是幾個最重要的物件說明:<br> 
 <p>
 <ol>
-<li>���f(Window) 
-<p>���f(����U���]�s��ܮ�)�N�b�w�˹L�{�γ]�wGenie�ɥX
-�{�b�z�������W. ����, �@�ӵ��f�i��O�J�t�@��; �o��, �z�u��M�̤W
-�������f���. �p���Ϥ@:<br><br>
+<li>窗口(Window) 
+<p>窗口(本手冊中也叫對話框)將在安裝過程或設定Genie時出
+現在您的瑩幕上. 有時, 一個窗口可能嵌入另一個; 這時, 您只能和最上
+面的窗口對話. 如附圖一:<br><br>
 <p>
 <figure>
 <eps FILE="images/X-Linux-window.eps">
 <img SRC="images/X-Linux-window.jpg" WIDTH="495" HEIGHT="302">
-<caption>���Ϥ@</caption>
+<caption>附圖一</caption>
 </figure>
  
 <p>
 </li>
-<li>��r��J��(Text Input) 
-<p>��r��J��O�z��J�T�����ϰ�. ����ЩΥ�
-�ΰ��b��r��J���, �z�i�H��J�έק墨�@��. �p���ϤG<br><br>
+<li>文字輸入行(Text Input) 
+<p>文字輸入行是您輸入訊息的區域. 當游標或光
+棒停在文字輸入行時, 您可以輸入或修改那一行. 如附圖二<br><br>
 <p>
 <figure>
 <eps FILE="images/textinput.eps">
 <img SRC="images/textinput.jpg" WIDTH="321" HEIGHT="128">
-<caption>���ϤG</caption>
+<caption>附圖二</caption>
 </figure>
             
 <p>
 <p>
 </li>
-<li>��ܮ�(Check Box) 
-<p>��ܮإi�H���z��ܦw�˵{�Ǫ��Y�ǯS��.<br> 
-�����а��b��ܮخ�, ���iSpace�j�i�H���z�b��ܩM����ܤ����ഫ. 
-�p���ϤT:<br>
+<li>選擇框(Check Box) 
+<p>選擇框可以讓您選擇安裝程序的某些特性.<br> 
+當光標停在選擇框時, 按【Space】可以讓您在選擇和不選擇之間轉換. 
+如附圖三:<br>
 <p>
 <figure>
 <eps FILE="images/checkbox.eps">
 <img SRC="images/checkbox.jpg" WIDTH="563" HEIGHT="257">
-<caption>���ϤT</caption>
+<caption>附圖三</caption>
 </figure>
       
 <p>
 </li>
-<li>�奻��ܰ�(Text Widget) 
-<p>�奻��ܰϬO��ܫH�����ϰ�. ����, 
-�@�Ӥ奻��ܰϥi��]�t��L����, �p��ܮ�. ���i��, 
-�@����ܰϩҥ]�t���T���|�񥦩ү���ܪ���h. �o��, ��ܰ���W�|���u�ʱ�; 
-�p���ϥ|: <br>
+<li>文本顯示區(Text Widget) 
+<p>文本顯示區是顯示信息的區域. 有時, 
+一個文本顯示區可能包含其他部件, 如選擇框. 有可能, 
+一個顯示區所包含的訊息會比它所能顯示的更多. 這時, 顯示區邊上會有滾動條; 
+如附圖四: <br>
 <p>
 <figure>
 <eps FILE="images/scrollbar.eps">
 <img SRC="images/scrollbar.jpg" WIDTH="215" HEIGHT="169">
-<caption> ���ϥ|?/CAPTION&gt;
+<caption> 附圖四?/CAPTION&gt;
 </figure>
   
 <p>
 </li>
-<li>�u�ʱ�(Scroll Bar) 
-<p>�u�ʱ������F�z�b�奻��ܰϩҳB���۹��m. 
-�η|�H�۱z�ηƹ������u�ʱ��U�ԩΤW�ƦӤW�U���ʩΪ̱z�i�Ρi\uparrow�j�M
-�i\downarrow�j��Ӻu�ʥH��ܩҦ����T��.�p���Ϥ�, ���Ϥ�: <br>
+<li>滾動條(Scroll Bar) 
+<p>滾動條表明了您在文本顯示區所處的相對位置. 
+或會隨著您用滑鼠按住滾動條下拉或上滑而上下移動或者您可用【\uparrow】和
+【\downarrow】鍵來滾動以顯示所有的訊息.如附圖五, 附圖六: <br>
  
 <p>
 <figure>
 <eps FILE="images/scrollbar.eps">
 <img SRC="images/scrollbar.jpg" WIDTH="215" HEIGHT="169">
-<caption>���Ϥ�</caption>
+<caption>附圖五</caption>
 </figure>
           
 <p>
 <figure>
 <eps FILE="images/scrollbar2.eps">
 <img SRC="images/scrollbar2.jpg" WIDTH="477" HEIGHT="320">
-<caption>���Ϥ�?/CAPTION&gt;
+<caption>附圖六?/CAPTION&gt;
 </figure>
          
 <p>
 </li>
-<li>���s(Button Widget) 
-<p>���s�O�M�w�˵{�ǥ�y���򥻤覡. 
-�q�L'��'�o�ǫ��s, �z�i�H�զ��w�˹L�{���o�@�t�C���f��������. �p���ϤC<br> <br>
+<li>按鈕(Button Widget) 
+<p>按鈕是和安裝程序交流的基本方式. 
+通過'按'這些按鈕, 您可以組成安裝過程的這一系列窗口之間切換. 如附圖七<br> <br>
 <p>
 <figure>
 <eps FILE="images/buttom.eps">
 <img SRC="images/buttom.jpg" WIDTH="169" HEIGHT="21">
-<caption>���ϤC</caption>
+<caption>附圖七</caption>
 </figure>
               
 <p>
 </li>
-<li>���(Cursor) 
-<p>��Х������O����, �����i�H�Ψӿ�ܬY�Ǫ���. 
-����Цb�@�ӭӪ��󤧶����ʮ�, �����C��i��|����, �z�]�i��u�ݨ����
-�b���󤧤��ή���. ?
+<li>游標(Cursor) 
+<p>游標本身不是物件, 但它可以用來選擇某些物件. 
+當游標在一個個物件之間移動時, 物件的顏色可能會改變, 您也可能只看到光棒
+在物件之中或旁邊. ?
 </li>
 </ol>
 <p>
 </li>
-<li> �w�ˬy�{  
+<li> 安裝流程  
 <p>
 <ol>
-<li> ��T����</li>
-<li> �w�˫e�ǳƧ@�~�]�w </li>
-<li> �}�l�w��</li>
-<li> ��q�]�w </li>
+<li> 資訊收集</li>
+<li> 安裝前準備作業設定 </li>
+<li> 開始安裝</li>
+<li> 後段設定 </li>
 </ol>
  
 </li>
 </ol>
 <p>
-<h2><a NAME="ss5.3">5.3 �Ұʦw�˵{��        </a>
+<h2><a NAME="ss5.3">5.3 啟動安裝程序        </a>
 </h2>
 
-<p>�бNXLinux���Ф���J���о���, �NBIOS�]��CD-Rom�}���᭫�s�Ұʱz���q��.
-�b�@�s�ꪺ�}���{�Ǥ�XLinux���w��e����, XLinux�|�������z���w��˸m, ����, �z�|�ݨ�H�U���e��:
+<p>請將XLinux光碟片放入光碟機中, 將BIOS設成CD-Rom開機後重新啟動您的電腦.
+在一連串的開機程序及XLinux的歡迎畫面後, XLinux會先偵測您的硬體裝置, 之後, 您會看到以下的畫面:
 <p>
 <figure>
 <eps FILE="images/X-Linux-main.eps">
 <img SRC="images/XLinux.jpg" WIDTH="0" HEIGHT="0">
-<caption>XLinux�w�˥D�e��</caption>
+<caption>XLinux安裝主畫面</caption>
 </figure>
         
-<p>�p�W��, �ЧQ�ηƹ�����L���k��V���ܱz�A�X���w�˻y�t, �M��i�JXLinux���w�˫e�ǳƧ@�~����. 
+<p>如上圖, 請利用滑鼠或鍵盤左右方向鍵選擇您適合的安裝語系, 然後進入XLinux的安裝前準備作業項目. 
 <p>
-<h2><a NAME="ss5.4">5.4 �w�˫e�ǳƧ@�~      </a>
+<h2><a NAME="ss5.4">5.4 安裝前準備作業      </a>
 </h2>
 
-<p>�w�˫e�ǳƧ@�~:
-<p>XLinux�O�ϥΥ��s��32�줸�U�Φr����, �]��, �i�H�B�z�h��y��, �è㦳�W�j���ۮe��, XLinux�i�H�B�z�]��unicode, big5, gbk, jis, ksc, .....�����U��y�������X. XLinux
-�]�]�t�F�h�ؤ��X, ���n�o���U�ꪺ��ƴ��z�겣.
-<p>XLinux�w�˫e���ǳƧ@�~�D�`²��, �u�n�z���B�J�����w�˵e���k�W�����]�w�{��(�ΧQ��
-�i�U�@�B�j�i�W�@�B�j���s)�Y�i�����w��XLinux���ǳƧ@�~�C<br>
+<p>安裝前準備作業:
+<p>XLinux是使用全新的32位元萬用字元集, 因此, 可以處理多國語言, 並具有超強的相容性, XLinux可以處理包函unicode, big5, gbk, jis, ksc, .....等等各國語言的內碼. XLinux
+也包含了多種內碼, 為要發揚各國的文化智慧資產.
+<p>XLinux安裝前的準備作業非常簡單, 只要您按步驟完成安裝畫面右上角的設定程序(或利用
+【下一步】【上一步】按鈕)即可完成安裝XLinux的準備作業。<br>
 <figure>
 <eps FILE="images/X-Linux-main-1.eps">
 <img SRC="images/XLinux-main-1.jpg" WIDTH="640" HEIGHT="480">
-<caption>��1:�w�˫e�ǳƧ@�~</caption>
+<caption>圖1:安裝前準備作業</caption>
 </figure>
                
 <p>
-<h3>�ϺФ���    </h3>
+<h3>磁碟切割    </h3>
 
 <p>
-<p>���]�A���w�Ч����S���g�L����(�]�N�O���s���@��)�AXLinux�|�n�D�A�O�_
-�n�N�w�Ъ�l�ơA
-<p>�ϥ�IDE�w�ЮɡA�Ұʤ��ΰϥ������b�e��1024�ӺϬW���C
-�o�O�]���w�гq�LBIOS�Ұ�(�b�t�ζi�J�O�@�Ҧ��e)�A��BIOS����B�z�h��1024���ϬW�C
-���ɤ]�i��ϥγ����b�e��1024�ϬW�����Ұʤ��ΰϡA�o�n�D�Ҧ���BIOSŪ�J����󳣦b
-�e1024�ϬW���C �ѩ�o�N������w�ơA�]���o�O�ӫܮt���D�N�F
-�A���i�ા�D����ɭԮ֤ߤɯũκϺиH����z�|�ɭP�t�εL�k�ҰʡC
-�]���A���ӽT�{�A���Ұʤ��ΰϧ����b�e1024�ϬW���C    
-<p>�ƹ�W�A�@�Ƿs����BIOS�MIDE�w�Хi�H�B�z�h��1024���ϬW�C�p�G�A���o�ˤ@�Өt�ΡA
-�A�i�H���h�z�|�o�Ӱ��D�F �p�G�A����T�{�A�٬O��Ұʤ��ΰϩ�b�e1024�ϬW�����C
-<p>���ܤ��ΰϤj�p�@��n�D�����Ƥ������ΰϷQ�O�d���Ҧ��F��(�����U�@�A
-�̦n�ƥ���ӵw��)�A�M��R�������ΰϡA���ͷs���ΰϡA�̫�^�s�Ҧ��F���s���ΰϡC
-�p�G�O�X�j���ΰϡA�A�i��ݭn�վ�۾F���ΰϪ��j�p(�óƥ��B�^�s)�C       
-<p>�ѩ���ܤ��ΰϤj�p�O�p���h�W�A�̦n�@���N�T�w�C�ξ֦��@�Ӧ��ĦӮe���ϥ�
-���ƥ��t�ΡC      
-<p>XLinux���ѨϥΪ̨�ؤ�K�����κϺЪ��覡(�p��2), �Ҭ������گS�O�}�o��
-�ϫ��ɭ����κϺФu��:
+<p>假設你的硬碟完全沒有經過劃分(也就是全新的一顆)，XLinux會要求你是否
+要將硬碟初始化，
+<p>使用IDE硬碟時，啟動分割區必須全在前面1024個磁柱內。
+這是因為硬碟通過BIOS啟動(在系統進入保護模式前)，而BIOS不能處理多於1024的磁柱。
+有時也可能使用部分在前面1024磁柱內的啟動分割區，這要求所有用BIOS讀入的文件都在
+前1024磁柱內。 由於這將很難於安排，因此這是個很差的主意；
+你不可能知道什麼時候核心升級或磁碟碎片整理會導致系統無法啟動。
+因此，應該確認你的啟動分割區完全在前1024磁柱內。    
+<p>事實上，一些新版的BIOS和IDE硬碟可以處理多於1024的磁柱。如果你有這樣一個系統，
+你可以不去理會這個問題； 如果你不能確認，還是把啟動分割區放在前1024磁柱面內。
+<p>改變分割區大小一般要求首先備分此分割區想保留的所有東西(為防萬一，
+最好備份整個硬碟)，然後刪除此分割區，產生新分割區，最後回存所有東西到新分割區。
+如果是擴大分割區，你可能需要調整相鄰分割區的大小(並備份、回存)。       
+<p>由於改變分割區大小是如此痛苦，最好一次就確定。或擁有一個有效而容易使用
+的備份系統。      
+<p>XLinux提供使用者兩種方便的分割磁碟的方式(如圖2), 皆為網虎國際特別開發的
+圖型界面切割磁碟工具:
 <p>
-<p>�����z���ϺФ��Τu�� 
-<p>���N�|�۰ʧP�_�z���w�Ф��O�_���ťպϰ�,�M��|�N�ťպϰϥ������ε�XLinux�ϥ�.
-�p�G�䤣��ťպϰ�, �N�|�߰ݱz�O�_�n������ϰϲM��. ���ؤ��Τ覡�N�`�ٱz�\
-�h���ɶ�, �u�n�z�n�w�˪��ϰϪťX��, �Ϊ̷��z�n��ӺϺФ��ε�XLinux��. 
-�z���ݧ@����ϺФ��Ϊ��W��, ���N�H�w�]���覡���z���κϺ�. 
+<p>●智慧型磁碟切割工具 
+<p>它將會自動判斷您的硬碟中是否有空白磁區,然後會將空白磁區全部切割給XLinux使用.
+如果找不到空白磁區, 將會詢問您是否要把全部磁區清除. 此種切割方式將節省您許
+多的時間, 只要您要安裝的磁區空出來, 或者當您要整個磁碟切割給XLinux時. 
+您不需作任何磁碟分割的規劃, 它將以預設的方式為您分割磁碟. 
 <p>
 <p> 
-���M�~���ϺФ��Τu��
-<p>�M�~���ϺФ��Τu�㴣�ѱz���\��ϫ��ɭ������Τ覡, �z�i���N���Ϊ��ϰϤj�p�B��ܺϰϫ��A�B��ܱҰʺϰ�, �u�n�Q�Τ@��ƹ��N�i�H�����ϺФ��γ�! 
+●專業型磁碟切割工具
+<p>專業型磁碟切割工具提供您全功能圖型界面的切割方式, 您可任意分割的磁區大小、選擇磁區型態、選擇啟動磁區, 只要利用一支滑鼠就可以完成磁碟切割喔! 
 <p>
-<p>�п�ܤ@���z�n���κϺЪ��覡:<br>
-�бN���β��ܱz�Q�n�����κϺФ覡, �ηƹ��I���Y�i.<br>
-�z�i���:<br>
-�i���z���ϺФ��Τu��j<br>
-�i�M�~���ϺФ��Τu��j<br>
+<p>請選擇一項您要切割磁碟的方式:<br>
+請將光棒移至您想要的切割磁碟方式, 用滑鼠點取即可.<br>
+您可選擇:<br>
+【智慧型磁碟切割工具】<br>
+【專業型磁碟切割工具】<br>
 <figure>
 <eps FILE="images/X-Linux-fdisk.eps">
 <img SRC="images/XLinux-fdisk.jpg" WIDTH="640" HEIGHT="480">
-<caption>��2:�ϺФ���</caption>
+<caption>圖2:磁碟切割</caption>
 </figure>
       
 <p>
 <ul>
-<li> ���z���ϺФ��Τu��
-<p>���N�|�P�_�z���w�Ф��O�_���ťպϰ�,�M��۰ʱN�ťպϰ�
-�������ε�XLinux�ϥ�. �p�G�䤣��ťպϰ�, �N�|�߰ݱz�O�_�n������ϰϲM��:
-<p>�p��3, ���z���ϺФ��Τu��N�|�۰����z���Φ��A�����Ϻа϶�, �z�u�n��ܡi�g�J�j�Ϋ��iEnd�j�Y�i.      
+<li> 智慧型磁碟切割工具
+<p>它將會判斷您的硬碟中是否有空白磁區,然後自動將空白磁區
+全部切割給XLinux使用. 如果找不到空白磁區, 將會詢問您是否要把全部磁區清除:
+<p>如圖3, 智慧型磁碟切割工具將會自動幫您分割成適當的磁碟區塊, 您只要選擇【寫入】或按【End】即可.      
 <p>
 <figure>
 <eps FILE="images/X-Linux-ds.eps">
 <img SRC="images/XLinux-fdisk1.jpg" WIDTH="640" HEIGHT="480">
-<caption>��3:���z�����εe��</caption>
+<caption>圖3:智慧型切割畫面</caption>
 </figure>
        
 </li>
-<li> �M�~���ϺФ��Τu��
-<p>�M�~���ϺФ��Τu�㴣�ѱz�M�~�������Τ覡 
-�����ѱz���\��ϫ��ɭ����Τu��, �p��4:
-<p>�̫�, �Ф��n�ѤF����z�n�Ұ� XLinux ���ϰ�:<br>
-�Ұʪ��ϰϹ��������A�ϱN�|��<b>&quot;�Ұ�&quot;</b>���r�����          
+<li> 專業型磁碟切割工具
+<p>專業型磁碟切割工具提供您專業型的切割方式 
+它提供您全功能圖型界面切割工具, 如圖4:
+<p>最後, 請不要忘了選取您要啟動 XLinux 的磁區:<br>
+啟動的磁區對應的狀態區將會有<b>&quot;啟動&quot;</b>的字樣顯示          
 <p>
 <figure>
 <eps FILE="images/X-Linux-pds.eps">
 <img SRC="images/XLinux-fdisk2.jpg" WIDTH="640" HEIGHT="480">
-<caption>��4:�ϺФ��εe��</caption>
+<caption>圖4:磁碟切割畫面</caption>
 </figure>
     
-<p>���z�n�s�W�@�ӺϺа϶�, �п�J�z�n���ΰ϶����j�p, ��ܺϺ�����(�p��5).
-�Ϻ������i�Ѧҥ���U���Ѫ�[���ΰϺϺЫ�����Ӫ�].?<p>
+<p>當您要新增一個磁碟區塊, 請輸入您要切割區塊的大小, 選擇磁碟類型(如圖5).
+磁碟類型可參考本手冊提供的[分割區磁碟型號對照表].?<p>
 <figure>
 <eps FILE="images/X-Linux-pds.eps">
 <img SRC="images/XLinux-fdisk4.jpg" WIDTH="640" HEIGHT="480">
-<caption>��5:��ܺϺ������e��</caption>
+<caption>圖5:選擇磁碟類型畫面</caption>
 </figure>
-<p>�d�� Linux���ѭ��X�غϺЫ���? 
+<p>查看 Linux提供哪幾種磁碟型號? 
 <p>
 <center><table BORDER><tr><td>
 
-0 �@Empty</td><td>9 �@AIX bootable</td><td>75 �@PC/IX</td><td>b7 �@ESDI fs </td></tr><tr><td>
-1 �@DOS12-bitFAT</td><td>a �@OS/2 BootManag </td><td>80 �@old MINIX</td><td>b8 �@BSDI swap </td></tr><tr><td>
-2 �@XENIX root</td><td>40 �@Venix 80286 </td><td>81 �@Linux/MINIX</td><td>c7 �@Syrinx </td></tr><tr><td>
-3 �@XENIX usr</td><td>51 �@Novell?</td><td>82 �@Linux swap </td><td>db �@CP/M </td></tr><tr><td>
-4 �@DOS16-bit&lt;32M</td><td>52 �@Microport</td><td>83 �@Linux native </td><td>el �@DOS access </td></tr><tr><td>
-5 �@Extended </td><td>63 �@GNUHURD</td><td>93 �@Amoeba </td><td>e3 �@DOS R/O </td></tr><tr><td>
-6 �@DOS16-bit&gt;=32</td><td>64 �@Novell Netware</td><td>94 �@AmoebaBBT</td><td>f2 �@DOSsecond </td></tr><tr><td>
-7 �@OS/2HPFS</td><td>65 �@Novell Netware</td><td>a5 �@BSD/386</td><td>ff �@BBT </td></tr><tr><td>
-8 �@AIX</td><td></td><td></td><td></td></tr><tr><td>
+0 　Empty</td><td>9 　AIX bootable</td><td>75 　PC/IX</td><td>b7 　ESDI fs </td></tr><tr><td>
+1 　DOS12-bitFAT</td><td>a 　OS/2 BootManag </td><td>80 　old MINIX</td><td>b8 　BSDI swap </td></tr><tr><td>
+2 　XENIX root</td><td>40 　Venix 80286 </td><td>81 　Linux/MINIX</td><td>c7 　Syrinx </td></tr><tr><td>
+3 　XENIX usr</td><td>51 　Novell?</td><td>82 　Linux swap </td><td>db 　CP/M </td></tr><tr><td>
+4 　DOS16-bit&lt;32M</td><td>52 　Microport</td><td>83 　Linux native </td><td>el 　DOS access </td></tr><tr><td>
+5 　Extended </td><td>63 　GNUHURD</td><td>93 　Amoeba </td><td>e3 　DOS R/O </td></tr><tr><td>
+6 　DOS16-bit&gt;=32</td><td>64 　Novell Netware</td><td>94 　AmoebaBBT</td><td>f2 　DOSsecond </td></tr><tr><td>
+7 　OS/2HPFS</td><td>65 　Novell Netware</td><td>a5 　BSD/386</td><td>ff 　BBT </td></tr><tr><td>
+8 　AIX</td><td></td><td></td><td></td></tr><tr><td>
 
-<caption> ���ΰϺϺЫ�����Ӫ� </caption>
+<caption> 分割區磁碟型號對照表 </caption>
 </td></tr></table></center>
                                        
-<p>�̫�, �Ф��n�ѤF����z�n�Ұ� XLinux ���ϰ�:<br>
-�Ұʪ��ϰϹ��������A�ϱN�|��<b>&quot;�Ұ�&quot;</b>���r�����.       
-<p>���z�]�w�n���Ϊ��j�p�M�ϰϫ��A, �󤣭n�ѤF���I�z�n�Ұ�XLinux���ϰϫ�, �п�ܡi�g�J�j, �N�z���]�w�g�J�ϺФ��Ϊ�, �p��6:        <br>
+<p>最後, 請不要忘了選取您要啟動 XLinux 的磁區:<br>
+啟動的磁區對應的狀態區將會有<b>&quot;啟動&quot;</b>的字樣顯示.       
+<p>當您設定好切割的大小和磁區型態, 更不要忘了選點您要啟動XLinux的磁區後, 請選擇【寫入】, 將您的設定寫入磁碟切割表, 如圖6:        <br>
 <figure>
 <eps FILE="images/X-Linux-pds-write.eps">
 <img SRC="images/XLinux-fdisk5.jpg" WIDTH="640" HEIGHT="480">
-<caption>��6:�ϺФ���-�g�J</caption>
+<caption>圖6:磁碟切割-寫入</caption>
 </figure>
          
-<p>�Ы��i�U�@�B�j, �i��U�@��XLinux�w�˫e�ǳƧ@�~�B�J�C
+<p>請按【下一步】, 進行下一個XLinux安裝前準備作業步驟。
 <p>
 </li>
 </ul>
 <br>
-<h3>�W�������O����</h3>
+<h3>規劃虛擬記憶體</h3>
 
 <p>
-<p>�W�������O����<br>
+<p>規劃虛擬記憶體<br>
 <figure>
 <eps FILE="images/X-Linux-pv.eps">
 <img SRC="images/XLinux-sw.jpg" WIDTH="640" HEIGHT="480">
-<caption>��7:�W�������O����e��</caption>
+<caption>圖7:規劃虛擬記憶體畫面</caption>
 </figure>
                                 
 <p>
-<p>�@��Ө��w�� Linux �ݭn�إߦܤ֨�Ӥ��ΰϨ� Linux �ϥΡA�@�ӬO Linux�T�����ΰ� (native partition)�B�ܤ֤@�� Linux �O����m�����ΰ�(swap partition)�A
-swap partition�S�p DOS �U���y�����O����z)���j�p�A�@��Ө��t�ΰO���� (RAM)�b 
-32 MB�H�����B�͡A�i�H�]�w�� RAM  ���⭿ �A �Ҧp 32 MB �N�]�w�b 60 MB ���k�A
-16 MB�N�]�w�b 40 MB ���k�C�ܩ� RAM �W�L 32 MB ��Ū�̡A�N�������⭿����h�A
-�Ҧp 64 MB �N�]�w�� 60 MB�A96 MB �N�]�w��40 MB�C���O�Ф��n�W�L 128 MB �A�]��
-Linux �@���̤j�u��B�z 128 MB �� SWAP�A
-<p>Swap  �]�i�H�h�δX�ӡA�o�˹����骺�į�ӻ��O�۷����U�q��!
-���Φ��@�� Linux  �T�����ΰ� (native  partition)�M�@�� Linux �O����m��
-���ΰ�(swap partition)�A�o�ت����Ϊk�O�۷��ʥF�w���ʪ��A�n�O root ������ 
-�Ϸ��l���� �A��Өt�Υi��u������@�~�C�Y�O�n�b�����W�����A����Ū�̡A�̤�
-�]���Ӥ��Φ� /(root)�B/usr�B/usr/local�B/var�B/home ���A�o�˭n�O�t�η��l
-�@�Ϥ]����e���A��L���ΰϪ���ƨ̵M�s�b�A���|�H�̷l�a�Ӯ����A�J�M���Ϊ�
-�n�`�N���O����h�A�Ӧp���ܩO ? �ЬݤU�@�`���ɮרt�γW������, �ڭ̥i�H��
-�ӫe�H�Ҵ��Ѫ����氵�Ѧ�.
-<p>�p��7,�z�i�b���]�w�z�������O����Ŷ�,�b�������i�Ұʡj�M�i�ˬd�j�ϰ���U�ƹ�
-�������i�O�j�Ρi�_�j�n�Ұʩ��ˬd�z�������O����Ŷ��C���z�]�w�n��, �Ы��i�U�@�B�j, �i��U�@��XLinux�w�˫e�ǳƧ@�~�B�J�C
+<p>一般而言安裝 Linux 需要建立至少兩個分割區供 Linux 使用，一個是 Linux固有分割區 (native partition)、至少一個 Linux 記憶體置換分割區(swap partition)，
+swap partition猶如 DOS 下的『虛擬記憶體』)的大小，一般而言系統記憶體 (RAM)在 
+32 MB以內的朋友，可以設定為 RAM  的兩倍 ， 例如 32 MB 就設定在 60 MB 左右，
+16 MB就設定在 40 MB 左右。至於 RAM 超過 32 MB 的讀者，就不必拘於兩倍的原則，
+例如 64 MB 就設定為 60 MB，96 MB 就設定為40 MB。但是請不要超過 128 MB ，因為
+Linux 一次最大只能處理 128 MB 的 SWAP，
+<p>Swap  也可以多割幾個，這樣對於整體的效能來說是相當有助益的!
+分割成一個 Linux  固有分割區 (native  partition)和一個 Linux 記憶體置換
+分割區(swap partition)，這種的分割法是相當缺乏安全性的，要是 root 的分割 
+區毀損的話 ，整個系統可能只有重灌一途。若是要在網路上當伺服器的讀者，最少
+也應該分割成 /(root)、/usr、/usr/local、/var、/home 等，這樣要是系統毀損
+拯救也比較容易，其他分割區的資料依然存在，不會隨者損壞而消失，既然分割的
+要注意的是那麼多，該如何抉擇呢 ? 請看下一節的檔案系統規劃說明, 我們可以依
+照前人所提供的表格做參考.
+<p>如圖7,您可在此設定您的虛擬記憶體空間,在對應的【啟動】和【檢查】區域按下滑鼠
+左鍵選取【是】或【否】要啟動或檢查您的虛擬記憶體空間。當您設定好後, 請按【下一步】, 進行下一個XLinux安裝前準備作業步驟。
 <p>
-<h3>�ɮרt�γW��</h3>
+<h3>檔案系統規劃</h3>
 
-<p>�ɮרt�γW��<br>
+<p>檔案系統規劃<br>
 <figure>
 <eps FILE="images/X-Linux-fsp.eps">
 <img SRC="images/XLinux-fs.jpg" WIDTH="640" HEIGHT="480">
-<caption>��8:�ɮרt�γW���e��</caption>
+<caption>圖8:檔案系統規劃畫面</caption>
 </figure>
    
-<p>�U���u�O�ѨϥΪ̰ѦҪ��ɮרt�γW������, �ϥΪ̥i�̷Ө�ߦn�P�γ~�]�w�C
+<p>下表只是供使用者參考的檔案系統規劃表格, 使用者可依照其喜好與用途設定。
 <center><table BORDER><tr><td>
 
-��k</td><td>���ΰ�</td><td>�e�q�j�p</td><td>����</td></tr><tr><td>
-�i�H���Ϊk</td><td>/�@�@�@�@�@�@�@�@�@�@�@SWAP </td><td>��h:���FSWAP���Ŷ��A�H�O���骺�⭿�j���Τ��~�A��l������/�ϥΡA���ݭn�A������L�����ΰϡC</td><td> ���i�k�����Ϊk�A���ڭ̫�ĳ�Ĥ@���w��Linux���s�B�͡A���ĥγo�˪����Ϊk�A����H�ᦳ�߱o��A�b�̷Ӧۤv���ߺD���s���ΡC</td></tr><tr><td>
-�Ӯ���Ϊk</td><td>/�@�@�@�@�@�@�@�@�@�@�@/usr�@�@�@�@�@�@�@�@�@�@/home�@�@�@�@�@�@�@�@�@SWAP</td><td>100M�@�@�@�@�@�@�@�@�@�h�h�q���@�@�@�@�@�@�@�h�h�q���@�@�@�@�@�@�@�O����X2 </td><td>��`�`Ū�g��/usr�P/home���O�ΥX��Ӥ��ΰϡA�H�T�O�t�εo�ͬG�ٮɡA�i�H�O����ơC</td></tr><tr><td>
-�M�����Ϊk</td><td>/�@�@�@�@�@�@�@�@�@�@�@�@/usr�@�@�@�@�@�@�@�@/usr/local�@�@�@�@�@�@/usr/X11�@�@�@�@�@�@�@�@/var�@�@�@�@�@�@�@�@�@�@/root�@�@�@�@�@�@�@�@�@�@/home�@�@�@�@�@�@�@�@SWAP</td><td>50M�@�@�@�@�@�@�@�@�@�h�h�q���@�@�@�@�@�@�@�����p�өw�@�@�@�@�@�@�����p�өw�@�@�@�@�@�@150M�@�@�@�@�@�@�@�@�@�����p�өw�@�@�@�@�@�@�h�h�q���@�@�@�@�@�@�@�O����X2</td><td>1.�]��XLinux�ߺD�ϥ�/usr��m�n��A�ҥH��ĳ/usr�V�j�V�n! 2./usr/local�O�Ψө�m�@�ǯS�����n��A���O�z�ۤv��user�g���n��A�бz�̷ӱz�ۤv�����p�A�վ�o�Ӥ��ΰϪ��j�p�a�C3�D/usr/XII�D�n��mX Window ���n��A�p�G�z�ڥ����|�Ψ�X Window�A����z�N�i�H��o�Ӥ��ΰϪ��Ŷ��Y�p�A������L���ΰϨϥΡC</td></tr><tr><td>
-�@
-<caption> ���ΰϺϺЫ�����Ӫ� </caption>
+方法</td><td>分割區</td><td>容量大小</td><td>說明</td></tr><tr><td>
+懶人分割法</td><td>/　　　　　　　　　　　SWAP </td><td>原則:除了SWAP的空間，以記憶體的兩倍大分割之外，其餘全部給/使用，不需要再劃分其他的分割區。</td><td> 最懶惰的分割法，但我們建議第一次安裝Linux的新朋友，先採用這樣的分割法，等到以後有心得後，在依照自己的習慣重新分割。</td></tr><tr><td>
+帥氣分割法</td><td>/　　　　　　　　　　　/usr　　　　　　　　　　/home　　　　　　　　　SWAP</td><td>100M　　　　　　　　　多多益善　　　　　　　多多益善　　　　　　　記憶體X2 </td><td>把常常讀寫的/usr與/home分別割出兩個分割區，以確保系統發生故障時，可以保全資料。</td></tr><tr><td>
+愚公分割法</td><td>/　　　　　　　　　　　　/usr　　　　　　　　/usr/local　　　　　　/usr/X11　　　　　　　　/var　　　　　　　　　　/root　　　　　　　　　　/home　　　　　　　　SWAP</td><td>50M　　　　　　　　　多多益善　　　　　　　視情況而定　　　　　　視情況而定　　　　　　150M　　　　　　　　　視情況而定　　　　　　多多益善　　　　　　　記憶體X2</td><td>1.因為XLinux習慣使用/usr放置軟體，所以建議/usr越大越好! 2./usr/local是用來放置一些特殊的軟體，像是您自己或user寫的軟體，請您依照您自己的狀況，調整這個分割區的大小吧。3．/usr/XII主要放置X Window 的軟體，如果您根本不會用到X Window，那麼您就可以把這個分割區的空閒縮小，讓給其他分割區使用。</td></tr><tr><td>
+　
+<caption> 分割區磁碟型號對照表 </caption>
 </td></tr></table></center>
                         
-<p><br>�p��8,�ЧQ�ΤW�U�䲾����ܴο�����ΰ�, �b�������i�ؿ��j�ϰ���U�ƹ��������ؿ��W�١C�b�������i�ˬd�j�M�i�s�@�j�ϰ���U�ƹ��������i�O�j�Ρi�_�j�n�ˬd�M�s�@�z���ɮרt�ΡC���z�]�w�n��, �Ы��i�U�@�B�j, �i��U�@��XLinux�w�˫e�ǳƧ@�~�B�J�C 
+<p><br>如圖8,請利用上下鍵移動顯示棒選取分割區, 在對應的【目錄】區域按下滑鼠左鍵選取目錄名稱。在對應的【檢查】和【製作】區域按下滑鼠左鍵選取【是】或【否】要檢查和製作您的檔案系統。當您設定好後, 請按【下一步】, 進行下一個XLinux安裝前準備作業步驟。 
 <p>
-<h3>��ܮM��</h3>
+<h3>選擇套件</h3>
 
-<p>�p��9, �����B�J, �t�αN�|Ū���M���Ʈw, �ǳƦw��XLinux�M��: 
+<p>如圖9, 此項步驟, 系統將會讀取套件資料庫, 準備安裝XLinux套件: 
 <figure>
 <eps FILE="images/X-Linux-pac.eps">
 <img SRC="images/XLinux-pac.jpg" WIDTH="640" HEIGHT="480">
-<caption>��9:��ܮM��e��</caption>
+<caption>圖9:選擇套件畫面</caption>
 </figure>
       
 <p>
-<p>�b����ܱz�n�w�˪�XLinux�M��զX:
-�Ҧp�z�i��ܭn:<br>
-�����M��<br>
-�̤p�t�Φw��<br>
-�ϥΪ̦ۦ��w<br>
-<p>�p��10, ��w���I��i�T�w�j���s�Y�i.<br>
+<p>在此選擇您要安裝的XLinux套件組合:
+例如您可選擇要:<br>
+全部套件<br>
+最小系統安裝<br>
+使用者自行選定<br>
+<p>如圖10, 選定後點選【確定】按鈕即可.<br>
 <figure>
 <eps FILE="images/X-Linux-pac.eps">
 <img SRC="images/XLinux-pac2.jpg" WIDTH="640" HEIGHT="480">
-<caption>��10:��ܮM��e��</caption>
+<caption>圖10:選擇套件畫面</caption>
 </figure>
  
 <p><br>
-<p>�M��ӥ�:
-�b����ܱz�n���M��ӥ�<br> 
-(�����M��ӥ�, �i�Ѧҥ���U�ĤQ�G�� <code>
-<a HREF="install-12.html#PAC-ref">XLinux���M��M��</a></code>) 
-�p��11, �Q�ηƹ��I����Ƨ�(Folder), �z�i�����Ӫ��M�󶵥�<br>
+<p>套件細目:
+在此選擇您要的套件細目<br> 
+(有關套件細目, 可參考本手冊第十二章 <code>
+<a HREF="install-12.html#PAC-ref">XLinux的套件清單</a></code>) 
+如圖11, 利用滑鼠點取資料夾(Folder), 您可選取更細的套件項目<br>
  
 <figure>
 <eps FILE="images/X-Linux-chpac.eps">
 <img SRC="images/XLinux-pac3.jpg" WIDTH="640" HEIGHT="480">
-<caption>��11:��ܮM��e��2</caption>
+<caption>圖11:選擇套件畫面2</caption>
 </figure>
   
-<p>���z�]�w�n��, �Ы��i�U�@�B�j, �i��U�@��XLinux�w�˫e�ǳƧ@�~�B�J�C
+<p>當您設定好後, 請按【下一步】, 進行下一個XLinux安裝前準備作業步驟。
 <p>
-<h3><a NAME="LILO-ref"></a> �]�w�Ұʺ޲z�� </h3>
+<h3><a NAME="LILO-ref"></a> 設定啟動管理員 </h3>
 
-<p>�p��12, �b���z�i�]�w�Ұʺ޲z��(LILO)�n�}�Ҫ��ϰ�:<br>
+<p>如圖12, 在此您可設定啟動管理員(LILO)要開啟的磁區:<br>
 <figure>
 <eps FILE="images/X-Linux-st.eps">
 <img SRC="images/XLinux-lilo.jpg" WIDTH="640" HEIGHT="480">
-<caption>��12:�]�w�Ұʺ޲z���e��</caption>
+<caption>圖12:設定啟動管理員畫面</caption>
 </figure>
                 
 <p>
-<p>LILO �O LInux LOader ��²�١A�OLinux���}���{���A�U�W��q�A���D�n���\�δN�O�b
-Linux�t�ζ}�����ɭԡA�ΨӸ��JLinux���t�ή֤ߡA���L�������~LILO�٥i�H�ΨӸ��J
-��L���@�~�t�ΡA�i��h���}���A�Ϊ̤]�i�H�b�}�����ɭԶǻ��ѼƵ�Linux���t�ή֤ߡC
-<p>LILO�O�@��Linux�t�ΤW���n���{���A
-���L�@��b�w�˨t�ήɴN�|��LILO�w�˦b�ϺЪ� MBR �� root partition�W���A
-���]�u�b�}���ɦ��@�ΡA���F�b�}���ɳz�LLILO�ǻ��ѼƵ��t�ή֤ߥH�~�A
-�ڭ̤��|������}���{��LILO����D�A
-<p>�b�ϥ�Linux�t�Ϊ��L�{���]�A�֦����|�P����LILO���s�b  ���L���z��ʤF�t�ή֤ߡA
-�ηQ�n���ܶ}���t�Ϊ��w�]�ѼƮɡA�N�����n���s�w��LILO�A���s�w��LILO���ʧ@�i�H
-�z�L�@�ӦW��&quot;lilo&quot;���{���ӹF���A�S���o�ӬO�W�٤@�ˡA�j�p�g���P�Ӥw, ���LŪ��
-�̦n�b�[���̭��˲M���A
-<p>�j�g��&quot;LILO&quot;�����O�}���{���A�ڭ̥û����|�ۤv�ʤ�h����o�ӵ{���A
-&quot;lilo&quot;�����OLILO���w�˵{���A�ڭ̳z�L�o�ӵ{�ӧ�LILo�w�˨쥿�T�a��h
-�ó]�wLILO�C
-<p>LILO�w�˵{��lilo���]�w�ɦb/etc/lilo.conf�A���ϥΪ̥Hroot��������lilo
-�{�����ɭԡAlilo�N�|�hŪ��/etc/lilo.conf�A�è̷Ө䤺�e�w��LILO�A
-�b�R�O�C����lilo�Ӧw��Linux�}���{�����ɭԦ��X�ӿﶵ�i�H�ϥΡG
-<p>�w�� LILO ����m�A�Y���w���O�@�ӵw�Ф��ΰϡA�p /dev/hda1 ���ܡA
-lilo �|�N LILO �w�˦b�����ΰϪ��Ĥ@�ӺϰϤ��W�A�N�O�@��ҿצw�˦b
-root partition �����p�A�Y���w���O�@��ӵw�СA�]�N�O /dev/hda ���ܡA
-LILO �N�|�Q�w�˸ӵw�Ъ� MBR �W���C  
-<p>����lilo��ԲӪ��Ϊk�A�аѦҥ���U�ĤK��8.4�`������
+<p>LILO 是 LInux LOader 的簡稱，是Linux的開機程式，顧名思義，它主要的功用就是在
+Linux系統開機的時候，用來載入Linux的系統核心，不過除此之外LILO還可以用來載入
+其他的作業系統，進行多重開機，或者也可以在開機的時候傳遞參數給Linux的系統核心。
+<p>LILO是一個Linux系統上必要的程式，
+不過一般在安裝系統時就會把LILO安裝在磁碟的 MBR 或 root partition上面，
+它也只在開機時有作用，除了在開機時透過LILO傳遞參數給系統核心以外，
+我們不會直接跟開機程式LILO打交道，
+<p>在使用Linux系統的過程中也鮮少有機會感受到LILO的存在  不過當您更動了系統核心，
+或想要改變開機系統的預設參數時，就有必要重新安裝LILO，重新安裝LILO的動作可以
+透過一個名為&quot;lilo&quot;的程式來達成，沒錯這個是名稱一樣，大小寫不同而已, 不過讀者
+最好在觀念裡面弄清楚，
+<p>大寫的&quot;LILO&quot;指的是開機程式，我們永遠不會自己動手去執行這個程式，
+&quot;lilo&quot;指的是LILO的安裝程式，我們透過這個程來把LILo安裝到正確地方去
+並設定LILO。
+<p>LILO安裝程式lilo的設定檔在/etc/lilo.conf，當使用者以root身份執行lilo
+程式的時候，lilo就會去讀取/etc/lilo.conf，並依照其內容安裝LILO，
+在命令列執行lilo來安裝Linux開機程式的時候有幾個選項可以使用：
+<p>安裝 LILO 的位置，若指定的是一個硬碟分割區，如 /dev/hda1 的話，
+lilo 會將 LILO 安裝在此分割區的第一個磁區之上，就是一般所謂安裝在
+root partition 的狀況，若指定的是一整個硬碟，也就是 /dev/hda 的話，
+LILO 就會被安裝該硬碟的 MBR 上面。  
+<p>關於lilo更詳細的用法，請參考本手冊第八章8.4節的說明
 <code>
-<a HREF="install-8.html#LILO2-ref">LILO �w�˵{��</a></code>�Ϊ�
-�Ѧ�lilo��������(man lilo)�A�άd�\�t�Τ����/usr/doc/���U��lilo���C
-<p>���z�]�w�n��, �Ы��i�U�@�B�j, �i��U�@��XLinux�w�˫e�ǳƧ@�~�B�J�C
+<a HREF="install-8.html#LILO2-ref">LILO 安裝程式</a></code>或者
+參考lilo的說明頁(man lilo)，或查閱系統中位於/usr/doc/底下的lilo文件。
+<p>當您設定好後, 請按【下一步】, 進行下一個XLinux安裝前準備作業步驟。
 <p>
-<h3>�]�w�}����</h3>
+<h3>設定開機片</h3>
 
-<p>�p��13, �b���z�i��ܬO�_�n�s�@XLinux���}���Ϥ�<br>
+<p>如圖13, 在此您可選擇是否要製作XLinux的開機磁片<br>
 <figure>
 <eps FILE="images/X-Linux-boot.eps">
 <img SRC="images/XLinux-bootdisk.jpg" WIDTH="640" HEIGHT="480">
-<caption>��13:�]�w�}�����e��</caption>
+<caption>圖13:設定開機片畫面</caption>
 </figure>
       
-<p>���z�]�w�n��, �Ы��i�U�@�B�j, �i��U�@��XLinux�w�˫e�ǳƧ@�~�B�J�C
+<p>當您設定好後, 請按【下一步】, 進行下一個XLinux安裝前準備作業步驟。
 <p>
-<h3>�����]�w</h3>
+<h3>完成設定</h3>
 
-<p>?�p��14, �b�o�Ӷ��q, XLinux�N�}�l�w��, �w�˪��L�{�|�̷ӥH�U���{�Ƕi��, �p�G�z��ܤF�n�s�@�@���}����, �Цb�z����i�O�j���e��J�@���ťժ��Ϥ�, �_�h�п���i�O�j�}�Ϧw��XLinux.
-<p>�� �s�@�����O����ϰ�<br>
-�� �s�@Linux�ϰ�<br>
-�� �w�ˮM��<br>
-�� �s�@�}���v���� <br>
-�� �w�˱Ұʺ޲z�{�� <br>
-�� �s�@�}���Ϥ�<br>
-�� ����<br>
+<p>?如圖14, 在這個階段, XLinux將開始安裝, 安裝的過程會依照以下的程序進行, 如果您選擇了要製作一片開機片, 請在您選取【是】之前放入一片空白的磁片, 否則請選取【是】開使安裝XLinux.
+<p>● 製作虛擬記憶體磁區<br>
+● 製作Linux磁區<br>
+● 安裝套件<br>
+● 製作開機影像檔 <br>
+● 安裝啟動管理程式 <br>
+● 製作開機磁片<br>
+● 完成<br>
 <p><br>
 <figure>
 <eps FILE="images/X-Linux-finish.eps">
 <img SRC="images/XLinux-finish.jpg" WIDTH="640" HEIGHT="480">
-<caption>��14:�����]�w�e��</caption>
+<caption>圖14:完成設定畫面</caption>
 </figure>
           
 <p>
-<h2><a NAME="ss5.5">5.5 �}�l�w��        </a>
+<h2><a NAME="ss5.5">5.5 開始安裝        </a>
 </h2>
 
-<p>�p��14, ���z�]�w�n�@���w�� XLinux ���ǳƧ@�~, �п�ܡi�O�j(�Ρi�U�@�B�j), �t�αN�}�l�w��XLinux��z�������W, �o�i��N�O�ɤ@�q�ɶ�, �b�w�˪��L�{��, �z�i�H�H�ۦw�˵e���Y��U���u���������C�Ϊ�, �z�i�H���}�z������, �w�M�@�سܧa! �]�����z�^�Ӫ��ɫ�, �z��XLinux�N�w�g�w�˦n, �N�o��²��ֳt, �z�N�i�H�i�JXLinux���t�@�ӥ@��.
+<p>如圖14, 當您設定好一切安裝 XLinux 的準備作業, 請選擇【是】(或【下一步】), 系統將開始安裝XLinux到您的機器上, 這可能將費時一段時間, 在安裝的過程中, 您可以隨著安裝畫面欣賞各國優美的風景。或者, 您可以離開您的坐位, 泡杯咖啡喝吧! 因為當您回來的時後, 您的XLinux將已經安裝好, 就這麼簡單快速, 您將可以進入XLinux的另一個世界.
 <p>
-<h2><a NAME="ss5.6">5.6 �ĤG���q�w��</a>
+<h2><a NAME="ss5.6">5.6 第二階段安裝</a>
 </h2>
 
-<p>XLinux �w�˦n����Ы��U��L�����N��ηƹ�������, ���о��N�|�۰ʰh�XXLinux������
-��, ����, �бNXLinux�����Ш��X, �t�αN���s�Ұ�, �i�JXLinux�w�˪��ĤG���q�C
-<p>�bXLinux���ĤG���q�w�˸�, �z�i�H��ܭn�[���B�~������(�M��), �]�i��ܡi�_�j, �����i�JXLinux����q�]�w. �p�G�z���L�F�o�Ӷ��q, �]�i�b�w�˧���bcommand�U����&quot;xlinstall&quot;���O�[���B�~������(�M��).
+<p>XLinux 安裝好之後請按下鍵盤的任意鍵或滑鼠的左鍵, 光碟機將會自動退出XLinux的光碟
+片, 此時, 請將XLinux的光碟取出, 系統將重新啟動, 進入XLinux安裝的第二階段。
+<p>在XLinux的第二階段安裝裡, 您可以選擇要加裝額外的光碟(套件), 也可選擇【否】, 直接進入XLinux的後段設定. 如果您跳過了這個階段, 也可在安裝完後在command下執行&quot;xlinstall&quot;指令加裝額外的光碟(套件).
 <p>
 <p>
 <ul>
-<li>�j�M����
+<li>搜尋光碟
 <p>
 <figure>
 <eps FILE="images/welcom.eps">
 <img SRC="images/2install-more-1.jpg" WIDTH="640" HEIGHT="480">
-<caption>��15:�ĤG���q�w�˷j�M���еe��</caption>
+<caption>圖15:第二階段安裝搜尋光碟畫面</caption>
 </figure>
    
 <p>
 </li>
-<li>��ܮM��
+<li>選擇套件
 <p>
 <figure>
 <eps FILE="images/welcom.eps">
 <img SRC="images/2install-more-2.jpg" WIDTH="640" HEIGHT="480">
-<caption>��16:�ĤG���q�w�˿�ܮM��e��</caption>
+<caption>圖16:第二階段安裝選擇套件畫面</caption>
 </figure>
      
 <p>
 </li>
-<li>�w�ˮM��
+<li>安裝套件
 <p>
 <figure>
 <eps FILE="images/welcom.eps">
 <img SRC="images/2install-more-3.jpg" WIDTH="640" HEIGHT="480">
-<caption>��17:�ĤG���q�w�ˮM��e��</caption>
+<caption>圖17:第二階段安裝套件畫面</caption>
 </figure>
    
 </li>
 </ul>
 <p>
-<h2><a NAME="ss5.7">5.7 �w�˫�q�]�w</a>
+<h2><a NAME="ss5.7">5.7 安裝後段設定</a>
 </h2>
 
-<p>���M�z��XLinxu�w�g�w�˧���, ���Ǩt�γ]�w�O�����n�̷ӱz���P���]�����ҳ]�w�~�i���T�ϥΪ��CXLinux���Ħw�˫�q�]�w�N�O�b�@�n�_��]�w�Ȫ��ǳƤu�@. ���ɱz�i�H�ݨ�p��18���w��e��:
+<p>雖然您的XLinxu已經安裝完成, 有些系統設定是必須要依照您不同的設備環境設定才可正確使用的。XLinux的第安裝後段設定就是在作好起初設定值的準備工作. 此時您可以看到如圖18的歡迎畫面:
 <p>
 <figure>
 <eps FILE="images/welcom.eps">
 <img SRC="images/2install-welcome.jpg" WIDTH="640" HEIGHT="480">
-<caption>��18:��q�]�w�w��e��</caption>
+<caption>圖18:後段設定歡迎畫面</caption>
 </figure>
       
-<p>XLinux���w�˫�q�]�w�O�D�`�e����, ���]�A�F�H�U�X���]�w:
-<p>�� �]�wroot�޲z���K�X�ΫإߨϥΪ̱b�� <br>
-�� �����g��]�ƪ��ۦ氻���H�βպA�]�w<br>
-�� �������ҳ]�w<br>
-�� �ƾھ��s�u�]�w<br>
-�� �t�ήɶ�, �ɰϳ]�w<br>
-�� X �����t�γ]�w <br> 
-<p>�H�U�N�v�@�����Цp��]�w:
+<p>XLinux的安裝後段設定是非常容易的, 它包括了以下幾項設定:
+<p>● 設定root管理員密碼及建立使用者帳號 <br>
+● 相關週邊設備的自行偵測以及組態設定<br>
+● 網路環境設定<br>
+● 數據機連線設定<br>
+● 系統時間, 時區設定<br>
+● X 視窗系統設定 <br> 
+<p>以下將逐一的介紹如何設定:
 <p>
 <ol>
-<li>�]�wroot�޲z���K�X
-<p>�b���z�i�]�w�z��root�b���K�X:
-<p>�p��19, �z���ݿ�J�⦸�K�X, �H�T�O�z��root�b���K�X�����T��.
-��J�K�X��, �t�αN�H&quot;*&quot;�N���z��J���K�X.
-������Ы��iEnter�j�~��U�@�B��q�]�w.
+<li>設定root管理員密碼
+<p>在此您可設定您的root帳號密碼:
+<p>如圖19, 您必需輸入兩次密碼, 以確保您的root帳號密碼的正確性.
+輸入密碼時, 系統將以&quot;*&quot;代表您輸入的密碼.
+完成後請按【Enter】繼續下一步後段設定.
 <p>
 <figure>
 <eps FILE="images/welcom.eps">
 <img SRC="images/2install-password.jpg" WIDTH="640" HEIGHT="480">
-<caption>��19:�]�wroot�޲z���K�X�e��</caption>
+<caption>圖19:設定root管理員密碼畫面</caption>
 </figure>
          
-<p>�إ߱K�X���\��, �N�|�X�{�H�U(��20)�T�{�e��:
+<p>建立密碼成功後, 將會出現以下(圖20)確認畫面:
 <figure>
 <eps FILE="images/welcom.eps">
 <img SRC="images/2install-password-2.jpg" WIDTH="640" HEIGHT="480">
-<caption>��20:�]�wroot�޲z���K�X���\�e��</caption>
+<caption>圖20:設定root管理員密碼成功畫面</caption>
 </figure>
               
 <p>
 </li>
-<li>�إߨϥΪ̱b���M�K�X
-<p>�b���z�i�]�w�z���ϥΪ̱b��:
-<p>�p��21, �z���ݿ�J�⦸�K�X, �H�T�O�z���ϥΪ̱b���K�X�����T��.
-��J�K�X��, �t�αN�H&quot;*&quot;�N���z��J���K�X.
-������Ы��iEnter�j�~��U�@�B��q�]�w.
+<li>建立使用者帳號和密碼
+<p>在此您可設定您的使用者帳號:
+<p>如圖21, 您必需輸入兩次密碼, 以確保您的使用者帳號密碼的正確性.
+輸入密碼時, 系統將以&quot;*&quot;代表您輸入的密碼.
+完成後請按【Enter】繼續下一步後段設定.
 <p>
 <figure>
 <eps FILE="images/welcom.eps">
 <img SRC="images/2install-user.jpg" WIDTH="640" HEIGHT="480">
-<caption>��21:�إߨϥΪ̵e��</caption>
+<caption>圖21:建立使用者畫面</caption>
 </figure>
                   
-<p>�p��22, �Y�z�ݭn�إߧ�h�ϥΪ�, �п�ܡi�O�j, �~��s�W.
+<p>如圖22, 若您需要建立更多使用者, 請選擇【是】, 繼續新增.
 <p>
 <figure>
 <eps FILE="images/welcom.eps">
 <img SRC="images/2install-user-2.jpg" WIDTH="640" HEIGHT="480">
-<caption>��22:�O�_�s�W�ϥΪ̵e��</caption>
+<caption>圖22:是否新增使用者畫面</caption>
 </figure>
   
 <p>
 </li>
-<li>�D���]�w
-<p>�b���z�i�H�]�w�z���D����������? �Y�z�������Ӷ�J�ƻ���, �и߰ݱz���t�κ޲z��.?<p>�p��23, �z�i�Q�ΥH�U�T�ؿ�ܳ]�w�D����������:<br>
-* �ϰ����(�ϥκ����d)<br>
-* �����W��(�ϥ�Modem)<br>
-* ����ϥ�(�S������)<br>
+<li>主機設定
+<p>在此您可以設定您的主機網路環境? 若您不知應該填入甚麼資料, 請詢問您的系統管理員.?<p>如圖23, 您可利用以下三種選擇設定主機網路環境:<br>
+* 區域網路(使用網路卡)<br>
+* 撥接上網(使用Modem)<br>
+* 單機使用(沒有網路)<br>
 <p>
 <figure>
 <eps FILE="images/2install-network.eps">
 <img SRC="images/2install-localhost.jpg" WIDTH="640" HEIGHT="480">
-<caption>��23:�D���]�w�D�e��</caption>
+<caption>圖23:主機設定主畫面</caption>
 </figure>
  
 <p>
 <ul>
-<li>�ϰ����(�ϥκ����d):
-<p>�p��24, �b���]�w�z���ϰ������T:
+<li>區域網路(使用網路卡):
+<p>如圖24, 在此設定您的區域網路資訊:
 <p>
 <figure>
 <eps FILE="images/2install-network.eps">
 <img SRC="images/2install-network.jpg" WIDTH="640" HEIGHT="480">
-<caption>��24:�ϰ�����]�w</caption>
+<caption>圖24:區域網路設定</caption>
 </figure>
                           
 <p>
 <p>
 </li>
-<li>�����W���]�w:
-<p>�p��25, �b���]�w�z�������W����T:
+<li>撥接上網設定:
+<p>如圖25, 在此設定您的撥接上網資訊:
 <figure>
 <eps FILE="images/2install-network.eps">
 <img SRC="images/2install-modem.jpg" WIDTH="640" HEIGHT="480">
-<caption>��25:�����W��(�ϥ�Modem)</caption>
+<caption>圖25:撥接上網(使用Modem)</caption>
 </figure>
      
 <p>
@@ -715,65 +715,65 @@ LILO �N�|�Q�w�˸ӵw�Ъ� MBR �W���C
 </ul>
 <p>
 </li>
-<li>��L�]�w
-<p>�p��26, �b���z�i�H�̰�O�y�t�]�w��L������: 
+<li>鍵盤設定
+<p>如圖26, 在此您可以依國別語系設定鍵盤的種類: 
 <p>
 <figure>
 <eps FILE="images/2install-accessmode.eps">
 <img SRC="images/2install-keyboard.jpg" WIDTH="640" HEIGHT="480">
-<caption>��26:��L�]�w?/CAPTION&gt;
+<caption>圖26:鍵盤設定?/CAPTION&gt;
 </figure>
       
 <p>
 </li>
-<li>�t�ήɶ��ɰϳ]�w
-<p>�p��27, �b���z�i�H�̦a�ϻP�ɰϳ]�w�z���D���t�ήɶ�, ���]�w�|�H�۱z����ܦP�ɧ��ܥD�����ɶ��P���.
+<li>系統時間時區設定
+<p>如圖27, 在此您可以依地區與時區設定您的主機系統時間, 此設定會隨著您的選擇同時改變主機的時間與日期.
 <p>
 <figure>
 <eps FILE="images/2install-accessmode.eps">
 <img SRC="images/2install-timezone.jpg" WIDTH="640" HEIGHT="480">
-<caption>��27:�t�ήɶ��ɰϳ]�w?/CAPTION&gt;
+<caption>圖27:系統時間時區設定?/CAPTION&gt;
 </figure>
        
 <p>
 </li>
-<li>�򥻪A�ȳ]�w?<p>�p��28, �b���z�i�H�]�w�򥻪����A���A��, �Ҧp: Apache �������A��, nfs �����ɮרt��, Sendmail �l����A��, ����. ���z�b�w�˧� XLinux ��N�P�ɧ����z�ҭn�[�]����
-����U���]�w.<br>
+<li>基本服務設定?<p>如圖28, 在此您可以設定基本的伺服器服務, 例如: Apache 網頁伺服器, nfs 網路檔案系統, Sendmail 郵件伺服器, 等等. 讓您在安裝完 XLinux 後就同時完成您所要架設伺知
+鼓漲U項設定.<br>
 <figure>
 <eps FILE="images/2install-keymap.eps">
 <img SRC="images/2install-setup.jpg" WIDTH="640" HEIGHT="480">
-<caption>��28:�򥻪A�ȳ]�w</caption>
+<caption>圖28:基本服務設定</caption>
 </figure>
  
 <p>
 </li>
-<li>�i���A�ȳ]�w?<p>�p��29, �b���z�i�H�]�w�i�����A�ȳ]�w�C  
+<li>進階服務設定?<p>如圖29, 在此您可以設定進階的服務設定。  
 <figure>
 <eps FILE="images/open.eps">
 <img SRC="images/2install-setup-2.jpg" WIDTH="640" HEIGHT="480">
-<caption>��29:�i���A�ȳ]�w</caption>
+<caption>圖29:進階服務設定</caption>
 </figure>
     
 <p>
 </li>
-<li>�����w��
-<p>�p��30, �즹�B�J, �z�w�g���Q�����Ҧ�XLinux���w�˻P�]�w, �ЧQ�ηƹ��I��i�����j ����.
+<li>完成安裝
+<p>如圖30, 到此步驟, 您已經順利完成所有XLinux的安裝與設定, 請利用滑鼠點選【結束】 按鍵.
 <p>
 <figure>
 <eps FILE="images/open.eps">
 <img SRC="images/2install-finish.jpg" WIDTH="640" HEIGHT="480">
-<caption>��30:�����w�˳]�w</caption>
+<caption>圖30:完成安裝設定</caption>
 </figure>
       
 <p>
 </li>
 </ol>
-<p>���z�]�w���H�W����, �t�η|���s�Ұ�, �i�J�p�U�@���q X �����������]�w, ��ӹL�{���O���媺����, �ХH��L�ӳ]�w�z���ﶵ, �H�U�N���|�X���]�w? 
+<p>當您設定完以上項目, 系統會重新啟動, 進入如下一階段 X 視窗的相關設定, 整個過程都是中文的說明, 請以鍵盤來設定您的選項, 以下將略舉幾項設定? 
 <p>
 <figure>
 <eps FILE="images/open.eps">
 <img SRC="images/2install-xsetup-main.jpg" WIDTH="1276" HEIGHT="926">
-<caption>X �����������]�w�w��e��</caption>
+<caption>X 視窗的相關設定歡迎畫面</caption>
 </figure>
            
 <p>
@@ -781,7 +781,7 @@ LILO �N�|�Q�w�˸ӵw�Ъ� MBR �W���C
 <figure>
 <eps FILE="images/open.eps">
 <img SRC="images/2install-xsetup.jpg" WIDTH="1276" HEIGHT="924">
-<caption>�ù��]�w�e��</caption>
+<caption>螢幕設定畫面</caption>
 </figure>
  
 <p>
@@ -789,7 +789,7 @@ LILO �N�|�Q�w�˸ӵw�Ъ� MBR �W���C
 <figure>
 <eps FILE="images/open.eps">
 <img SRC="images/2install-xsetup-1.jpg" WIDTH="1280" HEIGHT="928">
-<caption>�����e��</caption>
+<caption>偵測畫面</caption>
 </figure>
      
 <p>
@@ -797,26 +797,26 @@ LILO �N�|�Q�w�˸ӵw�Ъ� MBR �W���C
 <figure>
 <eps FILE="images/open.eps">
 <img SRC="images/2install-xsetup-2.jpg" WIDTH="1274" HEIGHT="926">
-<caption>�۩w�ù��]�w�e��</caption>
+<caption>自定螢幕設定畫面</caption>
 </figure>
       
 <p>
-<p>Linux �O�@�Ӧh�H�h�u���t�ΡA�U�Φw���ʡA�C�ӤH���n���@�ӱb����K�X�A�n��
-�J�b���αK�X�y�n�J�z�t�ΥH��~��ϥΡA
-<p>Linux �t�ιw�]���Ѥ��Ӥ�r�����������D���x�ѨϥΪ̨ϥΡA�z�i�H�b��
-�P�D���x�n�J�A�P�ɧ@���P���ơA���|�ۤ��z�Z�A�����i�P�ɫ�
-�iCtrl�j+�iAlt�j+�iF1�j&nbsp; �iF6�j��Ӭۤ������D���x�A���p�z�� X ���Q�_�ʤF�A���� X�|���b�ĤC���D���x�A���iCtrl�j+�iAlt�j+�iF7�j�N�i�H������ X ���e���A�ҥH�����Q�_�� X ���H�u�n���iCtrl�j+�iAlt�j+�iF7�j�N�i�H�^�� X �F�C              
-<p>�bXLinux�t�Τ��U, �B�~�W�[�F��ӵ����D���x�ѨϥΪ̨ϥ�:<br>
-* �iAlt�j+�iF11�j�i�����ܰ�ڻy��׺ݾ� (g11ntty), �p�U��. <br>
-* �iAlt�j+�iF12�j�i�����ܥHg11ntty����¦��Genie�]�w���F.<br>
+<p>Linux 是一個多人多工的系統，顧及安全性，每個人都要有一個帳號跟密碼，要打
+入帳號及密碼『登入』系統以後才能使用，
+<p>Linux 系統預設提供六個文字介面的虛擬主控台供使用者使用，您可以在不
+同主控台登入，同時作不同的事，不會相互干擾，彼此可同時按
+【Ctrl】+【Alt】+【F1】&nbsp; 【F6】鍵來相互切換主控台，假如您的 X 順利起動了，那麼 X會佔在第七號主控台，按【Ctrl】+【Alt】+【F7】就可以切換到 X 的畫面，所以有順利起動 X 的人只要按【Ctrl】+【Alt】+【F7】就可以回到 X 了。              
+<p>在XLinux系統之下, 額外增加了兩個虛擬主控台供使用者使用:<br>
+* 【Alt】+【F11】可切換至國際語文終端機 (g11ntty), 如下圖. <br>
+* 【Alt】+【F12】可切換至以g11ntty為基礎的Genie設定精靈.<br>
 <p>
 <p>
 <figure>
 <eps FILE="images/open.eps">
 <img SRC="images/open.jpg" WIDTH="1024" HEIGHT="768">
-<caption>G11ntty XLinux�n�J�e��</caption>
+<caption>G11ntty XLinux登入畫面</caption>
 </figure>
-<p>G11N �O Globalization (���y��) ���Y�g�A�Ĥ@�Ӧr G �P�̫�@�Ӧr N ������ 11 ���r���A�G�W�C G11N �ä��O�u�������W�N X Window �u���y�ơv�Ρu��ڤơv(InternationalizatioN) �Ӥw�A���O����b�̩��h�� libc �W�Clibc �����n�� locale ���䴩�A�~��V I18N �Ʀ� G11N �_�B�C 
+<p>G11N 是 Globalization (全球化) 的縮寫，第一個字 G 與最後一個字 N 之間有 11 的字母，故名。 G11N 並不是只有表面上將 X Window 「全球化」或「國際化」(InternationalizatioN) 而已，它是奠基在最底層的 libc 上。libc 必須要有 locale 的支援，才能向 I18N 甚至 G11N 起步。 
 <p>
 <hr>
 <a HREF="install-6.html">Next</a>
